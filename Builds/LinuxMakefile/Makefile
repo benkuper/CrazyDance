@@ -82,25 +82,25 @@ OBJECTS_APP := \
   $(JUCE_OBJDIR)/DroneUI_73c258f1.o \
   $(JUCE_OBJDIR)/Drone_725b9322.o \
   $(JUCE_OBJDIR)/DroneManager_35ad76b5.o \
-  $(JUCE_OBJDIR)/PatternBlock_7076c848.o \
-  $(JUCE_OBJDIR)/ScriptBlock_4722e90a.o \
-  $(JUCE_OBJDIR)/TimelineBlockUI_e8c69031.o \
-  $(JUCE_OBJDIR)/TimelineBlock_136191ca.o \
-  $(JUCE_OBJDIR)/MotionBlockModelPreset_187d9c84.o \
-  $(JUCE_OBJDIR)/MotionBlockModelPresetManager_74127b13.o \
-  $(JUCE_OBJDIR)/MotionBlockModelGroupUI_c992814d.o \
-  $(JUCE_OBJDIR)/MotionBlockModelLibraryUI_e6797549.o \
-  $(JUCE_OBJDIR)/MotionBlockModelManagerUI_1a26e2bb.o \
-  $(JUCE_OBJDIR)/MotionBlockModelParameterEditor_88c3e3f0.o \
-  $(JUCE_OBJDIR)/MotionBlockModelParameterManagerEditor_97f01b21.o \
-  $(JUCE_OBJDIR)/MotionBlockModelUI_1b801d44.o \
-  $(JUCE_OBJDIR)/MotionBlockDataProvider_25cf7c75.o \
-  $(JUCE_OBJDIR)/MotionBlockModel_f0e08d79.o \
-  $(JUCE_OBJDIR)/MotionBlockModelGroup_6fad2150.o \
-  $(JUCE_OBJDIR)/MotionBlockModelLibrary_27535a8c.o \
-  $(JUCE_OBJDIR)/MotionBlockModelParameter_34a70b7a.o \
-  $(JUCE_OBJDIR)/MotionBlockModelParameterManager_9b726b5d.o \
-  $(JUCE_OBJDIR)/UserMotionBlockModelManager_8ec34ab3.o \
+  $(JUCE_OBJDIR)/PatternBlock_e5713868.o \
+  $(JUCE_OBJDIR)/ScriptBlock_223ae12a.o \
+  $(JUCE_OBJDIR)/TimelineBlockUI_4653bc11.o \
+  $(JUCE_OBJDIR)/TimelineBlock_338079ea.o \
+  $(JUCE_OBJDIR)/MotionBlockModelPreset_389c84a4.o \
+  $(JUCE_OBJDIR)/MotionBlockModelPresetManager_a3042ef3.o \
+  $(JUCE_OBJDIR)/MotionBlockModelGroupUI_51798d2d.o \
+  $(JUCE_OBJDIR)/MotionBlockModelLibraryUI_10cd0929.o \
+  $(JUCE_OBJDIR)/MotionBlockModelManagerUI_447a769b.o \
+  $(JUCE_OBJDIR)/MotionBlockModelParameterEditor_e6510fd0.o \
+  $(JUCE_OBJDIR)/MotionBlockModelParameterManagerEditor_953d341.o \
+  $(JUCE_OBJDIR)/MotionBlockModelUI_b8992564.o \
+  $(JUCE_OBJDIR)/MotionBlockDataProvider_e0c6fc95.o \
+  $(JUCE_OBJDIR)/MotionBlockModel_2c0af159.o \
+  $(JUCE_OBJDIR)/MotionBlockModelGroup_cc62970.o \
+  $(JUCE_OBJDIR)/MotionBlockModelLibrary_e24adaac.o \
+  $(JUCE_OBJDIR)/MotionBlockModelParameter_fbf039a.o \
+  $(JUCE_OBJDIR)/MotionBlockModelParameterManager_88190f3d.o \
+  $(JUCE_OBJDIR)/UserMotionBlockModelManager_3bdbad3.o \
   $(JUCE_OBJDIR)/MotionBlock_99a2f7a0.o \
   $(JUCE_OBJDIR)/Action_66d1c291.o \
   $(JUCE_OBJDIR)/ActionLayer_9758810a.o \
@@ -227,97 +227,97 @@ $(JUCE_OBJDIR)/DroneManager_35ad76b5.o: ../../Source/Drone/DroneManager.cpp
 	@echo "Compiling DroneManager.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
-$(JUCE_OBJDIR)/PatternBlock_7076c848.o: ../../Source/MotionBlock/Model/blocks/pattern/PatternBlock.cpp
+$(JUCE_OBJDIR)/PatternBlock_e5713868.o: ../../Source/MotionBlock/model/blocks/pattern/PatternBlock.cpp
 	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
 	@echo "Compiling PatternBlock.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
-$(JUCE_OBJDIR)/ScriptBlock_4722e90a.o: ../../Source/MotionBlock/Model/blocks/script/ScriptBlock.cpp
+$(JUCE_OBJDIR)/ScriptBlock_223ae12a.o: ../../Source/MotionBlock/model/blocks/script/ScriptBlock.cpp
 	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
 	@echo "Compiling ScriptBlock.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
-$(JUCE_OBJDIR)/TimelineBlockUI_e8c69031.o: ../../Source/MotionBlock/Model/blocks/timeline/ui/TimelineBlockUI.cpp
+$(JUCE_OBJDIR)/TimelineBlockUI_4653bc11.o: ../../Source/MotionBlock/model/blocks/timeline/ui/TimelineBlockUI.cpp
 	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
 	@echo "Compiling TimelineBlockUI.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
-$(JUCE_OBJDIR)/TimelineBlock_136191ca.o: ../../Source/MotionBlock/Model/blocks/timeline/TimelineBlock.cpp
+$(JUCE_OBJDIR)/TimelineBlock_338079ea.o: ../../Source/MotionBlock/model/blocks/timeline/TimelineBlock.cpp
 	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
 	@echo "Compiling TimelineBlock.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
-$(JUCE_OBJDIR)/MotionBlockModelPreset_187d9c84.o: ../../Source/MotionBlock/Model/preset/MotionBlockModelPreset.cpp
+$(JUCE_OBJDIR)/MotionBlockModelPreset_389c84a4.o: ../../Source/MotionBlock/model/preset/MotionBlockModelPreset.cpp
 	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
 	@echo "Compiling MotionBlockModelPreset.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
-$(JUCE_OBJDIR)/MotionBlockModelPresetManager_74127b13.o: ../../Source/MotionBlock/Model/preset/MotionBlockModelPresetManager.cpp
+$(JUCE_OBJDIR)/MotionBlockModelPresetManager_a3042ef3.o: ../../Source/MotionBlock/model/preset/MotionBlockModelPresetManager.cpp
 	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
 	@echo "Compiling MotionBlockModelPresetManager.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
-$(JUCE_OBJDIR)/MotionBlockModelGroupUI_c992814d.o: ../../Source/MotionBlock/Model/ui/MotionBlockModelGroupUI.cpp
+$(JUCE_OBJDIR)/MotionBlockModelGroupUI_51798d2d.o: ../../Source/MotionBlock/model/ui/MotionBlockModelGroupUI.cpp
 	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
 	@echo "Compiling MotionBlockModelGroupUI.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
-$(JUCE_OBJDIR)/MotionBlockModelLibraryUI_e6797549.o: ../../Source/MotionBlock/Model/ui/MotionBlockModelLibraryUI.cpp
+$(JUCE_OBJDIR)/MotionBlockModelLibraryUI_10cd0929.o: ../../Source/MotionBlock/model/ui/MotionBlockModelLibraryUI.cpp
 	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
 	@echo "Compiling MotionBlockModelLibraryUI.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
-$(JUCE_OBJDIR)/MotionBlockModelManagerUI_1a26e2bb.o: ../../Source/MotionBlock/Model/ui/MotionBlockModelManagerUI.cpp
+$(JUCE_OBJDIR)/MotionBlockModelManagerUI_447a769b.o: ../../Source/MotionBlock/model/ui/MotionBlockModelManagerUI.cpp
 	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
 	@echo "Compiling MotionBlockModelManagerUI.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
-$(JUCE_OBJDIR)/MotionBlockModelParameterEditor_88c3e3f0.o: ../../Source/MotionBlock/Model/ui/MotionBlockModelParameterEditor.cpp
+$(JUCE_OBJDIR)/MotionBlockModelParameterEditor_e6510fd0.o: ../../Source/MotionBlock/model/ui/MotionBlockModelParameterEditor.cpp
 	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
 	@echo "Compiling MotionBlockModelParameterEditor.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
-$(JUCE_OBJDIR)/MotionBlockModelParameterManagerEditor_97f01b21.o: ../../Source/MotionBlock/Model/ui/MotionBlockModelParameterManagerEditor.cpp
+$(JUCE_OBJDIR)/MotionBlockModelParameterManagerEditor_953d341.o: ../../Source/MotionBlock/model/ui/MotionBlockModelParameterManagerEditor.cpp
 	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
 	@echo "Compiling MotionBlockModelParameterManagerEditor.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
-$(JUCE_OBJDIR)/MotionBlockModelUI_1b801d44.o: ../../Source/MotionBlock/Model/ui/MotionBlockModelUI.cpp
+$(JUCE_OBJDIR)/MotionBlockModelUI_b8992564.o: ../../Source/MotionBlock/model/ui/MotionBlockModelUI.cpp
 	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
 	@echo "Compiling MotionBlockModelUI.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
-$(JUCE_OBJDIR)/MotionBlockDataProvider_25cf7c75.o: ../../Source/MotionBlock/Model/MotionBlockDataProvider.cpp
+$(JUCE_OBJDIR)/MotionBlockDataProvider_e0c6fc95.o: ../../Source/MotionBlock/model/MotionBlockDataProvider.cpp
 	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
 	@echo "Compiling MotionBlockDataProvider.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
-$(JUCE_OBJDIR)/MotionBlockModel_f0e08d79.o: ../../Source/MotionBlock/Model/MotionBlockModel.cpp
+$(JUCE_OBJDIR)/MotionBlockModel_2c0af159.o: ../../Source/MotionBlock/model/MotionBlockModel.cpp
 	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
 	@echo "Compiling MotionBlockModel.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
-$(JUCE_OBJDIR)/MotionBlockModelGroup_6fad2150.o: ../../Source/MotionBlock/Model/MotionBlockModelGroup.cpp
+$(JUCE_OBJDIR)/MotionBlockModelGroup_cc62970.o: ../../Source/MotionBlock/model/MotionBlockModelGroup.cpp
 	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
 	@echo "Compiling MotionBlockModelGroup.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
-$(JUCE_OBJDIR)/MotionBlockModelLibrary_27535a8c.o: ../../Source/MotionBlock/Model/MotionBlockModelLibrary.cpp
+$(JUCE_OBJDIR)/MotionBlockModelLibrary_e24adaac.o: ../../Source/MotionBlock/model/MotionBlockModelLibrary.cpp
 	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
 	@echo "Compiling MotionBlockModelLibrary.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
-$(JUCE_OBJDIR)/MotionBlockModelParameter_34a70b7a.o: ../../Source/MotionBlock/Model/MotionBlockModelParameter.cpp
+$(JUCE_OBJDIR)/MotionBlockModelParameter_fbf039a.o: ../../Source/MotionBlock/model/MotionBlockModelParameter.cpp
 	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
 	@echo "Compiling MotionBlockModelParameter.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
-$(JUCE_OBJDIR)/MotionBlockModelParameterManager_9b726b5d.o: ../../Source/MotionBlock/Model/MotionBlockModelParameterManager.cpp
+$(JUCE_OBJDIR)/MotionBlockModelParameterManager_88190f3d.o: ../../Source/MotionBlock/model/MotionBlockModelParameterManager.cpp
 	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
 	@echo "Compiling MotionBlockModelParameterManager.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
-$(JUCE_OBJDIR)/UserMotionBlockModelManager_8ec34ab3.o: ../../Source/MotionBlock/Model/UserMotionBlockModelManager.cpp
+$(JUCE_OBJDIR)/UserMotionBlockModelManager_3bdbad3.o: ../../Source/MotionBlock/model/UserMotionBlockModelManager.cpp
 	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
 	@echo "Compiling UserMotionBlockModelManager.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
