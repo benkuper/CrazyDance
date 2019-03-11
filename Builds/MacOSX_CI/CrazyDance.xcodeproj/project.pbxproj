@@ -57,10 +57,6 @@
 			isa = PBXBuildFile;
 			fileRef = 271F6544D0B7EC9D151B44F6;
 		};
-		F531AD890E18D8EF2E88424F = {
-			isa = PBXBuildFile;
-			fileRef = A9C192CEAA7BF8B0821EF97E;
-		};
 		179A619D9C018512940FFB43 = {
 			isa = PBXBuildFile;
 			fileRef = B7C0BF34213912D6F8546AEE;
@@ -1180,13 +1176,6 @@
 			path = ../../Resources/models/pattern/line.png;
 			sourceTree = "SOURCE_ROOT";
 		};
-		A9C192CEAA7BF8B0821EF97E = {
-			isa = PBXFileReference;
-			lastKnownFileType = file.icns;
-			name = Icon.icns;
-			path = Icon.icns;
-			sourceTree = "SOURCE_ROOT";
-		};
 		AD7866CD2551114EAC40EB56 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.cpp;
@@ -1988,7 +1977,6 @@
 			children = (
 				5D78465C0D0546D84274B8F8,
 				271F6544D0B7EC9D151B44F6,
-				A9C192CEAA7BF8B0821EF97E,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -2046,7 +2034,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"_NDEBUG=1",
 					"NDEBUG=1",
-					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCER_XCODE_MAC_2F3811D6=1",
 					"JUCE_APP_VERSION=1.0.0",
 					"JUCE_APP_VERSION_HEX=0x10000",
 					"JucePlugin_Build_VST=0",
@@ -2092,7 +2080,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"_DEBUG=1",
 					"DEBUG=1",
-					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCER_XCODE_MAC_2F3811D6=1",
 					"JUCE_APP_VERSION=1.0.0",
 					"JUCE_APP_VERSION_HEX=0x10000",
 					"JucePlugin_Build_VST=0",
@@ -2239,7 +2227,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFFBC7E6AD61D473CA1C4EE3,
-				F531AD890E18D8EF2E88424F,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
