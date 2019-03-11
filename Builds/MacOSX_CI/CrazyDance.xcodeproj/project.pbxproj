@@ -1112,11 +1112,11 @@
 			path = ../../Source/Timeline/layers/Color/ColorLayer.cpp;
 			sourceTree = "SOURCE_ROOT";
 		};
-		98A8D17B02259AF30BB637C3 = {
+		978686465229787C97FCAF33 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.cpp;
-			name = TimelineBlock.cpp;
-			path = ../../Source/MotionBlock/model/blocks/timeline/TimelineBlock.cpp;
+			name = IOInterfaceManager.cpp;
+			path = ../../Source/Communication/IOInterfaceManager.cpp;
 			sourceTree = "SOURCE_ROOT";
 		};
 		996AB2C602723832DAAD3B22 = {
@@ -1469,14 +1469,14 @@
 			path = ../../Source/Drone/Cluster/DroneClusterGroupManager.h;
 			sourceTree = "SOURCE_ROOT";
 		};
-		D3007A02DF305E6CAFBFD7F4 = {
+		D3212C710B2622DCA28A4F1E = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.c.h;
-			name = MotionBlockModelUI.h;
-			path = ../../Source/MotionBlock/model/ui/MotionBlockModelUI.h;
+			name = MotionBlockClipManagerUI.h;
+			path = ../../Source/Timeline/layers/Block/ui/MotionBlockClipManagerUI.h;
 			sourceTree = "SOURCE_ROOT";
 		};
-		D3212C710B2622DCA28A4F1E = {
+		D382A59AB29409FD7198FAD5 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.c.h;
 			name = OSCIOInterface.h;

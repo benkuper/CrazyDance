@@ -13,7 +13,7 @@
 
 #include "osc/OSCIOInterface.h"
 #include "osc/lamouchefolle/LaMoucheFolleIOInterface.h"
-#include "ui\IOInterfaceManagerUI.h"
+#include "ui/IOInterfaceManagerUI.h"
 
 juce_ImplementSingleton(IOInterfaceManager)
 
