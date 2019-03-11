@@ -46,10 +46,10 @@ To build the software, you need to :
 
 - MacOS : [![Build Status](https://travis-matrix-badges.herokuapp.com/repos/CrazyDance/branches/master/1)](https://travis-ci.org/benkuper/CrazyDance)
 
-- Windows (x64) : [![Build status](https://ci.appveyor.com/api/projects/status/eckfb76a18twxna5?svg=true)](https://ci.appveyor.com/project/benkuper/crazydance)
+- Windows (x64) : [![Build status](https://ci.appveyor.com/api/projects/status/eckfb76a18twxna5)](https://ci.appveyor.com/project/benkuper/crazydance)
 
 [![forthebadge](http://forthebadge.com/images/badges/gluten-free.svg)](http://forthebadge.com)
 
 ## Screenshots
 
-![Bento](http://benjamin.kuperberg.fr/download/bento.png)
+
