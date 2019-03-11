@@ -9,8 +9,6 @@
 */
 
 #pragma once
-
-#include "JuceHeader.h"
 #include "MotionBlock/MotionBlock.h"
 
 class DroneFamily;
@@ -85,10 +83,10 @@ public:
 		enum Type { BLOCK_CHANGED, DATA_UPDATED };
 
 		DroneEvent(Type t, Drone * p, var v = var()) :
-			type(t), Drone(p), value(v) {}
+			type(t), drone(p), value(v) {}
 
 		Type type;
-		Drone * Drone;
+		Drone * drone;
 		var value;
 	};
 
