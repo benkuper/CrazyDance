@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="GKWuh9" name="CrazyDance" projectType="guiapp" jucerVersion="5.4.3"
+              headerPath="../../Source">
+  <MAINGROUP id="NJ6gip" name="CrazyDance">
+    <GROUP id="{B5D2DCAB-0538-FD92-CD32-905A62809468}" name="Resources">
+      <GROUP id="{F80A2B71-6C84-3871-DD96-2195933EF271}" name="drone">
+        <FILE id="ZWvOxb" name="drone_badcalib.png" compile="0" resource="1"
+              file="Resources/drone/drone_badcalib.png"/>
+        <FILE id="wg7hgr" name="drone_disconnected.png" compile="0" resource="1"
+              file="Resources/drone/drone_disconnected.png"/>
+        <FILE id="Ed0paZ" name="drone_error.png" compile="0" resource="1" file="Resources/drone/drone_error.png"/>
+        <FILE id="O5fONw" name="drone_off.png" compile="0" resource="1" file="Resources/drone/drone_off.png"/>
+        <FILE id="VPwLKA" name="drone_ready.png" compile="0" resource="1" file="Resources/drone/drone_ready.png"/>
+        <FILE id="dbg9gx" name="drone_warning.png" compile="0" resource="1"
+              file="Resources/drone/drone_warning.png"/>
+      </GROUP>
+      <GROUP id="{5FB585DA-C650-D505-873C-0FD400557771}" name="models">
+        <GROUP id="{4D42A8E8-1EFA-A2F7-0856-AFD3CE015001}" name="pattern">
+          <FILE id="ddSktw" name="circle.png" compile="0" resource="1" file="Resources/models/pattern/circle.png"/>
+          <FILE id="kV41i0" name="line.png" compile="0" resource="1" file="Resources/models/pattern/line.png"/>
+          <FILE id="I90pv0" name="multiPosition.png" compile="0" resource="1"
+                file="Resources/models/pattern/multiPosition.png"/>
+          <FILE id="lKaDp6" name="pingPong.png" compile="0" resource="1" file="Resources/models/pattern/pingPong.png"/>
+          <FILE id="LmFVnF" name="position.png" compile="0" resource="1" file="Resources/models/pattern/position.png"/>
+        </GROUP>
+        <FILE id="AKh6qz" name="model.png" compile="0" resource="1" file="Resources/models/model.png"/>
+        <FILE id="gP1DZf" name="script.png" compile="0" resource="1" file="Resources/models/script.png"/>
+        <FILE id="OYF1VY" name="timeline.png" compile="0" resource="1" file="Resources/models/timeline.png"/>
+      </GROUP>
+      <FILE id="g5D4B7" name="default.cdlayout" compile="0" resource="1"
+            file="Resources/default.cdlayout"/>
+      <FILE id="qqcZUp" name="fadeIn.png" compile="0" resource="1" file="Resources/fadeIn.png"/>
+      <FILE id="dB9oTd" name="fadeOut.png" compile="0" resource="1" file="Resources/fadeOut.png"/>
+      <FILE id="sB0f3i" name="icon.png" compile="0" resource="1" file="Resources/icon.png"/>
+    </GROUP>
+    <GROUP id="{4E1A6869-7211-0258-5143-EF5E39FD3DED}" name="Source">
+      <GROUP id="{390E5408-6425-A3DB-3927-C8F8F6EE02BC}" name="Viz">
+        <FILE id="B3ZzVg" name="DroneVizUI.cpp" compile="1" resource="0" file="Source/Viz/DroneVizUI.cpp"/>
+        <FILE id="Pqt9Jp" name="DroneVizUI.h" compile="0" resource="0" file="Source/Viz/DroneVizUI.h"/>
+        <FILE id="L6UCC4" name="StageViz.cpp" compile="1" resource="0" file="Source/Viz/StageViz.cpp"/>
+        <FILE id="LEbnWc" name="StageViz.h" compile="0" resource="0" file="Source/Viz/StageViz.h"/>
+      </GROUP>
+      <GROUP id="{85D26903-41F8-86C9-D7E9-09A88FAB287D}" name="Audio">
+        <GROUP id="{B0EC3351-9561-FBE9-D60C-2110E4AA189F}" name="ui">
+          <FILE id="azaIpZ" name="AudioManagerHardwareEditor.cpp" compile="1"
+                resource="0" file="Source/Audio/ui/AudioManagerHardwareEditor.cpp"/>
+          <FILE id="Bw8Slx" name="AudioManagerHardwareEditor.h" compile="0" resource="0"
+                file="Source/Audio/ui/AudioManagerHardwareEditor.h"/>
+        </GROUP>
+        <FILE id="kZ0tdY" name="AudioManager.cpp" compile="1" resource="0"
+              file="Source/Audio/AudioManager.cpp"/>
+        <FILE id="Zh6uJR" name="AudioManager.h" compile="0" resource="0" file="Source/Audio/AudioManager.h"/>
+      </GROUP>
+      <GROUP id="{10740861-777D-473F-A181-98A949FCD0E7}" name="Drone">
+        <GROUP id="{C0A26101-45EC-2C3C-8197-D6DBF0DB9A72}" name="drones"/>
+        <GROUP id="{632370AA-F904-F7B4-9D77-2B4B2F10588F}" name="Cluster">
+          <GROUP id="{6BB87F5C-4CAC-A530-52D9-E01C65C99FE6}" name="ui">
+            <FILE id="euiCkn" name="DroneClusterGroupManagerUI.cpp" compile="1"
+                  resource="0" file="Source/Drone/Cluster/ui/DroneClusterGroupManagerUI.cpp"/>
+            <FILE id="elF1yM" name="DroneClusterGroupManagerUI.h" compile="0" resource="0"
+                  file="Source/Drone/Cluster/ui/DroneClusterGroupManagerUI.h"/>
+          </GROUP>
+          <FILE id="f07Xjp" name="DroneCluster.cpp" compile="1" resource="0"
+                file="Source/Drone/Cluster/DroneCluster.cpp"/>
+          <FILE id="aJxDvE" name="DroneCluster.h" compile="0" resource="0" file="Source/Drone/Cluster/DroneCluster.h"/>
+          <FILE id="bETI6I" name="DroneClusterGroup.cpp" compile="1" resource="0"
+                file="Source/Drone/Cluster/DroneClusterGroup.cpp"/>
+          <FILE id="R6TQO4" name="DroneClusterGroup.h" compile="0" resource="0"
+                file="Source/Drone/Cluster/DroneClusterGroup.h"/>
+          <FILE id="zJhmq3" name="DroneClusterGroupManager.cpp" compile="1" resource="0"
+                file="Source/Drone/Cluster/DroneClusterGroupManager.cpp"/>
+          <FILE id="M5kXhe" name="DroneClusterGroupManager.h" compile="0" resource="0"
+                file="Source/Drone/Cluster/DroneClusterGroupManager.h"/>
+        </GROUP>
+        <GROUP id="{403A5182-85AC-C888-8501-83A3F5F04785}" name="TargetFilter">
+          <FILE id="OGYIEM" name="DroneTargetFilter.cpp" compile="1" resource="0"
+                file="Source/Drone/TargetFilter/DroneTargetFilter.cpp"/>
+          <FILE id="mUE71w" name="DroneTargetFilter.h" compile="0" resource="0"
+                file="Source/Drone/TargetFilter/DroneTargetFilter.h"/>
+          <FILE id="dJ5U35" name="DroneTargetFilterManager.cpp" compile="1" resource="0"
+                file="Source/Drone/TargetFilter/DroneTargetFilterManager.cpp"/>
+          <FILE id="sn26n9" name="DroneTargetFilterManager.h" compile="0" resource="0"
+                file="Source/Drone/TargetFilter/DroneTargetFilterManager.h"/>
+        </GROUP>
+        <GROUP id="{810EB99D-1729-78D9-592C-1CF3C5976AA6}" name="ui">
+          <FILE id="e2Lm2p" name="DroneManagerUI.cpp" compile="1" resource="0"
+                file="Source/Drone/ui/DroneManagerUI.cpp"/>
+          <FILE id="iJlDNu" name="DroneManagerUI.h" compile="0" resource="0"
+                file="Source/Drone/ui/DroneManagerUI.h"/>
+          <FILE id="AMepCf" name="DroneUI.cpp" compile="1" resource="0" file="Source/Drone/ui/DroneUI.cpp"/>
+          <FILE id="FaRIiN" name="DroneUI.h" compile="0" resource="0" file="Source/Drone/ui/DroneUI.h"/>
+        </GROUP>
+        <FILE id="abOr6s" name="Drone.cpp" compile="1" resource="0" file="Source/Drone/Drone.cpp"/>
+        <FILE id="hbRwDR" name="Drone.h" compile="0" resource="0" file="Source/Drone/Drone.h"/>
+        <FILE id="IvMDGb" name="DroneManager.cpp" compile="1" resource="0"
+              file="Source/Drone/DroneManager.cpp"/>
+        <FILE id="wGxqQK" name="DroneManager.h" compile="0" resource="0" file="Source/Drone/DroneManager.h"/>
+      </GROUP>
+      <GROUP id="{847A6674-7551-6F95-8BDC-2BE2A95B5C41}" name="MotionBlock">
+        <GROUP id="{859C19F8-3F19-4EAE-085C-47C373895C4A}" name="Model">
+          <GROUP id="{6029ABEE-FAA0-85C7-40E5-5068A09817F4}" name="blocks">
+            <GROUP id="{AB3ED0B8-0836-2D2F-F287-0E4744CA9FB5}" name="pattern">
+              <FILE id="Mhf3H4" name="PatternBlock.cpp" compile="1" resource="0"
+                    file="Source/MotionBlock/Model/blocks/pattern/PatternBlock.cpp"/>
+              <FILE id="kLqCRJ" name="PatternBlock.h" compile="0" resource="0" file="Source/MotionBlock/Model/blocks/pattern/PatternBlock.h"/>
+              <FILE id="xdNEyu" name="PerlinNoise.hpp" compile="0" resource="0" file="Source/MotionBlock/Model/blocks/pattern/PerlinNoise.hpp"/>
+            </GROUP>
+            <GROUP id="{1DC1F000-5683-C5DF-49F5-6ACFCCA31B7D}" name="script">
+              <FILE id="lZa4Zo" name="ScriptBlock.cpp" compile="1" resource="0" file="Source/MotionBlock/Model/blocks/script/ScriptBlock.cpp"/>
+              <FILE id="cuvRdX" name="ScriptBlock.h" compile="0" resource="0" file="Source/MotionBlock/Model/blocks/script/ScriptBlock.h"/>
+            </GROUP>
+            <GROUP id="{67D6BCD6-7845-2D89-D377-191C89EE8DAA}" name="timeline">
+              <GROUP id="{8988CB83-84AF-C0F3-C04D-925339E62E7B}" name="ui">
+                <FILE id="HffW28" name="TimelineBlockUI.cpp" compile="1" resource="0"
+                      file="Source/MotionBlock/Model/blocks/timeline/ui/TimelineBlockUI.cpp"/>
+                <FILE id="swrKLN" name="TimelineBlockUI.h" compile="0" resource="0"
+                      file="Source/MotionBlock/Model/blocks/timeline/ui/TimelineBlockUI.h"/>
+              </GROUP>
+              <FILE id="xD7m6h" name="TimelineBlock.cpp" compile="1" resource="0"
+                    file="Source/MotionBlock/Model/blocks/timeline/TimelineBlock.cpp"/>
+              <FILE id="alVk7y" name="TimelineBlock.h" compile="0" resource="0" file="Source/MotionBlock/Model/blocks/timeline/TimelineBlock.h"/>
+            </GROUP>
+          </GROUP>
+          <GROUP id="{4529BC91-E3BC-32DA-8F29-018C77E976A6}" name="preset">
+            <GROUP id="{8305B064-58BA-E4C4-7B62-272CCC1D5345}" name="ui"/>
+            <FILE id="XnpTio" name="MotionBlockModelPreset.cpp" compile="1" resource="0"
+                  file="Source/MotionBlock/Model/preset/MotionBlockModelPreset.cpp"/>
+            <FILE id="XkKeID" name="MotionBlockModelPreset.h" compile="0" resource="0"
+                  file="Source/MotionBlock/Model/preset/MotionBlockModelPreset.h"/>
+            <FILE id="lWsgnR" name="MotionBlockModelPresetManager.cpp" compile="1"
+                  resource="0" file="Source/MotionBlock/Model/preset/MotionBlockModelPresetManager.cpp"/>
+            <FILE id="u37C3Q" name="MotionBlockModelPresetManager.h" compile="0"
+                  resource="0" file="Source/MotionBlock/Model/preset/MotionBlockModelPresetManager.h"/>
+          </GROUP>
+          <GROUP id="{4E39FEE5-C4CF-9FD5-E87E-F9A92CADCF77}" name="ui">
+            <FILE id="eXouLK" name="MotionBlockModelGroupUI.cpp" compile="1" resource="0"
+                  file="Source/MotionBlock/Model/ui/MotionBlockModelGroupUI.cpp"/>
+            <FILE id="GPW5qL" name="MotionBlockModelGroupUI.h" compile="0" resource="0"
+                  file="Source/MotionBlock/Model/ui/MotionBlockModelGroupUI.h"/>
+            <FILE id="ngWbUE" name="MotionBlockModelLibraryUI.cpp" compile="1"
+                  resource="0" file="Source/MotionBlock/Model/ui/MotionBlockModelLibraryUI.cpp"/>
+            <FILE id="DcPXMq" name="MotionBlockModelLibraryUI.h" compile="0" resource="0"
+                  file="Source/MotionBlock/Model/ui/MotionBlockModelLibraryUI.h"/>
+            <FILE id="Zc9rK8" name="MotionBlockModelManagerUI.cpp" compile="1"
+                  resource="0" file="Source/MotionBlock/Model/ui/MotionBlockModelManagerUI.cpp"/>
+            <FILE id="MMDq0s" name="MotionBlockModelManagerUI.h" compile="0" resource="0"
+                  file="Source/MotionBlock/Model/ui/MotionBlockModelManagerUI.h"/>
+            <FILE id="KHquo5" name="MotionBlockModelParameterEditor.cpp" compile="1"
+                  resource="0" file="Source/MotionBlock/Model/ui/MotionBlockModelParameterEditor.cpp"/>
+            <FILE id="xpVWyU" name="MotionBlockModelParameterEditor.h" compile="0"
+                  resource="0" file="Source/MotionBlock/Model/ui/MotionBlockModelParameterEditor.h"/>
+            <FILE id="JXhzrp" name="MotionBlockModelParameterManagerEditor.cpp"
+                  compile="1" resource="0" file="Source/MotionBlock/Model/ui/MotionBlockModelParameterManagerEditor.cpp"/>
+            <FILE id="ogdQNG" name="MotionBlockModelParameterManagerEditor.h" compile="0"
+                  resource="0" file="Source/MotionBlock/Model/ui/MotionBlockModelParameterManagerEditor.h"/>
+            <FILE id="EGEdkM" name="MotionBlockModelUI.cpp" compile="1" resource="0"
+                  file="Source/MotionBlock/Model/ui/MotionBlockModelUI.cpp"/>
+            <FILE id="py04M1" name="MotionBlockModelUI.h" compile="0" resource="0"
+                  file="Source/MotionBlock/Model/ui/MotionBlockModelUI.h"/>
+          </GROUP>
+          <FILE id="Oy1eY4" name="MotionBlockDataProvider.cpp" compile="1" resource="0"
+                file="Source/MotionBlock/Model/MotionBlockDataProvider.cpp"/>
+          <FILE id="uX9igS" name="MotionBlockDataProvider.h" compile="0" resource="0"
+                file="Source/MotionBlock/Model/MotionBlockDataProvider.h"/>
+          <FILE id="FHV85V" name="MotionBlockModel.cpp" compile="1" resource="0"
+                file="Source/MotionBlock/Model/MotionBlockModel.cpp"/>
+          <FILE id="JJ9nwd" name="MotionBlockModel.h" compile="0" resource="0"
+                file="Source/MotionBlock/Model/MotionBlockModel.h"/>
+          <FILE id="Cpl8Th" name="MotionBlockModelGroup.cpp" compile="1" resource="0"
+                file="Source/MotionBlock/Model/MotionBlockModelGroup.cpp"/>
+          <FILE id="XX8TmN" name="MotionBlockModelGroup.h" compile="0" resource="0"
+                file="Source/MotionBlock/Model/MotionBlockModelGroup.h"/>
+          <FILE id="BJLw0l" name="MotionBlockModelLibrary.cpp" compile="1" resource="0"
+                file="Source/MotionBlock/Model/MotionBlockModelLibrary.cpp"/>
+          <FILE id="lttjsH" name="MotionBlockModelLibrary.h" compile="0" resource="0"
+                file="Source/MotionBlock/Model/MotionBlockModelLibrary.h"/>
+          <FILE id="rqC82D" name="MotionBlockModelParameter.cpp" compile="1"
+                resource="0" file="Source/MotionBlock/Model/MotionBlockModelParameter.cpp"/>
+          <FILE id="Wx10zX" name="MotionBlockModelParameter.h" compile="0" resource="0"
+                file="Source/MotionBlock/Model/MotionBlockModelParameter.h"/>
+          <FILE id="YR1API" name="MotionBlockModelParameterManager.cpp" compile="1"
+                resource="0" file="Source/MotionBlock/Model/MotionBlockModelParameterManager.cpp"/>
+          <FILE id="FhWwMw" name="MotionBlockModelParameterManager.h" compile="0"
+                resource="0" file="Source/MotionBlock/Model/MotionBlockModelParameterManager.h"/>
+          <FILE id="oB7wiQ" name="UserMotionBlockModelManager.cpp" compile="1"
+                resource="0" file="Source/MotionBlock/Model/UserMotionBlockModelManager.cpp"/>
+          <FILE id="ZBj6IX" name="UserMotionBlockModelManager.h" compile="0"
+                resource="0" file="Source/MotionBlock/Model/UserMotionBlockModelManager.h"/>
+        </GROUP>
+        <GROUP id="{13537819-125B-A336-955D-FBE5B32FE0F5}" name="ui">
+          <FILE id="RpMnpR" name="MotionBlockManagerUI.h" compile="0" resource="0"
+                file="Source/MotionBlock/ui/MotionBlockManagerUI.h"/>
+        </GROUP>
+        <FILE id="JztdP7" name="MotionBlock.cpp" compile="1" resource="0" file="Source/MotionBlock/MotionBlock.cpp"/>
+        <FILE id="lHXcJU" name="MotionBlock.h" compile="0" resource="0" file="Source/MotionBlock/MotionBlock.h"/>
+      </GROUP>
+      <GROUP id="{54A89741-7408-D4B0-E026-583BB5958666}" name="Timeline">
+        <GROUP id="{2059ACFF-7D4F-072E-D80C-100D6461C48D}" name="layers">
+          <GROUP id="{9BEFA2A1-0FCA-FB40-44EC-970E21A7AA1A}" name="Action">
+            <GROUP id="{4BDC4456-6524-9019-D44A-A85BF933319A}" name="actions"/>
+            <FILE id="WLDlyW" name="Action.cpp" compile="1" resource="0" file="Source/Timeline/layers/Action/Action.cpp"/>
+            <FILE id="NIYwg4" name="Action.h" compile="0" resource="0" file="Source/Timeline/layers/Action/Action.h"/>
+            <FILE id="dgWTMR" name="ActionLayer.cpp" compile="1" resource="0" file="Source/Timeline/layers/Action/ActionLayer.cpp"/>
+            <FILE id="gS5qQ5" name="ActionLayer.h" compile="0" resource="0" file="Source/Timeline/layers/Action/ActionLayer.h"/>
+            <FILE id="UiBKvC" name="ActionManager.cpp" compile="1" resource="0"
+                  file="Source/Timeline/layers/Action/ActionManager.cpp"/>
+            <FILE id="RSpKSZ" name="ActionManager.h" compile="0" resource="0" file="Source/Timeline/layers/Action/ActionManager.h"/>
+            <FILE id="xCdYLn" name="GenericActionTrigger.cpp" compile="1" resource="0"
+                  file="Source/Timeline/layers/Action/GenericActionTrigger.cpp"/>
+            <FILE id="gw3mwK" name="GenericActionTrigger.h" compile="0" resource="0"
+                  file="Source/Timeline/layers/Action/GenericActionTrigger.h"/>
+            <FILE id="ZvvHQp" name="IdentificationAction.cpp" compile="1" resource="0"
+                  file="Source/Timeline/layers/Action/IdentificationAction.cpp"/>
+            <FILE id="qR4REK" name="IdentificationAction.h" compile="0" resource="0"
+                  file="Source/Timeline/layers/Action/IdentificationAction.h"/>
+          </GROUP>
+          <GROUP id="{4294FA19-F272-956C-3EED-C1667A6AE991}" name="Block">
+            <GROUP id="{7FED4640-DFA3-310E-9AC8-DA817F0A118E}" name="ui">
+              <FILE id="G4hHiT" name="MotionBlockClipManagerUI.cpp" compile="1" resource="0"
+                    file="Source/Timeline/layers/Block/ui/MotionBlockClipManagerUI.cpp"/>
+              <FILE id="Iw23Co" name="MotionBlockClipManagerUI.h" compile="0" resource="0"
+                    file="Source/Timeline/layers/Block/ui/MotionBlockClipManagerUI.h"/>
+              <FILE id="viArCt" name="MotionBlockClipUI.cpp" compile="1" resource="0"
+                    file="Source/Timeline/layers/Block/ui/MotionBlockClipUI.cpp"/>
+              <FILE id="cuARSf" name="MotionBlockClipUI.h" compile="0" resource="0"
+                    file="Source/Timeline/layers/Block/ui/MotionBlockClipUI.h"/>
+              <FILE id="p8qsQm" name="MotionBlockLayerPanel.cpp" compile="1" resource="0"
+                    file="Source/Timeline/layers/Block/ui/MotionBlockLayerPanel.cpp"/>
+              <FILE id="zPLrC0" name="MotionBlockLayerPanel.h" compile="0" resource="0"
+                    file="Source/Timeline/layers/Block/ui/MotionBlockLayerPanel.h"/>
+              <FILE id="LpCJXR" name="MotionBlockLayerTimeline.cpp" compile="1" resource="0"
+                    file="Source/Timeline/layers/Block/ui/MotionBlockLayerTimeline.cpp"/>
+              <FILE id="aDGfSL" name="MotionBlockLayerTimeline.h" compile="0" resource="0"
+                    file="Source/Timeline/layers/Block/ui/MotionBlockLayerTimeline.h"/>
+            </GROUP>
+            <FILE id="ncyopy" name="MotionBlockClip.cpp" compile="1" resource="0"
+                  file="Source/Timeline/layers/Block/MotionBlockClip.cpp"/>
+            <FILE id="LdXcIu" name="MotionBlockClip.h" compile="0" resource="0"
+                  file="Source/Timeline/layers/Block/MotionBlockClip.h"/>
+            <FILE id="CBcrs2" name="MotionBlockClipManager.cpp" compile="1" resource="0"
+                  file="Source/Timeline/layers/Block/MotionBlockClipManager.cpp"/>
+            <FILE id="EM7vLE" name="MotionBlockClipManager.h" compile="0" resource="0"
+                  file="Source/Timeline/layers/Block/MotionBlockClipManager.h"/>
+            <FILE id="AI2Bno" name="MotionBlockLayer.cpp" compile="1" resource="0"
+                  file="Source/Timeline/layers/Block/MotionBlockLayer.cpp"/>
+            <FILE id="CTgQ7n" name="MotionBlockLayer.h" compile="0" resource="0"
+                  file="Source/Timeline/layers/Block/MotionBlockLayer.h"/>
+          </GROUP>
+          <GROUP id="{58F5122F-0E7E-1CCF-8533-C8E13D823B69}" name="Color">
+            <GROUP id="{0DB03687-D80F-FAFD-C1FF-EC6FB7F35215}" name="ui">
+              <FILE id="FY3xey" name="ColorLayerPanel.cpp" compile="1" resource="0"
+                    file="Source/Timeline/layers/Color/ui/ColorLayerPanel.cpp"/>
+              <FILE id="mjDbri" name="ColorLayerPanel.h" compile="0" resource="0"
+                    file="Source/Timeline/layers/Color/ui/ColorLayerPanel.h"/>
+              <FILE id="Qhdfnm" name="ColorLayerTimeline.cpp" compile="1" resource="0"
+                    file="Source/Timeline/layers/Color/ui/ColorLayerTimeline.cpp"/>
+              <FILE id="T6t3nX" name="ColorLayerTimeline.h" compile="0" resource="0"
+                    file="Source/Timeline/layers/Color/ui/ColorLayerTimeline.h"/>
+              <FILE id="r4QVWA" name="TimeColorManagerUI.cpp" compile="1" resource="0"
+                    file="Source/Timeline/layers/Color/ui/TimeColorManagerUI.cpp"/>
+              <FILE id="Dlk0Iw" name="TimeColorManagerUI.h" compile="0" resource="0"
+                    file="Source/Timeline/layers/Color/ui/TimeColorManagerUI.h"/>
+              <FILE id="t9M3uF" name="TimeColorUI.cpp" compile="1" resource="0" file="Source/Timeline/layers/Color/ui/TimeColorUI.cpp"/>
+              <FILE id="QDhFcr" name="TimeColorUI.h" compile="0" resource="0" file="Source/Timeline/layers/Color/ui/TimeColorUI.h"/>
+            </GROUP>
+            <FILE id="YsLXlF" name="ColorLayer.cpp" compile="1" resource="0" file="Source/Timeline/layers/Color/ColorLayer.cpp"/>
+            <FILE id="eSGrM1" name="ColorLayer.h" compile="0" resource="0" file="Source/Timeline/layers/Color/ColorLayer.h"/>
+            <FILE id="w9RJLu" name="TimeColor.cpp" compile="1" resource="0" file="Source/Timeline/layers/Color/TimeColor.cpp"/>
+            <FILE id="ynk6OR" name="TimeColor.h" compile="0" resource="0" file="Source/Timeline/layers/Color/TimeColor.h"/>
+            <FILE id="Sk4uGD" name="TimeColorManager.cpp" compile="1" resource="0"
+                  file="Source/Timeline/layers/Color/TimeColorManager.cpp"/>
+            <FILE id="uuUXNm" name="TimeColorManager.h" compile="0" resource="0"
+                  file="Source/Timeline/layers/Color/TimeColorManager.h"/>
+          </GROUP>
+        </GROUP>
+        <FILE id="mInyYI" name="TimelineBlockSequence.cpp" compile="1" resource="0"
+              file="Source/Timeline/TimelineBlockSequence.cpp"/>
+        <FILE id="nte9c3" name="TimelineBlockSequence.h" compile="0" resource="0"
+              file="Source/Timeline/TimelineBlockSequence.h"/>
+        <FILE id="m1qdU5" name="TimelineEditor.cpp" compile="1" resource="0"
+              file="Source/Timeline/TimelineEditor.cpp"/>
+        <FILE id="d67JZG" name="TimelineEditor.h" compile="0" resource="0"
+              file="Source/Timeline/TimelineEditor.h"/>
+      </GROUP>
+      <FILE id="pREQnR" name="CDEngine.cpp" compile="1" resource="0" file="Source/CDEngine.cpp"/>
+      <FILE id="DAX75M" name="CDEngine.h" compile="0" resource="0" file="Source/CDEngine.h"/>
+      <FILE id="z5VDrN" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
+      <FILE id="R6KWWZ" name="MainComponent.cpp" compile="1" resource="0"
+            file="Source/MainComponent.cpp"/>
+      <FILE id="oU684K" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <VS2017 targetFolder="Builds/VisualStudio2017" smallIcon="sB0f3i" bigIcon="sB0f3i">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" binaryPath="Binaries/Debug"/>
+        <CONFIGURATION isDebug="0" name="Release" binaryPath="Binaries/Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_osc" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_organicui" path="../../JUCE Modules"/>
+        <MODULEPATH id="juce_timeline" path="../../JUCE Modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../../../Softwares/JUCE/modules"/>
+      </MODULEPATHS>
+    </VS2017>
+    <XCODE_MAC targetFolder="Builds/MacOSX" smallIcon="sB0f3i" bigIcon="sB0f3i">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="0" name="Release"/>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_osc" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_organicui" path="../../JUCE Modules"/>
+        <MODULEPATH id="juce_timeline" path="../../JUCE Modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../../../Softwares/JUCE/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+    <LINUX_MAKE targetFolder="Builds/LinuxMakefile" smallIcon="sB0f3i" bigIcon="sB0f3i">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_osc" path="../../../../../Softwares/JUCE/modules"/>
+        <MODULEPATH id="juce_organicui" path="../../JUCE Modules"/>
+        <MODULEPATH id="juce_timeline" path="../../JUCE Modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../../../Softwares/JUCE/modules"/>
+      </MODULEPATHS>
+    </LINUX_MAKE>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="0" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="0" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="0" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="0" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="0" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="0" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_cryptography" showAllCode="0" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="0" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="0" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="0" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="0" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="0" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_opengl" showAllCode="0" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_organicui" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_osc" showAllCode="0" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_timeline" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <LIVE_SETTINGS>
+    <WINDOWS/>
+  </LIVE_SETTINGS>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1"/>
+</JUCERPROJECT>

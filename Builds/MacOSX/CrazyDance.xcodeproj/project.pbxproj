@@ -1,0 +1,2375 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+		3740C31525E9705B71019401 = {
+			isa = PBXBuildFile;
+			fileRef = 147E8B6D9FF53C63F46098D9;
+		};
+		CFEFAF74C2DAEADCE2E4223F = {
+			isa = PBXBuildFile;
+			fileRef = 8E4EAA59B1DB48B618739B1C;
+		};
+		4195F9A2CC83E06892150771 = {
+			isa = PBXBuildFile;
+			fileRef = C1731AF9106B425535CCAEB4;
+		};
+		8F40600D1C4B6C3BC5D8F5A1 = {
+			isa = PBXBuildFile;
+			fileRef = F96AE82340FA9DF27CF332FC;
+		};
+		77F5B941B74E283ABE4E48CE = {
+			isa = PBXBuildFile;
+			fileRef = 4406E075016FCB3E66932AB7;
+		};
+		9412B704481EDEA278249B27 = {
+			isa = PBXBuildFile;
+			fileRef = 6CBA75DF0C67BC206E7E2D7C;
+		};
+		49D46E19219E83E27D707433 = {
+			isa = PBXBuildFile;
+			fileRef = A1649476D3D9E25A602C8AED;
+		};
+		6306E4EF82AD586D1645A826 = {
+			isa = PBXBuildFile;
+			fileRef = 162331F4CDA498EE4DC5DCE0;
+		};
+		CA0DE18FE17BA17F5D4F62FD = {
+			isa = PBXBuildFile;
+			fileRef = 0F92BAC951997CFFAC744680;
+		};
+		ABD9795F44CE26F359D6101C = {
+			isa = PBXBuildFile;
+			fileRef = 0EEF5F249FA5CFE1E8718D3F;
+		};
+		0F6FDE236B4585D7C4F0CF90 = {
+			isa = PBXBuildFile;
+			fileRef = 40BD37BDA214D8C0377FA4C7;
+		};
+		645BB9EEFE17CD5E0B2FDF9D = {
+			isa = PBXBuildFile;
+			fileRef = 71C3D496EEC61093F846CFBC;
+		};
+		DFFBC7E6AD61D473CA1C4EE3 = {
+			isa = PBXBuildFile;
+			fileRef = 271F6544D0B7EC9D151B44F6;
+		};
+		F531AD890E18D8EF2E88424F = {
+			isa = PBXBuildFile;
+			fileRef = A9C192CEAA7BF8B0821EF97E;
+		};
+		179A619D9C018512940FFB43 = {
+			isa = PBXBuildFile;
+			fileRef = B7C0BF34213912D6F8546AEE;
+		};
+		FBEEBA0875A63CAE7D55F7B2 = {
+			isa = PBXBuildFile;
+			fileRef = 67C97A58FB0C641687B51744;
+		};
+		22656207B5EB3D49B16E858A = {
+			isa = PBXBuildFile;
+			fileRef = 79C7A551AD913F2F6A78CD29;
+		};
+		A817F06AD5B3A7D4ED17830B = {
+			isa = PBXBuildFile;
+			fileRef = 4D383239C2AC50806948E4E5;
+		};
+		54F8636F26618DFF9D5C4B07 = {
+			isa = PBXBuildFile;
+			fileRef = 5476772C51BFF9FB6329B38D;
+		};
+		65C2A961A03B2A14A9975076 = {
+			isa = PBXBuildFile;
+			fileRef = AE557D5ADAF306B382E6FE64;
+		};
+		BB3D41C39699C12C29B0472D = {
+			isa = PBXBuildFile;
+			fileRef = 5FA4621641D39E8E846D4A4A;
+		};
+		626B3F02989CFF8CE5F2B867 = {
+			isa = PBXBuildFile;
+			fileRef = 765CBFF31DF67E0096D83F07;
+		};
+		636A761B7F4FC5E90A528E9A = {
+			isa = PBXBuildFile;
+			fileRef = 0CAC72CD335EE332666EADF3;
+		};
+		B074774A3647EA2B03C4A18C = {
+			isa = PBXBuildFile;
+			fileRef = 167905428240FE50D0D2D9C4;
+		};
+		CAAE22A6D8B6966C520F3DEB = {
+			isa = PBXBuildFile;
+			fileRef = 1A570A0A96909C6D92EDB03A;
+		};
+		C09013E2E05DA89BCBB6EDE9 = {
+			isa = PBXBuildFile;
+			fileRef = 8F5BB45270F84274803FBFA4;
+		};
+		CA5524F7631A986A7EDD6EF5 = {
+			isa = PBXBuildFile;
+			fileRef = B5A1AC0FA8284EF33AA7EC06;
+		};
+		70ACEB94ECFCEB097297113D = {
+			isa = PBXBuildFile;
+			fileRef = 369BF5F7A5D5944FA0CEDF8F;
+		};
+		F65DF5E8BA2422DC0F4BB4A8 = {
+			isa = PBXBuildFile;
+			fileRef = D1A31B2593FF09DE828ED64F;
+		};
+		D35E4658828534646D4DAACC = {
+			isa = PBXBuildFile;
+			fileRef = 317524CB0E9ED5CE155F223A;
+		};
+		6358D80BAF91771F16F1DE56 = {
+			isa = PBXBuildFile;
+			fileRef = 05D7124370851438D12037D1;
+		};
+		A4D003B77C3F432FE6ACA01B = {
+			isa = PBXBuildFile;
+			fileRef = 98A8D17B02259AF30BB637C3;
+		};
+		42E7A57A62C76292D2906D16 = {
+			isa = PBXBuildFile;
+			fileRef = BDCD3ECB09A39B9D3F750051;
+		};
+		D80C7F26D90A9946E3D5BF49 = {
+			isa = PBXBuildFile;
+			fileRef = F27E396BF5094DF178ECB544;
+		};
+		EB9DA12A09E28EADE1D99717 = {
+			isa = PBXBuildFile;
+			fileRef = 4B12E6FD15829D258138A4D5;
+		};
+		EA8038477086B00DDCB0A800 = {
+			isa = PBXBuildFile;
+			fileRef = EB62FA40131922272DEB3487;
+		};
+		84256D9175B035EFD139A8E5 = {
+			isa = PBXBuildFile;
+			fileRef = 5DE559BC0D15B5960F78D067;
+		};
+		FF6171FB0DC58F35900EB28F = {
+			isa = PBXBuildFile;
+			fileRef = E3829E9115122EDDF443594E;
+		};
+		6ABF9D5DEFA07CD27DDCC3F7 = {
+			isa = PBXBuildFile;
+			fileRef = 7F0351A7E539266F68DD1ABB;
+		};
+		FDE0A6AB69EB46C39DD202CE = {
+			isa = PBXBuildFile;
+			fileRef = BB90A2003A7AA05491CB6B89;
+		};
+		CFF83DD45CA5C762995C4619 = {
+			isa = PBXBuildFile;
+			fileRef = 8C296095A4E20FD9C02D06EB;
+		};
+		4055ED44692A797B5C631598 = {
+			isa = PBXBuildFile;
+			fileRef = 65A83444729FFC0F47738932;
+		};
+		2E9359EB91A0B06B9825E540 = {
+			isa = PBXBuildFile;
+			fileRef = EBF564EA4C336DEABFA97D54;
+		};
+		D5C3F8E7A48E97E739835650 = {
+			isa = PBXBuildFile;
+			fileRef = 39C1EDFCF0A4227CA18C7BCA;
+		};
+		71BD56C155CAEFE970FB37BD = {
+			isa = PBXBuildFile;
+			fileRef = 5FE22E8FC2A2AFED1672D3C2;
+		};
+		A4567FDACBF9540DC38BBDEC = {
+			isa = PBXBuildFile;
+			fileRef = 8596DEE85709630A05852988;
+		};
+		529649D479F9614A2DEF619D = {
+			isa = PBXBuildFile;
+			fileRef = 90C879656AE3A2419D0580E0;
+		};
+		B894BBE6662E7318F34BB350 = {
+			isa = PBXBuildFile;
+			fileRef = 518F84E4D57ECA398DF2D1C2;
+		};
+		0179822654B844A399DD7AEF = {
+			isa = PBXBuildFile;
+			fileRef = 4B5D92328F454CDF638C6A7D;
+		};
+		531E2A585AF66FBF98AEFB3C = {
+			isa = PBXBuildFile;
+			fileRef = 77038BF282FEEC8430A449BF;
+		};
+		C276C24AB7C6F2E819F3EDC6 = {
+			isa = PBXBuildFile;
+			fileRef = CEFB1C91C3098A78EDB5C791;
+		};
+		BD2C363E33F02E2BE87CDFD8 = {
+			isa = PBXBuildFile;
+			fileRef = 64D7360D6B46D02B949F1A3E;
+		};
+		35470F8FDDB05CDD49345A88 = {
+			isa = PBXBuildFile;
+			fileRef = 6A11CEC37EF8CB86C62A7BAA;
+		};
+		475C1E922E6C63CB542BD874 = {
+			isa = PBXBuildFile;
+			fileRef = 27CBAAC0D4D1C3ECB5E2BCAB;
+		};
+		950A4378C6C5E149BF5FD9A2 = {
+			isa = PBXBuildFile;
+			fileRef = D51A130F04F59AA4C9C654AC;
+		};
+		CCFF657EE80BE96AEE22FD69 = {
+			isa = PBXBuildFile;
+			fileRef = 739820D7F0D2DEF52A5D24EA;
+		};
+		098DB11BECB9E295E153B736 = {
+			isa = PBXBuildFile;
+			fileRef = D19673F014C95231C62952E4;
+		};
+		38E61138C0D3C1125EB7A182 = {
+			isa = PBXBuildFile;
+			fileRef = 5DB911EC1917A7E8139E537A;
+		};
+		D2BCA096014B275067D9255C = {
+			isa = PBXBuildFile;
+			fileRef = 99EFD59665191DA3E0C3CDBE;
+		};
+		B4728DFAD455E80990265851 = {
+			isa = PBXBuildFile;
+			fileRef = 9C4CF59902648F88932B5F51;
+		};
+		5AC0CDF70AC1E32B2CE90A51 = {
+			isa = PBXBuildFile;
+			fileRef = 1519266D5DB0162F4F1A3EB8;
+		};
+		C03592362E0036C30EFB14E3 = {
+			isa = PBXBuildFile;
+			fileRef = 01F32EFFDB2DD8383AB18196;
+		};
+		D8B9ECE928D6B9690D743D61 = {
+			isa = PBXBuildFile;
+			fileRef = A1F2D8D61F55E3E2086C1130;
+		};
+		E2F262E63F8E7CC3FA82B5B9 = {
+			isa = PBXBuildFile;
+			fileRef = AD7866CD2551114EAC40EB56;
+		};
+		6B76994AFF6CDCB6D080AD12 = {
+			isa = PBXBuildFile;
+			fileRef = 94C1DF4A56C7CD9AC1DB3A4D;
+		};
+		CBC78ED46DABBEF39E137FD0 = {
+			isa = PBXBuildFile;
+			fileRef = F53C7B426A747D30DC532F19;
+		};
+		44D70116BCC368BF7DB487CE = {
+			isa = PBXBuildFile;
+			fileRef = 15F6B0541AA25565352A0B41;
+		};
+		3C1A56D69E6A024D30E9F97A = {
+			isa = PBXBuildFile;
+			fileRef = 044922759AA255F1B48212A0;
+		};
+		5A88087C6B3959A0BB83840C = {
+			isa = PBXBuildFile;
+			fileRef = C7CB76B7878A7A32C5AA36DF;
+		};
+		651D98290A4167A12CDCB716 = {
+			isa = PBXBuildFile;
+			fileRef = 88AA68305CBC31FBE2B3551B;
+		};
+		4C137B72563C82C07C2D4298 = {
+			isa = PBXBuildFile;
+			fileRef = 7301771BFA87D803F6D7A0C6;
+		};
+		99077C0711BA1A7B153AA197 = {
+			isa = PBXBuildFile;
+			fileRef = 42C8B4DC3FD104DF36FB14B9;
+		};
+		FB5C906575232CF372993C2D = {
+			isa = PBXBuildFile;
+			fileRef = 23D4A472A44069306EFC2920;
+		};
+		B6234CEBB9393A6BD42BC919 = {
+			isa = PBXBuildFile;
+			fileRef = 21BE633F8EC23969A07DBC6C;
+		};
+		7CAAFE8DB0850E4354543EC0 = {
+			isa = PBXBuildFile;
+			fileRef = E392750C496AD1A8EFFC1E85;
+		};
+		F32EE74B7E9449D58B70FD96 = {
+			isa = PBXBuildFile;
+			fileRef = 8860768DBA6D49C6E0CAA3FF;
+		};
+		31843B8F56F9352CFE811493 = {
+			isa = PBXBuildFile;
+			fileRef = 8F24239A4166A50A3E0C4E4B;
+		};
+		6F5C9631AAF41A65270D3962 = {
+			isa = PBXBuildFile;
+			fileRef = 3C958F7AF449E9EC370406A5;
+		};
+		94F23E6A1604B135C610D7C1 = {
+			isa = PBXBuildFile;
+			fileRef = B0ADFFD6CE21089299713334;
+		};
+		0487DD79F8BA0631AC2FDA00 = {
+			isa = PBXBuildFile;
+			fileRef = 5D481275E49C11813808967A;
+		};
+		777865F88DEB03E8C81F35C8 = {
+			isa = PBXBuildFile;
+			fileRef = A2D0A3E1A718EA74126F08CD;
+		};
+		458DE74AD08D209CAF916BDA = {
+			isa = PBXBuildFile;
+			fileRef = CA354C2AF2DC44C3893D431A;
+		};
+		ECB6A64E8556BFD0705C69B4 = {
+			isa = PBXBuildFile;
+			fileRef = 7AEA11209C76323CCEB015C4;
+		};
+		56A9AA9BE5A2797DB6A99CA1 = {
+			isa = PBXBuildFile;
+			fileRef = 24A172CAF098F8517F19A165;
+		};
+		D93C242D0BF209EC40416DA4 = {
+			isa = PBXBuildFile;
+			fileRef = A71DDA4D3CE545DDAC042976;
+		};
+		39BC030294DD0AA9EC6F6953 = {
+			isa = PBXBuildFile;
+			fileRef = 90186113CCA873229B470719;
+		};
+		1900AAE9BBC3C450168812D4 = {
+			isa = PBXBuildFile;
+			fileRef = 49DB1F8A634A8B863DE5259D;
+		};
+		3ABF1C53F4E1FB28A4FB5B8A = {
+			isa = PBXBuildFile;
+			fileRef = 4A15C743C12BA3DC47E2C73B;
+		};
+		A1808834886E0B98EBB60A02 = {
+			isa = PBXBuildFile;
+			fileRef = CE8423ACEDE3BF3E63E78937;
+		};
+		01F32EFFDB2DD8383AB18196 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = ColorLayerTimeline.cpp;
+			path = ../../Source/Timeline/layers/Color/ui/ColorLayerTimeline.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		044922759AA255F1B48212A0 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = TimelineBlockSequence.cpp;
+			path = ../../Source/Timeline/TimelineBlockSequence.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		05D7124370851438D12037D1 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = TimelineBlockUI.cpp;
+			path = ../../Source/MotionBlock/Model/blocks/timeline/ui/TimelineBlockUI.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		0989A3996615CD797A6E9642 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.png;
+			name = multiPosition.png;
+			path = ../../Resources/models/pattern/multiPosition.png;
+			sourceTree = "SOURCE_ROOT";
+		};
+		09C69E6166D206944351733B = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = MotionBlockLayer.h;
+			path = ../../Source/Timeline/layers/Block/MotionBlockLayer.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		0A8B4B90B0EB19F2124C5EC4 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = ColorLayerTimeline.h;
+			path = ../../Source/Timeline/layers/Color/ui/ColorLayerTimeline.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		0CAC72CD335EE332666EADF3 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = DroneTargetFilter.cpp;
+			path = ../../Source/Drone/TargetFilter/DroneTargetFilter.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		0DEF39961872FA48B1BEC4D1 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = MotionBlockModelParameter.h;
+			path = ../../Source/MotionBlock/Model/MotionBlockModelParameter.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		0EEF5F249FA5CFE1E8718D3F = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = OpenGL.framework;
+			path = System/Library/Frameworks/OpenGL.framework;
+			sourceTree = SDKROOT;
+		};
+		0F92BAC951997CFFAC744680 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = IOKit.framework;
+			path = System/Library/Frameworks/IOKit.framework;
+			sourceTree = SDKROOT;
+		};
+		147E8B6D9FF53C63F46098D9 = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.application;
+			includeInIndex = 0;
+			path = CrazyDance.app;
+			sourceTree = "BUILT_PRODUCTS_DIR";
+		};
+		1519266D5DB0162F4F1A3EB8 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = ColorLayerPanel.cpp;
+			path = ../../Source/Timeline/layers/Color/ui/ColorLayerPanel.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		15F6B0541AA25565352A0B41 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = TimeColorManager.cpp;
+			path = ../../Source/Timeline/layers/Color/TimeColorManager.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		16047E0AE5FFF010652363A2 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = DroneManager.h;
+			path = ../../Source/Drone/DroneManager.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		162331F4CDA498EE4DC5DCE0 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = DiscRecording.framework;
+			path = System/Library/Frameworks/DiscRecording.framework;
+			sourceTree = SDKROOT;
+		};
+		167905428240FE50D0D2D9C4 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = DroneTargetFilterManager.cpp;
+			path = ../../Source/Drone/TargetFilter/DroneTargetFilterManager.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		1A570A0A96909C6D92EDB03A = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = DroneManagerUI.cpp;
+			path = ../../Source/Drone/ui/DroneManagerUI.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		1BF0BCFED80F7885DA5E687F = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = MotionBlockModelManagerUI.h;
+			path = ../../Source/MotionBlock/Model/ui/MotionBlockModelManagerUI.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		1D44B9CB3E7B527C75BDD753 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = MotionBlockModelParameterEditor.h;
+			path = ../../Source/MotionBlock/Model/ui/MotionBlockModelParameterEditor.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		1DD130D5EE1322CE46665470 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file;
+			name = "juce_timeline";
+			path = "~/modules/juce_timeline";
+			sourceTree = "<absolute>";
+		};
+		1E88E5E223C09099F589A01D = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = TimeColorManagerUI.h;
+			path = ../../Source/Timeline/layers/Color/ui/TimeColorManagerUI.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		1EC3EAD13B4764ECF1A2D04A = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = MainComponent.h;
+			path = ../../Source/MainComponent.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		1EE5A98AB439359C3A6BE745 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.png;
+			name = "drone_badcalib.png";
+			path = "../../Resources/drone/drone_badcalib.png";
+			sourceTree = "SOURCE_ROOT";
+		};
+		1EE7E61093DF6CC6E5F1D78F = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.png;
+			name = "drone_off.png";
+			path = "../../Resources/drone/drone_off.png";
+			sourceTree = "SOURCE_ROOT";
+		};
+		201BBFD97E4E97730E553CE7 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = MotionBlockModelPreset.h;
+			path = ../../Source/MotionBlock/Model/preset/MotionBlockModelPreset.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		21BE633F8EC23969A07DBC6C = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_audio_basics.mm";
+			path = "../../JuceLibraryCode/include_juce_audio_basics.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		23D4A472A44069306EFC2920 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = BinaryData.cpp;
+			path = ../../JuceLibraryCode/BinaryData.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		24A172CAF098F8517F19A165 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_gui_basics.mm";
+			path = "../../JuceLibraryCode/include_juce_gui_basics.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		271F6544D0B7EC9D151B44F6 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.nib;
+			name = RecentFilesMenuTemplate.nib;
+			path = RecentFilesMenuTemplate.nib;
+			sourceTree = "SOURCE_ROOT";
+		};
+		27CBAAC0D4D1C3ECB5E2BCAB = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = MotionBlockClipManagerUI.cpp;
+			path = ../../Source/Timeline/layers/Block/ui/MotionBlockClipManagerUI.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		28F89D5E1B9BDBD2CD67C502 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = UserMotionBlockModelManager.h;
+			path = ../../Source/MotionBlock/Model/UserMotionBlockModelManager.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		2DF10A9F1E28EB9A1D6B6D22 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = DroneTargetFilterManager.h;
+			path = ../../Source/Drone/TargetFilter/DroneTargetFilterManager.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		2E32C3F8215686B3C54A8BF9 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = ActionLayer.h;
+			path = ../../Source/Timeline/layers/Action/ActionLayer.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		300D5FACCC8B0FCDA3A06048 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = ColorLayerPanel.h;
+			path = ../../Source/Timeline/layers/Color/ui/ColorLayerPanel.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		317524CB0E9ED5CE155F223A = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = ScriptBlock.cpp;
+			path = ../../Source/MotionBlock/Model/blocks/script/ScriptBlock.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		369BF5F7A5D5944FA0CEDF8F = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = DroneManager.cpp;
+			path = ../../Source/Drone/DroneManager.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		39C1EDFCF0A4227CA18C7BCA = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = MotionBlockModelLibrary.cpp;
+			path = ../../Source/MotionBlock/Model/MotionBlockModelLibrary.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		3BEF7451411D4396C1405FD8 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.png;
+			name = "drone_disconnected.png";
+			path = "../../Resources/drone/drone_disconnected.png";
+			sourceTree = "SOURCE_ROOT";
+		};
+		3C958F7AF449E9EC370406A5 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_audio_utils.mm";
+			path = "../../JuceLibraryCode/include_juce_audio_utils.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		40BD37BDA214D8C0377FA4C7 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = QuartzCore.framework;
+			path = System/Library/Frameworks/QuartzCore.framework;
+			sourceTree = SDKROOT;
+		};
+		42C8B4DC3FD104DF36FB14B9 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = Main.cpp;
+			path = ../../Source/Main.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		4406E075016FCB3E66932AB7 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Cocoa.framework;
+			path = System/Library/Frameworks/Cocoa.framework;
+			sourceTree = SDKROOT;
+		};
+		4423305BE158617139B4F8BE = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = AudioManager.h;
+			path = ../../Source/Audio/AudioManager.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		44A5AED8DAFEB1508EFF59FA = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.png;
+			name = "drone_warning.png";
+			path = "../../Resources/drone/drone_warning.png";
+			sourceTree = "SOURCE_ROOT";
+		};
+		457B31F8AC26D0982F8EBC3E = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = AppConfig.h;
+			path = ../../JuceLibraryCode/AppConfig.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		46514B1756769DBB286B088D = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = CDEngine.h;
+			path = ../../Source/CDEngine.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		489784F546B68574D2CDA6CC = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = MotionBlock.h;
+			path = ../../Source/MotionBlock/MotionBlock.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		49DB1F8A634A8B863DE5259D = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = "include_juce_organicui.cpp";
+			path = "../../JuceLibraryCode/include_juce_organicui.cpp";
+			sourceTree = "SOURCE_ROOT";
+		};
+		4A15C743C12BA3DC47E2C73B = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = "include_juce_osc.cpp";
+			path = "../../JuceLibraryCode/include_juce_osc.cpp";
+			sourceTree = "SOURCE_ROOT";
+		};
+		4B12E6FD15829D258138A4D5 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = MotionBlockModelGroupUI.cpp;
+			path = ../../Source/MotionBlock/Model/ui/MotionBlockModelGroupUI.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		4B5D92328F454CDF638C6A7D = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = Action.cpp;
+			path = ../../Source/Timeline/layers/Action/Action.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		4BA240D5A07D81400006B9A5 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.png;
+			name = circle.png;
+			path = ../../Resources/models/pattern/circle.png;
+			sourceTree = "SOURCE_ROOT";
+		};
+		4D383239C2AC50806948E4E5 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = AudioManager.cpp;
+			path = ../../Source/Audio/AudioManager.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		4E0439DCFA37EC58701AB98F = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.png;
+			name = "drone_error.png";
+			path = "../../Resources/drone/drone_error.png";
+			sourceTree = "SOURCE_ROOT";
+		};
+		518F84E4D57ECA398DF2D1C2 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = MotionBlock.cpp;
+			path = ../../Source/MotionBlock/MotionBlock.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		5476772C51BFF9FB6329B38D = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = DroneClusterGroupManagerUI.cpp;
+			path = ../../Source/Drone/Cluster/ui/DroneClusterGroupManagerUI.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		56833C22C870E17891678191 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.png;
+			name = icon.png;
+			path = ../../Resources/icon.png;
+			sourceTree = "SOURCE_ROOT";
+		};
+		5D481275E49C11813808967A = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_cryptography.mm";
+			path = "../../JuceLibraryCode/include_juce_cryptography.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		5D78465C0D0546D84274B8F8 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			name = "Info-App.plist";
+			path = "Info-App.plist";
+			sourceTree = "SOURCE_ROOT";
+		};
+		5DB911EC1917A7E8139E537A = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = MotionBlockClip.cpp;
+			path = ../../Source/Timeline/layers/Block/MotionBlockClip.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		5DE559BC0D15B5960F78D067 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = MotionBlockModelManagerUI.cpp;
+			path = ../../Source/MotionBlock/Model/ui/MotionBlockModelManagerUI.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		5E9C310BE32119A26B914732 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = MotionBlockModelLibraryUI.h;
+			path = ../../Source/MotionBlock/Model/ui/MotionBlockModelLibraryUI.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		5EAD4C8312254B2435D85D81 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = TimelineBlockSequence.h;
+			path = ../../Source/Timeline/TimelineBlockSequence.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		5FA4621641D39E8E846D4A4A = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = DroneClusterGroup.cpp;
+			path = ../../Source/Drone/Cluster/DroneClusterGroup.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		5FE22E8FC2A2AFED1672D3C2 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = MotionBlockModelParameter.cpp;
+			path = ../../Source/MotionBlock/Model/MotionBlockModelParameter.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		64D7360D6B46D02B949F1A3E = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = GenericActionTrigger.cpp;
+			path = ../../Source/Timeline/layers/Action/GenericActionTrigger.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		65A83444729FFC0F47738932 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = MotionBlockModel.cpp;
+			path = ../../Source/MotionBlock/Model/MotionBlockModel.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		67C97A58FB0C641687B51744 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = StageViz.cpp;
+			path = ../../Source/Viz/StageViz.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		6A11CEC37EF8CB86C62A7BAA = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = IdentificationAction.cpp;
+			path = ../../Source/Timeline/layers/Action/IdentificationAction.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		6CBA75DF0C67BC206E7E2D7C = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = CoreAudio.framework;
+			path = System/Library/Frameworks/CoreAudio.framework;
+			sourceTree = SDKROOT;
+		};
+		6F61DE71CCEF2B6B94BBC4E0 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = MotionBlockModelParameterManager.h;
+			path = ../../Source/MotionBlock/Model/MotionBlockModelParameterManager.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		702C86479EED3092AEAD7CE9 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = JuceHeader.h;
+			path = ../../JuceLibraryCode/JuceHeader.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		71C3D496EEC61093F846CFBC = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = WebKit.framework;
+			path = System/Library/Frameworks/WebKit.framework;
+			sourceTree = SDKROOT;
+		};
+		7301771BFA87D803F6D7A0C6 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = MainComponent.cpp;
+			path = ../../Source/MainComponent.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		739820D7F0D2DEF52A5D24EA = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = MotionBlockLayerPanel.cpp;
+			path = ../../Source/Timeline/layers/Block/ui/MotionBlockLayerPanel.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		765CBFF31DF67E0096D83F07 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = DroneClusterGroupManager.cpp;
+			path = ../../Source/Drone/Cluster/DroneClusterGroupManager.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		77038BF282FEEC8430A449BF = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = ActionLayer.cpp;
+			path = ../../Source/Timeline/layers/Action/ActionLayer.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		78149EE66B949EB3513759E3 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = MotionBlockModelParameterManagerEditor.h;
+			path = ../../Source/MotionBlock/Model/ui/MotionBlockModelParameterManagerEditor.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		79C7A551AD913F2F6A78CD29 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = AudioManagerHardwareEditor.cpp;
+			path = ../../Source/Audio/ui/AudioManagerHardwareEditor.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		7AEA11209C76323CCEB015C4 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_graphics.mm";
+			path = "../../JuceLibraryCode/include_juce_graphics.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		7DB4FBA099D47C19F348354D = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = TimeColorManager.h;
+			path = ../../Source/Timeline/layers/Color/TimeColorManager.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		7ED8C152A8238D3F3B40B4AC = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = MotionBlockModelLibrary.h;
+			path = ../../Source/MotionBlock/Model/MotionBlockModelLibrary.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		7F0351A7E539266F68DD1ABB = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = MotionBlockModelParameterManagerEditor.cpp;
+			path = ../../Source/MotionBlock/Model/ui/MotionBlockModelParameterManagerEditor.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		83F4B428C30FC897600ADA86 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = BinaryData.h;
+			path = ../../JuceLibraryCode/BinaryData.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		8596DEE85709630A05852988 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = MotionBlockModelParameterManager.cpp;
+			path = ../../Source/MotionBlock/Model/MotionBlockModelParameterManager.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		86CFE2DA55A2EA9D5BFB31F6 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.png;
+			name = "drone_ready.png";
+			path = "../../Resources/drone/drone_ready.png";
+			sourceTree = "SOURCE_ROOT";
+		};
+		8860768DBA6D49C6E0CAA3FF = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_audio_formats.mm";
+			path = "../../JuceLibraryCode/include_juce_audio_formats.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		8876CF9EFAAB600654EC5821 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = MotionBlockModelGroup.h;
+			path = ../../Source/MotionBlock/Model/MotionBlockModelGroup.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		88AA68305CBC31FBE2B3551B = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = CDEngine.cpp;
+			path = ../../Source/CDEngine.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		88C9DDBD5F7422345CCBAF04 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = DroneClusterGroupManagerUI.h;
+			path = ../../Source/Drone/Cluster/ui/DroneClusterGroupManagerUI.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		89B543F099C1C319F9B3B1A7 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = MotionBlockClip.h;
+			path = ../../Source/Timeline/layers/Block/MotionBlockClip.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		8BD240826F8F5FF817F4E557 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = GenericActionTrigger.h;
+			path = ../../Source/Timeline/layers/Action/GenericActionTrigger.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		8C296095A4E20FD9C02D06EB = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = MotionBlockDataProvider.cpp;
+			path = ../../Source/MotionBlock/Model/MotionBlockDataProvider.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		8E4EAA59B1DB48B618739B1C = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Accelerate.framework;
+			path = System/Library/Frameworks/Accelerate.framework;
+			sourceTree = SDKROOT;
+		};
+		8EAE804B62260A743FA7450A = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = DroneVizUI.h;
+			path = ../../Source/Viz/DroneVizUI.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		8F24239A4166A50A3E0C4E4B = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_audio_processors.mm";
+			path = "../../JuceLibraryCode/include_juce_audio_processors.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		8F5BB45270F84274803FBFA4 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = DroneUI.cpp;
+			path = ../../Source/Drone/ui/DroneUI.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		8F90FC5DDCD7C1CC7EE16FAE = {
+			isa = PBXFileReference;
+			lastKnownFileType = file;
+			name = "juce_organicui";
+			path = "~/modules/juce_organicui";
+			sourceTree = "<absolute>";
+		};
+		90186113CCA873229B470719 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_opengl.mm";
+			path = "../../JuceLibraryCode/include_juce_opengl.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		90C879656AE3A2419D0580E0 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = UserMotionBlockModelManager.cpp;
+			path = ../../Source/MotionBlock/Model/UserMotionBlockModelManager.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		94478ACD1FFB0F02763659CA = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = ActionManager.h;
+			path = ../../Source/Timeline/layers/Action/ActionManager.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		94C1DF4A56C7CD9AC1DB3A4D = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = ColorLayer.cpp;
+			path = ../../Source/Timeline/layers/Color/ColorLayer.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		98A8D17B02259AF30BB637C3 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = TimelineBlock.cpp;
+			path = ../../Source/MotionBlock/Model/blocks/timeline/TimelineBlock.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		996AB2C602723832DAAD3B22 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = Action.h;
+			path = ../../Source/Timeline/layers/Action/Action.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		99EFD59665191DA3E0C3CDBE = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = MotionBlockClipManager.cpp;
+			path = ../../Source/Timeline/layers/Block/MotionBlockClipManager.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		9C4CF59902648F88932B5F51 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = MotionBlockLayer.cpp;
+			path = ../../Source/Timeline/layers/Block/MotionBlockLayer.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		9E8ADF9E8DC5808691939F5C = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = TimeColor.h;
+			path = ../../Source/Timeline/layers/Color/TimeColor.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		A0FA160D2FD8AC6B3199D933 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = MotionBlockClipUI.h;
+			path = ../../Source/Timeline/layers/Block/ui/MotionBlockClipUI.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		A1649476D3D9E25A602C8AED = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = CoreMIDI.framework;
+			path = System/Library/Frameworks/CoreMIDI.framework;
+			sourceTree = SDKROOT;
+		};
+		A1F2D8D61F55E3E2086C1130 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = TimeColorManagerUI.cpp;
+			path = ../../Source/Timeline/layers/Color/ui/TimeColorManagerUI.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		A2D0A3E1A718EA74126F08CD = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_data_structures.mm";
+			path = "../../JuceLibraryCode/include_juce_data_structures.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		A71DDA4D3CE545DDAC042976 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_gui_extra.mm";
+			path = "../../JuceLibraryCode/include_juce_gui_extra.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		A776120C60CB56FD18DD9885 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = TimeColorUI.h;
+			path = ../../Source/Timeline/layers/Color/ui/TimeColorUI.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		A7926E9593B9116EEFAA182B = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = AudioManagerHardwareEditor.h;
+			path = ../../Source/Audio/ui/AudioManagerHardwareEditor.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		A7B2B708E555D4BC6F3A3566 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = DroneClusterGroup.h;
+			path = ../../Source/Drone/Cluster/DroneClusterGroup.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		A7F82AD13477ECB32C2CBA5E = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = ColorLayer.h;
+			path = ../../Source/Timeline/layers/Color/ColorLayer.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		A852206288AE4C93755AC596 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.png;
+			name = line.png;
+			path = ../../Resources/models/pattern/line.png;
+			sourceTree = "SOURCE_ROOT";
+		};
+		A9C192CEAA7BF8B0821EF97E = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.icns;
+			name = Icon.icns;
+			path = Icon.icns;
+			sourceTree = "SOURCE_ROOT";
+		};
+		AD7866CD2551114EAC40EB56 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = TimeColorUI.cpp;
+			path = ../../Source/Timeline/layers/Color/ui/TimeColorUI.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		AE557D5ADAF306B382E6FE64 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = DroneCluster.cpp;
+			path = ../../Source/Drone/Cluster/DroneCluster.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		AF75DE19DB8AAE9C3CF47856 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.png;
+			name = fadeOut.png;
+			path = ../../Resources/fadeOut.png;
+			sourceTree = "SOURCE_ROOT";
+		};
+		B0ADFFD6CE21089299713334 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_core.mm";
+			path = "../../JuceLibraryCode/include_juce_core.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		B35CEB40C97D5C15851B9072 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = TimelineEditor.h;
+			path = ../../Source/Timeline/TimelineEditor.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		B4986E6C36C9858A1F1743D0 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = DroneCluster.h;
+			path = ../../Source/Drone/Cluster/DroneCluster.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		B4DE54D8AF014246198805B6 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.png;
+			name = model.png;
+			path = ../../Resources/models/model.png;
+			sourceTree = "SOURCE_ROOT";
+		};
+		B5A1AC0FA8284EF33AA7EC06 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = Drone.cpp;
+			path = ../../Source/Drone/Drone.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		B6C5570E01B9C333A2AE2833 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = TimelineBlockUI.h;
+			path = ../../Source/MotionBlock/Model/blocks/timeline/ui/TimelineBlockUI.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		B7C0BF34213912D6F8546AEE = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = DroneVizUI.cpp;
+			path = ../../Source/Viz/DroneVizUI.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		B7FAE6A4441612D02F95E317 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = MotionBlockManagerUI.h;
+			path = ../../Source/MotionBlock/ui/MotionBlockManagerUI.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		BB90A2003A7AA05491CB6B89 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = MotionBlockModelUI.cpp;
+			path = ../../Source/MotionBlock/Model/ui/MotionBlockModelUI.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		BCDB9F1A6D1EBC5D5CE63EC8 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = PatternBlock.h;
+			path = ../../Source/MotionBlock/Model/blocks/pattern/PatternBlock.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		BDCD3ECB09A39B9D3F750051 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = MotionBlockModelPreset.cpp;
+			path = ../../Source/MotionBlock/Model/preset/MotionBlockModelPreset.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		BEE451F24341647DB4FA4EC6 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = TimelineBlock.h;
+			path = ../../Source/MotionBlock/Model/blocks/timeline/TimelineBlock.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		BFE6821EF10C610987A9D371 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = ScriptBlock.h;
+			path = ../../Source/MotionBlock/Model/blocks/script/ScriptBlock.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		C0763196DEEAF6B1BE63441B = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = IdentificationAction.h;
+			path = ../../Source/Timeline/layers/Action/IdentificationAction.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		C1731AF9106B425535CCAEB4 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = AudioToolbox.framework;
+			path = System/Library/Frameworks/AudioToolbox.framework;
+			sourceTree = SDKROOT;
+		};
+		C3EC0F136DE8EC06C1962DCE = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = MotionBlockLayerTimeline.h;
+			path = ../../Source/Timeline/layers/Block/ui/MotionBlockLayerTimeline.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		C7CB76B7878A7A32C5AA36DF = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = TimelineEditor.cpp;
+			path = ../../Source/Timeline/TimelineEditor.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		CA354C2AF2DC44C3893D431A = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_events.mm";
+			path = "../../JuceLibraryCode/include_juce_events.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		CE144A085C5CE62A0A3979CF = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = StageViz.h;
+			path = ../../Source/Viz/StageViz.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		CE8423ACEDE3BF3E63E78937 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = "include_juce_timeline.cpp";
+			path = "../../JuceLibraryCode/include_juce_timeline.cpp";
+			sourceTree = "SOURCE_ROOT";
+		};
+		CEFB1C91C3098A78EDB5C791 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = ActionManager.cpp;
+			path = ../../Source/Timeline/layers/Action/ActionManager.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		CF5553AADAF38F795896CFB4 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.png;
+			name = timeline.png;
+			path = ../../Resources/models/timeline.png;
+			sourceTree = "SOURCE_ROOT";
+		};
+		CFFF4B2D1C67199DB14CFA32 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = DroneManagerUI.h;
+			path = ../../Source/Drone/ui/DroneManagerUI.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		D16CD12B07D19D5FDABCA5E1 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = MotionBlockModelGroupUI.h;
+			path = ../../Source/MotionBlock/Model/ui/MotionBlockModelGroupUI.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		D19673F014C95231C62952E4 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = MotionBlockLayerTimeline.cpp;
+			path = ../../Source/Timeline/layers/Block/ui/MotionBlockLayerTimeline.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		D1A31B2593FF09DE828ED64F = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = PatternBlock.cpp;
+			path = ../../Source/MotionBlock/Model/blocks/pattern/PatternBlock.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		D281C98DFDA08634FCDF0E77 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = DroneClusterGroupManager.h;
+			path = ../../Source/Drone/Cluster/DroneClusterGroupManager.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		D3007A02DF305E6CAFBFD7F4 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = MotionBlockModelUI.h;
+			path = ../../Source/MotionBlock/Model/ui/MotionBlockModelUI.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		D3212C710B2622DCA28A4F1E = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = MotionBlockClipManagerUI.h;
+			path = ../../Source/Timeline/layers/Block/ui/MotionBlockClipManagerUI.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		D51A130F04F59AA4C9C654AC = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = MotionBlockClipUI.cpp;
+			path = ../../Source/Timeline/layers/Block/ui/MotionBlockClipUI.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		DA411D96DB8474879DCB796C = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = DroneTargetFilter.h;
+			path = ../../Source/Drone/TargetFilter/DroneTargetFilter.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		DCF63E496C10B30433C81890 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = MotionBlockModelPresetManager.h;
+			path = ../../Source/MotionBlock/Model/preset/MotionBlockModelPresetManager.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		DF93B627831D4C82776AA722 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.png;
+			name = pingPong.png;
+			path = ../../Resources/models/pattern/pingPong.png;
+			sourceTree = "SOURCE_ROOT";
+		};
+		E2C1457499D6E41820AB868C = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = MotionBlockLayerPanel.h;
+			path = ../../Source/Timeline/layers/Block/ui/MotionBlockLayerPanel.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		E3829E9115122EDDF443594E = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = MotionBlockModelParameterEditor.cpp;
+			path = ../../Source/MotionBlock/Model/ui/MotionBlockModelParameterEditor.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		E392750C496AD1A8EFFC1E85 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_audio_devices.mm";
+			path = "../../JuceLibraryCode/include_juce_audio_devices.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		E40230082F67FB36815EB830 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.cdlayout;
+			name = default.cdlayout;
+			path = ../../Resources/default.cdlayout;
+			sourceTree = "SOURCE_ROOT";
+		};
+		E61FABB59D1F80FCD4CE8BEC = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = MotionBlockDataProvider.h;
+			path = ../../Source/MotionBlock/Model/MotionBlockDataProvider.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		EA088D31857FF4B349901474 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = PerlinNoise.hpp;
+			path = ../../Source/MotionBlock/Model/blocks/pattern/PerlinNoise.hpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		EABBB4AB3C49AD46B3DE3DA6 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = Drone.h;
+			path = ../../Source/Drone/Drone.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		EB62FA40131922272DEB3487 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = MotionBlockModelLibraryUI.cpp;
+			path = ../../Source/MotionBlock/Model/ui/MotionBlockModelLibraryUI.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		EBF564EA4C336DEABFA97D54 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = MotionBlockModelGroup.cpp;
+			path = ../../Source/MotionBlock/Model/MotionBlockModelGroup.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		ECB5BD5DF94DA17A3B1C3232 = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.png;
+			name = script.png;
+			path = ../../Resources/models/script.png;
+			sourceTree = "SOURCE_ROOT";
+		};
+		F27E396BF5094DF178ECB544 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = MotionBlockModelPresetManager.cpp;
+			path = ../../Source/MotionBlock/Model/preset/MotionBlockModelPresetManager.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		F3E1F24B82B499AD123B8755 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = MotionBlockModel.h;
+			path = ../../Source/MotionBlock/Model/MotionBlockModel.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		F53C7B426A747D30DC532F19 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = TimeColor.cpp;
+			path = ../../Source/Timeline/layers/Color/TimeColor.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		F5AB2BA5E36DA71F37173C0E = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.png;
+			name = position.png;
+			path = ../../Resources/models/pattern/position.png;
+			sourceTree = "SOURCE_ROOT";
+		};
+		F5C9235DEF06B255855DA138 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = DroneUI.h;
+			path = ../../Source/Drone/ui/DroneUI.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		F70C8BFEDA24880ADCCF255A = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.png;
+			name = fadeIn.png;
+			path = ../../Resources/fadeIn.png;
+			sourceTree = "SOURCE_ROOT";
+		};
+		F96AE82340FA9DF27CF332FC = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Carbon.framework;
+			path = System/Library/Frameworks/Carbon.framework;
+			sourceTree = SDKROOT;
+		};
+		FCA131A90C13AA451516DF9C = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = MotionBlockClipManager.h;
+			path = ../../Source/Timeline/layers/Block/MotionBlockClipManager.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		A73E92FF92D7FC9F229843B6 = {
+			isa = PBXGroup;
+			children = (
+				1EE5A98AB439359C3A6BE745,
+				3BEF7451411D4396C1405FD8,
+				4E0439DCFA37EC58701AB98F,
+				1EE7E61093DF6CC6E5F1D78F,
+				86CFE2DA55A2EA9D5BFB31F6,
+				44A5AED8DAFEB1508EFF59FA,
+			);
+			name = drone;
+			sourceTree = "<group>";
+		};
+		CB54D41FF5A6A6F41882C7EF = {
+			isa = PBXGroup;
+			children = (
+				4BA240D5A07D81400006B9A5,
+				A852206288AE4C93755AC596,
+				0989A3996615CD797A6E9642,
+				DF93B627831D4C82776AA722,
+				F5AB2BA5E36DA71F37173C0E,
+			);
+			name = pattern;
+			sourceTree = "<group>";
+		};
+		07D42B3146DF0AC1DF1FAC19 = {
+			isa = PBXGroup;
+			children = (
+				CB54D41FF5A6A6F41882C7EF,
+				B4DE54D8AF014246198805B6,
+				ECB5BD5DF94DA17A3B1C3232,
+				CF5553AADAF38F795896CFB4,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		3A0E381FB42B85202EFCF705 = {
+			isa = PBXGroup;
+			children = (
+				A73E92FF92D7FC9F229843B6,
+				07D42B3146DF0AC1DF1FAC19,
+				E40230082F67FB36815EB830,
+				F70C8BFEDA24880ADCCF255A,
+				AF75DE19DB8AAE9C3CF47856,
+				56833C22C870E17891678191,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		4F0279EE3538E851DDF041DB = {
+			isa = PBXGroup;
+			children = (
+				B7C0BF34213912D6F8546AEE,
+				8EAE804B62260A743FA7450A,
+				67C97A58FB0C641687B51744,
+				CE144A085C5CE62A0A3979CF,
+			);
+			name = Viz;
+			sourceTree = "<group>";
+		};
+		5762BC76088D8A3B633B3BBF = {
+			isa = PBXGroup;
+			children = (
+				79C7A551AD913F2F6A78CD29,
+				A7926E9593B9116EEFAA182B,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
+		9C8617E9154D207F591817AD = {
+			isa = PBXGroup;
+			children = (
+				5762BC76088D8A3B633B3BBF,
+				4D383239C2AC50806948E4E5,
+				4423305BE158617139B4F8BE,
+			);
+			name = Audio;
+			sourceTree = "<group>";
+		};
+		6A7F8297B279FD4FA3FE534D = {
+			isa = PBXGroup;
+			children = (
+				5476772C51BFF9FB6329B38D,
+				88C9DDBD5F7422345CCBAF04,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
+		9452D9AE47C12F860BA8C175 = {
+			isa = PBXGroup;
+			children = (
+				6A7F8297B279FD4FA3FE534D,
+				AE557D5ADAF306B382E6FE64,
+				B4986E6C36C9858A1F1743D0,
+				5FA4621641D39E8E846D4A4A,
+				A7B2B708E555D4BC6F3A3566,
+				765CBFF31DF67E0096D83F07,
+				D281C98DFDA08634FCDF0E77,
+			);
+			name = Cluster;
+			sourceTree = "<group>";
+		};
+		0A3445C8521B908EC51AFA59 = {
+			isa = PBXGroup;
+			children = (
+				0CAC72CD335EE332666EADF3,
+				DA411D96DB8474879DCB796C,
+				167905428240FE50D0D2D9C4,
+				2DF10A9F1E28EB9A1D6B6D22,
+			);
+			name = TargetFilter;
+			sourceTree = "<group>";
+		};
+		BB12E1BEE76F3DCCEB5A6DE8 = {
+			isa = PBXGroup;
+			children = (
+				1A570A0A96909C6D92EDB03A,
+				CFFF4B2D1C67199DB14CFA32,
+				8F5BB45270F84274803FBFA4,
+				F5C9235DEF06B255855DA138,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
+		248AA68537C0E7B586F7A5A2 = {
+			isa = PBXGroup;
+			children = (
+				9452D9AE47C12F860BA8C175,
+				0A3445C8521B908EC51AFA59,
+				BB12E1BEE76F3DCCEB5A6DE8,
+				B5A1AC0FA8284EF33AA7EC06,
+				EABBB4AB3C49AD46B3DE3DA6,
+				369BF5F7A5D5944FA0CEDF8F,
+				16047E0AE5FFF010652363A2,
+			);
+			name = Drone;
+			sourceTree = "<group>";
+		};
+		2F1F89DC1A83FD0C53C8A340 = {
+			isa = PBXGroup;
+			children = (
+				D1A31B2593FF09DE828ED64F,
+				BCDB9F1A6D1EBC5D5CE63EC8,
+				EA088D31857FF4B349901474,
+			);
+			name = pattern;
+			sourceTree = "<group>";
+		};
+		EC2B4F95E6150FF800638B80 = {
+			isa = PBXGroup;
+			children = (
+				317524CB0E9ED5CE155F223A,
+				BFE6821EF10C610987A9D371,
+			);
+			name = script;
+			sourceTree = "<group>";
+		};
+		D01733369353614C645E5510 = {
+			isa = PBXGroup;
+			children = (
+				05D7124370851438D12037D1,
+				B6C5570E01B9C333A2AE2833,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
+		5D6A32716520F0F6E1BF7061 = {
+			isa = PBXGroup;
+			children = (
+				D01733369353614C645E5510,
+				98A8D17B02259AF30BB637C3,
+				BEE451F24341647DB4FA4EC6,
+			);
+			name = timeline;
+			sourceTree = "<group>";
+		};
+		71A1C883F15D3F294B7DB341 = {
+			isa = PBXGroup;
+			children = (
+				2F1F89DC1A83FD0C53C8A340,
+				EC2B4F95E6150FF800638B80,
+				5D6A32716520F0F6E1BF7061,
+			);
+			name = blocks;
+			sourceTree = "<group>";
+		};
+		ED6312D48C4204EC629759CF = {
+			isa = PBXGroup;
+			children = (
+				BDCD3ECB09A39B9D3F750051,
+				201BBFD97E4E97730E553CE7,
+				F27E396BF5094DF178ECB544,
+				DCF63E496C10B30433C81890,
+			);
+			name = preset;
+			sourceTree = "<group>";
+		};
+		8286ACD46DDA6CF87F47E281 = {
+			isa = PBXGroup;
+			children = (
+				4B12E6FD15829D258138A4D5,
+				D16CD12B07D19D5FDABCA5E1,
+				EB62FA40131922272DEB3487,
+				5E9C310BE32119A26B914732,
+				5DE559BC0D15B5960F78D067,
+				1BF0BCFED80F7885DA5E687F,
+				E3829E9115122EDDF443594E,
+				1D44B9CB3E7B527C75BDD753,
+				7F0351A7E539266F68DD1ABB,
+				78149EE66B949EB3513759E3,
+				BB90A2003A7AA05491CB6B89,
+				D3007A02DF305E6CAFBFD7F4,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
+		E102B2699550573972120F4C = {
+			isa = PBXGroup;
+			children = (
+				71A1C883F15D3F294B7DB341,
+				ED6312D48C4204EC629759CF,
+				8286ACD46DDA6CF87F47E281,
+				8C296095A4E20FD9C02D06EB,
+				E61FABB59D1F80FCD4CE8BEC,
+				65A83444729FFC0F47738932,
+				F3E1F24B82B499AD123B8755,
+				EBF564EA4C336DEABFA97D54,
+				8876CF9EFAAB600654EC5821,
+				39C1EDFCF0A4227CA18C7BCA,
+				7ED8C152A8238D3F3B40B4AC,
+				5FE22E8FC2A2AFED1672D3C2,
+				0DEF39961872FA48B1BEC4D1,
+				8596DEE85709630A05852988,
+				6F61DE71CCEF2B6B94BBC4E0,
+				90C879656AE3A2419D0580E0,
+				28F89D5E1B9BDBD2CD67C502,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		AA91A74404F4377D2B79A843 = {
+			isa = PBXGroup;
+			children = (
+				B7FAE6A4441612D02F95E317,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
+		38DCD8D50A8BD587B21188D8 = {
+			isa = PBXGroup;
+			children = (
+				E102B2699550573972120F4C,
+				AA91A74404F4377D2B79A843,
+				518F84E4D57ECA398DF2D1C2,
+				489784F546B68574D2CDA6CC,
+			);
+			name = MotionBlock;
+			sourceTree = "<group>";
+		};
+		55336F4A0D47F95BCA290BE7 = {
+			isa = PBXGroup;
+			children = (
+				4B5D92328F454CDF638C6A7D,
+				996AB2C602723832DAAD3B22,
+				77038BF282FEEC8430A449BF,
+				2E32C3F8215686B3C54A8BF9,
+				CEFB1C91C3098A78EDB5C791,
+				94478ACD1FFB0F02763659CA,
+				64D7360D6B46D02B949F1A3E,
+				8BD240826F8F5FF817F4E557,
+				6A11CEC37EF8CB86C62A7BAA,
+				C0763196DEEAF6B1BE63441B,
+			);
+			name = Action;
+			sourceTree = "<group>";
+		};
+		B6FE482372382042320B0798 = {
+			isa = PBXGroup;
+			children = (
+				27CBAAC0D4D1C3ECB5E2BCAB,
+				D3212C710B2622DCA28A4F1E,
+				D51A130F04F59AA4C9C654AC,
+				A0FA160D2FD8AC6B3199D933,
+				739820D7F0D2DEF52A5D24EA,
+				E2C1457499D6E41820AB868C,
+				D19673F014C95231C62952E4,
+				C3EC0F136DE8EC06C1962DCE,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
+		18414178C2F86027188848A4 = {
+			isa = PBXGroup;
+			children = (
+				B6FE482372382042320B0798,
+				5DB911EC1917A7E8139E537A,
+				89B543F099C1C319F9B3B1A7,
+				99EFD59665191DA3E0C3CDBE,
+				FCA131A90C13AA451516DF9C,
+				9C4CF59902648F88932B5F51,
+				09C69E6166D206944351733B,
+			);
+			name = Block;
+			sourceTree = "<group>";
+		};
+		DCCE9F33BC8A118FC02CBA85 = {
+			isa = PBXGroup;
+			children = (
+				1519266D5DB0162F4F1A3EB8,
+				300D5FACCC8B0FCDA3A06048,
+				01F32EFFDB2DD8383AB18196,
+				0A8B4B90B0EB19F2124C5EC4,
+				A1F2D8D61F55E3E2086C1130,
+				1E88E5E223C09099F589A01D,
+				AD7866CD2551114EAC40EB56,
+				A776120C60CB56FD18DD9885,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
+		705A61C49DFF86032971986F = {
+			isa = PBXGroup;
+			children = (
+				DCCE9F33BC8A118FC02CBA85,
+				94C1DF4A56C7CD9AC1DB3A4D,
+				A7F82AD13477ECB32C2CBA5E,
+				F53C7B426A747D30DC532F19,
+				9E8ADF9E8DC5808691939F5C,
+				15F6B0541AA25565352A0B41,
+				7DB4FBA099D47C19F348354D,
+			);
+			name = Color;
+			sourceTree = "<group>";
+		};
+		1FC8F8D496EC0B48E155C5BA = {
+			isa = PBXGroup;
+			children = (
+				55336F4A0D47F95BCA290BE7,
+				18414178C2F86027188848A4,
+				705A61C49DFF86032971986F,
+			);
+			name = layers;
+			sourceTree = "<group>";
+		};
+		ABAAF63036E58AF3C7A13542 = {
+			isa = PBXGroup;
+			children = (
+				1FC8F8D496EC0B48E155C5BA,
+				044922759AA255F1B48212A0,
+				5EAD4C8312254B2435D85D81,
+				C7CB76B7878A7A32C5AA36DF,
+				B35CEB40C97D5C15851B9072,
+			);
+			name = Timeline;
+			sourceTree = "<group>";
+		};
+		5220D88DF9779C5AE4F38DB0 = {
+			isa = PBXGroup;
+			children = (
+				4F0279EE3538E851DDF041DB,
+				9C8617E9154D207F591817AD,
+				248AA68537C0E7B586F7A5A2,
+				38DCD8D50A8BD587B21188D8,
+				ABAAF63036E58AF3C7A13542,
+				88AA68305CBC31FBE2B3551B,
+				46514B1756769DBB286B088D,
+				1EC3EAD13B4764ECF1A2D04A,
+				7301771BFA87D803F6D7A0C6,
+				42C8B4DC3FD104DF36FB14B9,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		F006C91B7FCA28AC6FFB5082 = {
+			isa = PBXGroup;
+			children = (
+				3A0E381FB42B85202EFCF705,
+				5220D88DF9779C5AE4F38DB0,
+			);
+			name = CrazyDance;
+			sourceTree = "<group>";
+		};
+		564E3C0E013CDCDBDAE337E0 = {
+			isa = PBXGroup;
+			children = (
+				8F90FC5DDCD7C1CC7EE16FAE,
+				1DD130D5EE1322CE46665470,
+			);
+			name = "JUCE Modules";
+			sourceTree = "<group>";
+		};
+		9BDC864C9B1577FAFF8135E5 = {
+			isa = PBXGroup;
+			children = (
+				457B31F8AC26D0982F8EBC3E,
+				23D4A472A44069306EFC2920,
+				83F4B428C30FC897600ADA86,
+				21BE633F8EC23969A07DBC6C,
+				E392750C496AD1A8EFFC1E85,
+				8860768DBA6D49C6E0CAA3FF,
+				8F24239A4166A50A3E0C4E4B,
+				3C958F7AF449E9EC370406A5,
+				B0ADFFD6CE21089299713334,
+				5D481275E49C11813808967A,
+				A2D0A3E1A718EA74126F08CD,
+				CA354C2AF2DC44C3893D431A,
+				7AEA11209C76323CCEB015C4,
+				24A172CAF098F8517F19A165,
+				A71DDA4D3CE545DDAC042976,
+				90186113CCA873229B470719,
+				49DB1F8A634A8B863DE5259D,
+				4A15C743C12BA3DC47E2C73B,
+				CE8423ACEDE3BF3E63E78937,
+				702C86479EED3092AEAD7CE9,
+			);
+			name = "JUCE Library Code";
+			sourceTree = "<group>";
+		};
+		D9942B41752A3CA95D2C166C = {
+			isa = PBXGroup;
+			children = (
+				5D78465C0D0546D84274B8F8,
+				271F6544D0B7EC9D151B44F6,
+				A9C192CEAA7BF8B0821EF97E,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C5A8FF7901DD2F140712FF86 = {
+			isa = PBXGroup;
+			children = (
+				8E4EAA59B1DB48B618739B1C,
+				C1731AF9106B425535CCAEB4,
+				F96AE82340FA9DF27CF332FC,
+				4406E075016FCB3E66932AB7,
+				6CBA75DF0C67BC206E7E2D7C,
+				A1649476D3D9E25A602C8AED,
+				162331F4CDA498EE4DC5DCE0,
+				0F92BAC951997CFFAC744680,
+				0EEF5F249FA5CFE1E8718D3F,
+				40BD37BDA214D8C0377FA4C7,
+				71C3D496EEC61093F846CFBC,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72E5F1537089EA6969AF4FEE = {
+			isa = PBXGroup;
+			children = (
+				147E8B6D9FF53C63F46098D9,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		74F9F7C73812F9DBBF61F8B3 = {
+			isa = PBXGroup;
+			children = (
+				F006C91B7FCA28AC6FFB5082,
+				564E3C0E013CDCDBDAE337E0,
+				9BDC864C9B1577FAFF8135E5,
+				D9942B41752A3CA95D2C166C,
+				C5A8FF7901DD2F140712FF86,
+				72E5F1537089EA6969AF4FEE,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		FA31782532448406DD2E91DC = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				DEAD_CODE_STRIPPING = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_NDEBUG=1",
+					"NDEBUG=1",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=0",
+					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_RTAS=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Unity=0",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"../../JuceLibraryCode",
+					"$(HOME)/JUCE/modules",
+					"$(HOME)/modules",
+					"../../Source",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-App.plist;
+				INFOPLIST_PREPROCESS = NO;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.CrazyDance;
+				PRODUCT_NAME = "CrazyDance";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		11F71E6FC8CDDE76444CF591 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_DEBUG=1",
+					"DEBUG=1",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=0",
+					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_RTAS=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Unity=0",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"../../JuceLibraryCode",
+					"$(HOME)/JUCE/modules",
+					"$(HOME)/modules",
+					"../../Source",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-App.plist;
+				INFOPLIST_PREPROCESS = NO;
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.CrazyDance;
+				PRODUCT_NAME = "CrazyDance";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		67B6E410771F24BE93F63AD8 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PRODUCT_NAME = "CrazyDance";
+				WARNING_CFLAGS = "-Wreorder";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		377010821AA5940B115A0E70 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "CrazyDance";
+				WARNING_CFLAGS = "-Wreorder";
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		09B3A1486B7DFD4DF2715DA8 = {
+			isa = PBXTargetDependency;
+			target = B27B5CA080C8F0FCE5AFD424;
+		};
+		07760E51B644B152998B9735 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67B6E410771F24BE93F63AD8,
+				377010821AA5940B115A0E70,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79C494BCA65A4EF5D68B0CA1 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA31782532448406DD2E91DC,
+				11F71E6FC8CDDE76444CF591,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6A6D8B7C2F60E8F599184A49 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFFBC7E6AD61D473CA1C4EE3,
+				F531AD890E18D8EF2E88424F,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3D30A2B4E2F8DA47A8E4EB7 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				179A619D9C018512940FFB43,
+				FBEEBA0875A63CAE7D55F7B2,
+				22656207B5EB3D49B16E858A,
+				A817F06AD5B3A7D4ED17830B,
+				54F8636F26618DFF9D5C4B07,
+				65C2A961A03B2A14A9975076,
+				BB3D41C39699C12C29B0472D,
+				626B3F02989CFF8CE5F2B867,
+				636A761B7F4FC5E90A528E9A,
+				B074774A3647EA2B03C4A18C,
+				CAAE22A6D8B6966C520F3DEB,
+				C09013E2E05DA89BCBB6EDE9,
+				CA5524F7631A986A7EDD6EF5,
+				70ACEB94ECFCEB097297113D,
+				F65DF5E8BA2422DC0F4BB4A8,
+				D35E4658828534646D4DAACC,
+				6358D80BAF91771F16F1DE56,
+				A4D003B77C3F432FE6ACA01B,
+				42E7A57A62C76292D2906D16,
+				D80C7F26D90A9946E3D5BF49,
+				EB9DA12A09E28EADE1D99717,
+				EA8038477086B00DDCB0A800,
+				84256D9175B035EFD139A8E5,
+				FF6171FB0DC58F35900EB28F,
+				6ABF9D5DEFA07CD27DDCC3F7,
+				FDE0A6AB69EB46C39DD202CE,
+				CFF83DD45CA5C762995C4619,
+				4055ED44692A797B5C631598,
+				2E9359EB91A0B06B9825E540,
+				D5C3F8E7A48E97E739835650,
+				71BD56C155CAEFE970FB37BD,
+				A4567FDACBF9540DC38BBDEC,
+				529649D479F9614A2DEF619D,
+				B894BBE6662E7318F34BB350,
+				0179822654B844A399DD7AEF,
+				531E2A585AF66FBF98AEFB3C,
+				C276C24AB7C6F2E819F3EDC6,
+				BD2C363E33F02E2BE87CDFD8,
+				35470F8FDDB05CDD49345A88,
+				475C1E922E6C63CB542BD874,
+				950A4378C6C5E149BF5FD9A2,
+				CCFF657EE80BE96AEE22FD69,
+				098DB11BECB9E295E153B736,
+				38E61138C0D3C1125EB7A182,
+				D2BCA096014B275067D9255C,
+				B4728DFAD455E80990265851,
+				5AC0CDF70AC1E32B2CE90A51,
+				C03592362E0036C30EFB14E3,
+				D8B9ECE928D6B9690D743D61,
+				E2F262E63F8E7CC3FA82B5B9,
+				6B76994AFF6CDCB6D080AD12,
+				CBC78ED46DABBEF39E137FD0,
+				44D70116BCC368BF7DB487CE,
+				3C1A56D69E6A024D30E9F97A,
+				5A88087C6B3959A0BB83840C,
+				651D98290A4167A12CDCB716,
+				4C137B72563C82C07C2D4298,
+				99077C0711BA1A7B153AA197,
+				FB5C906575232CF372993C2D,
+				B6234CEBB9393A6BD42BC919,
+				7CAAFE8DB0850E4354543EC0,
+				F32EE74B7E9449D58B70FD96,
+				31843B8F56F9352CFE811493,
+				6F5C9631AAF41A65270D3962,
+				94F23E6A1604B135C610D7C1,
+				0487DD79F8BA0631AC2FDA00,
+				777865F88DEB03E8C81F35C8,
+				458DE74AD08D209CAF916BDA,
+				ECB6A64E8556BFD0705C69B4,
+				56A9AA9BE5A2797DB6A99CA1,
+				D93C242D0BF209EC40416DA4,
+				39BC030294DD0AA9EC6F6953,
+				1900AAE9BBC3C450168812D4,
+				3ABF1C53F4E1FB28A4FB5B8A,
+				A1808834886E0B98EBB60A02,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		604690C0C60BA12A2919D457 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFEFAF74C2DAEADCE2E4223F,
+				4195F9A2CC83E06892150771,
+				8F40600D1C4B6C3BC5D8F5A1,
+				77F5B941B74E283ABE4E48CE,
+				9412B704481EDEA278249B27,
+				49D46E19219E83E27D707433,
+				6306E4EF82AD586D1645A826,
+				CA0DE18FE17BA17F5D4F62FD,
+				ABD9795F44CE26F359D6101C,
+				0F6FDE236B4585D7C4F0CF90,
+				645BB9EEFE17CD5E0B2FDF9D,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B27B5CA080C8F0FCE5AFD424 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79C494BCA65A4EF5D68B0CA1;
+			buildPhases = (
+				6A6D8B7C2F60E8F599184A49,
+				B3D30A2B4E2F8DA47A8E4EB7,
+				604690C0C60BA12A2919D457,
+			);
+			buildRules = ( );
+			dependencies = ( );
+			name = "CrazyDance - App";
+			productName = CrazyDance;
+			productReference = 147E8B6D9FF53C63F46098D9;
+			productType = "com.apple.product-type.application";
+		};
+		295367DE8853D15FD6F03399 = {
+			isa = PBXProject;
+			buildConfigurationList = 07760E51B644B152998B9735;
+			attributes = { LastUpgradeCheck = 0930; ORGANIZATIONNAME = ""; TargetAttributes = { B27B5CA080C8F0FCE5AFD424 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; }; }; };
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 74F9F7C73812F9DBBF61F8B3;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (B27B5CA080C8F0FCE5AFD424);
+			knownRegions = (en, Base);
+		};
+	};
+	rootObject = 295367DE8853D15FD6F03399;
+}

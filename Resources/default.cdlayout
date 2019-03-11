@@ -1,0 +1,98 @@
+{
+  "mainLayout": {
+    "type": 1,
+    "width": 1920,
+    "height": 997,
+    "direction": 2,
+    "shifters": [
+      {
+        "type": 1,
+        "width": 1920,
+        "height": 997,
+        "direction": 1,
+        "shifters": [
+          {
+            "type": 1,
+            "width": 1542,
+            "height": 997,
+            "direction": 2,
+            "shifters": [
+              {
+                "type": 1,
+                "width": 1542,
+                "height": 737,
+                "direction": 1,
+                "shifters": [
+                  {
+                    "type": 0,
+                    "width": 212,
+                    "height": 737,
+                    "currentContent": "Blocks",
+                    "tabs": [
+                      {
+                        "name": "Blocks"
+                      }
+                    ]
+                  },
+                  {
+                    "type": 0,
+                    "width": 1324,
+                    "height": 737,
+                    "currentContent": "Timeline Editor",
+                    "tabs": [
+                      {
+                        "name": "Timeline Editor"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": 1,
+                "width": 1542,
+                "height": 254,
+                "direction": 1,
+                "shifters": [
+                  {
+                    "type": 0,
+                    "width": 1229,
+                    "height": 254,
+                    "currentContent": "Drones",
+                    "tabs": [
+                      {
+                        "name": "Drones"
+                      }
+                    ]
+                  },
+                  {
+                    "type": 0,
+                    "width": 307,
+                    "height": 254,
+                    "currentContent": "Logger",
+                    "tabs": [
+                      {
+                        "name": "Logger"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": 0,
+            "width": 371,
+            "height": 997,
+            "currentContent": "Inspector",
+            "tabs": [
+              {
+                "name": "Inspector"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "windows": null
+}
