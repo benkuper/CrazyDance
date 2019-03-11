@@ -24,7 +24,7 @@ public:
 	BlockType type;
 	File libFolder;
 
-	MotionBlockModel * createItem();
+    MotionBlockModel * createItem() override;
 
 
 	var getJSONData() override;

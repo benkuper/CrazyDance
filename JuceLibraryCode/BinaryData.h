@@ -51,7 +51,7 @@ namespace BinaryData
     const int            timeline_pngSize = 1253;
 
     extern const char*   default_cdlayout;
-    const int            default_cdlayoutSize = 2533;
+    const int            default_cdlayoutSize = 2436;
 
     extern const char*   fadeIn_png;
     const int            fadeIn_pngSize = 1868;

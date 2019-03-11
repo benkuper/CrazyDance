@@ -22,8 +22,8 @@ public:
 	DroneManager();
 	~DroneManager();
 
-	void addItemInternal(Drone * d, var);
-	void removeItemInternal(Drone * d);
+    void addItemInternal(Drone * d, var) override;
+	void removeItemInternal(Drone * d) override;
 
 	Drone * getDroneWithId(int id, Drone * exludeDrone = nullptr);
 	

@@ -80,7 +80,7 @@ CirclePattern::CirclePattern(var params) :
 void CirclePattern::getMotionDataInternal(var result, Drone * d, double time, int id, var params)
 {
 	Vector3D<float> bCenter = getPoint3DValue(center, params);
-	Vector3D<float> bOrientation = getPoint3DValue(orientation, params);
+	//Vector3D<float> bOrientation = getPoint3DValue(orientation, params);
 	float bRadius = getParamValue<float>(radius, params);
 	float bSpeed = getParamValue<float>(speed, params);
 	float bStartAngle = getParamValue<float>(startAngle, params);
@@ -145,7 +145,7 @@ MultiPositionPattern::MultiPositionPattern(var params) :
 void MultiPositionPattern::getMotionDataInternal(var result, Drone * d, double time, int id, var params)
 {
 	Vector3D<float> bCenter = getPoint3DValue(center, params);
-	Vector3D<float> bOrientation = getPoint3DValue(orientation, params);
+	//Vector3D<float> bOrientation = getPoint3DValue(orientation, params);
 
 	var pos = params.getProperty("position" + String(id), var());
 	if (!pos.isArray()) return;
