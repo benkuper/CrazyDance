@@ -1791,7 +1791,7 @@
 				90C879656AE3A2419D0580E0,
 				28F89D5E1B9BDBD2CD67C502,
 			);
-			name = Model;
+			name = model;
 			sourceTree = "<group>";
 		};
 		AA91A74404F4377D2B79A843 = {

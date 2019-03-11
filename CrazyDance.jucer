@@ -98,7 +98,7 @@
         <FILE id="wGxqQK" name="DroneManager.h" compile="0" resource="0" file="Source/Drone/DroneManager.h"/>
       </GROUP>
       <GROUP id="{847A6674-7551-6F95-8BDC-2BE2A95B5C41}" name="MotionBlock">
-        <GROUP id="{859C19F8-3F19-4EAE-085C-47C373895C4A}" name="Model">
+        <GROUP id="{859C19F8-3F19-4EAE-085C-47C373895C4A}" name="model">
           <GROUP id="{6029ABEE-FAA0-85C7-40E5-5068A09817F4}" name="blocks">
             <GROUP id="{AB3ED0B8-0836-2D2F-F287-0E4744CA9FB5}" name="pattern">
               <FILE id="Mhf3H4" name="PatternBlock.cpp" compile="1" resource="0"
