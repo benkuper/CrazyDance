@@ -319,61 +319,61 @@
     <ClCompile Include="..\..\Source\Drone\DroneManager.cpp">
       <Filter>CrazyDance\Source\Drone</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\MotionBlock\Model\blocks\pattern\PatternBlock.cpp">
+    <ClCompile Include="..\..\Source\MotionBlock\model\blocks\pattern\PatternBlock.cpp">
       <Filter>CrazyDance\Source\MotionBlock\model\blocks\pattern</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\MotionBlock\Model\blocks\script\ScriptBlock.cpp">
+    <ClCompile Include="..\..\Source\MotionBlock\model\blocks\script\ScriptBlock.cpp">
       <Filter>CrazyDance\Source\MotionBlock\model\blocks\script</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\MotionBlock\Model\blocks\timeline\ui\TimelineBlockUI.cpp">
+    <ClCompile Include="..\..\Source\MotionBlock\model\blocks\timeline\ui\TimelineBlockUI.cpp">
       <Filter>CrazyDance\Source\MotionBlock\model\blocks\timeline\ui</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\MotionBlock\Model\blocks\timeline\TimelineBlock.cpp">
+    <ClCompile Include="..\..\Source\MotionBlock\model\blocks\timeline\TimelineBlock.cpp">
       <Filter>CrazyDance\Source\MotionBlock\model\blocks\timeline</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\MotionBlock\Model\preset\MotionBlockModelPreset.cpp">
+    <ClCompile Include="..\..\Source\MotionBlock\model\preset\MotionBlockModelPreset.cpp">
       <Filter>CrazyDance\Source\MotionBlock\model\preset</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\MotionBlock\Model\preset\MotionBlockModelPresetManager.cpp">
+    <ClCompile Include="..\..\Source\MotionBlock\model\preset\MotionBlockModelPresetManager.cpp">
       <Filter>CrazyDance\Source\MotionBlock\model\preset</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\MotionBlock\Model\ui\MotionBlockModelGroupUI.cpp">
+    <ClCompile Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelGroupUI.cpp">
       <Filter>CrazyDance\Source\MotionBlock\model\ui</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\MotionBlock\Model\ui\MotionBlockModelLibraryUI.cpp">
+    <ClCompile Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelLibraryUI.cpp">
       <Filter>CrazyDance\Source\MotionBlock\model\ui</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\MotionBlock\Model\ui\MotionBlockModelManagerUI.cpp">
+    <ClCompile Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelManagerUI.cpp">
       <Filter>CrazyDance\Source\MotionBlock\model\ui</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\MotionBlock\Model\ui\MotionBlockModelParameterEditor.cpp">
+    <ClCompile Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelParameterEditor.cpp">
       <Filter>CrazyDance\Source\MotionBlock\model\ui</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\MotionBlock\Model\ui\MotionBlockModelParameterManagerEditor.cpp">
+    <ClCompile Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelParameterManagerEditor.cpp">
       <Filter>CrazyDance\Source\MotionBlock\model\ui</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\MotionBlock\Model\ui\MotionBlockModelUI.cpp">
+    <ClCompile Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelUI.cpp">
       <Filter>CrazyDance\Source\MotionBlock\model\ui</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\MotionBlock\Model\MotionBlockDataProvider.cpp">
+    <ClCompile Include="..\..\Source\MotionBlock\model\MotionBlockDataProvider.cpp">
       <Filter>CrazyDance\Source\MotionBlock\model</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\MotionBlock\Model\MotionBlockModel.cpp">
+    <ClCompile Include="..\..\Source\MotionBlock\model\MotionBlockModel.cpp">
       <Filter>CrazyDance\Source\MotionBlock\model</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\MotionBlock\Model\MotionBlockModelGroup.cpp">
+    <ClCompile Include="..\..\Source\MotionBlock\model\MotionBlockModelGroup.cpp">
       <Filter>CrazyDance\Source\MotionBlock\model</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\MotionBlock\Model\MotionBlockModelLibrary.cpp">
+    <ClCompile Include="..\..\Source\MotionBlock\model\MotionBlockModelLibrary.cpp">
       <Filter>CrazyDance\Source\MotionBlock\model</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\MotionBlock\Model\MotionBlockModelParameter.cpp">
+    <ClCompile Include="..\..\Source\MotionBlock\model\MotionBlockModelParameter.cpp">
       <Filter>CrazyDance\Source\MotionBlock\model</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\MotionBlock\Model\MotionBlockModelParameterManager.cpp">
+    <ClCompile Include="..\..\Source\MotionBlock\model\MotionBlockModelParameterManager.cpp">
       <Filter>CrazyDance\Source\MotionBlock\model</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\MotionBlock\Model\UserMotionBlockModelManager.cpp">
+    <ClCompile Include="..\..\Source\MotionBlock\model\UserMotionBlockModelManager.cpp">
       <Filter>CrazyDance\Source\MotionBlock\model</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\MotionBlock\MotionBlock.cpp">
@@ -1200,64 +1200,64 @@
     <ClInclude Include="..\..\Source\Drone\DroneManager.h">
       <Filter>CrazyDance\Source\Drone</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\MotionBlock\Model\blocks\pattern\PatternBlock.h">
+    <ClInclude Include="..\..\Source\MotionBlock\model\blocks\pattern\PatternBlock.h">
       <Filter>CrazyDance\Source\MotionBlock\model\blocks\pattern</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\MotionBlock\Model\blocks\pattern\PerlinNoise.hpp">
+    <ClInclude Include="..\..\Source\MotionBlock\model\blocks\pattern\PerlinNoise.hpp">
       <Filter>CrazyDance\Source\MotionBlock\model\blocks\pattern</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\MotionBlock\Model\blocks\script\ScriptBlock.h">
+    <ClInclude Include="..\..\Source\MotionBlock\model\blocks\script\ScriptBlock.h">
       <Filter>CrazyDance\Source\MotionBlock\model\blocks\script</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\MotionBlock\Model\blocks\timeline\ui\TimelineBlockUI.h">
+    <ClInclude Include="..\..\Source\MotionBlock\model\blocks\timeline\ui\TimelineBlockUI.h">
       <Filter>CrazyDance\Source\MotionBlock\model\blocks\timeline\ui</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\MotionBlock\Model\blocks\timeline\TimelineBlock.h">
+    <ClInclude Include="..\..\Source\MotionBlock\model\blocks\timeline\TimelineBlock.h">
       <Filter>CrazyDance\Source\MotionBlock\model\blocks\timeline</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\MotionBlock\Model\preset\MotionBlockModelPreset.h">
+    <ClInclude Include="..\..\Source\MotionBlock\model\preset\MotionBlockModelPreset.h">
       <Filter>CrazyDance\Source\MotionBlock\model\preset</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\MotionBlock\Model\preset\MotionBlockModelPresetManager.h">
+    <ClInclude Include="..\..\Source\MotionBlock\model\preset\MotionBlockModelPresetManager.h">
       <Filter>CrazyDance\Source\MotionBlock\model\preset</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\MotionBlock\Model\ui\MotionBlockModelGroupUI.h">
+    <ClInclude Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelGroupUI.h">
       <Filter>CrazyDance\Source\MotionBlock\model\ui</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\MotionBlock\Model\ui\MotionBlockModelLibraryUI.h">
+    <ClInclude Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelLibraryUI.h">
       <Filter>CrazyDance\Source\MotionBlock\model\ui</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\MotionBlock\Model\ui\MotionBlockModelManagerUI.h">
+    <ClInclude Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelManagerUI.h">
       <Filter>CrazyDance\Source\MotionBlock\model\ui</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\MotionBlock\Model\ui\MotionBlockModelParameterEditor.h">
+    <ClInclude Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelParameterEditor.h">
       <Filter>CrazyDance\Source\MotionBlock\model\ui</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\MotionBlock\Model\ui\MotionBlockModelParameterManagerEditor.h">
+    <ClInclude Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelParameterManagerEditor.h">
       <Filter>CrazyDance\Source\MotionBlock\model\ui</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\MotionBlock\Model\ui\MotionBlockModelUI.h">
+    <ClInclude Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelUI.h">
       <Filter>CrazyDance\Source\MotionBlock\model\ui</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\MotionBlock\Model\MotionBlockDataProvider.h">
+    <ClInclude Include="..\..\Source\MotionBlock\model\MotionBlockDataProvider.h">
       <Filter>CrazyDance\Source\MotionBlock\model</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\MotionBlock\Model\MotionBlockModel.h">
+    <ClInclude Include="..\..\Source\MotionBlock\model\MotionBlockModel.h">
       <Filter>CrazyDance\Source\MotionBlock\model</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\MotionBlock\Model\MotionBlockModelGroup.h">
+    <ClInclude Include="..\..\Source\MotionBlock\model\MotionBlockModelGroup.h">
       <Filter>CrazyDance\Source\MotionBlock\model</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\MotionBlock\Model\MotionBlockModelLibrary.h">
+    <ClInclude Include="..\..\Source\MotionBlock\model\MotionBlockModelLibrary.h">
       <Filter>CrazyDance\Source\MotionBlock\model</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\MotionBlock\Model\MotionBlockModelParameter.h">
+    <ClInclude Include="..\..\Source\MotionBlock\model\MotionBlockModelParameter.h">
       <Filter>CrazyDance\Source\MotionBlock\model</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\MotionBlock\Model\MotionBlockModelParameterManager.h">
+    <ClInclude Include="..\..\Source\MotionBlock\model\MotionBlockModelParameterManager.h">
       <Filter>CrazyDance\Source\MotionBlock\model</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\MotionBlock\Model\UserMotionBlockModelManager.h">
+    <ClInclude Include="..\..\Source\MotionBlock\model\UserMotionBlockModelManager.h">
       <Filter>CrazyDance\Source\MotionBlock\model</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\MotionBlock\ui\MotionBlockManagerUI.h">
