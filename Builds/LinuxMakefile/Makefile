@@ -68,6 +68,11 @@ ifeq ($(CONFIG),Release)
 endif
 
 OBJECTS_APP := \
+  $(JUCE_OBJDIR)/IOInterfaceManagerUI_da41a251.o \
+  $(JUCE_OBJDIR)/LaMoucheFolleIOInterface_8b860a80.o \
+  $(JUCE_OBJDIR)/OSCIOInterface_35639e66.o \
+  $(JUCE_OBJDIR)/IOInterface_b278ba5b.o \
+  $(JUCE_OBJDIR)/IOInterfaceManager_79e96d5c.o \
   $(JUCE_OBJDIR)/DroneVizUI_8d9cb9d4.o \
   $(JUCE_OBJDIR)/StageViz_79fb1d5a.o \
   $(JUCE_OBJDIR)/AudioManagerHardwareEditor_ce81cbaf.o \
@@ -156,6 +161,31 @@ $(JUCE_OUTDIR)/$(JUCE_TARGET_APP) : $(OBJECTS_APP) $(RESOURCES)
 	-$(V_AT)mkdir -p $(JUCE_LIBDIR)
 	-$(V_AT)mkdir -p $(JUCE_OUTDIR)
 	$(V_AT)$(CXX) -o $(JUCE_OUTDIR)/$(JUCE_TARGET_APP) $(OBJECTS_APP) $(JUCE_LDFLAGS) $(JUCE_LDFLAGS_APP) $(RESOURCES) $(TARGET_ARCH)
+
+$(JUCE_OBJDIR)/IOInterfaceManagerUI_da41a251.o: ../../Source/Communication/ui/IOInterfaceManagerUI.cpp
+	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
+	@echo "Compiling IOInterfaceManagerUI.cpp"
+	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
+
+$(JUCE_OBJDIR)/LaMoucheFolleIOInterface_8b860a80.o: ../../Source/Communication/osc/lamouchefolle/LaMoucheFolleIOInterface.cpp
+	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
+	@echo "Compiling LaMoucheFolleIOInterface.cpp"
+	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
+
+$(JUCE_OBJDIR)/OSCIOInterface_35639e66.o: ../../Source/Communication/osc/OSCIOInterface.cpp
+	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
+	@echo "Compiling OSCIOInterface.cpp"
+	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
+
+$(JUCE_OBJDIR)/IOInterface_b278ba5b.o: ../../Source/Communication/IOInterface.cpp
+	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
+	@echo "Compiling IOInterface.cpp"
+	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
+
+$(JUCE_OBJDIR)/IOInterfaceManager_79e96d5c.o: ../../Source/Communication/IOInterfaceManager.cpp
+	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
+	@echo "Compiling IOInterfaceManager.cpp"
+	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
 $(JUCE_OBJDIR)/DroneVizUI_8d9cb9d4.o: ../../Source/Viz/DroneVizUI.cpp
 	-$(V_AT)mkdir -p $(JUCE_OBJDIR)

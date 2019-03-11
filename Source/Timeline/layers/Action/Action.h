@@ -18,4 +18,7 @@ class Action :
 public:
 	Action(float time = 0, float flagYPos = 0, const String &name = "Action");
 	~Action();
+
+
+	String getTypeString() const override { return "Action"; }
 };

@@ -80,6 +80,11 @@
     <Lib/>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\Communication\ui\IOInterfaceManagerUI.cpp"/>
+    <ClCompile Include="..\..\Source\Communication\osc\lamouchefolle\LaMoucheFolleIOInterface.cpp"/>
+    <ClCompile Include="..\..\Source\Communication\osc\OSCIOInterface.cpp"/>
+    <ClCompile Include="..\..\Source\Communication\IOInterface.cpp"/>
+    <ClCompile Include="..\..\Source\Communication\IOInterfaceManager.cpp"/>
     <ClCompile Include="..\..\Source\Viz\DroneVizUI.cpp"/>
     <ClCompile Include="..\..\Source\Viz\StageViz.cpp"/>
     <ClCompile Include="..\..\Source\Audio\ui\AudioManagerHardwareEditor.cpp"/>
@@ -733,6 +738,11 @@
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_timeline.cpp"/>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\Communication\ui\IOInterfaceManagerUI.h"/>
+    <ClInclude Include="..\..\Source\Communication\osc\lamouchefolle\LaMoucheFolleIOInterface.h"/>
+    <ClInclude Include="..\..\Source\Communication\osc\OSCIOInterface.h"/>
+    <ClInclude Include="..\..\Source\Communication\IOInterface.h"/>
+    <ClInclude Include="..\..\Source\Communication\IOInterfaceManager.h"/>
     <ClInclude Include="..\..\Source\Viz\DroneVizUI.h"/>
     <ClInclude Include="..\..\Source\Viz\StageViz.h"/>
     <ClInclude Include="..\..\Source\Audio\ui\AudioManagerHardwareEditor.h"/>

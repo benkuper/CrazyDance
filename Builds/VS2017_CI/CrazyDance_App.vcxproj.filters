@@ -14,6 +14,18 @@
     <Filter Include="CrazyDance\Resources">
       <UniqueIdentifier>{B8A5848A-97E0-D75C-88B1-84057A2F3859}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CrazyDance\Source\Communication\ui">
+      <UniqueIdentifier>{0F793027-17AF-CE70-A757-6F81DD1B8EEC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CrazyDance\Source\Communication\osc\lamouchefolle">
+      <UniqueIdentifier>{AE22AA7B-FD54-1F94-BD24-22BD14D65116}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CrazyDance\Source\Communication\osc">
+      <UniqueIdentifier>{02650DAD-0338-64CD-5774-4086F485C523}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CrazyDance\Source\Communication">
+      <UniqueIdentifier>{253D9C9E-32FC-9702-1478-6756DF3FD2FB}</UniqueIdentifier>
+    </Filter>
     <Filter Include="CrazyDance\Source\Viz">
       <UniqueIdentifier>{497354B9-E310-4BA1-A032-DD5FC402E20D}</UniqueIdentifier>
     </Filter>
@@ -277,6 +289,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\Communication\ui\IOInterfaceManagerUI.cpp">
+      <Filter>CrazyDance\Source\Communication\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Communication\osc\lamouchefolle\LaMoucheFolleIOInterface.cpp">
+      <Filter>CrazyDance\Source\Communication\osc\lamouchefolle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Communication\osc\OSCIOInterface.cpp">
+      <Filter>CrazyDance\Source\Communication\osc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Communication\IOInterface.cpp">
+      <Filter>CrazyDance\Source\Communication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Communication\IOInterfaceManager.cpp">
+      <Filter>CrazyDance\Source\Communication</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Viz\DroneVizUI.cpp">
       <Filter>CrazyDance\Source\Viz</Filter>
     </ClCompile>
@@ -1158,6 +1185,21 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\Communication\ui\IOInterfaceManagerUI.h">
+      <Filter>CrazyDance\Source\Communication\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Communication\osc\lamouchefolle\LaMoucheFolleIOInterface.h">
+      <Filter>CrazyDance\Source\Communication\osc\lamouchefolle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Communication\osc\OSCIOInterface.h">
+      <Filter>CrazyDance\Source\Communication\osc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Communication\IOInterface.h">
+      <Filter>CrazyDance\Source\Communication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Communication\IOInterfaceManager.h">
+      <Filter>CrazyDance\Source\Communication</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Viz\DroneVizUI.h">
       <Filter>CrazyDance\Source\Viz</Filter>
     </ClInclude>

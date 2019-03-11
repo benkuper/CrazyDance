@@ -18,6 +18,7 @@
 #include "Timeline/layers/Color/ColorLayer.h"
 #include "Timeline/layers/Action/ActionLayer.h"
 #include "Drone/Cluster/DroneClusterGroupManager.h"
+#include "Communication/IOInterfaceManager.h"
 
 CDEngine::CDEngine() :
 	Engine("CrazyFance", ".dance"),
@@ -50,6 +51,8 @@ CDEngine::CDEngine() :
 CDEngine::~CDEngine()
 {
 	DroneManager::getInstance()->clear();
+
+	IOInterfaceManager::deleteInstance();
 
 	DroneManager::deleteInstance();
 	DroneClusterGroupManager::deleteInstance();
