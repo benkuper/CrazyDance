@@ -89,6 +89,7 @@ after_success:
     wget "https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage";
     chmod a+x appimagetool-x86_64.AppImage;
     echo 'Packaging AppImage...';
+    mkdir CrazyDance.AppDir/usr/;
     mkdir CrazyDance.AppDir/usr/bin/;
     cp build/CrazyDance CrazyDance.AppDir/usr/bin/;
     ./appimagetool-x86_64.AppImage CrazyDance.AppDir CrazyDance-linux-x64-$SUFFIX.AppImage;
