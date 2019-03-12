@@ -61,6 +61,14 @@
 			isa = PBXBuildFile;
 			fileRef = A9C192CEAA7BF8B0821EF97E;
 		};
+		65B4BBA1EADB1E827A643443 = {
+			isa = PBXBuildFile;
+			fileRef = 39CE845F7EB03E79E600BA9C;
+		};
+		0D52EAF21B7A3588AADD459D = {
+			isa = PBXBuildFile;
+			fileRef = 2AB5407DAD015F88BE05D5CC;
+		};
 		78852BC302274B5A660ADB7E = {
 			isa = PBXBuildFile;
 			fileRef = 211D0480725392B075E1AB96;
@@ -212,6 +220,10 @@
 		1013B39C5087E1D338A66D69 = {
 			isa = PBXBuildFile;
 			fileRef = F7990DA457D62819C3FC6AF3;
+		};
+		C8E0F120E1F21DE5A81770FA = {
+			isa = PBXBuildFile;
+			fileRef = 384FA15EA5F1DE10CEE15B08;
 		};
 		B894BBE6662E7318F34BB350 = {
 			isa = PBXBuildFile;
@@ -626,6 +638,13 @@
 			path = ../../Source/MotionBlock/model/MotionBlockModel.cpp;
 			sourceTree = "SOURCE_ROOT";
 		};
+		2AB5407DAD015F88BE05D5CC = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = BaseTreeItemUI.cpp;
+			path = ../../Source/ManagerTree/ui/BaseTreeItemUI.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
 		2DF10A9F1E28EB9A1D6B6D22 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.c.h;
@@ -652,6 +671,20 @@
 			lastKnownFileType = sourcecode.cpp.cpp;
 			name = DroneManager.cpp;
 			path = ../../Source/Drone/DroneManager.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		384FA15EA5F1DE10CEE15B08 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = UserMotionBlockModelManagerTree.cpp;
+			path = ../../Source/MotionBlock/model/UserMotionBlockModelManagerTree.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		39CE845F7EB03E79E600BA9C = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = BaseManagerTreeUI.cpp;
+			path = ../../Source/ManagerTree/ui/BaseManagerTreeUI.cpp;
 			sourceTree = "SOURCE_ROOT";
 		};
 		3BEF7451411D4396C1405FD8 = {
@@ -841,6 +874,20 @@
 			lastKnownFileType = sourcecode.c.h;
 			name = IOInterfaceManager.h;
 			path = ../../Source/Communication/IOInterfaceManager.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		58D4E335B09901926FBE703C = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = BaseManagerTree.h;
+			path = ../../Source/ManagerTree/BaseManagerTree.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		5C5F8EE54C5BA7917A9D1A61 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = BaseManagerTreeUI.h;
+			path = ../../Source/ManagerTree/ui/BaseManagerTreeUI.h;
 			sourceTree = "SOURCE_ROOT";
 		};
 		5CB90022654687AD5BF26D95 = {
@@ -1095,6 +1142,13 @@
 			path = "../../JuceLibraryCode/include_juce_opengl.mm";
 			sourceTree = "SOURCE_ROOT";
 		};
+		9365537865219BE7FCF1EA5A = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = BaseTreeItemUI.h;
+			path = ../../Source/ManagerTree/ui/BaseTreeItemUI.h;
+			sourceTree = "SOURCE_ROOT";
+		};
 		9413CCB01420AC4D8366F01E = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.cpp;
@@ -1305,6 +1359,13 @@
 			path = ../../Resources/models/model.png;
 			sourceTree = "SOURCE_ROOT";
 		};
+		B4E08D25C0B2AF31B49A6B75 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = BaseTreeItem.h;
+			path = ../../Source/ManagerTree/BaseTreeItem.h;
+			sourceTree = "SOURCE_ROOT";
+		};
 		B5A1AC0FA8284EF33AA7EC06 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.cpp;
@@ -1499,6 +1560,13 @@
 			lastKnownFileType = sourcecode.cpp.cpp;
 			name = MotionBlockClipUI.cpp;
 			path = ../../Source/Timeline/layers/Block/ui/MotionBlockClipUI.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		D666F2099805307EB1B447E8 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = UserMotionBlockModelManagerTree.h;
+			path = ../../Source/MotionBlock/model/UserMotionBlockModelManagerTree.h;
 			sourceTree = "SOURCE_ROOT";
 		};
 		DA411D96DB8474879DCB796C = {
@@ -1702,6 +1770,27 @@
 				56833C22C870E17891678191,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		6CB54D2D92DD08B1F7D532A7 = {
+			isa = PBXGroup;
+			children = (
+				39CE845F7EB03E79E600BA9C,
+				5C5F8EE54C5BA7917A9D1A61,
+				2AB5407DAD015F88BE05D5CC,
+				9365537865219BE7FCF1EA5A,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
+		1EEAD4D3C38EF54BA34C09B5 = {
+			isa = PBXGroup;
+			children = (
+				6CB54D2D92DD08B1F7D532A7,
+				58D4E335B09901926FBE703C,
+				B4E08D25C0B2AF31B49A6B75,
+			);
+			name = ManagerTree;
 			sourceTree = "<group>";
 		};
 		E4B421F53F52CAEC58123E4F = {
@@ -1932,6 +2021,8 @@
 				DF414A4D9AD4D9865597E743,
 				F7990DA457D62819C3FC6AF3,
 				F936BF92934647097DC1A621,
+				384FA15EA5F1DE10CEE15B08,
+				D666F2099805307EB1B447E8,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -2055,6 +2146,7 @@
 		5220D88DF9779C5AE4F38DB0 = {
 			isa = PBXGroup;
 			children = (
+				1EEAD4D3C38EF54BA34C09B5,
 				6B6DFA9821CE7B5C190EE958,
 				4F0279EE3538E851DDF041DB,
 				9C8617E9154D207F591817AD,
@@ -2379,6 +2471,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65B4BBA1EADB1E827A643443,
+				0D52EAF21B7A3588AADD459D,
 				78852BC302274B5A660ADB7E,
 				306CBE92578597578FBF507F,
 				9179BDA3D19539BA9909E851,
@@ -2417,6 +2511,7 @@
 				7D00F7A865B77B57EBC8A802,
 				F35B08A37D293152B4ECA3A8,
 				1013B39C5087E1D338A66D69,
+				C8E0F120E1F21DE5A81770FA,
 				B894BBE6662E7318F34BB350,
 				0179822654B844A399DD7AEF,
 				531E2A585AF66FBF98AEFB3C,

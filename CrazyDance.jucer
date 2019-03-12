@@ -35,6 +35,21 @@
       <FILE id="sB0f3i" name="icon.png" compile="0" resource="1" file="Resources/icon.png"/>
     </GROUP>
     <GROUP id="{4E1A6869-7211-0258-5143-EF5E39FD3DED}" name="Source">
+      <GROUP id="{23A5EDAF-B0FB-8358-DEA1-B5E564FD6D61}" name="ManagerTree">
+        <GROUP id="{E300E452-70E7-2A2F-0E5F-8BB8A901F13E}" name="ui">
+          <FILE id="xmniWL" name="BaseManagerTreeUI.cpp" compile="1" resource="0"
+                file="Source/ManagerTree/ui/BaseManagerTreeUI.cpp"/>
+          <FILE id="b3q4ja" name="BaseManagerTreeUI.h" compile="0" resource="0"
+                file="Source/ManagerTree/ui/BaseManagerTreeUI.h"/>
+          <FILE id="iVcj4k" name="BaseTreeItemUI.cpp" compile="1" resource="0"
+                file="Source/ManagerTree/ui/BaseTreeItemUI.cpp"/>
+          <FILE id="DFar9p" name="BaseTreeItemUI.h" compile="0" resource="0"
+                file="Source/ManagerTree/ui/BaseTreeItemUI.h"/>
+        </GROUP>
+        <FILE id="Qoq3EB" name="BaseManagerTree.h" compile="0" resource="0"
+              file="Source/ManagerTree/BaseManagerTree.h"/>
+        <FILE id="Jvtyky" name="BaseTreeItem.h" compile="0" resource="0" file="Source/ManagerTree/BaseTreeItem.h"/>
+      </GROUP>
       <GROUP id="{F76DB500-E872-C997-AB08-BC6B97DE7DDF}" name="Communication">
         <GROUP id="{A43C71C8-B427-D337-FEC2-1BE8BCE939E2}" name="ui">
           <FILE id="FS704M" name="IOInterfaceManagerUI.cpp" compile="1" resource="0"
@@ -213,6 +228,10 @@
                 resource="0" file="Source/MotionBlock/model/UserMotionBlockModelManager.cpp"/>
           <FILE id="P56pGI" name="UserMotionBlockModelManager.h" compile="0"
                 resource="0" file="Source/MotionBlock/model/UserMotionBlockModelManager.h"/>
+          <FILE id="KcBqIx" name="UserMotionBlockModelManagerTree.cpp" compile="1"
+                resource="0" file="Source/MotionBlock/model/UserMotionBlockModelManagerTree.cpp"/>
+          <FILE id="QYG8oW" name="UserMotionBlockModelManagerTree.h" compile="0"
+                resource="0" file="Source/MotionBlock/model/UserMotionBlockModelManagerTree.h"/>
         </GROUP>
         <GROUP id="{13537819-125B-A336-955D-FBE5B32FE0F5}" name="ui">
           <FILE id="RpMnpR" name="MotionBlockManagerUI.h" compile="0" resource="0"

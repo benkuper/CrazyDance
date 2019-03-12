@@ -51,7 +51,7 @@ namespace BinaryData
     const int            timeline_pngSize = 1253;
 
     extern const char*   default_cdlayout;
-    const int            default_cdlayoutSize = 2436;
+    const int            default_cdlayoutSize = 3222;
 
     extern const char*   fadeIn_png;
     const int            fadeIn_pngSize = 1868;
@@ -60,7 +60,7 @@ namespace BinaryData
     const int            fadeOut_pngSize = 392;
 
     extern const char*   icon_png;
-    const int            icon_pngSize = 8297;
+    const int            icon_pngSize = 243986;
 
     // Number of elements in the namedResourceList and originalFileNames arrays.
     const int namedResourceListSize = 18;

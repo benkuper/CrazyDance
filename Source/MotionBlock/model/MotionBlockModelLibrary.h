@@ -20,14 +20,11 @@ public:
 	juce_DeclareSingleton(MotionBlockModelLibrary, true)
 	MotionBlockModelLibrary();
 	~MotionBlockModelLibrary();
-	
-
 
 	MotionBlockModelGroup genericBlocks;
 	UserMotionBlockModelManager scriptBlocks;
 	UserMotionBlockModelManager timelineBlocks;
-
-
+	
 	//Generic / Patterns
 	ScopedPointer<MotionBlockModel> positionBlock;
 	ScopedPointer<MotionBlockModel> lineBlock;
