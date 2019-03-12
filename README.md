@@ -9,7 +9,7 @@ Releases are on the release page.
 
 You can find the bleeding edge version, compiled against latest commits here :
 
-- Linux (x64):  http://benjamin.kuperberg.fr/download/crazydance/CrazyDance-linux-x64-bleedingedge.zip
+- Linux (x64):  http://benjamin.kuperberg.fr/download/crazydance/CrazyDance-linux-x64-bleedingedge.AppImage
 
 - MacOS :  http://benjamin.kuperberg.fr/download/crazydance/CrazyDance-osx-bleedingedge.zip
  
