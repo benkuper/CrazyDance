@@ -35,6 +35,32 @@
       <FILE id="sB0f3i" name="icon.png" compile="0" resource="1" file="Resources/icon.png"/>
     </GROUP>
     <GROUP id="{4E1A6869-7211-0258-5143-EF5E39FD3DED}" name="Source">
+      <GROUP id="{F76DB500-E872-C997-AB08-BC6B97DE7DDF}" name="Communication">
+        <GROUP id="{A43C71C8-B427-D337-FEC2-1BE8BCE939E2}" name="ui">
+          <FILE id="FS704M" name="IOInterfaceManagerUI.cpp" compile="1" resource="0"
+                file="Source/Communication/ui/IOInterfaceManagerUI.cpp"/>
+          <FILE id="nswKkP" name="IOInterfaceManagerUI.h" compile="0" resource="0"
+                file="Source/Communication/ui/IOInterfaceManagerUI.h"/>
+        </GROUP>
+        <GROUP id="{0F81EE47-08BC-F4E2-BC8F-56401449F9DF}" name="osc">
+          <GROUP id="{9B1514D4-7A45-25B4-4986-52EFD57E609E}" name="lamouchefolle">
+            <FILE id="Dfvyi1" name="LaMoucheFolleIOInterface.cpp" compile="1" resource="0"
+                  file="Source/Communication/osc/lamouchefolle/LaMoucheFolleIOInterface.cpp"/>
+            <FILE id="Gfdtt3" name="LaMoucheFolleIOInterface.h" compile="0" resource="0"
+                  file="Source/Communication/osc/lamouchefolle/LaMoucheFolleIOInterface.h"/>
+          </GROUP>
+          <FILE id="uY38Ph" name="OSCIOInterface.cpp" compile="1" resource="0"
+                file="Source/Communication/osc/OSCIOInterface.cpp"/>
+          <FILE id="zhpj2e" name="OSCIOInterface.h" compile="0" resource="0"
+                file="Source/Communication/osc/OSCIOInterface.h"/>
+        </GROUP>
+        <FILE id="cdbm3Q" name="IOInterface.cpp" compile="1" resource="0" file="Source/Communication/IOInterface.cpp"/>
+        <FILE id="XG2zDY" name="IOInterface.h" compile="0" resource="0" file="Source/Communication/IOInterface.h"/>
+        <FILE id="TMRfwL" name="IOInterfaceManager.cpp" compile="1" resource="0"
+              file="Source/Communication/IOInterfaceManager.cpp"/>
+        <FILE id="X6d5t5" name="IOInterfaceManager.h" compile="0" resource="0"
+              file="Source/Communication/IOInterfaceManager.h"/>
+      </GROUP>
       <GROUP id="{390E5408-6425-A3DB-3927-C8F8F6EE02BC}" name="Viz">
         <FILE id="B3ZzVg" name="DroneVizUI.cpp" compile="1" resource="0" file="Source/Viz/DroneVizUI.cpp"/>
         <FILE id="Pqt9Jp" name="DroneVizUI.h" compile="0" resource="0" file="Source/Viz/DroneVizUI.h"/>
@@ -387,7 +413,7 @@
         <MODULEPATH id="juce_audio_basics" path="../JUCE/modules"/>
       </MODULEPATHS>
     </VS2017>
-    <XCODE_MAC targetFolder="Builds/MacOSX_CI">
+    <XCODE_MAC targetFolder="Builds/MacOSX_CI" smallIcon="sB0f3i" bigIcon="sB0f3i">
       <CONFIGURATIONS>
         <CONFIGURATION isDebug="0" name="Release"/>
         <CONFIGURATION isDebug="1" name="Debug"/>
