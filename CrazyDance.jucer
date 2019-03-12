@@ -413,7 +413,7 @@
         <MODULEPATH id="juce_audio_basics" path="../JUCE/modules"/>
       </MODULEPATHS>
     </VS2017>
-    <XCODE_MAC targetFolder="Builds/MacOSX_CI">
+    <XCODE_MAC targetFolder="Builds/MacOSX_CI" smallIcon="sB0f3i" bigIcon="sB0f3i">
       <CONFIGURATIONS>
         <CONFIGURATION isDebug="0" name="Release"/>
         <CONFIGURATION isDebug="1" name="Debug"/>
