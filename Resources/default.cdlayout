@@ -1,32 +1,32 @@
 {
   "mainLayout": {
     "type": 1,
-    "width": 1920,
-    "height": 997,
+    "width": 1431,
+    "height": 854,
     "direction": 2,
     "shifters": [
       {
         "type": 1,
-        "width": 1920,
-        "height": 997,
+        "width": 1431,
+        "height": 854,
         "direction": 1,
         "shifters": [
           {
             "type": 1,
-            "width": 1542,
-            "height": 997,
+            "width": 973,
+            "height": 854,
             "direction": 2,
             "shifters": [
               {
                 "type": 1,
-                "width": 1542,
-                "height": 737,
+                "width": 973,
+                "height": 574,
                 "direction": 1,
                 "shifters": [
                   {
                     "type": 0,
-                    "width": 212,
-                    "height": 737,
+                    "width": 261,
+                    "height": 574,
                     "currentContent": "Blocks",
                     "tabs": [
                       {
@@ -36,8 +36,8 @@
                   },
                   {
                     "type": 0,
-                    "width": 1324,
-                    "height": 737,
+                    "width": 706,
+                    "height": 574,
                     "currentContent": "Timeline Editor",
                     "tabs": [
                       {
@@ -49,14 +49,14 @@
               },
               {
                 "type": 1,
-                "width": 1542,
-                "height": 254,
+                "width": 973,
+                "height": 273,
                 "direction": 1,
                 "shifters": [
                   {
                     "type": 0,
-                    "width": 1229,
-                    "height": 254,
+                    "width": 618,
+                    "height": 273,
                     "currentContent": "Drones",
                     "tabs": [
                       {
@@ -66,12 +66,12 @@
                   },
                   {
                     "type": 0,
-                    "width": 307,
-                    "height": 254,
-                    "currentContent": "Logger",
+                    "width": 349,
+                    "height": 273,
+                    "currentContent": "Clusters",
                     "tabs": [
                       {
-                        "name": "Logger"
+                        "name": "Clusters"
                       }
                     ]
                   }
@@ -80,13 +80,38 @@
             ]
           },
           {
-            "type": 0,
-            "width": 371,
-            "height": 997,
-            "currentContent": "Inspector",
-            "tabs": [
+            "type": 1,
+            "width": 451,
+            "height": 854,
+            "direction": 2,
+            "shifters": [
               {
-                "name": "Inspector"
+                "type": 0,
+                "width": 451,
+                "height": 465,
+                "currentContent": "Inspector",
+                "tabs": [
+                  {
+                    "name": "Inspector"
+                  }
+                ]
+              },
+              {
+                "type": 0,
+                "width": 451,
+                "height": 383,
+                "currentContent": "Interfaces",
+                "tabs": [
+                  {
+                    "name": "Stage Viz"
+                  },
+                  {
+                    "name": "Logger"
+                  },
+                  {
+                    "name": "Interfaces"
+                  }
+                ]
               }
             ]
           }

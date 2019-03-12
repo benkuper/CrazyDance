@@ -33,6 +33,10 @@ public:
 	EnumParameter * state;
 	FloatParameter * battery;
 
+	ControllableContainer controlCC;
+	Trigger * takeOff;
+	Trigger * land;
+
 	ControllableContainer flightCC;
 	Point3DParameter * position;
 

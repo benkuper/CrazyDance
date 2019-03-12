@@ -27,7 +27,7 @@ OSCIOInterface::~OSCIOInterface()
 
 void OSCIOInterface::sendDroneData(Drone * d, Controllable * c)
 {
-	String address = "/drone/" + d->droneID->stringValue() + getAddressForDroneControllable(d, c);
+	String address = getAddressForDroneControllable(d, c);
 	OSCMessage m(address);
 	if (c->type != Controllable::TRIGGER)
 	{
@@ -45,7 +45,7 @@ void OSCIOInterface::sendDroneData(Drone * d, Controllable * c)
 
 	if (logOutgoing->boolValue())
 	{
-		NLOG(niceName, "Send " + address + " " + ((Parameter *)c)->stringValue());
+		NLOG(niceName, "Send " + address + " " + (c->type == Controllable::TRIGGER?"":((Parameter *)c)->stringValue()));
 	}
 
 	sender.sendToIPAddress(remoteHost->stringValue(), remotePort->intValue(), m);
@@ -53,7 +53,7 @@ void OSCIOInterface::sendDroneData(Drone * d, Controllable * c)
 
 String OSCIOInterface::getAddressForDroneControllable(Drone * d, Controllable * c) const
 {
-	return c->getControlAddress(d);
+	return "/drone/" + d->droneID->stringValue() + "/" + c->getControlAddress(d);
 }
 
 void OSCIOInterface::oscMessageReceived(const OSCMessage & message)

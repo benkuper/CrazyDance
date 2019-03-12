@@ -22,9 +22,9 @@ LaMoucheFolleIOInterface::~LaMoucheFolleIOInterface()
 
 String LaMoucheFolleIOInterface::getAddressForDroneControllable(Drone * d, Controllable * c) const
 {
-	String baseAddress = "/drone-" + d->droneID->stringValue() + "/";
-	if (c == d->position) return baseAddress + "desiredPosition";
-	else if (c == d->color) return baseAddress + "lightColor";
-	else if (c == d->headlight) return baseAddress + "headlight";
-	else return baseAddress + c->shortName;
+	String baseAddress = "/drone-" + d->droneID->stringValue();
+	if (c == d->position) return baseAddress + "/flight/desiredPosition";
+	else if (c == d->color) return baseAddress + "/light/lightColor";
+	else if (c == d->headlight) return baseAddress + "/light/headlight";
+	else return baseAddress + c->getControlAddress(d);
 }

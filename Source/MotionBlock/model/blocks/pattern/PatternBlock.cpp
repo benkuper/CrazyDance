@@ -69,7 +69,7 @@ CirclePattern::CirclePattern(var params) :
 {
 	center = paramsContainer->addPoint3DParameter("Center", "The center of the circle");
 	center->setVector(0, 2, 0);
-	radius = paramsContainer->addFloatParameter("Radius", "Radius of the circle", 2);
+	radius = paramsContainer->addFloatParameter("Radius", "Radius of the circle", 2,.5f,10);
 	startAngle = paramsContainer->addFloatParameter("Start Angle", "Start angle, 1 is full circle, .5 is half", 0, 0, 1);
 	speed = paramsContainer->addFloatParameter("Speed", "Speed of the motion, in full circles per second (1 is 1 full round per second)", .1, -2, 2);
 	length = paramsContainer->addFloatParameter("Length", "Length to cover, 1 is full circle, .5 is arc of half circle", 1, 0, 1);

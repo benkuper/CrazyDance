@@ -68,6 +68,13 @@ void DroneUI::controllableFeedbackUpdateInternal(Controllable * c)
 	else if (c == item->globalID) repaint();
 }
 
+void DroneUI::mouseDown(const MouseEvent & e)
+{
+	BaseItemUI::mouseDown(e);
+	if (e.mods.isShiftDown()) item->takeOff->trigger();
+	else if (e.mods.isCtrlDown()) item->land->trigger();
+}
+
 void DroneUI::newMessage(const Drone::DroneEvent & e)
 {
 	switch (e.type)

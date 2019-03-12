@@ -147,11 +147,15 @@ var CDEngine::getJSONData()
 	if (!mData.isVoid() && mData.getDynamicObject()->getProperties().size() > 0) data.getDynamicObject()->setProperty("models", mData);
 
 
-	var DroneData = DroneManager::getInstance()->getJSONData();
-	if (!DroneData.isVoid() && DroneData.getDynamicObject()->getProperties().size() > 0) data.getDynamicObject()->setProperty("Drones", DroneData);
+	var droneData = DroneManager::getInstance()->getJSONData();
+	if (!droneData.isVoid() && droneData.getDynamicObject()->getProperties().size() > 0) data.getDynamicObject()->setProperty("drones", droneData);
 
 	var clusterData = DroneClusterGroupManager::getInstance()->getJSONData();
 	if (!clusterData.isVoid() && clusterData.getDynamicObject()->getProperties().size() > 0) data.getDynamicObject()->setProperty("clusters", clusterData);
+
+	var ioData = IOInterfaceManager::getInstance()->getJSONData();
+	if (!ioData.isVoid() && ioData.getDynamicObject()->getProperties().size() > 0) data.getDynamicObject()->setProperty("ioInterfaces", ioData);
+
 
 	return data;
 }
@@ -160,8 +164,9 @@ void CDEngine::loadJSONDataInternalEngine(var data, ProgressTask * loadingTask)
 {
 	//ProgressTask * projectTask = loadingTask->addTask("Project"
 	ProgressTask * modelsTask = loadingTask->addTask("Models");
-	ProgressTask * DroneTask = loadingTask->addTask("Drones");
+	ProgressTask * droneTask = loadingTask->addTask("Drones");
 	ProgressTask * clusterTask = loadingTask->addTask("Clusters");
+	ProgressTask * ioTask = loadingTask->addTask("IO");
 
 
 	clusterTask->start();
@@ -174,10 +179,14 @@ void CDEngine::loadJSONDataInternalEngine(var data, ProgressTask * loadingTask)
 	modelsTask->setProgress(1);
 	modelsTask->end();
 
+	droneTask->start();
+	DroneManager::getInstance()->loadJSONData(data.getProperty("drones", var()));
+	droneTask->setProgress(1);
+	droneTask->end();
 
-	DroneTask->start();
-	DroneManager::getInstance()->loadJSONData(data.getProperty("Drones", var()));
-	DroneTask->setProgress(1);
-	DroneTask->end();
+	ioTask->start();
+	IOInterfaceManager::getInstance()->loadJSONData(data.getProperty("ioInterfaces", var()));
+	ioTask->setProgress(1);
+	ioTask->end();
 }
 

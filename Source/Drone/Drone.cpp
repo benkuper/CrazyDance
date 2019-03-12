@@ -15,6 +15,7 @@
 Drone::Drone(StringRef name, StringRef familyName, var) :
 	BaseItem(name),
 	Thread("Drone " + name),
+	controlCC("Controls"),
 	generalCC("General"),
 	flightCC("Flight"),
 	lightCC("Light"),
@@ -26,6 +27,10 @@ Drone::Drone(StringRef name, StringRef familyName, var) :
 	editorIsCollapsed = true;
 
 	saveAndLoadRecursiveData = true;
+
+	addChildControllableContainer(&controlCC);
+	takeOff = controlCC.addTrigger("Take off", "Take off");
+	land = controlCC.addTrigger("Land", "Land");
 
 	addChildControllableContainer(&generalCC);
 	droneID = generalCC.addIntParameter("Drone ID", "ID of the physical drone", 0);

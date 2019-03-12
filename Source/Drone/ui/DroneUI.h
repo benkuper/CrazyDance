@@ -31,6 +31,8 @@ public:
 	void updateBlockImage();
 	void controllableFeedbackUpdateInternal(Controllable * c) override;
 
+	void mouseDown(const MouseEvent &e) override;
+
 	void newMessage(const Drone::DroneEvent &e) override;
 
 	bool isInterestedInDragSource(const SourceDetails &source) override;
