@@ -120,8 +120,9 @@ after_success:
     echo 'Uploading $SUFFIX ...';
     curl -X POST -F 'appFile=@CrazyDance-linux-x64-$SUFFIX.AppImage' -F 'pass=$UPLOAD_PASS' -F 'path=crazydance/' $UPLOAD_URL;"
   else
-    cd /Users/travis/build/benkuper/CrazyDance/Builds/MacOSX_CI/build/Release
+    cd /Users/travis/build/benkuper/CrazyDance/Package
     ls
-    zip -r -y CrazyDance-osx-bleedingedge.zip CrazyDance.app
-    curl --ftp-create-dirs -T CrazyDance-osx-bleedingedge.zip -u $FTP_USER:$FTP_PASSWORD --insecure ftp://home403871847.1and1-data.host/crazydance/
+    packagesbuild CrazyDance.pkgproj
+    mv CrazyDance.pkg CrazyDance-osx-$SUFFIX.pkg
+    curl -T CrazyDance-osx-$SUFFIX.pkg -u $FTP_USER:$FTP_PASSWORD --insecure ftp://ftp.kuperberg.fr/crazydance
   fi

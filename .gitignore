@@ -28,6 +28,7 @@ contents.xcworkspacedata
 .dirstamp
 profile
 **/MacOSX/build
+**/MacOSX_CI/build
 **/iOS/build
 **/IDEWorkspaceChecks.plist
 **/Linux/build
@@ -80,3 +81,5 @@ Builds/LinuxMakefile/CrazyDance\.AppDir/\.DirIcon
 Builds/LinuxMakefile/CrazyDance\.AppDir/usr/bin/CrazyDance
 
 Builds/LinuxMakefile/CrazyDance-x86_64\.AppImage
+
+Package/CrazyDance\.pkg
