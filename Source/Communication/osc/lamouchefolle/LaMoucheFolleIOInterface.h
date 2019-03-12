@@ -9,3 +9,20 @@
 */
 
 #pragma once
+
+#include "../OSCIOInterface.h"
+
+class LaMoucheFolleIOInterface :
+	public OSCIOInterface
+{
+public:
+	LaMoucheFolleIOInterface(var params = var());
+	~LaMoucheFolleIOInterface();
+
+
+	String getAddressForDroneControllable(Drone * d, Controllable * c) const override;
+
+	String getTypeString() const override { return getTypeStringStatic(); }
+	static const String getTypeStringStatic() { return "LaMoucheFolle";  }
+	static IOInterface * create(var params) { return new LaMoucheFolleIOInterface(params); }
+};

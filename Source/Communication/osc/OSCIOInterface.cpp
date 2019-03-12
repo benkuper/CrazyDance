@@ -11,8 +11,8 @@
 #include "OSCIOInterface.h"
 #include "Drone/Drone.h"
 
-OSCIOInterface::OSCIOInterface(var params) :
-	IOInterface(getTypeString())
+OSCIOInterface::OSCIOInterface(StringRef name, var params) :
+	IOInterface(name)
 {
 	localPort = addIntParameter("Local Port", "", 16001, 1024, 65535);
 	remoteHost = addStringParameter("Remote Host", "", "127.0.0.1");

@@ -21,6 +21,8 @@ IOInterfaceManager::IOInterfaceManager() :
 	BaseManager("Interfaces")
 {
 	factory.defs.add(Factory<IOInterface>::Definition::createDef("", OSCIOInterface::getTypeStringStatic(), &OSCIOInterface::create));
+	factory.defs.add(Factory<IOInterface>::Definition::createDef("", LaMoucheFolleIOInterface::getTypeStringStatic(), &LaMoucheFolleIOInterface::create));
+
 	managerFactory = &factory;
 	DroneManager::getInstance()->addControllableContainerListener(this);
 }

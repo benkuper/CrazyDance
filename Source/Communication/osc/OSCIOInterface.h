@@ -17,7 +17,7 @@ class OSCIOInterface :
 	public OSCReceiver::Listener<OSCReceiver::RealtimeCallback>
 {
 public:
-	OSCIOInterface(var params = var());
+	OSCIOInterface(StringRef name = OSCIOInterface::getTypeStringStatic(), var params = var());
 	virtual ~OSCIOInterface();
 
 	IntParameter * localPort;
@@ -32,7 +32,7 @@ public:
 
 	virtual String getTypeString() const override { return getTypeStringStatic(); }
 	static const String getTypeStringStatic() { return "OSC"; }
-	static IOInterface * create(var params) { return new OSCIOInterface(params); }
+	static IOInterface * create(var params) { return new OSCIOInterface(getTypeStringStatic(), params); }
 
 	// Inherited via Listener
 	virtual void oscMessageReceived(const OSCMessage & message) override;
