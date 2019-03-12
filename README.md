@@ -11,7 +11,7 @@ You can find the bleeding edge version, compiled against latest commits here :
 
 - Linux (x64):  http://benjamin.kuperberg.fr/download/crazydance/CrazyDance-linux-x64-bleedingedge.AppImage
 
-- MacOS :  http://benjamin.kuperberg.fr/download/crazydance/CrazyDance-osx-bleedingedge.zip
+- MacOS :  http://benjamin.kuperberg.fr/download/crazydance/CrazyDance-osx-bleedingedge.pkg
  
 - Windows (x64):  http://benjamin.kuperberg.fr/download/crazydance/CrazyDance-win-x64-bleedingedge.zip
 
