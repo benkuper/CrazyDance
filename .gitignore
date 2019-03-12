@@ -72,3 +72,11 @@ Binaries/
 update\.json
 
 Firmware/ArduinoOutput/
+
+Builds/LinuxMakefile/appimagetool-x86_64\.AppImage
+
+Builds/LinuxMakefile/CrazyDance\.AppDir/\.DirIcon
+
+Builds/LinuxMakefile/CrazyDance\.AppDir/usr/bin/CrazyDance
+
+Builds/LinuxMakefile/CrazyDance-x86_64\.AppImage

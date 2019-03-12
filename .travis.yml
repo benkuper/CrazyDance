@@ -83,11 +83,17 @@ script:
 after_success:
 - |-
   if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then
-    mkdir export
-    cd export
-    docker cp ubuntu:/benkuper/CrazyDance/Builds/LinuxMakefile/build/CrazyDance .
-    zip -r CrazyDance-linux-x64-bleedingedge.zip CrazyDance
-    curl --verbose --progress-bar --ipv4 --connect-timeout 8 --max-time 120 --retry 128 --ftp-ssl --disable-epsv --ftp-pasv --ftp-create-dirs -T CrazyDance-linux-x64-bleedingedge.zip -u $FTP_USER:$FTP_PASSWORD --insecure ftp://home403871847.1and1-data.host/crazydance/
+       docker exec -t ubuntu bash -c "cd /benkuper/CrazyDance/Builds/LinuxMakefile;
+    pwd
+    echo 'Downloading AppImageTool...';
+    wget "https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage";
+    chmod a+x appimagetool-x86_64.AppImage;
+    echo 'Packaging AppImage...';
+    mkdir CrazyDance.AppDir/usr/bin/;
+    cp build/CrazyDance CrazyDance.AppDir/usr/bin/;
+    ./appimagetool-x86_64.AppImage CrazyDance.AppDir CrazyDance-linux-x64-$SUFFIX.AppImage;
+    echo 'Uploading $SUFFIX ...';
+    curl -X POST -F 'appFile=@CrazyDance-linux-x64-$SUFFIX.AppImage' -F 'pass=$UPLOAD_PASS' -F 'path=crazydance/' $UPLOAD_URL;"
   else
     cd /Users/travis/build/benkuper/CrazyDance/Builds/MacOSX_CI/build/Release
     ls
