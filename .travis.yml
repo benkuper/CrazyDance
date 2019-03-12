@@ -129,5 +129,5 @@ after_success:
     ls
     packagesbuild CrazyDance.pkgproj
     mv CrazyDance.pkg CrazyDance-osx-$SUFFIX.pkg
-    curl -T CrazyDance-osx-$SUFFIX.pkg -u $FTP_USER:$FTP_PASSWORD --insecure ftp://ftp.kuperberg.fr/crazydance
+    curl -v -T CrazyDance-osx-$SUFFIX.pkg -u $FTP_USER:$FTP_PASSWORD --insecure ftp://ftp.kuperberg.fr/crazydance/
   fi
