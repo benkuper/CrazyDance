@@ -57,6 +57,10 @@
 			isa = PBXBuildFile;
 			fileRef = 271F6544D0B7EC9D151B44F6;
 		};
+		F531AD890E18D8EF2E88424F = {
+			isa = PBXBuildFile;
+			fileRef = A9C192CEAA7BF8B0821EF97E;
+		};
 		78852BC302274B5A660ADB7E = {
 			isa = PBXBuildFile;
 			fileRef = 211D0480725392B075E1AB96;
@@ -1224,6 +1228,13 @@
 			path = ../../Resources/models/pattern/line.png;
 			sourceTree = "SOURCE_ROOT";
 		};
+		A9C192CEAA7BF8B0821EF97E = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.icns;
+			name = Icon.icns;
+			path = Icon.icns;
+			sourceTree = "SOURCE_ROOT";
+		};
 		AA3B230BC034786E0D77D912 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.cpp;
@@ -2109,6 +2120,7 @@
 			children = (
 				5D78465C0D0546D84274B8F8,
 				271F6544D0B7EC9D151B44F6,
+				A9C192CEAA7BF8B0821EF97E,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -2359,6 +2371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFFBC7E6AD61D473CA1C4EE3,
+				F531AD890E18D8EF2E88424F,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

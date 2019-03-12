@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=CrazyDance
+Exec=CrazyDance
+Icon=crazydance
+Type=Application
+Categories=AudioVideo;Art;
+Comment=Modular Drone Choreography Tool
+MimeType=text/crazydance;
+Name[en]=CrazyDance
+Terminal=false
+StartupNotify=true
+NoDisplay=false
+Name[en_US]=crazydance.desktop
