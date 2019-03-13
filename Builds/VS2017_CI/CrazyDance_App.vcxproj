@@ -122,6 +122,10 @@
     <ClCompile Include="..\..\Source\Timeline\layers\Action\ActionManager.cpp"/>
     <ClCompile Include="..\..\Source\Timeline\layers\Action\GenericActionTrigger.cpp"/>
     <ClCompile Include="..\..\Source\Timeline\layers\Action\IdentificationAction.cpp"/>
+    <ClCompile Include="..\..\Source\Timeline\layers\Block\Transition\ui\MotionBlockClipTransitionManagerUI.cpp"/>
+    <ClCompile Include="..\..\Source\Timeline\layers\Block\Transition\ui\MotionBlockClipTransitionUI.cpp"/>
+    <ClCompile Include="..\..\Source\Timeline\layers\Block\Transition\MotionBlockClipTransition.cpp"/>
+    <ClCompile Include="..\..\Source\Timeline\layers\Block\Transition\MotionBlockClipTransitionManager.cpp"/>
     <ClCompile Include="..\..\Source\Timeline\layers\Block\ui\MotionBlockClipManagerUI.cpp"/>
     <ClCompile Include="..\..\Source\Timeline\layers\Block\ui\MotionBlockClipUI.cpp"/>
     <ClCompile Include="..\..\Source\Timeline\layers\Block\ui\MotionBlockLayerPanel.cpp"/>
@@ -779,6 +783,10 @@
     <ClInclude Include="..\..\Source\Timeline\layers\Action\ActionManager.h"/>
     <ClInclude Include="..\..\Source\Timeline\layers\Action\GenericActionTrigger.h"/>
     <ClInclude Include="..\..\Source\Timeline\layers\Action\IdentificationAction.h"/>
+    <ClInclude Include="..\..\Source\Timeline\layers\Block\Transition\ui\MotionBlockClipTransitionManagerUI.h"/>
+    <ClInclude Include="..\..\Source\Timeline\layers\Block\Transition\ui\MotionBlockClipTransitionUI.h"/>
+    <ClInclude Include="..\..\Source\Timeline\layers\Block\Transition\MotionBlockClipTransition.h"/>
+    <ClInclude Include="..\..\Source\Timeline\layers\Block\Transition\MotionBlockClipTransitionManager.h"/>
     <ClInclude Include="..\..\Source\Timeline\layers\Block\ui\MotionBlockClipManagerUI.h"/>
     <ClInclude Include="..\..\Source\Timeline\layers\Block\ui\MotionBlockClipUI.h"/>
     <ClInclude Include="..\..\Source\Timeline\layers\Block\ui\MotionBlockLayerPanel.h"/>

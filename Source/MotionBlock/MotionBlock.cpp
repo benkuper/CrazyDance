@@ -147,7 +147,6 @@ var MotionBlock::getJSONData()
 	var data = BaseItem::getJSONData();
 	data.getDynamicObject()->setProperty("params", paramsContainer.getJSONData());
 	//data.getDynamicObject()->setProperty("automations", automationsManager.getJSONData());
-	
 	return data;
 
 }

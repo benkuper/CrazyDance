@@ -229,6 +229,22 @@
 			isa = PBXBuildFile;
 			fileRef = 6A11CEC37EF8CB86C62A7BAA;
 		};
+		F6F78B165CD7D9B7F4C80A6E = {
+			isa = PBXBuildFile;
+			fileRef = C52E2F722B4DB8D1B815BD6D;
+		};
+		921B438FFFB82A4A29E6D060 = {
+			isa = PBXBuildFile;
+			fileRef = B8F571F71ECF0FCF91BB7038;
+		};
+		049949D4CF827FB30C353B08 = {
+			isa = PBXBuildFile;
+			fileRef = 0D36B5A90761994C8DC7977C;
+		};
+		5B5859EAC1F286A8F85471B3 = {
+			isa = PBXBuildFile;
+			fileRef = A1A69E4CB27F3D147DD45474;
+		};
 		475C1E922E6C63CB542BD874 = {
 			isa = PBXBuildFile;
 			fileRef = 27CBAAC0D4D1C3ECB5E2BCAB;
@@ -436,6 +452,13 @@
 			path = ../../Source/Drone/TargetFilter/DroneTargetFilter.cpp;
 			sourceTree = "SOURCE_ROOT";
 		};
+		0D36B5A90761994C8DC7977C = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = MotionBlockClipTransition.cpp;
+			path = ../../Source/Timeline/layers/Block/Transition/MotionBlockClipTransition.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
 		0EEF5F249FA5CFE1E8718D3F = {
 			isa = PBXFileReference;
 			lastKnownFileType = wrapper.framework;
@@ -490,6 +513,13 @@
 			lastKnownFileType = sourcecode.cpp.cpp;
 			name = DroneTargetFilterManager.cpp;
 			path = ../../Source/Drone/TargetFilter/DroneTargetFilterManager.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		17D9455799C41F8E6BE8C831 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = MotionBlockClipTransitionUI.h;
+			path = ../../Source/Timeline/layers/Block/Transition/ui/MotionBlockClipTransitionUI.h;
 			sourceTree = "SOURCE_ROOT";
 		};
 		1A570A0A96909C6D92EDB03A = {
@@ -616,6 +646,13 @@
 			lastKnownFileType = sourcecode.cpp.cpp;
 			name = MotionBlockModel.cpp;
 			path = ../../Source/MotionBlock/model/MotionBlockModel.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		2A5D196F7F910FB23C3F0C76 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = MotionBlockClipTransitionManagerUI.h;
+			path = ../../Source/Timeline/layers/Block/Transition/ui/MotionBlockClipTransitionManagerUI.h;
 			sourceTree = "SOURCE_ROOT";
 		};
 		2DF10A9F1E28EB9A1D6B6D22 = {
@@ -1171,6 +1208,13 @@
 			path = System/Library/Frameworks/CoreMIDI.framework;
 			sourceTree = SDKROOT;
 		};
+		A1A69E4CB27F3D147DD45474 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = MotionBlockClipTransitionManager.cpp;
+			path = ../../Source/Timeline/layers/Block/Transition/MotionBlockClipTransitionManager.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
 		A1F2D8D61F55E3E2086C1130 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.cpp;
@@ -1311,6 +1355,13 @@
 			path = ../../Source/Viz/DroneVizUI.cpp;
 			sourceTree = "SOURCE_ROOT";
 		};
+		B8F571F71ECF0FCF91BB7038 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = MotionBlockClipTransitionUI.cpp;
+			path = ../../Source/Timeline/layers/Block/Transition/ui/MotionBlockClipTransitionUI.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
 		BD928BEEB2AD0767E9C29A95 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.c.h;
@@ -1358,6 +1409,13 @@
 			lastKnownFileType = sourcecode.c.h;
 			name = MotionBlockModelPresetManager.h;
 			path = ../../Source/MotionBlock/model/preset/MotionBlockModelPresetManager.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		C52E2F722B4DB8D1B815BD6D = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = MotionBlockClipTransitionManagerUI.cpp;
+			path = ../../Source/Timeline/layers/Block/Transition/ui/MotionBlockClipTransitionManagerUI.cpp;
 			sourceTree = "SOURCE_ROOT";
 		};
 		C7CB76B7878A7A32C5AA36DF = {
@@ -1486,6 +1544,13 @@
 			path = ../../Source/Drone/TargetFilter/DroneTargetFilter.h;
 			sourceTree = "SOURCE_ROOT";
 		};
+		DCF76ECAAF7A144136E44D4D = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = MotionBlockClipTransition.h;
+			path = ../../Source/Timeline/layers/Block/Transition/MotionBlockClipTransition.h;
+			sourceTree = "SOURCE_ROOT";
+		};
 		DF2B61B9A2FC4DC4ED5FD468 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.c.h;
@@ -1554,6 +1619,13 @@
 			lastKnownFileType = image.png;
 			name = script.png;
 			path = ../../Resources/models/script.png;
+			sourceTree = "SOURCE_ROOT";
+		};
+		F2E9B1C977F1E2057617A00A = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = MotionBlockClipTransitionManager.h;
+			path = ../../Source/Timeline/layers/Block/Transition/MotionBlockClipTransitionManager.h;
 			sourceTree = "SOURCE_ROOT";
 		};
 		F53C7B426A747D30DC532F19 = {
@@ -1908,6 +1980,29 @@
 			name = Action;
 			sourceTree = "<group>";
 		};
+		98C648C61FEB2608E920E86A = {
+			isa = PBXGroup;
+			children = (
+				C52E2F722B4DB8D1B815BD6D,
+				2A5D196F7F910FB23C3F0C76,
+				B8F571F71ECF0FCF91BB7038,
+				17D9455799C41F8E6BE8C831,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
+		4A321AE629984841BA1824A0 = {
+			isa = PBXGroup;
+			children = (
+				98C648C61FEB2608E920E86A,
+				0D36B5A90761994C8DC7977C,
+				DCF76ECAAF7A144136E44D4D,
+				A1A69E4CB27F3D147DD45474,
+				F2E9B1C977F1E2057617A00A,
+			);
+			name = Transition;
+			sourceTree = "<group>";
+		};
 		B6FE482372382042320B0798 = {
 			isa = PBXGroup;
 			children = (
@@ -1926,6 +2021,7 @@
 		18414178C2F86027188848A4 = {
 			isa = PBXGroup;
 			children = (
+				4A321AE629984841BA1824A0,
 				B6FE482372382042320B0798,
 				5DB911EC1917A7E8139E537A,
 				89B543F099C1C319F9B3B1A7,
@@ -2357,6 +2453,10 @@
 				C276C24AB7C6F2E819F3EDC6,
 				BD2C363E33F02E2BE87CDFD8,
 				35470F8FDDB05CDD49345A88,
+				F6F78B165CD7D9B7F4C80A6E,
+				921B438FFFB82A4A29E6D060,
+				049949D4CF827FB30C353B08,
+				5B5859EAC1F286A8F85471B3,
 				475C1E922E6C63CB542BD874,
 				950A4378C6C5E149BF5FD9A2,
 				CCFF657EE80BE96AEE22FD69,

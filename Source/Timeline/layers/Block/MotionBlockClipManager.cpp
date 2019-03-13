@@ -28,6 +28,14 @@ LayerBlock * MotionBlockClipManager::createItem()
 	return new MotionBlockClip(layer);
 }
 
+void MotionBlockClipManager::getSurroundingBlocks(MotionBlockClip * clip, MotionBlockClip *& prevClip, MotionBlockClip *& nextClip)
+{
+	int index = items.indexOf(clip);
+	if (index == -1) return;
+	if (index > 0) prevClip = (MotionBlockClip *)(items[index - 1]);
+	if (index < items.size() - 1) nextClip = (MotionBlockClip *)(items[index + 1]);
+}
+
 void MotionBlockClipManager::onControllableFeedbackUpdate(ControllableContainer * cc, Controllable * c)
 {
 	MotionBlockClip * b = dynamic_cast<MotionBlockClip *>(c->parentContainer);
@@ -35,12 +43,12 @@ void MotionBlockClipManager::onControllableFeedbackUpdate(ControllableContainer 
 	{
 		if (c == b->time || c == b->coreLength || c == b->loopLength)
 		{
-			if (!blocksCanOverlap) return;
-			computeFadesForClip(b, true);
+			//if (!blocksCanOverlap) return;
+			//computeFadesForClip(b, true);
 		}
 	}
 }
-
+/*
 void MotionBlockClipManager::computeFadesForClip(MotionBlockClip * clip, bool propagate)
 {
 	int bIndex = items.indexOf(clip);
@@ -77,3 +85,4 @@ void MotionBlockClipManager::computeFadesForClip(MotionBlockClip * clip, bool pr
 		if (nextBlock != nullptr) computeFadesForClip(nextBlock, false);
 	}
 }
+*/

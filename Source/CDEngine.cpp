@@ -52,6 +52,7 @@ CDEngine::CDEngine() :
 CDEngine::~CDEngine()
 {
 	DroneManager::getInstance()->clear();
+	MotionBlockModelLibrary::getInstance()->clear();
 
 	IOInterfaceManager::deleteInstance();
 

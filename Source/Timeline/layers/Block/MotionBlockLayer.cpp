@@ -15,12 +15,18 @@
 
 MotionBlockLayer::MotionBlockLayer(Sequence * s, var) :
 	SequenceLayer(s, "Block Layer"),
-	blockClipManager(this)
+	blockClipManager(this),
+	transitionManager(this)
 {
 	mode = addEnumParameter("Mode", "Mode for this layer.\nAll \"Main\" layers will be averaged together, then the \"Effect\" layers will be added to that.");
 	mode->addOption("Main", MAIN)->addOption("Effect", EFFECT);
 
 	//defaultLayer = addBoolParameter("Default", "If checked, this layer will be the default layer when no layer has the requested prop id", false);
+
+	addChildControllableContainer(&blockClipManager);
+	blockClipManager.hideInEditor = true;
+	addChildControllableContainer(&transitionManager);
+	transitionManager.hideInEditor = true;
 
 	addChildControllableContainer(&filterManager);
 	filterManager.addFilterManagerListener(this);
@@ -28,6 +34,8 @@ MotionBlockLayer::MotionBlockLayer(Sequence * s, var) :
 	updateLinkedProps();
 
 	Engine::mainEngine->addEngineListener(this);
+
+	blockClipManager.addBaseManagerListener(this);
 }
 
 MotionBlockLayer::~MotionBlockLayer()
@@ -37,7 +45,26 @@ MotionBlockLayer::~MotionBlockLayer()
 
 var MotionBlockLayer::getMotionData(Drone * p, double time, var params)
 {
-	Array<LayerBlock *> blocks = blockClipManager.getBlocksAtTime(time, false);
+	var motionData;
+	MotionBlockClipTransition * transition = (MotionBlockClipTransition *)transitionManager.getBlockAtTime(time);
+	if (transition != nullptr)
+	{
+		motionData = transition->getMotionData(p, time, params);
+	}
+	else
+	{
+		MotionBlockClip * clip = (MotionBlockClip *)blockClipManager.getBlockAtTime(time);
+		if (clip != nullptr)
+		{
+			motionData = clip->getMotionData(p, time, params);
+		}
+	}
+
+	return motionData;
+
+
+	/*
+	Array<LayerBlock *> blocks = blockClipManager.get(time, false);
 
 	if (blocks.size() == 0) return var();
 
@@ -74,7 +101,7 @@ var MotionBlockLayer::getMotionData(Drone * p, double time, var params)
 	tPos /= totalWeight;
 	float weight = jmin(totalWeight, 1.f);
 
-
+	
 	var result = var(new DynamicObject());
 	var posData;
 	posData.append(tPos.x);
@@ -85,6 +112,7 @@ var MotionBlockLayer::getMotionData(Drone * p, double time, var params)
 
 	
 	return result;
+	*/
 }
 
 void MotionBlockLayer::updateLinkedProps()
@@ -129,10 +157,83 @@ SequenceLayerTimeline * MotionBlockLayer::getTimelineUI()
 	return new MotionBlockLayerTimeline(this);
 }
 
+void MotionBlockLayer::itemAdded(LayerBlock * b)
+{
+	if (isCurrentlyLoadingData) return;
+
+	if (blockClipManager.items.size() == 1) return;
+
+	MotionBlockClip * clip = dynamic_cast<MotionBlockClip *>(b);
+
+	MotionBlockClip * prevClip = nullptr;
+	MotionBlockClip * nextClip = nullptr;
+	blockClipManager.getSurroundingBlocks(clip, prevClip, nextClip);
+
+	DBG("Add clip " << clip->time->floatValue() << ", " << blockClipManager.items.indexOf(clip));
+
+	if (nextClip != nullptr)
+	{
+		DBG("Next clip " << nextClip->niceName);
+	}
+
+	MotionBlockClipTransition * beforeTransition = transitionManager.getAfterTransition(prevClip);
+	MotionBlockClipTransition * afterTransition = transitionManager.getBeforeTransition(nextClip);
+
+
+	if (afterTransition == nullptr) 
+	{
+		if(nextClip != nullptr) transitionManager.addTransition(clip, nextClip);
+	}
+	
+	if (beforeTransition == nullptr) 
+	{
+		if(prevClip != nullptr) transitionManager.addTransition(prevClip, clip);
+	}
+	
+	if(afterTransition != nullptr && beforeTransition != nullptr)//middle
+	{
+		if (beforeTransition != afterTransition)
+		{
+			DBG("Weird overlapping");
+			return;
+		}
+
+		beforeTransition->setToClip(clip);
+		transitionManager.addTransition(clip, nextClip);
+	}
+	
+}
+
+void MotionBlockLayer::itemRemoved(LayerBlock * b)
+{
+	if (isCurrentlyLoadingData) return;
+
+	MotionBlockClip * clip = dynamic_cast<MotionBlockClip *>(b);
+
+	
+	MotionBlockClipTransition * beforeTransition = nullptr;
+	MotionBlockClipTransition * afterTransition = nullptr;
+	transitionManager.getTransitionsForClip(clip, beforeTransition, afterTransition);
+	//MotionBlockClip * prevClip = beforeTransition != nullptr ? beforeTransition->fromClip : nullptr;
+	MotionBlockClip * nextClip = afterTransition != nullptr ? afterTransition->toClip : nullptr;
+
+	if (beforeTransition != nullptr && afterTransition != nullptr) //between
+	{
+		jassert(nextClip != nullptr);
+		transitionManager.removeItem(afterTransition);
+		beforeTransition->setToClip(nextClip);
+	}else
+	{
+		if(beforeTransition != nullptr) transitionManager.removeItem(beforeTransition);
+		if(afterTransition != nullptr) transitionManager.removeItem(afterTransition);
+	}
+}
+
 var MotionBlockLayer::getJSONData()
 {
 	var data = SequenceLayer::getJSONData();
 	data.getDynamicObject()->setProperty("blocks", blockClipManager.getJSONData());
+	data.getDynamicObject()->setProperty("transitions", transitionManager.getJSONData());
 	data.getDynamicObject()->setProperty("filters", filterManager.getJSONData());
 	return data;
 }
@@ -141,5 +242,6 @@ void MotionBlockLayer::loadJSONDataInternal(var data)
 {
 	SequenceLayer::loadJSONDataInternal(data);
 	blockClipManager.loadJSONData(data.getProperty("blocks", var()));
+	transitionManager.loadJSONData(data.getProperty("transitions", var()));
 	filterManager.loadJSONData(data.getProperty("filters", var()));
 }

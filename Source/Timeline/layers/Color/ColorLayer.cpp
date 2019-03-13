@@ -13,7 +13,7 @@
 #include "ui/ColorLayerTimeline.h"
 
 ColorLayer::ColorLayer(Sequence * s, var params) :
-	SequenceLayer(s, params),
+	SequenceLayer(s, getTypeString()),
 	colorManager(s->totalTime->floatValue())
 {
 

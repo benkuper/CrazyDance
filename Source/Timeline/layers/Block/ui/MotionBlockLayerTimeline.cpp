@@ -12,9 +12,13 @@
 
 MotionBlockLayerTimeline::MotionBlockLayerTimeline(MotionBlockLayer * layer) :
 	SequenceLayerTimeline(layer),
-	managerUI(this, &layer->blockClipManager)
+	managerUI(this, &layer->blockClipManager),
+	transitionManagerUI(this, &layer->transitionManager)
 {
 	addAndMakeVisible(managerUI);
+	managerUI.bringToFrontOnSelect = false;
+	addAndMakeVisible(transitionManagerUI);
+	transitionManagerUI.bringToFrontOnSelect = false;
 }
 
 MotionBlockLayerTimeline::~MotionBlockLayerTimeline()
@@ -24,9 +28,11 @@ MotionBlockLayerTimeline::~MotionBlockLayerTimeline()
 void MotionBlockLayerTimeline::resized()
 {
 	managerUI.setBounds(getLocalBounds());
+	transitionManagerUI.setBounds(getLocalBounds());
 }
 
 void MotionBlockLayerTimeline::updateContent()
 {
 	managerUI.updateContent();
+	transitionManagerUI.updateContent();
 }

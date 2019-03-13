@@ -24,7 +24,9 @@ public:
 	MotionBlockLayer * layer;
 	LayerBlock * createItem() override;
 
+	void getSurroundingBlocks(MotionBlockClip * clip, MotionBlockClip *& prevClip, MotionBlockClip *& nextClip);
+
 	void onControllableFeedbackUpdate(ControllableContainer * cc, Controllable *c) override;
 
-	void computeFadesForClip(MotionBlockClip * clip, bool propagate);
+	//void computeFadesForClip(MotionBlockClip * clip, bool propagate);
 };

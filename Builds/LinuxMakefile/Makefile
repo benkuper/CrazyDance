@@ -110,6 +110,10 @@ OBJECTS_APP := \
   $(JUCE_OBJDIR)/ActionManager_d256dc66.o \
   $(JUCE_OBJDIR)/GenericActionTrigger_2cdd7966.o \
   $(JUCE_OBJDIR)/IdentificationAction_6763151f.o \
+  $(JUCE_OBJDIR)/MotionBlockClipTransitionManagerUI_d0888f30.o \
+  $(JUCE_OBJDIR)/MotionBlockClipTransitionUI_fd625a6f.o \
+  $(JUCE_OBJDIR)/MotionBlockClipTransition_12f193ec.o \
+  $(JUCE_OBJDIR)/MotionBlockClipTransitionManager_d804deab.o \
   $(JUCE_OBJDIR)/MotionBlockClipManagerUI_837280d5.o \
   $(JUCE_OBJDIR)/MotionBlockClipUI_9d5ac86a.o \
   $(JUCE_OBJDIR)/MotionBlockLayerPanel_ce080db9.o \
@@ -368,6 +372,26 @@ $(JUCE_OBJDIR)/GenericActionTrigger_2cdd7966.o: ../../Source/Timeline/layers/Act
 $(JUCE_OBJDIR)/IdentificationAction_6763151f.o: ../../Source/Timeline/layers/Action/IdentificationAction.cpp
 	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
 	@echo "Compiling IdentificationAction.cpp"
+	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
+
+$(JUCE_OBJDIR)/MotionBlockClipTransitionManagerUI_d0888f30.o: ../../Source/Timeline/layers/Block/Transition/ui/MotionBlockClipTransitionManagerUI.cpp
+	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
+	@echo "Compiling MotionBlockClipTransitionManagerUI.cpp"
+	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
+
+$(JUCE_OBJDIR)/MotionBlockClipTransitionUI_fd625a6f.o: ../../Source/Timeline/layers/Block/Transition/ui/MotionBlockClipTransitionUI.cpp
+	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
+	@echo "Compiling MotionBlockClipTransitionUI.cpp"
+	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
+
+$(JUCE_OBJDIR)/MotionBlockClipTransition_12f193ec.o: ../../Source/Timeline/layers/Block/Transition/MotionBlockClipTransition.cpp
+	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
+	@echo "Compiling MotionBlockClipTransition.cpp"
+	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
+
+$(JUCE_OBJDIR)/MotionBlockClipTransitionManager_d804deab.o: ../../Source/Timeline/layers/Block/Transition/MotionBlockClipTransitionManager.cpp
+	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
+	@echo "Compiling MotionBlockClipTransitionManager.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
 $(JUCE_OBJDIR)/MotionBlockClipManagerUI_837280d5.o: ../../Source/Timeline/layers/Block/ui/MotionBlockClipManagerUI.cpp

@@ -228,6 +228,26 @@
                   file="Source/Timeline/layers/Action/IdentificationAction.h"/>
           </GROUP>
           <GROUP id="{4294FA19-F272-956C-3EED-C1667A6AE991}" name="Block">
+            <GROUP id="{1E364DB8-A57F-FF0A-03FF-26188D934CA1}" name="Transition">
+              <GROUP id="{26AA04E5-24A7-0CAE-8C2C-8EF8F2DC134D}" name="ui">
+                <FILE id="ixk6fF" name="MotionBlockClipTransitionManagerUI.cpp" compile="1"
+                      resource="0" file="Source/Timeline/layers/Block/Transition/ui/MotionBlockClipTransitionManagerUI.cpp"/>
+                <FILE id="jXkQeD" name="MotionBlockClipTransitionManagerUI.h" compile="0"
+                      resource="0" file="Source/Timeline/layers/Block/Transition/ui/MotionBlockClipTransitionManagerUI.h"/>
+                <FILE id="r8ZYac" name="MotionBlockClipTransitionUI.cpp" compile="1"
+                      resource="0" file="Source/Timeline/layers/Block/Transition/ui/MotionBlockClipTransitionUI.cpp"/>
+                <FILE id="l3bgd7" name="MotionBlockClipTransitionUI.h" compile="0"
+                      resource="0" file="Source/Timeline/layers/Block/Transition/ui/MotionBlockClipTransitionUI.h"/>
+              </GROUP>
+              <FILE id="toaLZ2" name="MotionBlockClipTransition.cpp" compile="1"
+                    resource="0" file="Source/Timeline/layers/Block/Transition/MotionBlockClipTransition.cpp"/>
+              <FILE id="dsMJ63" name="MotionBlockClipTransition.h" compile="0" resource="0"
+                    file="Source/Timeline/layers/Block/Transition/MotionBlockClipTransition.h"/>
+              <FILE id="jG1LYz" name="MotionBlockClipTransitionManager.cpp" compile="1"
+                    resource="0" file="Source/Timeline/layers/Block/Transition/MotionBlockClipTransitionManager.cpp"/>
+              <FILE id="izvWw2" name="MotionBlockClipTransitionManager.h" compile="0"
+                    resource="0" file="Source/Timeline/layers/Block/Transition/MotionBlockClipTransitionManager.h"/>
+            </GROUP>
             <GROUP id="{7FED4640-DFA3-310E-9AC8-DA817F0A118E}" name="ui">
               <FILE id="G4hHiT" name="MotionBlockClipManagerUI.cpp" compile="1" resource="0"
                     file="Source/Timeline/layers/Block/ui/MotionBlockClipManagerUI.cpp"/>
@@ -324,7 +344,7 @@
         <MODULEPATH id="juce_opengl" path="D:/Softwares\JUCE\modules"/>
         <MODULEPATH id="juce_osc" path="D:/Softwares\JUCE\modules"/>
         <MODULEPATH id="juce_organicui" path="../../JUCE Modules"/>
-        <MODULEPATH id="juce_timeline" path="../JUCE Modules"/>
+        <MODULEPATH id="juce_timeline" path="../../JUCE Modules"/>
         <MODULEPATH id="juce_audio_utils" path="D:/Softwares\JUCE\modules"/>
       </MODULEPATHS>
     </VS2017>

@@ -77,6 +77,12 @@
     <Filter Include="CrazyDance\Source\Timeline\layers\Action">
       <UniqueIdentifier>{C93477DD-BE01-8AD7-1D9A-7EBB960E6B8F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CrazyDance\Source\Timeline\layers\Block\Transition\ui">
+      <UniqueIdentifier>{0C631355-9360-C150-DC5A-3E76C1649017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CrazyDance\Source\Timeline\layers\Block\Transition">
+      <UniqueIdentifier>{298923ED-91CF-0487-2726-EF4CFF5F43E4}</UniqueIdentifier>
+    </Filter>
     <Filter Include="CrazyDance\Source\Timeline\layers\Block\ui">
       <UniqueIdentifier>{3950B3DA-6444-F8B4-885B-C4FCB946E6DB}</UniqueIdentifier>
     </Filter>
@@ -408,6 +414,18 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\Timeline\layers\Action\IdentificationAction.cpp">
       <Filter>CrazyDance\Source\Timeline\layers\Action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Timeline\layers\Block\Transition\ui\MotionBlockClipTransitionManagerUI.cpp">
+      <Filter>CrazyDance\Source\Timeline\layers\Block\Transition\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Timeline\layers\Block\Transition\ui\MotionBlockClipTransitionUI.cpp">
+      <Filter>CrazyDance\Source\Timeline\layers\Block\Transition\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Timeline\layers\Block\Transition\MotionBlockClipTransition.cpp">
+      <Filter>CrazyDance\Source\Timeline\layers\Block\Transition</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Timeline\layers\Block\Transition\MotionBlockClipTransitionManager.cpp">
+      <Filter>CrazyDance\Source\Timeline\layers\Block\Transition</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Timeline\layers\Block\ui\MotionBlockClipManagerUI.cpp">
       <Filter>CrazyDance\Source\Timeline\layers\Block\ui</Filter>
@@ -1301,6 +1319,18 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\Timeline\layers\Action\IdentificationAction.h">
       <Filter>CrazyDance\Source\Timeline\layers\Action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Timeline\layers\Block\Transition\ui\MotionBlockClipTransitionManagerUI.h">
+      <Filter>CrazyDance\Source\Timeline\layers\Block\Transition\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Timeline\layers\Block\Transition\ui\MotionBlockClipTransitionUI.h">
+      <Filter>CrazyDance\Source\Timeline\layers\Block\Transition\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Timeline\layers\Block\Transition\MotionBlockClipTransition.h">
+      <Filter>CrazyDance\Source\Timeline\layers\Block\Transition</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Timeline\layers\Block\Transition\MotionBlockClipTransitionManager.h">
+      <Filter>CrazyDance\Source\Timeline\layers\Block\Transition</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Timeline\layers\Block\ui\MotionBlockClipManagerUI.h">
       <Filter>CrazyDance\Source\Timeline\layers\Block\ui</Filter>

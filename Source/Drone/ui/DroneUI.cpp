@@ -31,6 +31,7 @@ void DroneUI::paint(Graphics & g)
 	BaseItemUI::paint(g);
 	Rectangle<int> r = getMainBounds().withTop(headerHeight + headerGap);
 
+	//g.setColour(item->uiColor->getColor());
 	if (blockImage.getWidth() > 0) g.drawImage(blockImage, r.removeFromBottom(r.getHeight() / 3).toFloat(), RectanglePlacement::centred);
 	if (droneImage.getWidth() > 0) g.drawImage(droneImage, r.toFloat().reduced(8), RectanglePlacement::centred);
 

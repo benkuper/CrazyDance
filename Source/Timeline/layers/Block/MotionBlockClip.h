@@ -32,6 +32,8 @@ public:
 	FloatParameter * fadeIn;
 	FloatParameter * fadeOut;
 
+	var blockData; //for ghosting
+
 	void setBlockFromProvider(MotionBlockDataProvider * provider);
 	var getMotionData(Drone * p, double absoluteTime, var params);
 
@@ -47,4 +49,6 @@ public:
 	void loadJSONDataInternal(var data) override;
 
 	String getTypeString() const override { return "MotionBlockClip"; }
+
+	WeakReference<MotionBlockClip>::Master masterReference;
 };

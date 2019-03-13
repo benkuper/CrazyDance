@@ -16,7 +16,7 @@
 TimelineBlockSequence::TimelineBlockSequence() :
 	Sequence()
 {
-
+	totalTime->setValue(120); //2 min by default
 	layerManager->addItem(new MotionBlockLayer(this));
 	layerManager->addBaseManagerListener(this);
 	setAudioDeviceManager(&AudioManager::getInstance()->am);

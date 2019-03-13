@@ -27,6 +27,9 @@ Drone::Drone(StringRef name, StringRef familyName, var) :
 	editorIsCollapsed = true;
 
 	saveAndLoadRecursiveData = true;
+	Random r(Time::currentTimeMillis());
+
+	uiColor = addColorParameter("UI Color", "Color in UI", Colour::fromHSV(r.nextFloat(), 1, .5f,1));
 
 	addChildControllableContainer(&controlCC);
 	takeOff = controlCC.addTrigger("Take off", "Take off");
@@ -43,6 +46,7 @@ Drone::Drone(StringRef name, StringRef familyName, var) :
 
 	addChildControllableContainer(&flightCC);
 	position = flightCC.addPoint3DParameter("Position", "Position of the drone");
+	position->setBounds(-10, 0, -10, 10, 5, 10);
 
 	addChildControllableContainer(&lightCC);
 	color = lightCC.addColorParameter("Color", "Color of the light deck", Colours::black);

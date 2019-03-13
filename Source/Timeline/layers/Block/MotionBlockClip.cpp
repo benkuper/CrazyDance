@@ -29,12 +29,16 @@ MotionBlockClip::MotionBlockClip(MotionBlockLayer * layer, float _time) :
 	fadeOut = addFloatParameter("Fade Out", "Fade out time", 0, 0, getTotalLength());
 	fadeIn->setControllableFeedbackOnly(autoFade->boolValue());
 	fadeOut->setControllableFeedbackOnly(autoFade->boolValue());
+
+	DBG("New clip ! " << niceName);
 }
 
 MotionBlockClip::~MotionBlockClip()
 {
 	setBlockFromProvider(nullptr);
+	masterReference.clear();
 }
+
 
 void MotionBlockClip::setBlockFromProvider(MotionBlockDataProvider * provider)
 {
@@ -56,7 +60,9 @@ void MotionBlockClip::setBlockFromProvider(MotionBlockDataProvider * provider)
 	{
 		addChildControllableContainer(currentBlock);
 		currentBlock->addMotionBlockListener(this);
-
+		//if(parentContainer != nullptr) setNiceName(parentContainer->getUniqueNameInContainer(currentBlock->niceName));
+		currentBlock->loadJSONDataInternal(blockData);
+		blockData = var();
 	}
 }
 var MotionBlockClip::getMotionData(Drone * p, double absoluteTime, var params)
@@ -135,9 +141,11 @@ var MotionBlockClip::getJSONData()
 void MotionBlockClip::loadJSONDataInternal(var data)
 {
 	LayerBlock::loadJSONDataInternal(data);
+
+	var bData = data.getProperty("blockData", var());
 	if (currentBlock != nullptr)
 	{
-		currentBlock->loadJSONData(data.getProperty("blockData", var()));
+		currentBlock->loadJSONData(blockData);
 
 		Array<WeakReference<Parameter>> params = currentBlock->paramsContainer.getAllParameters();
 
@@ -149,5 +157,11 @@ void MotionBlockClip::loadJSONDataInternal(var data)
 			}
 		}
 	}
+	else
+	{
+		blockData = bData;
+	}
+
+	DBG(" > after load " << niceName << " / " << time->floatValue());
 
 }

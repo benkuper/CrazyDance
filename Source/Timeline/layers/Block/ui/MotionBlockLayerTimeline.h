@@ -12,6 +12,7 @@
 
 #include "../MotionBlockLayer.h"
 #include "MotionBlockClipManagerUI.h"
+#include "../Transition/ui/MotionBlockClipTransitionManagerUI.h"
 
 class MotionBlockLayerTimeline :
 	public SequenceLayerTimeline
@@ -22,6 +23,7 @@ public:
 
 	MotionBlockLayer * blockLayer;
 	MotionBlockClipManagerUI managerUI;
+	MotionBlockClipTransitionManagerUI transitionManagerUI;
 
 	void resized() override;
 	void updateContent() override;

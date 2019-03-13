@@ -27,6 +27,7 @@ public:
 	SequenceLayerPanel * getPanel() override;
 	SequenceLayerTimeline * getTimelineUI() override;
 
+	String getTypeString() const override { return getTypeStringStatic(); }
 	static const String getTypeStringStatic() { return "Color"; }
 
 	static ColorLayer * create(Sequence * s, var params) { return new ColorLayer(s, params); }

@@ -12,11 +12,13 @@
 
 #include "MotionBlockClipManager.h"
 #include "Drone/TargetFilter/DroneTargetFilterManager.h"
+#include "Transition/MotionBlockClipTransitionManager.h"
 
 class MotionBlockLayer :
 	public SequenceLayer,
 	public DroneTargetFilterManager::FilterManagerListener,
-	public EngineListener
+	public EngineListener,
+	public MotionBlockClipManager::Listener
 {
 public:
 	MotionBlockLayer(Sequence * s, var params = var());
@@ -25,6 +27,7 @@ public:
 	enum Mode { MAIN, EFFECT};
 
 	MotionBlockClipManager blockClipManager;
+	MotionBlockClipTransitionManager transitionManager;
 
 	//BoolParameter * defaultLayer;
 	EnumParameter * mode;
@@ -36,6 +39,9 @@ public:
 
 	void filtersChanged() override;
 	void endLoadFile() override;
+
+	void itemAdded(LayerBlock * clip) override;
+	void itemRemoved(LayerBlock * clip) override;
 	
 	var getJSONData() override;
 	void loadJSONDataInternal(var data) override;

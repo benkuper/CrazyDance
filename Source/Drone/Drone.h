@@ -27,6 +27,8 @@ public:
 	enum State { OFF, DISCONNECTED, CONNECTING, CALIBRATING, READY, TAKEOFF, FLYING, LANDING, WARNING, MAX_STATES};
 	const String stateStrings[MAX_STATES]{ "Off", "Disconnected", "Connecting","Connecting","Calibrating", "Ready", "Takeoff", "Flying", " Warning" };
 
+	ColorParameter * uiColor;
+	
 	ControllableContainer generalCC;
 	IntParameter * droneID;
 	IntParameter * globalID;
