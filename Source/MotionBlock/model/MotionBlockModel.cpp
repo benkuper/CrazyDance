@@ -94,6 +94,7 @@ MotionBlockModelUI * MotionBlockModel::createUI()
 {
 	return new MotionBlockModelUI(this);
 }
+
 Vector3D<float> MotionBlockModel::getPoint3DValue(Point3DParameter * p, var params)
 {
 	var val = getParamValue<var>(p, params);

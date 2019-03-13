@@ -12,6 +12,7 @@
 
 #include "CDEngine.h"
 #include "MotionBlock/model/MotionBlockModelLibrary.h"
+
 #include "Drone/DroneManager.h"
 #include "Audio/AudioManager.h"
 #include "Timeline/layers/Block/MotionBlockLayer.h"
@@ -26,9 +27,9 @@ CDEngine::CDEngine() :
 {
 	Engine::mainEngine = this;
 
-	addChildControllableContainer(MotionBlockModelLibrary::getInstance());
 	addChildControllableContainer(DroneManager::getInstance());
 	addChildControllableContainer(DroneClusterGroupManager::getInstance());
+	addChildControllableContainer(MotionBlockModelLibrary::getInstance());
 
 	remoteHost = ioCC.addStringParameter("Remote Host", "Global remote host to send OSC to", "127.0.0.1");
 	remotePort = ioCC.addIntParameter("Remote port", "Remote port to send OSC to", 43001, 1024, 65535);
@@ -80,39 +81,40 @@ void CDEngine::processMessage(const OSCMessage & m)
 	if (aList[1] == "model")
 	{
 		String modelName = OSCHelpers::getStringArg(m[0]);
-		MotionBlockModel * lm = MotionBlockModelLibrary::getInstance()->getModelWithName(modelName);
 
-		if (lm != nullptr)
-		{
-			if (aList[2] == "assign")
-			{
-				if (m.size() >= 2)
-				{
-					int id = OSCHelpers::getIntArg(m[1]);
+		//MotionBlockModel * lm = MotionBlockModelLibrary::getInstance()->getModelWithName(modelName);
 
-					MotionBlockModelPreset * mp = nullptr;
-					if (m.size() >= 3)
-					{
-						String presetName = OSCHelpers::getStringArg(m[2]);
-						mp = lm->presetManager.getItemWithName(presetName);
-					}
+		//if (lm != nullptr)
+		//{
+		//	if (aList[2] == "assign")
+		//	{
+		//		if (m.size() >= 2)
+		//		{
+		//			int id = OSCHelpers::getIntArg(m[1]);
 
-					MotionBlockDataProvider * providerToAssign = mp != nullptr ? mp : (MotionBlockDataProvider *)lm;
-					if (id == -1)
-					{
-						for (auto & p : DroneManager::getInstance()->items)  p->activeProvider->setValueFromTarget(providerToAssign);
-					}
-					else
-					{
-						Drone * p = DroneManager::getInstance()->getDroneWithId(id);
-						if (p != nullptr) p->activeProvider->setValueFromTarget(providerToAssign);
-					}
+		//			MotionBlockModelPreset * mp = nullptr;
+		//			if (m.size() >= 3)
+		//			{
+		//				String presetName = OSCHelpers::getStringArg(m[2]);
+		//				mp = lm->presetManager.getItemWithName(presetName);
+		//			}
 
-				}
+		//			MotionBlockDataProvider * providerToAssign = mp != nullptr ? mp : (MotionBlockDataProvider *)lm;
+		//			if (id == -1)
+		//			{
+		//				for (auto & p : DroneManager::getInstance()->items)  p->activeProvider->setValueFromTarget(providerToAssign);
+		//			}
+		//			else
+		//			{
+		//				Drone * p = DroneManager::getInstance()->getDroneWithId(id);
+		//				if (p != nullptr) p->activeProvider->setValueFromTarget(providerToAssign);
+		//			}
+
+		//		}
 
 
-			}
-		}
+		//	}
+		//}
 
 	}
 	else if (aList[1] == "Drone")

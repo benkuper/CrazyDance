@@ -9,7 +9,7 @@
 */
 
 #include "DroneUI.h"
-#include "MotionBlock/model/ui/MotionBlockModelUI.h"
+#include "MotionBlock/model/ui/MotionBlockModelTreeUI.h"
 
 DroneUI::DroneUI(Drone * d) :
 	BaseItemUI(d, Direction::NONE, Direction::NONE),
@@ -91,7 +91,7 @@ void DroneUI::newMessage(const Drone::DroneEvent & e)
 
 bool DroneUI::isInterestedInDragSource(const SourceDetails & source)
 {
-	return source.description.getProperty("type", "") == MotionBlockModelUI::dragAndDropID.toString();
+	return source.description.getProperty("type", "") == MotionBlockModelTreeUI::dragAndDropID.toString();
 }
 
 void DroneUI::itemDragEnter(const SourceDetails & source)
@@ -108,11 +108,11 @@ void DroneUI::itemDragExit(const SourceDetails & source)
 
 void DroneUI::itemDropped(const SourceDetails & source)
 {
-	MotionBlockModelUI * modelUI = dynamic_cast<MotionBlockModelUI *>(source.sourceComponent.get());
+	MotionBlockModelTreeUI * modelUI = dynamic_cast<MotionBlockModelTreeUI *>(source.sourceComponent.get());
 
 	if (modelUI != nullptr)
 	{
-		MotionBlockDataProvider * provider = modelUI->item;
+		MotionBlockDataProvider * provider = modelUI->model;
 
 		bool shift = KeyPress::isKeyCurrentlyDown(16);
 		if (shift)
@@ -121,9 +121,9 @@ void DroneUI::itemDropped(const SourceDetails & source)
 			m.addItem(-1, "Default");
 			m.addSeparator();
 			int index = 1;
-			for (auto &p : modelUI->item->presetManager.items) m.addItem(index++, p->niceName);
+			for (auto &p : modelUI->model->presetManager.items) m.addItem(index++, p->niceName);
 			int result = m.show();
-			if (result >= 1) provider = modelUI->item->presetManager.items[result - 1];
+			if (result >= 1) provider = modelUI->model->presetManager.items[result - 1];
 		}
 
 		item->activeProvider->setValueFromTarget(provider);

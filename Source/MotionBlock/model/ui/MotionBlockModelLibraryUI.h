@@ -11,38 +11,24 @@
 #pragma once
 
 #include "../MotionBlockModelLibrary.h"
-#include "MotionBlockModelManagerUI.h"
-#include "MotionBlockModelGroupUI.h"
+#include "MotionBlockModelGroupTreeUI.h"
 
 class MotionBlockModelLibraryUI :
-	public ShapeShifterContentComponent,
-	public ComponentListener,
-	public ContainerAsyncListener
+	public ShapeShifterContentComponent
 {
 public:
 	MotionBlockModelLibraryUI(const String &contentName, MotionBlockModelLibrary * library);
 	~MotionBlockModelLibraryUI();
 
 	Viewport viewport;
-	Component container;
-
+	TreeView treeView;
+	GroupTreeViewItem rootItem;
 	ScopedPointer<IntSliderUI> iconSizeUI;
-
 	MotionBlockModelLibrary * library;
-	MotionBlockModelGroupUI genericGroupUI;
-
-	MotionBlockModelManagerUI scriptBlocksManagerUI;
-	MotionBlockModelManagerUI timelineBlocksManagerUI;
-
 
 	void paint(Graphics &g) override;
 	void resized() override;
 
-	void newMessage(const ContainerAsyncEvent &e) override;
-
-	void componentMovedOrResized(Component &, bool, bool) override;
 
 	static MotionBlockModelLibraryUI * create(const String &contentName) { return new MotionBlockModelLibraryUI(contentName, MotionBlockModelLibrary::getInstance()); }
-
-	
 };

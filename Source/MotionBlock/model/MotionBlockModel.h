@@ -16,7 +16,7 @@
 
 class MotionBlock;
 class MotionBlockModelUI;
-
+class MotionBlockModelTreeUI;
 
 class MotionBlockModel :
 	public MotionBlockDataProvider
@@ -55,7 +55,6 @@ public:
 
 	var getJSONData() override;
 	void loadJSONDataInternal(var data) override;
-
 	
 	virtual MotionBlockModelUI * createUI();
 

@@ -11,34 +11,24 @@
 #include "MotionBlockModelLibrary.h"
 #include "blocks/timeline/TimelineBlock.h"
 #include "blocks/pattern/PatternBlock.h"
+#include "blocks/script/ScriptBlock.h"
 
 juce_ImplementSingleton(MotionBlockModelLibrary)
 
-
 MotionBlockModelLibrary::MotionBlockModelLibrary() :
-	ControllableContainer("Library"),
-	genericBlocks("Generic"),
-	scriptBlocks("Scripts", UserMotionBlockModelManager::SCRIPT),
-	timelineBlocks("Timeline", UserMotionBlockModelManager::TIMELINE)
+	MotionBlockModelGroup("Library")
 {
-	//patterns
-	positionBlock = new PositionPattern();
-	lineBlock = new LinePattern();
-	circleBlock = new CirclePattern();
-	pingPongBlock = new PingPongPattern();
-	multiPosBlock = new MultiPositionPattern();
-
-	genericBlocks.addChildControllableContainer(positionBlock);
-	genericBlocks.addChildControllableContainer(lineBlock);
-	genericBlocks.addChildControllableContainer(circleBlock);
-	genericBlocks.addChildControllableContainer(pingPongBlock);
-	genericBlocks.addChildControllableContainer(multiPosBlock);
-	addChildControllableContainer(&genericBlocks);
-
-	addChildControllableContainer(&scriptBlocks);
-	addChildControllableContainer(&timelineBlocks);
-
 	iconSize = addIntParameter("Icon size", "Size of library icons", 70, 16, 120);
+
+	factory.defs.add(Factory<MotionBlockModel>::Definition::createDef("", "Position", &PositionPattern::create));
+	factory.defs.add(Factory<MotionBlockModel>::Definition::createDef("", "Line", &LinePattern::create));
+	factory.defs.add(Factory<MotionBlockModel>::Definition::createDef("", "Circle", &CirclePattern::create));
+	factory.defs.add(Factory<MotionBlockModel>::Definition::createDef("", "Ping Pong", &PingPongPattern::create));
+	factory.defs.add(Factory<MotionBlockModel>::Definition::createDef("", "Multi Position", &MultiPositionPattern::create));
+	factory.defs.add(Factory<MotionBlockModel>::Definition::createDef("", "Script", &ScriptBlock::create));
+	factory.defs.add(Factory<MotionBlockModel>::Definition::createDef("", "Timeline", &TimelineBlock::create));
+	factory.buildPopupMenu();
+
 }
 
 MotionBlockModelLibrary::~MotionBlockModelLibrary()
@@ -47,12 +37,34 @@ MotionBlockModelLibrary::~MotionBlockModelLibrary()
 }
 
 
+void MotionBlockModelLibrary::showMenuAndCreateModelOrGroup(MotionBlockModelGroup * group)
+{
+	PopupMenu menu = factory.getMenu();
+	menu.addSeparator();
+	menu.addItem(-1, "New Group");
+
+	int result = menu.show();
+	if (result == 0) return;
+
+	if (result == -1) group->groupManager.addItem();
+	else
+	{
+		MotionBlockModel * model = factory.createFromMenuResult(result);
+		jassert(model != nullptr);
+		group->modelManager.addItem(model);
+	}
+}
+
+
+/*
 void MotionBlockModelLibrary::clear()
 {
+	*
 	Array<MotionBlockModel *> models = getAllModels(false);
 	timelineBlocks.clear();
 	scriptBlocks.clear();
 	for (auto &m : models) m->clear();
+	
 }
 
 var MotionBlockModelLibrary::getJSONData()
@@ -209,3 +221,4 @@ Array<MotionBlockDataProvider*> MotionBlockModelLibrary::fillUserMotionBlockMana
 
 	return mList;
 }
+*/

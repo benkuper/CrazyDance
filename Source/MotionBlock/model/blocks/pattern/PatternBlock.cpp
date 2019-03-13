@@ -16,7 +16,6 @@ PatternBlock::PatternBlock(const String &name, var params) :
 	MotionBlockModel(name == "" ? getTypeString() : name, params)
 {
 	saveAndLoadName = false;
-	saveType = false;
 }
 
 PatternBlock::~PatternBlock()

@@ -10,7 +10,7 @@
 
 #include "MotionBlockClipManagerUI.h"
 #include "MotionBlockLayerTimeline.h"
-#include "MotionBlock/model/ui/MotionBlockModelUI.h"
+#include "MotionBlock/model/ui/MotionBlockModelTreeUI.h"
 
 
 MotionBlockClipManagerUI::MotionBlockClipManagerUI(MotionBlockLayerTimeline * _timeline, MotionBlockClipManager * manager) :
@@ -44,7 +44,7 @@ LayerBlockUI * MotionBlockClipManagerUI::createUIForItem(LayerBlock * item)
 
 bool MotionBlockClipManagerUI::isInterestedInDragSource(const SourceDetails & source)
 {
-	return source.description.getProperty("type", "") == MotionBlockModelUI::dragAndDropID.toString();
+	return source.description.getProperty("type", "") == MotionBlockModelTreeUI::dragAndDropID.toString();
 }
 
 void MotionBlockClipManagerUI::itemDragEnter(const SourceDetails & source)
@@ -69,11 +69,11 @@ void MotionBlockClipManagerUI::itemDropped(const SourceDetails & source)
 {
 	dropClipX = -1;
 
-	MotionBlockModelUI * modelUI = dynamic_cast<MotionBlockModelUI *>(source.sourceComponent.get());
+	MotionBlockModelTreeUI * modelUI = dynamic_cast<MotionBlockModelTreeUI *>(source.sourceComponent.get());
 	MotionBlockClip * clip = (MotionBlockClip *)manager->addBlockAt(timeline->getTimeForX(source.localPosition.x));
 	if (modelUI == nullptr || clip == nullptr) return;
 
-	MotionBlockDataProvider * provider = modelUI->item;
+	MotionBlockDataProvider * provider = modelUI->model;
 
 	bool shift = KeyPress::isKeyCurrentlyDown(16);
 	if (shift)
@@ -82,9 +82,9 @@ void MotionBlockClipManagerUI::itemDropped(const SourceDetails & source)
 		m.addItem(-1, "Default");
 		m.addSeparator();
 		int index = 1;
-		for (auto &p : modelUI->item->presetManager.items) m.addItem(index++, p->niceName);
+		for (auto &p : modelUI->model->presetManager.items) m.addItem(index++, p->niceName);
 		int result = m.show();
-		if (result >= 1) provider = modelUI->item->presetManager.items[result - 1];
+		if (result >= 1) provider = modelUI->model->presetManager.items[result - 1];
 	}
 
 	clip->activeProvider->setValueFromTarget(provider);

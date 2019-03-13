@@ -20,7 +20,9 @@ MotionBlockClip::MotionBlockClip(MotionBlockLayer * layer, float _time) :
 
 	activeProvider = addTargetParameter("Active Block", "The current active block for this prop");
 	activeProvider->targetType = TargetParameter::CONTAINER;
-	activeProvider->customGetTargetContainerFunc = &MotionBlockModelLibrary::showProvidersAndGet;
+	activeProvider->hideInEditor = true;
+	
+	//activeProvider->customGetTargetContainerFunc = &MotionBlockModelLibrary::showProvidersAndGet;
 
 	autoFade = addBoolParameter("Auto Fade", "If checked, when clips are overlapping, fade will be adjusted automatically", true);
 	fadeIn = addFloatParameter("Fade In", "Fade in time", 0, 0, getTotalLength());

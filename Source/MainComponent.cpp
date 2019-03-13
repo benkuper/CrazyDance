@@ -27,7 +27,7 @@ MainComponent::~MainComponent()
 void MainComponent::init()
 {
 	ShapeShifterFactory::getInstance()->defs.add(new ShapeShifterDefinition("Drones", &DroneManagerUI::create));
-	ShapeShifterFactory::getInstance()->defs.add(new ShapeShifterDefinition("Blocks", &MotionBlockModelLibraryUI::create));
+	ShapeShifterFactory::getInstance()->defs.add(new ShapeShifterDefinition("Library", &MotionBlockModelLibraryUI::create));
 	ShapeShifterFactory::getInstance()->defs.add(new ShapeShifterDefinition(TimelineEditor::getTypeStringStatic(), &TimelineEditor::create));
 	ShapeShifterFactory::getInstance()->defs.add(new ShapeShifterDefinition("Clusters", &DroneClusterGroupManagerUI::create));
 	ShapeShifterFactory::getInstance()->defs.add(new ShapeShifterDefinition("Stage Viz", &StageViz::create));

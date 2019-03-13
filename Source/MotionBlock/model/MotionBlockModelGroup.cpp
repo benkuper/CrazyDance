@@ -9,23 +9,73 @@
 */
 
 #include "MotionBlockModelGroup.h"
+#include "MotionBlockModelLibrary.h"
+
+MotionBlockModelGroup::MotionBlockModelGroup(const String & name) :
+	BaseItem(name, false, false),
+	groupManager("Groups"),
+	modelManager("Models"),
+	groupNotifier(10)
+{
+	groupManager.hideEditorHeader = true;
+	modelManager.hideEditorHeader = true;
+
+	addChildControllableContainer(&groupManager);
+	addChildControllableContainer(&modelManager);
+	
+	//groupManager.skipControllableNameInAddress = true;
+	//modelManager.skipControllableNameInAddress = true;
+	//groupManager.skipLabelInTarget = true;
+	//modelManager.skipLabelInTarget = true;
+
+	groupManager.addBaseManagerListener(this);
+	modelManager.addBaseManagerListener(this);
+}
+
+MotionBlockModelGroup::~MotionBlockModelGroup() 
+{
+
+}
+
+void MotionBlockModelGroup::clear()
+{
+	groupManager.clear();
+	modelManager.clear();
+}
 
 var MotionBlockModelGroup::getJSONData()
 {
 	var data = ControllableContainer::getJSONData();
-	for (auto &cc : controllableContainers)
-	{
-		var ccData = cc->getJSONData();
-		if(ccData.getDynamicObject()->getProperties().size() > 0) data.getDynamicObject()->setProperty(cc->shortName, ccData);
-	}
+	data.getDynamicObject()->setProperty("groups", groupManager.getJSONData());
+	data.getDynamicObject()->setProperty("models", modelManager.getJSONData());
 	return data;
 }
 
 void MotionBlockModelGroup::loadJSONDataInternal(var data)
 {
-	ControllableContainer::loadJSONDataInternal(data);
-	for (auto &cc : controllableContainers)
-	{
-		cc->loadJSONData(data.getProperty(cc->shortName, var()));
-	}
+	if(modelManager.managerFactory == nullptr) modelManager.managerFactory = &MotionBlockModelLibrary::getInstance()->factory;
+	groupManager.loadJSONData(data.getProperty("groups", var()));
+	modelManager.loadJSONData(data.getProperty("models", var()));
+}
+
+
+void MotionBlockModelGroup::itemAdded(MotionBlockModel * model)
+{
+	groupListeners.call(&ModelGroupListener::groupModelAdded, model);
+	groupNotifier.addMessage(new ModelGroupEvent(ModelGroupEvent::MODEL_ADDED, model));
+}
+void MotionBlockModelGroup::itemRemoved(MotionBlockModel * model)
+{
+	groupListeners.call(&ModelGroupListener::groupModelRemoved, model);
+	groupNotifier.addMessage(new ModelGroupEvent(ModelGroupEvent::MODEL_ADDED, model));
+}
+void MotionBlockModelGroup::itemAdded(MotionBlockModelGroup * group)
+{
+	groupListeners.call(&ModelGroupListener::groupModelGroupAdded, group);
+	groupNotifier.addMessage(new ModelGroupEvent(ModelGroupEvent::GROUP_ADDED, group));
+}
+void MotionBlockModelGroup::itemRemoved(MotionBlockModelGroup * group)
+{
+	groupListeners.call(&ModelGroupListener::groupModelGroupRemoved, group);
+	groupNotifier.addMessage(new ModelGroupEvent(ModelGroupEvent::GROUP_ADDED, group));
 }

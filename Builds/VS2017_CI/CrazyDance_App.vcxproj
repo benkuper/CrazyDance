@@ -80,8 +80,6 @@
     <Lib/>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Source\ManagerTree\ui\BaseManagerTreeUI.cpp"/>
-    <ClCompile Include="..\..\Source\ManagerTree\ui\BaseTreeItemUI.cpp"/>
     <ClCompile Include="..\..\Source\Communication\ui\IOInterfaceManagerUI.cpp"/>
     <ClCompile Include="..\..\Source\Communication\osc\lamouchefolle\LaMoucheFolleIOInterface.cpp"/>
     <ClCompile Include="..\..\Source\Communication\osc\OSCIOInterface.cpp"/>
@@ -107,11 +105,13 @@
     <ClCompile Include="..\..\Source\MotionBlock\model\blocks\timeline\TimelineBlock.cpp"/>
     <ClCompile Include="..\..\Source\MotionBlock\model\preset\MotionBlockModelPreset.cpp"/>
     <ClCompile Include="..\..\Source\MotionBlock\model\preset\MotionBlockModelPresetManager.cpp"/>
+    <ClCompile Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelGroupTreeUI.cpp"/>
     <ClCompile Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelGroupUI.cpp"/>
     <ClCompile Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelLibraryUI.cpp"/>
     <ClCompile Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelManagerUI.cpp"/>
     <ClCompile Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelParameterEditor.cpp"/>
     <ClCompile Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelParameterManagerEditor.cpp"/>
+    <ClCompile Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelTreeUI.cpp"/>
     <ClCompile Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelUI.cpp"/>
     <ClCompile Include="..\..\Source\MotionBlock\model\MotionBlockDataProvider.cpp"/>
     <ClCompile Include="..\..\Source\MotionBlock\model\MotionBlockModel.cpp"/>
@@ -119,9 +119,8 @@
     <ClCompile Include="..\..\Source\MotionBlock\model\MotionBlockModelLibrary.cpp"/>
     <ClCompile Include="..\..\Source\MotionBlock\model\MotionBlockModelParameter.cpp"/>
     <ClCompile Include="..\..\Source\MotionBlock\model\MotionBlockModelParameterManager.cpp"/>
-    <ClCompile Include="..\..\Source\MotionBlock\model\UserMotionBlockModelManager.cpp"/>
-    <ClCompile Include="..\..\Source\MotionBlock\model\UserMotionBlockModelManagerTree.cpp"/>
     <ClCompile Include="..\..\Source\MotionBlock\MotionBlock.cpp"/>
+    <ClCompile Include="..\..\Source\MotionBlock\UserMotionBlockContainer.cpp"/>
     <ClCompile Include="..\..\Source\Timeline\layers\Action\Action.cpp"/>
     <ClCompile Include="..\..\Source\Timeline\layers\Action\ActionLayer.cpp"/>
     <ClCompile Include="..\..\Source\Timeline\layers\Action\ActionManager.cpp"/>
@@ -741,10 +740,6 @@
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_timeline.cpp"/>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Source\ManagerTree\ui\BaseManagerTreeUI.h"/>
-    <ClInclude Include="..\..\Source\ManagerTree\ui\BaseTreeItemUI.h"/>
-    <ClInclude Include="..\..\Source\ManagerTree\BaseManagerTree.h"/>
-    <ClInclude Include="..\..\Source\ManagerTree\BaseTreeItem.h"/>
     <ClInclude Include="..\..\Source\Communication\ui\IOInterfaceManagerUI.h"/>
     <ClInclude Include="..\..\Source\Communication\osc\lamouchefolle\LaMoucheFolleIOInterface.h"/>
     <ClInclude Include="..\..\Source\Communication\osc\OSCIOInterface.h"/>
@@ -771,11 +766,13 @@
     <ClInclude Include="..\..\Source\MotionBlock\model\blocks\timeline\TimelineBlock.h"/>
     <ClInclude Include="..\..\Source\MotionBlock\model\preset\MotionBlockModelPreset.h"/>
     <ClInclude Include="..\..\Source\MotionBlock\model\preset\MotionBlockModelPresetManager.h"/>
+    <ClInclude Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelGroupTreeUI.h"/>
     <ClInclude Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelGroupUI.h"/>
     <ClInclude Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelLibraryUI.h"/>
     <ClInclude Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelManagerUI.h"/>
     <ClInclude Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelParameterEditor.h"/>
     <ClInclude Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelParameterManagerEditor.h"/>
+    <ClInclude Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelTreeUI.h"/>
     <ClInclude Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelUI.h"/>
     <ClInclude Include="..\..\Source\MotionBlock\model\MotionBlockDataProvider.h"/>
     <ClInclude Include="..\..\Source\MotionBlock\model\MotionBlockModel.h"/>
@@ -783,10 +780,9 @@
     <ClInclude Include="..\..\Source\MotionBlock\model\MotionBlockModelLibrary.h"/>
     <ClInclude Include="..\..\Source\MotionBlock\model\MotionBlockModelParameter.h"/>
     <ClInclude Include="..\..\Source\MotionBlock\model\MotionBlockModelParameterManager.h"/>
-    <ClInclude Include="..\..\Source\MotionBlock\model\UserMotionBlockModelManager.h"/>
-    <ClInclude Include="..\..\Source\MotionBlock\model\UserMotionBlockModelManagerTree.h"/>
     <ClInclude Include="..\..\Source\MotionBlock\ui\MotionBlockManagerUI.h"/>
     <ClInclude Include="..\..\Source\MotionBlock\MotionBlock.h"/>
+    <ClInclude Include="..\..\Source\MotionBlock\UserMotionBlockContainer.h"/>
     <ClInclude Include="..\..\Source\Timeline\layers\Action\Action.h"/>
     <ClInclude Include="..\..\Source\Timeline\layers\Action\ActionLayer.h"/>
     <ClInclude Include="..\..\Source\Timeline\layers\Action\ActionManager.h"/>

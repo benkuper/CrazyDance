@@ -39,6 +39,8 @@ public:
 	void getMotionDataInternal(var result, Drone * d, double time, int id, var params) override;
 
 	String getTypeString() const override { return "Position" ; }
+	static PositionPattern * create(var params) { return new PositionPattern(params); }
+
 };
 
 class LinePattern :
@@ -54,6 +56,7 @@ public:
 	void getMotionDataInternal(var result, Drone * d, double time, int id, var params) override;
 
 	String getTypeString() const override { return "Line"; } 
+	static LinePattern * create(var params) { return new LinePattern(params); }
 };
 
 class CirclePattern :
@@ -73,6 +76,7 @@ public:
 	void getMotionDataInternal(var result, Drone * d, double time, int id, var params) override;
 
 	String getTypeString() const override { return "Circle"; }
+	static CirclePattern * create(var params) { return new CirclePattern(params); }
 };
 
 
@@ -93,6 +97,7 @@ public:
 	void getMotionDataInternal(var result, Drone * d, double time, int id, var params) override;
 
 	String getTypeString() const override { return "Ping Pong"; }
+	static PingPongPattern * create(var params) { return new PingPongPattern(params); }
 };
 
 class MultiPositionPattern :
@@ -110,4 +115,5 @@ public:
 	static void createPosition(ControllableContainer *);
 
 	String getTypeString() const override { return "Multi Position"; }
+	static MultiPositionPattern * create(var params) { return new MultiPositionPattern(params); }
 };
