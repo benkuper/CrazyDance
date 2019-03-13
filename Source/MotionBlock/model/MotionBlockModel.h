@@ -15,7 +15,6 @@
 #include "MotionBlockDataProvider.h"
 
 class MotionBlock;
-class MotionBlockModelUI;
 class MotionBlockModelTreeUI;
 
 class MotionBlockModel :
@@ -60,8 +59,6 @@ public:
 	var getJSONData() override;
 	void loadJSONDataInternal(var data) override;
 	
-	virtual MotionBlockModelUI * createUI();
-
 	//Listener
 	class  ModelListener
 	{

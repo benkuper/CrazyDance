@@ -11,7 +11,6 @@
 #include "MotionBlockModel.h"
 #include "../MotionBlock.h"
 #include "Drone/DroneManager.h"
-#include "ui/MotionBlockModelUI.h"
 
 
 MotionBlockModel::MotionBlockModel(const String &name, var params, Type type) :
@@ -90,10 +89,6 @@ void MotionBlockModel::loadJSONDataInternal(var data)
 	MotionBlockDataProvider::loadJSONDataInternal(data);
 	if (paramsContainer != nullptr) paramsContainer->loadJSONData(data.getProperty("modelParams", var()), paramsContainer->userCanAddControllables);
 	presetManager.loadJSONData(data.getProperty("presets", var()));
-}
-MotionBlockModelUI * MotionBlockModel::createUI()
-{
-	return new MotionBlockModelUI(this);
 }
 
 Vector3D<float> MotionBlockModel::getPoint3DValue(Point3DParameter * p, var params)
