@@ -23,7 +23,7 @@ StageViz::~StageViz()
 void StageViz::updateViewUIPosition(DroneVizUI * dui)
 {
 	Vector3D<float> pos = dui->item->position->getVector(); 
-	Point<int> vPos = getPosInView(Point<float>(pos.x, pos.z)).toInt();
+	Point<int> vPos = getPosInView(Point<float>(pos.x, -pos.z)).toInt();
 
 	dui->setCentrePosition(vPos);
 }

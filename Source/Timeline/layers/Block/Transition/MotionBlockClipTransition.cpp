@@ -22,15 +22,11 @@ MotionBlockClipTransition::MotionBlockClipTransition(MotionBlockLayer * layer, W
 	setToClip(toClip);
 
 
-	fadeFrom = addFloatParameter("Fade From", "", 0, 0);
-	fadeFrom->defaultUI = FloatParameter::TIME;
-	fadeTo = addFloatParameter("Fade To", "", 0, 0);
-	fadeTo->defaultUI = FloatParameter::TIME;
+	fadeFrom = addFloatParameter("Fade From", "", 0, 0, 1);
+	fadeTo = addFloatParameter("Fade To", "", 0, 0, 1);
 
-	holdFrom = addFloatParameter("Hold from", "", 0, 0);
-	holdFrom->defaultUI = FloatParameter::TIME;
-	holdTo = addFloatParameter("Hold to", "", 0, 0);
-	holdTo->defaultUI = FloatParameter::TIME;
+	holdFrom = addFloatParameter("Hold from", "", 0, 0, 1);
+	holdTo = addFloatParameter("Hold to", "", 0, 0, 1);
 
 	curve.allowKeysOutside = false;
 	addChildControllableContainer(&curve);
@@ -128,20 +124,22 @@ var MotionBlockClipTransition::getMotionData(Drone * d, double absoluteTime, var
 	float targetFromTime = inverted ? absoluteTime : jmin<float>(absoluteTime, fromTime + fadeFrom->floatValue());
 	float targetToTime = inverted ? absoluteTime : jmax<float>(absoluteTime, toTime - fadeTo->floatValue());
 
-	DBG("From time : " << targetFromTime << " / " << absoluteTime << " / " << (fromTime + fadeFrom->floatValue()));
+	//DBG("From time : " << targetFromTime << " / " << absoluteTime << " / " << (fromTime + fadeFrom->floatValue()));
 	var fromMotionPosData = fromClip->getMotionData(d, targetFromTime, params).getProperty("position", var());
 	var toMotionPosData = toClip->getMotionData(d, targetToTime, params).getProperty("position", var());
 
 	if (fromTime == toTime) return fromMotionPosData;
 	if (!fromMotionPosData.isArray() || !toMotionPosData.isArray()) return var();
 
-	
+
 
 	Vector3D<float> fromPos = Vector3D<float>(fromMotionPosData[0], fromMotionPosData[1], fromMotionPosData[2]);
 	Vector3D<float> toPos = Vector3D<float>(toMotionPosData[0], toMotionPosData[1], toMotionPosData[2]);
-
 	
-	float relTime = jmap<float>(absoluteTime, fromTime+holdFrom->floatValue(), toTime-holdTo->floatValue(), 0, 1);
+	float holdFromRel = holdFrom->floatValue() * coreLength->floatValue();
+	float holdToRel = holdTo->floatValue() * coreLength->floatValue();
+
+	float relTime = jmap<float>(absoluteTime, fromTime + holdFromRel, toTime - holdToRel, 0, 1);
 	relTime = jlimit<float>(0, 1, relTime);
 
 	if (fromTime > toTime) relTime = 1 - relTime; //invert

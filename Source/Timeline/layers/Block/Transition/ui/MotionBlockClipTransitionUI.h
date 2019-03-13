@@ -25,4 +25,6 @@ public:
 
 	virtual bool hitTest(int x, int y) override;
 
+	void controllableFeedbackUpdateInternal(Controllable *c) override;
+
 };

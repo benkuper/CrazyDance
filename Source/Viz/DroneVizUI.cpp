@@ -27,12 +27,11 @@ DroneVizUI::~DroneVizUI()
 
 void DroneVizUI::paint(Graphics & g)
 {
-	float red = jmap<float>(item->position->y, item->position->minimumValue[1], item->position->maximumValue[2], 0 ,1);
 
-	Rectangle<int> r = getMainBounds().reduced((1-red)*40);
+	Rectangle<int> r = getMainBounds();
 	if (droneImage.getWidth() > +0) g.drawImage(droneImage, r.toFloat(), RectanglePlacement::centred);
 
-	g.setFont(6+4*red);
+	g.setFont(10);
 	Colour c = item->uiColor->getColor();
 	g.setColour(c.withAlpha(.5f)); 
 	g.fillRoundedRectangle(r.withSizeKeepingCentre(g.getCurrentFont().getStringWidth(item->niceName) , g.getCurrentFont().getHeight()).expanded(4,4).toFloat(), 2);
@@ -55,6 +54,9 @@ void DroneVizUI::controllableFeedbackUpdateInternal(Controllable * c)
 	if (c == item->state) updateDroneImage();
 	else if (c == item->position)
 	{
+		int targetSize = jmap<float>(item->position->y, item->position->minimumValue[1], item->position->maximumValue[2], 20, 100);
+		if (targetSize != getWidth()) setSize(targetSize, targetSize);
+
 		repaint();
 		vizNotifier.addMessage(new VizEvent(VizEvent::POSITION_UPDATED, this));
 	}
