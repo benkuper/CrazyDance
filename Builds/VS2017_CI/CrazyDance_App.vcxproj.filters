@@ -56,9 +56,6 @@
     <Filter Include="CrazyDance\Source\MotionBlock\model\blocks\script">
       <UniqueIdentifier>{4EFD1A32-44AF-017A-B4E5-48978F8E0ED4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="CrazyDance\Source\MotionBlock\model\blocks\timeline\ui">
-      <UniqueIdentifier>{DCA1DD3C-3734-40BE-7A04-A77D655AE610}</UniqueIdentifier>
-    </Filter>
     <Filter Include="CrazyDance\Source\MotionBlock\model\blocks\timeline">
       <UniqueIdentifier>{62FE2EAA-3B99-B24A-E73B-0D65F079794B}</UniqueIdentifier>
     </Filter>
@@ -348,9 +345,6 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\MotionBlock\model\blocks\script\ScriptBlock.cpp">
       <Filter>CrazyDance\Source\MotionBlock\model\blocks\script</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\MotionBlock\model\blocks\timeline\ui\TimelineBlockUI.cpp">
-      <Filter>CrazyDance\Source\MotionBlock\model\blocks\timeline\ui</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\MotionBlock\model\blocks\timeline\TimelineBlock.cpp">
       <Filter>CrazyDance\Source\MotionBlock\model\blocks\timeline</Filter>
@@ -1244,9 +1238,6 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\MotionBlock\model\blocks\script\ScriptBlock.h">
       <Filter>CrazyDance\Source\MotionBlock\model\blocks\script</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\MotionBlock\model\blocks\timeline\ui\TimelineBlockUI.h">
-      <Filter>CrazyDance\Source\MotionBlock\model\blocks\timeline\ui</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\MotionBlock\model\blocks\timeline\TimelineBlock.h">
       <Filter>CrazyDance\Source\MotionBlock\model\blocks\timeline</Filter>

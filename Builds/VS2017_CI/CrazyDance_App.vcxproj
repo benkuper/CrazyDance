@@ -101,7 +101,6 @@
     <ClCompile Include="..\..\Source\Drone\DroneManager.cpp"/>
     <ClCompile Include="..\..\Source\MotionBlock\model\blocks\pattern\PatternBlock.cpp"/>
     <ClCompile Include="..\..\Source\MotionBlock\model\blocks\script\ScriptBlock.cpp"/>
-    <ClCompile Include="..\..\Source\MotionBlock\model\blocks\timeline\ui\TimelineBlockUI.cpp"/>
     <ClCompile Include="..\..\Source\MotionBlock\model\blocks\timeline\TimelineBlock.cpp"/>
     <ClCompile Include="..\..\Source\MotionBlock\model\preset\MotionBlockModelPreset.cpp"/>
     <ClCompile Include="..\..\Source\MotionBlock\model\preset\MotionBlockModelPresetManager.cpp"/>
@@ -759,7 +758,6 @@
     <ClInclude Include="..\..\Source\MotionBlock\model\blocks\pattern\PatternBlock.h"/>
     <ClInclude Include="..\..\Source\MotionBlock\model\blocks\pattern\PerlinNoise.hpp"/>
     <ClInclude Include="..\..\Source\MotionBlock\model\blocks\script\ScriptBlock.h"/>
-    <ClInclude Include="..\..\Source\MotionBlock\model\blocks\timeline\ui\TimelineBlockUI.h"/>
     <ClInclude Include="..\..\Source\MotionBlock\model\blocks\timeline\TimelineBlock.h"/>
     <ClInclude Include="..\..\Source\MotionBlock\model\preset\MotionBlockModelPreset.h"/>
     <ClInclude Include="..\..\Source\MotionBlock\model\preset\MotionBlockModelPresetManager.h"/>

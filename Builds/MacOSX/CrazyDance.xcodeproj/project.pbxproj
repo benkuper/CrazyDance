@@ -145,10 +145,6 @@
 			isa = PBXBuildFile;
 			fileRef = 511AFF61796C1846B0E6E3A2;
 		};
-		F3CB4B3F7C041D86F2D8E02C = {
-			isa = PBXBuildFile;
-			fileRef = 41E6F4F0C9560737D3CEE96D;
-		};
 		4FAC588299ABB90404BF081D = {
 			isa = PBXBuildFile;
 			fileRef = 8AC83D16A36FD0E0E4462A3B;
@@ -676,13 +672,6 @@
 			lastKnownFileType = sourcecode.cpp.cpp;
 			name = LaMoucheFolleIOInterface.cpp;
 			path = ../../Source/Communication/osc/lamouchefolle/LaMoucheFolleIOInterface.cpp;
-			sourceTree = "SOURCE_ROOT";
-		};
-		41E6F4F0C9560737D3CEE96D = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.cpp.cpp;
-			name = TimelineBlockUI.cpp;
-			path = ../../Source/MotionBlock/model/blocks/timeline/ui/TimelineBlockUI.cpp;
 			sourceTree = "SOURCE_ROOT";
 		};
 		42C8B4DC3FD104DF36FB14B9 = {
@@ -1546,13 +1535,6 @@
 			path = ../../Resources/default.cdlayout;
 			sourceTree = "SOURCE_ROOT";
 		};
-		E5E1865F43E4A905BC71D878 = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			name = TimelineBlockUI.h;
-			path = ../../Source/MotionBlock/model/blocks/timeline/ui/TimelineBlockUI.h;
-			sourceTree = "SOURCE_ROOT";
-		};
 		EA86226907C7E72573FE4B1F = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.c.h;
@@ -1828,19 +1810,9 @@
 			name = script;
 			sourceTree = "<group>";
 		};
-		1CE911954BC61587F4767B23 = {
-			isa = PBXGroup;
-			children = (
-				41E6F4F0C9560737D3CEE96D,
-				E5E1865F43E4A905BC71D878,
-			);
-			name = ui;
-			sourceTree = "<group>";
-		};
 		EDD1FD173752C0590005E88B = {
 			isa = PBXGroup;
 			children = (
-				1CE911954BC61587F4767B23,
 				8AC83D16A36FD0E0E4462A3B,
 				EA86226907C7E72573FE4B1F,
 			);
@@ -2364,7 +2336,6 @@
 				70ACEB94ECFCEB097297113D,
 				1E0177E48E77610D2A8D52E6,
 				F0CEFC671CBF27F7508F36BF,
-				F3CB4B3F7C041D86F2D8E02C,
 				4FAC588299ABB90404BF081D,
 				037B95ADC672B1BD692D7A28,
 				D3C33A1ED10B0D9B2B106F34,

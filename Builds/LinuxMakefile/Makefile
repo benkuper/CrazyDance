@@ -89,7 +89,6 @@ OBJECTS_APP := \
   $(JUCE_OBJDIR)/DroneManager_35ad76b5.o \
   $(JUCE_OBJDIR)/PatternBlock_e5713868.o \
   $(JUCE_OBJDIR)/ScriptBlock_223ae12a.o \
-  $(JUCE_OBJDIR)/TimelineBlockUI_4653bc11.o \
   $(JUCE_OBJDIR)/TimelineBlock_338079ea.o \
   $(JUCE_OBJDIR)/MotionBlockModelPreset_389c84a4.o \
   $(JUCE_OBJDIR)/MotionBlockModelPresetManager_a3042ef3.o \
@@ -264,11 +263,6 @@ $(JUCE_OBJDIR)/PatternBlock_e5713868.o: ../../Source/MotionBlock/model/blocks/pa
 $(JUCE_OBJDIR)/ScriptBlock_223ae12a.o: ../../Source/MotionBlock/model/blocks/script/ScriptBlock.cpp
 	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
 	@echo "Compiling ScriptBlock.cpp"
-	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
-
-$(JUCE_OBJDIR)/TimelineBlockUI_4653bc11.o: ../../Source/MotionBlock/model/blocks/timeline/ui/TimelineBlockUI.cpp
-	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
-	@echo "Compiling TimelineBlockUI.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
 $(JUCE_OBJDIR)/TimelineBlock_338079ea.o: ../../Source/MotionBlock/model/blocks/timeline/TimelineBlock.cpp

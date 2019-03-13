@@ -137,12 +137,6 @@
               <FILE id="eGLNTx" name="ScriptBlock.h" compile="0" resource="0" file="Source/MotionBlock/model/blocks/script/ScriptBlock.h"/>
             </GROUP>
             <GROUP id="{8443FD45-F0D7-2983-FA04-815C7CACE15F}" name="timeline">
-              <GROUP id="{89274D53-DCE4-8A15-114F-70D36CE27D39}" name="ui">
-                <FILE id="h5GoKE" name="TimelineBlockUI.cpp" compile="1" resource="0"
-                      file="Source/MotionBlock/model/blocks/timeline/ui/TimelineBlockUI.cpp"/>
-                <FILE id="ZZBhBU" name="TimelineBlockUI.h" compile="0" resource="0"
-                      file="Source/MotionBlock/model/blocks/timeline/ui/TimelineBlockUI.h"/>
-              </GROUP>
               <FILE id="lcTBS5" name="TimelineBlock.cpp" compile="1" resource="0"
                     file="Source/MotionBlock/model/blocks/timeline/TimelineBlock.cpp"/>
               <FILE id="mwTjyJ" name="TimelineBlock.h" compile="0" resource="0" file="Source/MotionBlock/model/blocks/timeline/TimelineBlock.h"/>

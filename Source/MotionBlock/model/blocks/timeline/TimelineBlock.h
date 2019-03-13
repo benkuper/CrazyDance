@@ -38,6 +38,5 @@ public:
 
 
 	String getTypeString() const override { return "Timeline"; }
-	MotionBlockModelUI * createUI() override;
 	static TimelineBlock * create(var params) { return new TimelineBlock(params); }
 };
