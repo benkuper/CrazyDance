@@ -13,8 +13,9 @@
 
 MotionBlockModelLibraryUI::MotionBlockModelLibraryUI(const String &contentName, MotionBlockModelLibrary * library) :
 	ShapeShifterContentComponent(contentName),
-	library(library),
-	rootItem(library)
+	rootItem(library),
+    library(library)
+
 {
 	//iconSizeUI = library->iconSize->createSlider();
 	//addAndMakeVisible(iconSizeUI);
