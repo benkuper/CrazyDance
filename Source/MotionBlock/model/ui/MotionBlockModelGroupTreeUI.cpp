@@ -81,10 +81,10 @@ void GroupTreeViewItem::newMessage(const MotionBlockModelGroup::ModelGroupEvent 
 {
 	switch (e.type)
 	{
-	case e.MODEL_ADDED:
-	case e.MODEL_REMOVED:
-	case e.GROUP_ADDED:
-	case e.GROUP_REMOVED:
+	case MotionBlockModelGroup::ModelGroupEvent::MODEL_ADDED:
+	case MotionBlockModelGroup::ModelGroupEvent::MODEL_REMOVED:
+	case MotionBlockModelGroup::ModelGroupEvent::GROUP_ADDED:
+	case MotionBlockModelGroup::ModelGroupEvent::GROUP_REMOVED:
 		rebuildTree();
 		break;
 	}
