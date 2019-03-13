@@ -14,8 +14,9 @@
 #include "ui/MotionBlockModelUI.h"
 
 
-MotionBlockModel::MotionBlockModel(const String &name, var params) :
+MotionBlockModel::MotionBlockModel(const String &name, var params, Type type) :
 	MotionBlockDataProvider(name, false),
+	type(type),
 	isBeingEdited(false),
 	presetManager(this),
 	modelNotifier(5)

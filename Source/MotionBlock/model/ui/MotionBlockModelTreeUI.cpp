@@ -29,15 +29,22 @@ void MotionBlockModelTreeUI::paint(Graphics & g)
 {
 	if (inspectable.wasObjectDeleted()) return;
 	
-	Colour textColor = BLUE_COLOR;
-	if (model->isSelected)
+	Colour c = TEXT_COLOR;
+	switch (model->type)
 	{
-		g.setColour(BLUE_COLOR);
-		g.fillRoundedRectangle(getLocalBounds().withWidth(g.getCurrentFont().getStringWidth(model->niceName)).expanded(10,0).toFloat(), 2);
-		textColor = BG_COLOR;
+	case MotionBlockModel::TIMELINE: c = Colours::limegreen; break;
+	case MotionBlockModel::SCRIPT: c = Colours::pink; break;
+	case MotionBlockModel::PATTERN: c = BLUE_COLOR; break;
 	}
 
-	g.setColour(textColor);
+	if (model->isSelected)
+	{
+		g.setColour(c);
+		g.fillRoundedRectangle(getLocalBounds().withWidth(g.getCurrentFont().getStringWidth(model->niceName)).expanded(10,0).toFloat(), 2);
+		c = BG_COLOR;
+	}
+
+	g.setColour(c);
 	g.drawFittedText(model->niceName, getLocalBounds().reduced(4), Justification::centredLeft, 1);
 }
 
@@ -87,7 +94,7 @@ void MotionBlockModelTreeUI::mouseDoubleClick(const MouseEvent & e)
 	InspectableContentComponent::mouseDoubleClick(e);
 	//editBlock();
 	
-	if (model->getTypeString() == "Timeline")
+	if (model->type == model->TIMELINE)
 	{
 		ShapeShifterManager::getInstance()->showContent("Timeline Editor");
 		TimeMachineView * view = (TimeMachineView *)ShapeShifterManager::getInstance()->getContentForName("Timeline Editor");

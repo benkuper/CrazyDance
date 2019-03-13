@@ -12,7 +12,7 @@
 #include "Drone/Drone.h"
 
 ScriptBlock::ScriptBlock(var params) :
-	MotionBlockModel(getTypeString(), params),
+	MotionBlockModel(getTypeString(), params, SCRIPT),
 	script(this)
 {
 	removeChildControllableContainer(paramsContainer);

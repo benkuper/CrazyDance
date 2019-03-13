@@ -21,10 +21,14 @@ class MotionBlockModelTreeUI;
 class MotionBlockModel :
 	public MotionBlockDataProvider
 {
-public:
-	MotionBlockModel(const String &name = "MotionBlockModel", var params = var());
+public:	
+	enum Type { PATTERN, TIMELINE, SCRIPT, NOT_SET };
+		
+	MotionBlockModel(const String &name = "MotionBlockModel", var params = var(), Type type = NOT_SET);
 	~MotionBlockModel();
 
+	Type type;
+	
 	//ui
 	String customThumbnailPath;
 

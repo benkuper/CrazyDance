@@ -13,7 +13,7 @@
 #include "ui/TimelineBlockUI.h"
 
 TimelineBlock::TimelineBlock(var params) :
-	MotionBlockModel(getTypeString(), params)
+	MotionBlockModel(getTypeString(), params, TIMELINE)
 {
 	sequence.addSequenceListener(this);
 	addChildControllableContainer(&sequence);

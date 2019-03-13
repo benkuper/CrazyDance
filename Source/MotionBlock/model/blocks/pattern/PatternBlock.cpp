@@ -13,7 +13,7 @@
 #include "Drone/DroneManager.h"
 
 PatternBlock::PatternBlock(const String &name, var params) :
-	MotionBlockModel(name == "" ? getTypeString() : name, params)
+	MotionBlockModel(name == "" ? getTypeString() : name, params, PATTERN)
 {
 	saveAndLoadName = false;
 }
