@@ -35,6 +35,8 @@ void MotionBlockModelTreeUI::paint(Graphics & g)
 	case MotionBlockModel::TIMELINE: c = Colours::limegreen; break;
 	case MotionBlockModel::SCRIPT: c = Colours::pink; break;
 	case MotionBlockModel::PATTERN: c = BLUE_COLOR; break;
+        default:
+            break;
 	}
 
 	if (model->isSelected)

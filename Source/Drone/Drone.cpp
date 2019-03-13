@@ -15,8 +15,8 @@
 Drone::Drone(StringRef name, StringRef familyName, var) :
 	BaseItem(name),
 	Thread("Drone " + name),
-	controlCC("Controls"),
-	generalCC("General"),
+    generalCC("General"),
+    controlCC("Controls"),
 	flightCC("Flight"),
 	lightCC("Light"),
 	currentBlock(nullptr),

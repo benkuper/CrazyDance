@@ -60,7 +60,7 @@ public:
 		ModelGroupEvent(Type t, MotionBlockModel * m) :
 			type(t), model(m), group(nullptr) {}
 		ModelGroupEvent(Type t, MotionBlockModelGroup * g) :
-			type(t), group(g), model(nullptr) {}
+			type(t), model(nullptr), group(g) {}
 
 		Type type;
 		MotionBlockModel * model;

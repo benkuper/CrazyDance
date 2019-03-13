@@ -45,7 +45,7 @@ public:
 
 	Component * createItemComponent() override { return new MotionBlockModelTreeUI(model); }
 	int getItemHeight() const override { return 16; }
-	bool mightContainSubItems() { return false; }
+	bool mightContainSubItems() override { return false; }
 
 	void newMessage(const MotionBlockModel::ModelEvent &e) override;
 };
