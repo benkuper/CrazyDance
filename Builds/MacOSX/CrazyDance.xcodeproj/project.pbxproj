@@ -165,17 +165,9 @@
 			isa = PBXBuildFile;
 			fileRef = 7CECAE1307949DFE1F78ED2E;
 		};
-		523BE9311F943CEE56591332 = {
-			isa = PBXBuildFile;
-			fileRef = AA3B230BC034786E0D77D912;
-		};
 		E31F141C95E51C8296F46F6C = {
 			isa = PBXBuildFile;
 			fileRef = A0F78F99383E8C3DEB72FCE6;
-		};
-		FF5DE084AA5AC5500EE8E8AC = {
-			isa = PBXBuildFile;
-			fileRef = 3C3BD21246A3072A2E181E58;
 		};
 		65DACA9BD2BF0318F28ACF59 = {
 			isa = PBXBuildFile;
@@ -188,10 +180,6 @@
 		9411110795776FFC97A7D51D = {
 			isa = PBXBuildFile;
 			fileRef = 863005E2D4A74168D1F44A20;
-		};
-		B9850DF60270ED75C9D1F5CC = {
-			isa = PBXBuildFile;
-			fileRef = BBBD20B9FEC13D87A5F13162;
 		};
 		927242BF8EF50CBCC9099DF9 = {
 			isa = PBXBuildFile;
@@ -669,13 +657,6 @@
 			path = "../../Resources/drone/drone_disconnected.png";
 			sourceTree = "SOURCE_ROOT";
 		};
-		3C3BD21246A3072A2E181E58 = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.cpp.cpp;
-			name = MotionBlockModelManagerUI.cpp;
-			path = ../../Source/MotionBlock/model/ui/MotionBlockModelManagerUI.cpp;
-			sourceTree = "SOURCE_ROOT";
-		};
 		3C958F7AF449E9EC370406A5 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.objcpp;
@@ -779,13 +760,6 @@
 			lastKnownFileType = image.png;
 			name = circle.png;
 			path = ../../Resources/models/pattern/circle.png;
-			sourceTree = "SOURCE_ROOT";
-		};
-		4CC923CFFE0EE3C79B634B73 = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			name = MotionBlockModelManagerUI.h;
-			path = ../../Source/MotionBlock/model/ui/MotionBlockModelManagerUI.h;
 			sourceTree = "SOURCE_ROOT";
 		};
 		4D383239C2AC50806948E4E5 = {
@@ -1271,13 +1245,6 @@
 			path = Icon.icns;
 			sourceTree = "SOURCE_ROOT";
 		};
-		AA3B230BC034786E0D77D912 = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.cpp.cpp;
-			name = MotionBlockModelGroupUI.cpp;
-			path = ../../Source/MotionBlock/model/ui/MotionBlockModelGroupUI.cpp;
-			sourceTree = "SOURCE_ROOT";
-		};
 		AD7866CD2551114EAC40EB56 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.cpp;
@@ -1355,20 +1322,6 @@
 			path = ../../Source/Viz/DroneVizUI.cpp;
 			sourceTree = "SOURCE_ROOT";
 		};
-		B7FAE6A4441612D02F95E317 = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			name = MotionBlockManagerUI.h;
-			path = ../../Source/MotionBlock/ui/MotionBlockManagerUI.h;
-			sourceTree = "SOURCE_ROOT";
-		};
-		BBBD20B9FEC13D87A5F13162 = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.cpp.cpp;
-			name = MotionBlockModelUI.cpp;
-			path = ../../Source/MotionBlock/model/ui/MotionBlockModelUI.cpp;
-			sourceTree = "SOURCE_ROOT";
-		};
 		BD928BEEB2AD0767E9C29A95 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.c.h;
@@ -1402,13 +1355,6 @@
 			lastKnownFileType = sourcecode.cpp.cpp;
 			name = MotionBlockDataProvider.cpp;
 			path = ../../Source/MotionBlock/model/MotionBlockDataProvider.cpp;
-			sourceTree = "SOURCE_ROOT";
-		};
-		C1E79427CFC814C5B0001F17 = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			name = MotionBlockModelGroupUI.h;
-			path = ../../Source/MotionBlock/model/ui/MotionBlockModelGroupUI.h;
 			sourceTree = "SOURCE_ROOT";
 		};
 		C3EC0F136DE8EC06C1962DCE = {
@@ -1626,13 +1572,6 @@
 			lastKnownFileType = image.png;
 			name = script.png;
 			path = ../../Resources/models/script.png;
-			sourceTree = "SOURCE_ROOT";
-		};
-		ECE157C553ACB54E6C33D169 = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			name = MotionBlockModelUI.h;
-			path = ../../Source/MotionBlock/model/ui/MotionBlockModelUI.h;
 			sourceTree = "SOURCE_ROOT";
 		};
 		F53C7B426A747D30DC532F19 = {
@@ -1934,20 +1873,14 @@
 			children = (
 				7CECAE1307949DFE1F78ED2E,
 				F8A5325FE7C48DAA6F9518D5,
-				AA3B230BC034786E0D77D912,
-				C1E79427CFC814C5B0001F17,
 				A0F78F99383E8C3DEB72FCE6,
 				076F5AAD5AA7468F678F1AED,
-				3C3BD21246A3072A2E181E58,
-				4CC923CFFE0EE3C79B634B73,
 				539A6A0AA6869B69E06A16BD,
 				1D276FBDBDA944671E0B20CA,
 				CEBE5EF99BB4162E7CCDC1F2,
 				54C2FC810904571E38500C89,
 				863005E2D4A74168D1F44A20,
 				D0BE26E4602E9E6D475DEDCB,
-				BBBD20B9FEC13D87A5F13162,
-				ECE157C553ACB54E6C33D169,
 			);
 			name = ui;
 			sourceTree = "<group>";
@@ -1974,19 +1907,10 @@
 			name = model;
 			sourceTree = "<group>";
 		};
-		AA91A74404F4377D2B79A843 = {
-			isa = PBXGroup;
-			children = (
-				B7FAE6A4441612D02F95E317,
-			);
-			name = ui;
-			sourceTree = "<group>";
-		};
 		38DCD8D50A8BD587B21188D8 = {
 			isa = PBXGroup;
 			children = (
 				D2104485EEA504FCD9C996EB,
-				AA91A74404F4377D2B79A843,
 				518F84E4D57ECA398DF2D1C2,
 				489784F546B68574D2CDA6CC,
 				98A851C13ABB92BFBDE8150A,
@@ -2445,13 +2369,10 @@
 				037B95ADC672B1BD692D7A28,
 				D3C33A1ED10B0D9B2B106F34,
 				CF155DF94EB909C4B553753A,
-				523BE9311F943CEE56591332,
 				E31F141C95E51C8296F46F6C,
-				FF5DE084AA5AC5500EE8E8AC,
 				65DACA9BD2BF0318F28ACF59,
 				5E27EC6A5ACE9D7DCEA275BF,
 				9411110795776FFC97A7D51D,
-				B9850DF60270ED75C9D1F5CC,
 				927242BF8EF50CBCC9099DF9,
 				C68E588447F31EAD9FE8740C,
 				70271E7EED763AF194A2C908,

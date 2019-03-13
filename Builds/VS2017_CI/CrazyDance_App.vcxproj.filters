@@ -74,9 +74,6 @@
     <Filter Include="CrazyDance\Source\MotionBlock\model">
       <UniqueIdentifier>{0F68ED19-F3D0-F836-8F12-984DCF34EED8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="CrazyDance\Source\MotionBlock\ui">
-      <UniqueIdentifier>{0739720E-3B47-2201-3566-774DD51278AC}</UniqueIdentifier>
-    </Filter>
     <Filter Include="CrazyDance\Source\MotionBlock">
       <UniqueIdentifier>{F74B4A80-7CE7-8909-C44E-0A64CD46A974}</UniqueIdentifier>
     </Filter>
@@ -367,13 +364,7 @@
     <ClCompile Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelGroupTreeUI.cpp">
       <Filter>CrazyDance\Source\MotionBlock\model\ui</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelGroupUI.cpp">
-      <Filter>CrazyDance\Source\MotionBlock\model\ui</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelLibraryUI.cpp">
-      <Filter>CrazyDance\Source\MotionBlock\model\ui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelManagerUI.cpp">
       <Filter>CrazyDance\Source\MotionBlock\model\ui</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelParameterEditor.cpp">
@@ -383,9 +374,6 @@
       <Filter>CrazyDance\Source\MotionBlock\model\ui</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelTreeUI.cpp">
-      <Filter>CrazyDance\Source\MotionBlock\model\ui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelUI.cpp">
       <Filter>CrazyDance\Source\MotionBlock\model\ui</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\MotionBlock\model\MotionBlockDataProvider.cpp">
@@ -1272,13 +1260,7 @@
     <ClInclude Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelGroupTreeUI.h">
       <Filter>CrazyDance\Source\MotionBlock\model\ui</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelGroupUI.h">
-      <Filter>CrazyDance\Source\MotionBlock\model\ui</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelLibraryUI.h">
-      <Filter>CrazyDance\Source\MotionBlock\model\ui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelManagerUI.h">
       <Filter>CrazyDance\Source\MotionBlock\model\ui</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelParameterEditor.h">
@@ -1288,9 +1270,6 @@
       <Filter>CrazyDance\Source\MotionBlock\model\ui</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelTreeUI.h">
-      <Filter>CrazyDance\Source\MotionBlock\model\ui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\MotionBlock\model\ui\MotionBlockModelUI.h">
       <Filter>CrazyDance\Source\MotionBlock\model\ui</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\MotionBlock\model\MotionBlockDataProvider.h">
@@ -1310,9 +1289,6 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\MotionBlock\model\MotionBlockModelParameterManager.h">
       <Filter>CrazyDance\Source\MotionBlock\model</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\MotionBlock\ui\MotionBlockManagerUI.h">
-      <Filter>CrazyDance\Source\MotionBlock\ui</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\MotionBlock\MotionBlock.h">
       <Filter>CrazyDance\Source\MotionBlock</Filter>
