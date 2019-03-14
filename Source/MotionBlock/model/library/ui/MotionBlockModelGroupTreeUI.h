@@ -11,7 +11,7 @@
 #pragma once
 
 #include "../MotionBlockModelGroup.h"
-#include "../MotionBlockModel.h"
+#include "../../MotionBlockModel.h"
 
 
 class MotionBlockModelGroupTreeUI :

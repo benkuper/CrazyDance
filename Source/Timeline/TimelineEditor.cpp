@@ -9,7 +9,7 @@
 */
 
 #include "TimelineEditor.h"
-#include "MotionBlock/model/MotionBlockModelLibrary.h"
+#include "MotionBlock/model/library/MotionBlockModelLibrary.h"
 
 TimelineEditor::TimelineEditor(const String &contentName) :
 	TimeMachineView(contentName)

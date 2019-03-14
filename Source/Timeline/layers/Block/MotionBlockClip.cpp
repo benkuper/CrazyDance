@@ -9,7 +9,7 @@
 */
 
 #include "MotionBlockClip.h"
-#include "MotionBlock/model/MotionBlockModelLibrary.h"
+#include "MotionBlock/model/library/MotionBlockModelLibrary.h"
 #include "MotionBlock/model/blocks/timeline/TimelineBlock.h"
 
 MotionBlockClip::MotionBlockClip(MotionBlockLayer * layer, float _time) :

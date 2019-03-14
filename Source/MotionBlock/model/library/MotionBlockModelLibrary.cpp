@@ -9,9 +9,9 @@
 */
 
 #include "MotionBlockModelLibrary.h"
-#include "blocks/timeline/TimelineBlock.h"
-#include "blocks/pattern/PatternBlock.h"
-#include "blocks/script/ScriptBlock.h"
+#include "../blocks/timeline/TimelineBlock.h"
+#include "../blocks/pattern/PatternBlock.h"
+#include "../blocks/script/ScriptBlock.h"
 
 juce_ImplementSingleton(MotionBlockModelLibrary)
 

@@ -10,7 +10,7 @@
 
 #include "MotionBlockModelTreeUI.h"
 #include "Drone/DroneManager.h"
-#include "../blocks/timeline/TimelineBlock.h"
+#include "../../blocks/timeline/TimelineBlock.h"
 
 const Identifier MotionBlockModelTreeUI::dragAndDropID = "MotionBlockModel";
 

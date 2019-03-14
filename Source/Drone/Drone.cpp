@@ -9,7 +9,7 @@
 */
 
 #include "Drone.h"
-#include "MotionBlock/model/MotionBlockModelLibrary.h"
+#include "MotionBlock/model/library/MotionBlockModelLibrary.h"
 #include "DroneManager.h"
 
 Drone::Drone(StringRef name, StringRef familyName, var) :

@@ -25,23 +25,47 @@ MotionBlockClipTransitionUI::~MotionBlockClipTransitionUI()
 
 void MotionBlockClipTransitionUI::paint(Graphics & g)
 {
-	bgColor = (transition->isInverted()?Colours::purple: BLUE_COLOR).withAlpha(.3f);
-	LayerBlockUI::paint(g);
+	//LayerBlockUI::paint(g);
 
-	Rectangle<int> r = getLocalBounds();
 	
-
-	g.setColour(Colours::yellow.withAlpha(.3f));
-	if (transition->fadeFrom->floatValue() > 0) g.fillRect(r.removeFromLeft(transition->fadeFrom->floatValue()*getWidth()));
-	if (transition->fadeTo->floatValue() > 0) g.fillRect(r.removeFromRight(transition->fadeTo->floatValue()*getWidth()));
-
-
-	g.setColour(Colours::orange.withAlpha(.3f));
-	if (transition->holdFrom->floatValue() > 0) g.fillRect(r.removeFromLeft(transition->holdFrom->floatValue()*getWidth()));
-	if (transition->holdTo->floatValue() > 0) g.fillRect(r.removeFromRight(transition->holdTo->floatValue()*getWidth()));
 	
-	g.setColour(TEXT_COLOR);
-	g.drawText(transition->niceName, getLocalBounds().toFloat(), Justification::centred);
+	if (transition->isInverted())
+	{
+		g.setColour((transition->isInverted() ? Colours::purple : BLUE_COLOR).withAlpha(.3f));
+		g.fillRect(getMainBounds());
+	}
+	else
+	{
+		Path p;
+		p.startNewSubPath(0, 0);
+		p.quadraticTo(getWidth() / 2, getHeight() / 3, getWidth(), 0);
+		p.lineTo(getWidth(), getHeight());
+		p.quadraticTo(getWidth() / 2, 2 * getHeight() / 3, 0, getHeight());
+		p.closeSubPath();
+
+		float fadeFrom = transition->fadeFrom->floatValue();
+		float fadeTo = transition->fadeTo->floatValue();
+		
+		g.setColour((inspectable->isSelected?HIGHLIGHT_COLOR:BLUE_COLOR).brighter(isMouseOver() ? .5f:0));
+		g.fillPath(p);
+
+		Colour fadeFromC = YELLOW_COLOR;
+		Colour fadeToC = YELLOW_COLOR;
+
+		if (fadeFrom > 0)
+		{
+			ColourGradient gradient = ColourGradient::horizontal(fadeFromC, fadeFromC.withAlpha(0.f), getMainBounds().removeFromLeft(fadeFrom*getWidth()));
+			g.setGradientFill(gradient);
+			g.fillPath(p);
+		}
+
+		if (fadeTo > 0)
+		{
+			ColourGradient gradient = ColourGradient::horizontal(fadeToC.withAlpha(0.f), fadeToC, getMainBounds().removeFromRight(fadeTo*getWidth()));
+			g.setGradientFill(gradient);
+			g.fillPath(p);
+		}
+	}
 }
 
 bool MotionBlockClipTransitionUI::hitTest(int x, int y)

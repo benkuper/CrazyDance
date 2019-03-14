@@ -8,7 +8,7 @@
 
 #include "MainComponent.h"
 
-#include "MotionBlock/model/ui/MotionBlockModelLibraryUI.h"
+#include "MotionBlock/model/library/ui/MotionBlockModelLibraryUI.h"
 #include "Drone/ui/DroneManagerUI.h"
 #include "Timeline/TimelineEditor.h"
 #include "Drone/Cluster/ui/DroneClusterGroupManagerUI.h"

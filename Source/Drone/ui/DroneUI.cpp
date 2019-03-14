@@ -9,7 +9,7 @@
 */
 
 #include "DroneUI.h"
-#include "MotionBlock/model/ui/MotionBlockModelTreeUI.h"
+#include "MotionBlock/model/library/ui/MotionBlockModelTreeUI.h"
 
 DroneUI::DroneUI(Drone * d) :
 	BaseItemUI(d, Direction::NONE, Direction::NONE),

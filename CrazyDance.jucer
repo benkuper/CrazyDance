@@ -125,6 +125,30 @@
       </GROUP>
       <GROUP id="{847A6674-7551-6F95-8BDC-2BE2A95B5C41}" name="MotionBlock">
         <GROUP id="{BC603841-CA96-1ED5-50C6-C5D56C707B8E}" name="model">
+          <GROUP id="{64EAFA77-8F46-16CE-94D5-46C3FC652922}" name="library">
+            <GROUP id="{5059EBCC-0FBD-C1B3-DB3A-EE0DC622BF64}" name="ui">
+              <FILE id="TvB2NG" name="MotionBlockModelGroupTreeUI.cpp" compile="1"
+                    resource="0" file="Source/MotionBlock/model/library/ui/MotionBlockModelGroupTreeUI.cpp"/>
+              <FILE id="c6SGJ2" name="MotionBlockModelGroupTreeUI.h" compile="0"
+                    resource="0" file="Source/MotionBlock/model/library/ui/MotionBlockModelGroupTreeUI.h"/>
+              <FILE id="kdz7wt" name="MotionBlockModelLibraryUI.cpp" compile="1"
+                    resource="0" file="Source/MotionBlock/model/library/ui/MotionBlockModelLibraryUI.cpp"/>
+              <FILE id="fkMSOE" name="MotionBlockModelLibraryUI.h" compile="0" resource="0"
+                    file="Source/MotionBlock/model/library/ui/MotionBlockModelLibraryUI.h"/>
+              <FILE id="ZBbOOe" name="MotionBlockModelTreeUI.cpp" compile="1" resource="0"
+                    file="Source/MotionBlock/model/library/ui/MotionBlockModelTreeUI.cpp"/>
+              <FILE id="GoePRf" name="MotionBlockModelTreeUI.h" compile="0" resource="0"
+                    file="Source/MotionBlock/model/library/ui/MotionBlockModelTreeUI.h"/>
+            </GROUP>
+            <FILE id="fbKxVb" name="MotionBlockModelGroup.cpp" compile="1" resource="0"
+                  file="Source/MotionBlock/model/library/MotionBlockModelGroup.cpp"/>
+            <FILE id="X49TUp" name="MotionBlockModelGroup.h" compile="0" resource="0"
+                  file="Source/MotionBlock/model/library/MotionBlockModelGroup.h"/>
+            <FILE id="Q5sieQ" name="MotionBlockModelLibrary.cpp" compile="1" resource="0"
+                  file="Source/MotionBlock/model/library/MotionBlockModelLibrary.cpp"/>
+            <FILE id="FVg9fr" name="MotionBlockModelLibrary.h" compile="0" resource="0"
+                  file="Source/MotionBlock/model/library/MotionBlockModelLibrary.h"/>
+          </GROUP>
           <GROUP id="{C93508DE-6D81-9797-8535-D15251DA464D}" name="blocks">
             <GROUP id="{6999C32F-10C5-31DA-E934-5E07DE612348}" name="pattern">
               <FILE id="JyPVNG" name="PatternBlock.cpp" compile="1" resource="0"
@@ -154,14 +178,6 @@
                   resource="0" file="Source/MotionBlock/model/preset/MotionBlockModelPresetManager.h"/>
           </GROUP>
           <GROUP id="{41D20742-08FD-5EE0-11A8-19C7E5DAF53B}" name="ui">
-            <FILE id="aRaD9z" name="MotionBlockModelGroupTreeUI.cpp" compile="1"
-                  resource="0" file="Source/MotionBlock/model/ui/MotionBlockModelGroupTreeUI.cpp"/>
-            <FILE id="aOuDum" name="MotionBlockModelGroupTreeUI.h" compile="0"
-                  resource="0" file="Source/MotionBlock/model/ui/MotionBlockModelGroupTreeUI.h"/>
-            <FILE id="LBZtEv" name="MotionBlockModelLibraryUI.cpp" compile="1"
-                  resource="0" file="Source/MotionBlock/model/ui/MotionBlockModelLibraryUI.cpp"/>
-            <FILE id="kSYwjy" name="MotionBlockModelLibraryUI.h" compile="0" resource="0"
-                  file="Source/MotionBlock/model/ui/MotionBlockModelLibraryUI.h"/>
             <FILE id="X5tkOA" name="MotionBlockModelParameterEditor.cpp" compile="1"
                   resource="0" file="Source/MotionBlock/model/ui/MotionBlockModelParameterEditor.cpp"/>
             <FILE id="KQ5e7Q" name="MotionBlockModelParameterEditor.h" compile="0"
@@ -170,10 +186,6 @@
                   compile="1" resource="0" file="Source/MotionBlock/model/ui/MotionBlockModelParameterManagerEditor.cpp"/>
             <FILE id="BSH25G" name="MotionBlockModelParameterManagerEditor.h" compile="0"
                   resource="0" file="Source/MotionBlock/model/ui/MotionBlockModelParameterManagerEditor.h"/>
-            <FILE id="pMfpEs" name="MotionBlockModelTreeUI.cpp" compile="1" resource="0"
-                  file="Source/MotionBlock/model/ui/MotionBlockModelTreeUI.cpp"/>
-            <FILE id="KHwkC2" name="MotionBlockModelTreeUI.h" compile="0" resource="0"
-                  file="Source/MotionBlock/model/ui/MotionBlockModelTreeUI.h"/>
           </GROUP>
           <FILE id="eGG3L1" name="MotionBlockDataProvider.cpp" compile="1" resource="0"
                 file="Source/MotionBlock/model/MotionBlockDataProvider.cpp"/>
@@ -183,14 +195,6 @@
                 file="Source/MotionBlock/model/MotionBlockModel.cpp"/>
           <FILE id="U17VCl" name="MotionBlockModel.h" compile="0" resource="0"
                 file="Source/MotionBlock/model/MotionBlockModel.h"/>
-          <FILE id="QWlePt" name="MotionBlockModelGroup.cpp" compile="1" resource="0"
-                file="Source/MotionBlock/model/MotionBlockModelGroup.cpp"/>
-          <FILE id="AdbK6s" name="MotionBlockModelGroup.h" compile="0" resource="0"
-                file="Source/MotionBlock/model/MotionBlockModelGroup.h"/>
-          <FILE id="BC4Ulb" name="MotionBlockModelLibrary.cpp" compile="1" resource="0"
-                file="Source/MotionBlock/model/MotionBlockModelLibrary.cpp"/>
-          <FILE id="MLDSLA" name="MotionBlockModelLibrary.h" compile="0" resource="0"
-                file="Source/MotionBlock/model/MotionBlockModelLibrary.h"/>
           <FILE id="X77muw" name="MotionBlockModelParameter.cpp" compile="1"
                 resource="0" file="Source/MotionBlock/model/MotionBlockModelParameter.cpp"/>
           <FILE id="FmrQbJ" name="MotionBlockModelParameter.h" compile="0" resource="0"
@@ -202,10 +206,6 @@
         </GROUP>
         <FILE id="JztdP7" name="MotionBlock.cpp" compile="1" resource="0" file="Source/MotionBlock/MotionBlock.cpp"/>
         <FILE id="lHXcJU" name="MotionBlock.h" compile="0" resource="0" file="Source/MotionBlock/MotionBlock.h"/>
-        <FILE id="eW8f7u" name="UserMotionBlockContainer.cpp" compile="1" resource="0"
-              file="Source/MotionBlock/UserMotionBlockContainer.cpp"/>
-        <FILE id="FQppqN" name="UserMotionBlockContainer.h" compile="0" resource="0"
-              file="Source/MotionBlock/UserMotionBlockContainer.h"/>
       </GROUP>
       <GROUP id="{54A89741-7408-D4B0-E026-583BB5958666}" name="Timeline">
         <GROUP id="{2059ACFF-7D4F-072E-D80C-100D6461C48D}" name="layers">

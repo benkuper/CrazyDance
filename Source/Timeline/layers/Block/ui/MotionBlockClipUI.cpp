@@ -10,7 +10,7 @@
 
 #include "MotionBlockClipUI.h"
 #include "../MotionBlockLayer.h"
-#include "MotionBlock/model/ui/MotionBlockModelTreeUI.h"
+#include "MotionBlock/model/library/ui/MotionBlockModelTreeUI.h"
 
 MotionBlockClipUI::MotionBlockClipUI(MotionBlockClip * _clip) :
 	LayerBlockUI(_clip),
@@ -24,6 +24,9 @@ MotionBlockClipUI::MotionBlockClipUI(MotionBlockClip * _clip) :
 {
 
 	bgColor = BG_COLOR.brighter().withAlpha(.5f);
+
+	setHighlightOnMouseOver(true);
+	fillColorOnSelected = true;
 
 	addChildComponent(&fadeInHandle, 0);
 	addChildComponent(&fadeOutHandle, 0);

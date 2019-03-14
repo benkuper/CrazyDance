@@ -10,7 +10,7 @@
 
 #include "MotionBlockClipManagerUI.h"
 #include "MotionBlockLayerTimeline.h"
-#include "MotionBlock/model/ui/MotionBlockModelTreeUI.h"
+#include "MotionBlock/model/library/ui/MotionBlockModelTreeUI.h"
 
 
 MotionBlockClipManagerUI::MotionBlockClipManagerUI(MotionBlockLayerTimeline * _timeline, MotionBlockClipManager * manager) :

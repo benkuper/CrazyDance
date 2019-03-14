@@ -10,7 +10,7 @@
 
 #pragma once
 
-#include "../MotionBlockModel.h"
+#include "../../MotionBlockModel.h"
 
 class MotionBlockModelTreeUI :
 	public InspectableContentComponent,

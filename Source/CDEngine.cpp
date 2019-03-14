@@ -11,7 +11,7 @@
 #include "CDEngine.h"
 
 #include "CDEngine.h"
-#include "MotionBlock/model/MotionBlockModelLibrary.h"
+#include "MotionBlock/model/library/MotionBlockModelLibrary.h"
 
 #include "Drone/DroneManager.h"
 #include "Audio/AudioManager.h"
