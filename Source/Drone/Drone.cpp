@@ -129,8 +129,14 @@ void Drone::update()
 	droneListeners.call(&DroneListener::dataUpdated, this);
 	droneNotifier.addMessage(new DroneEvent(DroneEvent::DATA_UPDATED, this));
 
+	bool forceUpdate = motionData.getProperty("forceUpdate", false);
+
 	var posData = motionData.getProperty("position", var());
-	if (posData.isArray()) position->setVector(posData[0], posData[1], posData[2]);
+	if (posData.isArray())
+	{
+		position->setVector(posData[0], posData[1], posData[2]);
+		if (forceUpdate) position->setValue(position->value, false, true);
+	}
 
 	var colorData = motionData.getProperty("color", var());
 	if (colorData.isArray()) color->setColor(Colour((int)colorData[0], (int)colorData[1], (int)colorData[2]));
