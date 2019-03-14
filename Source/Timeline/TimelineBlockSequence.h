@@ -14,6 +14,7 @@
 
 class MotionBlock;
 class MotionBlockLayer;
+class ColorLayer;
 class Drone;
 
 class TimelineBlockSequence :
@@ -35,6 +36,7 @@ public:
 
 	MotionBlockLayer * getPrimaryLayerForDrone(Drone * p, bool includeDisabled = false);
 	Array<MotionBlockLayer *> getSecondaryLayersForDrone(Drone * p, bool includeDisabled = false);
+	ColorLayer * getColorLayerForDrone(Drone * p, bool includeDisabled = false);
 
 	void itemAdded(SequenceLayer * s) override;
 

@@ -10,6 +10,7 @@
 
 #include "TimelineBlockSequence.h"
 #include "layers/Block/MotionBlockLayer.h"
+#include "layers/Color/ColorLayer.h"
 #include "Audio/AudioManager.h"
 #include "Drone/Drone.h"
 #include "Drone/DroneManager.h"
@@ -82,6 +83,18 @@ var TimelineBlockSequence::getMotionData(Drone * p, double time, var params)
 	posData.append(tPos.z);
 	result.getDynamicObject()->setProperty("position", posData);
 
+	ColorLayer * colorLayer = getColorLayerForDrone(p);
+	if (colorLayer != nullptr)
+	{
+		Colour col = colorLayer->getColorAtTime(t);
+		var colData;
+		colData.append(col.getRed());
+		colData.append(col.getGreen());
+		colData.append(col.getBlue());
+		colData.append(col.getAlpha());
+		result.getDynamicObject()->setProperty("color", colData);
+	}
+
 	if (alwaysSendWhenPlaying->boolValue() && isPlaying->boolValue()) result.getDynamicObject()->setProperty("forceUpdate", true);
 
 	return result;
@@ -125,6 +138,21 @@ Array<MotionBlockLayer*> TimelineBlockSequence::getSecondaryLayersForDrone(Drone
 	}
 
 	return result;// result.size() > 0 ? result : defaultLayers;
+}
+
+ColorLayer *TimelineBlockSequence::getColorLayerForDrone(Drone * p, bool includeDisabled)
+{
+	for (auto &i : layerManager->items)
+	{
+		if (!includeDisabled && !i->enabled->boolValue()) continue;
+		ColorLayer * l = dynamic_cast<ColorLayer *>(i);
+		if (l == nullptr) continue;
+
+		int droneCount = -1;
+		if (l->filterManager.getTargetIDForDrone(p, droneCount) >= 0) return l;
+	}
+
+	return nullptr;
 }
 
 void TimelineBlockSequence::itemAdded(SequenceLayer * s)

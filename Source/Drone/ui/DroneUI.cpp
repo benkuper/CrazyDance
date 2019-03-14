@@ -31,6 +31,9 @@ void DroneUI::paint(Graphics & g)
 	BaseItemUI::paint(g);
 	Rectangle<int> r = getMainBounds().withTop(headerHeight + headerGap);
 
+	g.setColour(item->color->getColor());
+	g.fillEllipse(getLocalBounds().withSizeKeepingCentre(30,30).toFloat());
+
 	//g.setColour(item->uiColor->getColor());
 	if (blockImage.getWidth() > 0) g.drawImage(blockImage, r.removeFromBottom(r.getHeight() / 3).toFloat(), RectanglePlacement::centred);
 	if (droneImage.getWidth() > 0) g.drawImage(droneImage, r.toFloat().reduced(8), RectanglePlacement::centred);
@@ -82,6 +85,10 @@ void DroneUI::newMessage(const Drone::DroneEvent & e)
 	{
 	case Drone::DroneEvent::BLOCK_CHANGED:
 		updateBlockImage();
+		break;
+
+	case Drone::DroneEvent::DATA_UPDATED:
+		repaint();
 		break;
 
 	default:

@@ -126,9 +126,7 @@ void Drone::update()
 	double time = (Time::getMillisecondCounter() % (int)1e9) / 1000.0;
 	motionData = currentBlock->getMotionData(this, time, var());
 
-	droneListeners.call(&DroneListener::dataUpdated, this);
-	droneNotifier.addMessage(new DroneEvent(DroneEvent::DATA_UPDATED, this));
-
+	
 	bool forceUpdate = motionData.getProperty("forceUpdate", false);
 
 	var posData = motionData.getProperty("position", var());
@@ -139,10 +137,16 @@ void Drone::update()
 	}
 
 	var colorData = motionData.getProperty("color", var());
-	if (colorData.isArray()) color->setColor(Colour((int)colorData[0], (int)colorData[1], (int)colorData[2]));
+	if (colorData.isArray())
+	{
+		color->setColor(Colour((int)colorData[0], (int)colorData[1], (int)colorData[2]));
+	}
 
 	var headlightData = motionData.getProperty("headlight", var());
 	if (!headlightData.isVoid()) headlight->setValue(headlightData);
+
+	droneListeners.call(&DroneListener::dataUpdated, this);
+	droneNotifier.addMessage(new DroneEvent(DroneEvent::DATA_UPDATED, this));
 }
 
 void Drone::onContainerParameterChangedInternal(Parameter * p)

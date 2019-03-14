@@ -29,8 +29,13 @@ void DroneVizUI::paint(Graphics & g)
 {
 
 	Rectangle<int> r = getMainBounds();
+
+	g.setColour(item->color->getColor());
+	g.drawEllipse(getLocalBounds().toFloat(),3);
+
 	if (droneImage.getWidth() > +0) g.drawImage(droneImage, r.toFloat(), RectanglePlacement::centred);
 
+	
 	g.setFont(10);
 	Colour c = item->uiColor->getColor();
 	g.setColour(c.withAlpha(.5f)); 
@@ -52,7 +57,7 @@ void DroneVizUI::updateDroneImage()
 void DroneVizUI::controllableFeedbackUpdateInternal(Controllable * c)
 {
 	if (c == item->state) updateDroneImage();
-	else if (c == item->position)
+	else if (c == item->position || c == item->color)
 	{
 		int targetSize = jmap<float>(item->position->y, 0, 10, 20, 100);
 		if (targetSize != getWidth()) setSize(targetSize, targetSize);
