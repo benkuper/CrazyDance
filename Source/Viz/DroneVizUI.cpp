@@ -54,7 +54,7 @@ void DroneVizUI::controllableFeedbackUpdateInternal(Controllable * c)
 	if (c == item->state) updateDroneImage();
 	else if (c == item->position)
 	{
-		int targetSize = jmap<float>(item->position->y, item->position->minimumValue[1], item->position->maximumValue[2], 20, 100);
+		int targetSize = jmap<float>(item->position->y, 0, 10, 20, 100);
 		if (targetSize != getWidth()) setSize(targetSize, targetSize);
 
 		repaint();

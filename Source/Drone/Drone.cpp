@@ -47,7 +47,7 @@ Drone::Drone(StringRef name, StringRef familyName, var) :
 
 	addChildControllableContainer(&flightCC);
 	position = flightCC.addPoint3DParameter("Position", "Position of the drone");
-	position->setBounds(-10, 0, -10, 10, 5, 10);
+	//position->setBounds(-10, 0, -10, 10, 5, 10);
 
 	addChildControllableContainer(&lightCC);
 	color = lightCC.addColorParameter("Color", "Color of the light deck", Colours::black);
