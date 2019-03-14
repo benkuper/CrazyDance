@@ -56,7 +56,7 @@ Drone::Drone(StringRef name, StringRef familyName, var) :
 	activeProvider = addTargetParameter("Active Block", "The current active block for this Drone");
 	activeProvider->targetType = TargetParameter::CONTAINER;
 	//activeProvider->customGetTargetContainerFunc = &MotionBlockModelLibrary::showProvidersAndGet;
-	activeProvider->hideInEditor = true;
+	//activeProvider->hideInEditor = true;
 }
 
 Drone::~Drone()

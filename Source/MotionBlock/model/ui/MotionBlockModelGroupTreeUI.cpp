@@ -49,6 +49,35 @@ void MotionBlockModelGroupTreeUI::mouseDown(const MouseEvent & e)
 	}
 }
 
+
+bool MotionBlockModelGroupTreeUI::keyPressed(const KeyPress & e)
+{
+	if (e.getKeyCode() == e.deleteKey || e.getKeyCode() == e.backspaceKey)
+	{
+		if (group != MotionBlockModelLibrary::getInstance() && inspectable->isSelected && inspectable->selectionManager == InspectableSelectionManager::activeSelectionManager)
+		{
+			if (group->askConfirmationBeforeRemove && GlobalSettings::getInstance()->askBeforeRemovingItems->boolValue())
+			{
+				int result = AlertWindow::showOkCancelBox(AlertWindow::QuestionIcon, "Delete " + group->niceName, "Are you sure you want to delete this ?", "Delete", "Cancel");
+				if (result != 0) group->remove();
+			}
+			else
+			{
+				group->remove();
+			}
+
+			return true;
+		}
+	}
+
+	return InspectableContentComponent::keyPressed(e);
+}
+
+
+
+/////////////// TREE ITEM
+
+
 GroupTreeViewItem::GroupTreeViewItem(MotionBlockModelGroup * group) : 
 	InspectableContentComponent(group),
 	group(group)

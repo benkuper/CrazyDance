@@ -15,7 +15,8 @@
 
 class MotionBlock :
 	public BaseItem,
-	public MotionBlockDataProvider::ProviderListener
+	public MotionBlockDataProvider::ProviderListener,
+	public Inspectable::InspectableListener
 {
 public:
 	MotionBlock(MotionBlockDataProvider * provider);
@@ -23,7 +24,6 @@ public:
 
 	WeakReference<MotionBlockDataProvider> provider;
 	ControllableContainer paramsContainer;
-
 
 	var paramsLoadData;
 
@@ -38,12 +38,14 @@ public:
 	var getJSONData() override;
 	void loadJSONDataInternal(var data) override;
 
-	
+	void inspectableDestroyed(Inspectable *) override;
+
 	class  MotionBlockListener
 	{
 	public:
 		virtual ~MotionBlockListener() {}
 		virtual void blockParamControlModeChanged(Parameter * p) {}
+		virtual void blockProviderDestroyed() {}
 		//virtual void colorsUpdated() {}
 	};
 

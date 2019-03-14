@@ -27,6 +27,7 @@ public:
 	WeakReference<MotionBlockClip> toClip;
 	
 	Automation curve;
+	Automation fadeCurve;
 	
 	FloatParameter * fadeFrom;
 	FloatParameter * fadeTo;

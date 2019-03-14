@@ -19,7 +19,7 @@ MotionBlockLayer::MotionBlockLayer(Sequence * s, var) :
 	transitionManager(this)
 {
 	mode = addEnumParameter("Mode", "Mode for this layer.\nAll \"Main\" layers will be averaged together, then the \"Effect\" layers will be added to that.");
-	mode->addOption("Main", MAIN)->addOption("Effect", EFFECT);
+	mode->addOption("Primary", PRIMARY)->addOption("Secondary", SECONDARY);
 
 	//defaultLayer = addBoolParameter("Default", "If checked, this layer will be the default layer when no layer has the requested prop id", false);
 
@@ -43,20 +43,34 @@ MotionBlockLayer::~MotionBlockLayer()
 
 }
 
-var MotionBlockLayer::getMotionData(Drone * p, double time, var params)
+var MotionBlockLayer::getMotionData(Drone * d, double time, var params)
 {
+	if (blockClipManager.items.size() == 0) return var();
+	
+	if (mode->getValueDataAsEnum<Mode>() == PRIMARY)
+	{
+		MotionBlockClip * firstBlock = (MotionBlockClip *)blockClipManager.items[0];
+		MotionBlockClip * lastBlock = (MotionBlockClip *)blockClipManager.items[blockClipManager.items.size()-1];
+
+		if (time <= firstBlock->time->floatValue())
+		{
+			return  firstBlock->getMotionData(d, firstBlock->time->floatValue(), params);
+		}
+		else if (time >= lastBlock->getEndTime()) return  lastBlock->getMotionData(d, lastBlock->getEndTime(), params);
+	}
+
 	var motionData;
 	MotionBlockClipTransition * transition = (MotionBlockClipTransition *)transitionManager.getBlockAtTime(time);
 	if (transition != nullptr)
 	{
-		motionData = transition->getMotionData(p, time, params);
+		motionData = transition->getMotionData(d, time, params);
 	}
 	else
 	{
 		MotionBlockClip * clip = (MotionBlockClip *)blockClipManager.getBlockAtTime(time);
 		if (clip != nullptr)
 		{
-			motionData = clip->getMotionData(p, time, params);
+			motionData = clip->getMotionData(d, time, params);
 		}
 	}
 

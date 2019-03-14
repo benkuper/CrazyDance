@@ -48,14 +48,16 @@ void MotionBlockClipUI::paint(Graphics & g)
 {
 	LayerBlockUI::paint(g);
 
-
+	if (inspectable.wasObjectDeleted()) return;
+	
 	imgLock.enter();
 	g.setColour(Colours::white.withAlpha(automationUI != nullptr ? .3f : .6f));
 	g.drawImage(previewImage, getCoreBounds().toFloat(), RectanglePlacement::centred);
 	imgLock.exit();
 
 	g.setColour(bgColor.brighter());
-	g.drawText(clip->currentBlock != nullptr ? clip->currentBlock->provider->getTypeString() : "No Light block selected", getCoreBounds().removeFromBottom(20).reduced(8).toFloat(), Justification::centred);
+	g.drawText((clip->currentBlock != nullptr && clip->currentBlock->provider != nullptr) ? clip->currentBlock->provider->getTypeString() : "No Light block selected", getCoreBounds().removeFromBottom(20).reduced(8).toFloat(), Justification::centred);
+
 
 	if (automationUI != nullptr)
 	{
@@ -104,6 +106,11 @@ void MotionBlockClipUI::generatePreview()
 		int numBytes;
 		const char * imgData = BinaryData::getNamedResource((StringUtil::toShortName(clip->currentBlock->provider->getTypeString()) + "_png").getCharPointer(), numBytes);
 		previewImage = ImageCache::getFromMemory(imgData, numBytes);
+		repaint();
+	}
+	else
+	{
+		previewImage = Image();
 		repaint();
 	}
 }

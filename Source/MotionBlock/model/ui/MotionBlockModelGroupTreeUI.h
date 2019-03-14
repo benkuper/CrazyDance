@@ -26,6 +26,7 @@ public:
 	void paint(Graphics &g) override;
 
 	void mouseDown(const MouseEvent &e) override;
+	bool keyPressed(const KeyPress &e) override;
 };
 
 class GroupTreeViewItem :
@@ -40,6 +41,7 @@ public:
 	MotionBlockModelGroup * group;
 	
 	void rebuildTree();
+
 
 	Component * createItemComponent() override { return new MotionBlockModelGroupTreeUI(group); }
 	int getItemHeight() const override { return 16; }

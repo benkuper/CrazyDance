@@ -17,6 +17,8 @@ MotionBlockClipTransitionManagerUI::MotionBlockClipTransitionManagerUI(MotionBlo
 	manager(manager),
 	timeline(timeline)
 {
+	noItemText = "";
+
 	autoFilterHitTestOnItems = true;
 	validateHitTestOnNoItem = false;
 

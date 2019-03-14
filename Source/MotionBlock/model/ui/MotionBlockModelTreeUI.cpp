@@ -128,12 +128,35 @@ void MotionBlockModelTreeUI::mouseDrag(const MouseEvent & e)
 
 
 
+bool MotionBlockModelTreeUI::keyPressed(const KeyPress & e)
+{
+	if (e.getKeyCode() == e.deleteKey || e.getKeyCode() == e.backspaceKey)
+	{
+		if (model && inspectable->isSelected && inspectable->selectionManager == InspectableSelectionManager::activeSelectionManager)
+		{
+			if (model->askConfirmationBeforeRemove && GlobalSettings::getInstance()->askBeforeRemovingItems->boolValue())
+			{
+				int result = AlertWindow::showOkCancelBox(AlertWindow::QuestionIcon, "Delete " + model->niceName, "Are you sure you want to delete this ?", "Delete", "Cancel");
+				if (result != 0) model->remove();
+			}
+			else
+			{
+				model->remove();
+			}
+
+			return true;
+		}
+	}
+
+	return InspectableContentComponent::keyPressed(e);
+}
 
 
 
 
 
 
+///////// TREE ITEM
 
 
 

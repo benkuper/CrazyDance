@@ -30,6 +30,8 @@ MotionBlockModelGroup::MotionBlockModelGroup(const String & name) :
 
 	groupManager.addBaseManagerListener(this);
 	modelManager.addBaseManagerListener(this);
+
+
 }
 
 MotionBlockModelGroup::~MotionBlockModelGroup() 
@@ -63,19 +65,29 @@ void MotionBlockModelGroup::itemAdded(MotionBlockModel * model)
 {
 	groupListeners.call(&ModelGroupListener::groupModelAdded, model);
 	groupNotifier.addMessage(new ModelGroupEvent(ModelGroupEvent::MODEL_ADDED, model));
+
+	askConfirmationBeforeRemove = true;
 }
 void MotionBlockModelGroup::itemRemoved(MotionBlockModel * model)
 {
 	groupListeners.call(&ModelGroupListener::groupModelRemoved, model);
 	groupNotifier.addMessage(new ModelGroupEvent(ModelGroupEvent::MODEL_ADDED, model));
+
+
+	askConfirmationBeforeRemove = modelManager.items.size() > 0 || groupManager.items.size() > 0;
 }
 void MotionBlockModelGroup::itemAdded(MotionBlockModelGroup * group)
 {
 	groupListeners.call(&ModelGroupListener::groupModelGroupAdded, group);
 	groupNotifier.addMessage(new ModelGroupEvent(ModelGroupEvent::GROUP_ADDED, group));
+
+	askConfirmationBeforeRemove = true;
 }
 void MotionBlockModelGroup::itemRemoved(MotionBlockModelGroup * group)
 {
 	groupListeners.call(&ModelGroupListener::groupModelGroupRemoved, group);
 	groupNotifier.addMessage(new ModelGroupEvent(ModelGroupEvent::GROUP_ADDED, group));
+
+	askConfirmationBeforeRemove = modelManager.items.size() > 0 || groupManager.items.size() > 0;
+
 }

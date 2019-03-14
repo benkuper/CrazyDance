@@ -26,7 +26,9 @@ public:
 
 	SequenceLayerFactory layerFactory;
 	var getMotionData(Drone * p, double time, var params);
-	Array<MotionBlockLayer *> getLayersForProp(Drone * p, bool includeDisabled = false);
+
+	MotionBlockLayer * getPrimaryLayerForDrone(Drone * p, bool includeDisabled = false);
+	Array<MotionBlockLayer *> getSecondaryLayersForDrone(Drone * p, bool includeDisabled = false);
 
 	void itemAdded(SequenceLayer * s) override;
 

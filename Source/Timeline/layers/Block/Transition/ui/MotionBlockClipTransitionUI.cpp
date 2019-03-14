@@ -30,14 +30,16 @@ void MotionBlockClipTransitionUI::paint(Graphics & g)
 
 	Rectangle<int> r = getLocalBounds();
 	
-	g.setColour(Colours::orange.withAlpha(.2f));
-	if (transition->holdFrom->floatValue() > 0) g.fillRect(r.removeFromLeft(transition->holdFrom->floatValue()*getWidth()));
-	if (transition->holdTo->floatValue() > 0) g.fillRect(r.removeFromRight(transition->holdTo->floatValue()*getWidth()));
-	
-	g.setColour(Colours::yellow.withAlpha(.2f));
+
+	g.setColour(Colours::yellow.withAlpha(.3f));
 	if (transition->fadeFrom->floatValue() > 0) g.fillRect(r.removeFromLeft(transition->fadeFrom->floatValue()*getWidth()));
 	if (transition->fadeTo->floatValue() > 0) g.fillRect(r.removeFromRight(transition->fadeTo->floatValue()*getWidth()));
 
+
+	g.setColour(Colours::orange.withAlpha(.3f));
+	if (transition->holdFrom->floatValue() > 0) g.fillRect(r.removeFromLeft(transition->holdFrom->floatValue()*getWidth()));
+	if (transition->holdTo->floatValue() > 0) g.fillRect(r.removeFromRight(transition->holdTo->floatValue()*getWidth()));
+	
 	g.setColour(TEXT_COLOR);
 	g.drawText(transition->niceName, getLocalBounds().toFloat(), Justification::centred);
 }

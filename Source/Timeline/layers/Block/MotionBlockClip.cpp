@@ -30,7 +30,6 @@ MotionBlockClip::MotionBlockClip(MotionBlockLayer * layer, float _time) :
 	fadeIn->setControllableFeedbackOnly(autoFade->boolValue());
 	fadeOut->setControllableFeedbackOnly(autoFade->boolValue());
 
-	DBG("New clip ! " << niceName);
 }
 
 MotionBlockClip::~MotionBlockClip()
@@ -48,6 +47,7 @@ void MotionBlockClip::setBlockFromProvider(MotionBlockDataProvider * provider)
 
 	if (currentBlock != nullptr)
 	{
+		blockData = currentBlock->getJSONData();
 		removeChildControllableContainer(currentBlock);
 		currentBlock->removeMotionBlockListener(this);
 		currentBlock = nullptr;
@@ -61,8 +61,12 @@ void MotionBlockClip::setBlockFromProvider(MotionBlockDataProvider * provider)
 		addChildControllableContainer(currentBlock);
 		currentBlock->addMotionBlockListener(this);
 		//if(parentContainer != nullptr) setNiceName(parentContainer->getUniqueNameInContainer(currentBlock->niceName));
-		currentBlock->loadJSONDataInternal(blockData);
-		blockData = var();
+		
+		if (!blockData.isVoid())
+		{
+			currentBlock->loadJSONDataInternal(blockData);
+			blockData = var();
+		}
 	}
 }
 var MotionBlockClip::getMotionData(Drone * p, double absoluteTime, var params)
@@ -82,8 +86,8 @@ var MotionBlockClip::getMotionData(Drone * p, double absoluteTime, var params)
 		params.getDynamicObject()->setProperty("sequenceTime", false);
 	}
 
-	double relTimeLooped = getRelativeTime(absoluteTime, true);
-	result = currentBlock->getMotionData(p, relTimeLooped, params);
+	double relTime = getRelativeTime(absoluteTime, true, absoluteTime >= getEndTime()); //if outside of clip, don't loop
+	result = currentBlock->getMotionData(p, relTime, params);
 	if (result.isObject()) result.getDynamicObject()->setProperty("weight", factor);
 	return result;
 }
@@ -96,6 +100,7 @@ void MotionBlockClip::blockParamControlModeChanged(Parameter * p)
 		p->automation->automation.allowKeysOutside = true;
 	}
 }
+
 
 void MotionBlockClip::setCoreLength(float value, bool stretch, bool stickToCoreEnd)
 {
@@ -145,7 +150,7 @@ void MotionBlockClip::loadJSONDataInternal(var data)
 	var bData = data.getProperty("blockData", var());
 	if (currentBlock != nullptr)
 	{
-		currentBlock->loadJSONData(blockData);
+		currentBlock->loadJSONData(bData);
 
 		Array<WeakReference<Parameter>> params = currentBlock->paramsContainer.getAllParameters();
 
@@ -162,6 +167,5 @@ void MotionBlockClip::loadJSONDataInternal(var data)
 		blockData = bData;
 	}
 
-	DBG(" > after load " << niceName << " / " << time->floatValue());
 
 }

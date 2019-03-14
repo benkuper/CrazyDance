@@ -16,7 +16,8 @@ MotionBlockClipTransition::MotionBlockClipTransition(MotionBlockLayer * layer, W
 	layer(layer),
 	fromClip(nullptr),
 	toClip(nullptr),
-	curve("Curve")
+	curve("Curve"),
+	fadeCurve("Fade Curve")
 {
 	setFromClip(fromClip);
 	setToClip(toClip);
@@ -34,6 +35,20 @@ MotionBlockClipTransition::MotionBlockClipTransition(MotionBlockLayer * layer, W
 	curve.addItem(1, 1);
 	curve.items[0]->setEasing(Easing::BEZIER);
 	curve.showUIInEditor = true;
+	CubicEasing * cb = (CubicEasing *)(curve.items[0]->easing.get());
+	cb->anchor1->setPoint(.3f,0);
+	cb->anchor2->setPoint(.6f,1);
+
+	fadeCurve.allowKeysOutside = false;
+	addChildControllableContainer(&fadeCurve);
+	fadeCurve.addItem(0, 0);
+	fadeCurve.addItem(1, .5f);
+	fadeCurve.items[0]->setEasing(Easing::BEZIER);
+	CubicEasing * fb = (CubicEasing *)(fadeCurve.items[0]->easing.get());
+	fb->anchor1->setPoint(.4f, .8f);
+	fb->anchor2->setPoint(.5f, 1);
+
+	fadeCurve.showUIInEditor = true;
 }
 
 MotionBlockClipTransition::~MotionBlockClipTransition()
@@ -116,21 +131,27 @@ var MotionBlockClipTransition::getMotionData(Drone * d, double absoluteTime, var
 {
 	if (fromClip == nullptr || toClip == nullptr || fromClip.wasObjectDeleted() || toClip.wasObjectDeleted()) return var();
 
+	float curBlockTime = getRelativeTime(absoluteTime, true, true);
+
 	float fromTime = fromClip->getEndTime();
 	float toTime = toClip->time->floatValue();
 
 	bool inverted = isInverted();
 
-	float targetFromTime = inverted ? absoluteTime : jmin<float>(absoluteTime, fromTime + fadeFrom->floatValue());
-	float targetToTime = inverted ? absoluteTime : jmax<float>(absoluteTime, toTime - fadeTo->floatValue());
+	float fadeFromAbs = fadeFrom->floatValue() * coreLength->floatValue();
+	float fadeToAbs = fadeTo->floatValue() * coreLength->floatValue();
 
-	//DBG("From time : " << targetFromTime << " / " << absoluteTime << " / " << (fromTime + fadeFrom->floatValue()));
+	float smoothedFadeFrom = fadeFromAbs == 0 ? fromTime : (fromTime + fadeCurve.getValueForPosition(curBlockTime / fadeFromAbs) * fadeFromAbs);
+	float smoothedFadeTo = fadeToAbs == 0 ? toTime : (toTime - fadeCurve.getValueForPosition((coreLength->floatValue()-curBlockTime) / fadeToAbs) * fadeToAbs);
+
+	float targetFromTime = inverted ? absoluteTime : jmin<float>(absoluteTime, smoothedFadeFrom);
+	float targetToTime = inverted ? absoluteTime : jmax<float>(absoluteTime, smoothedFadeTo);
+
 	var fromMotionPosData = fromClip->getMotionData(d, targetFromTime, params).getProperty("position", var());
 	var toMotionPosData = toClip->getMotionData(d, targetToTime, params).getProperty("position", var());
 
 	if (fromTime == toTime) return fromMotionPosData;
 	if (!fromMotionPosData.isArray() || !toMotionPosData.isArray()) return var();
-
 
 
 	Vector3D<float> fromPos = Vector3D<float>(fromMotionPosData[0], fromMotionPosData[1], fromMotionPosData[2]);
@@ -167,6 +188,7 @@ var MotionBlockClipTransition::getJSONData()
 	if (fromClip != nullptr) data.getDynamicObject()->setProperty("fromClip", fromClip->shortName);
 	if (toClip != nullptr) data.getDynamicObject()->setProperty("toClip", toClip->shortName);
 	data.getDynamicObject()->setProperty("curve", curve.getJSONData());
+	data.getDynamicObject()->setProperty("fadeCurve", fadeCurve.getJSONData());
 	return data;
 }
 
@@ -175,7 +197,8 @@ void MotionBlockClipTransition::loadJSONDataInternal(var data)
 	LayerBlock::loadJSONDataInternal(data);
 	setFromClip((MotionBlockClip *)layer->blockClipManager.getItemWithName(data.getProperty("fromClip", "")));
 	setToClip((MotionBlockClip *)layer->blockClipManager.getItemWithName(data.getProperty("toClip", "")));
-	curve.loadJSONData(data.getProperty("curve", var()));
+	//curve.loadJSONData(data.getProperty("curve", var()));
+	//fadeCurve.loadJSONData(data.getProperty("fadeCurve", var()));
 }
 
 void MotionBlockClipTransition::onControllableFeedbackUpdateInternal(ControllableContainer * cc, Controllable * c)

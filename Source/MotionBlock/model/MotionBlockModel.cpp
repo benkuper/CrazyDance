@@ -26,6 +26,8 @@ MotionBlockModel::MotionBlockModel(const String &name, var params, Type type) :
 	paramsContainer->saveAndLoadRecursiveData = true;
 	addChildControllableContainer(paramsContainer);
 	addChildControllableContainer(&presetManager);
+
+	askConfirmationBeforeRemove = true;
 }
 
 MotionBlockModel::~MotionBlockModel()

@@ -24,7 +24,7 @@ public:
 	MotionBlockLayer(Sequence * s, var params = var());
 	~MotionBlockLayer();
 
-	enum Mode { MAIN, EFFECT};
+	enum Mode { PRIMARY, SECONDARY};
 
 	MotionBlockClipManager blockClipManager;
 	MotionBlockClipTransitionManager transitionManager;

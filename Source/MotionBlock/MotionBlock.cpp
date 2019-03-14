@@ -27,16 +27,23 @@ MotionBlock::MotionBlock(MotionBlockDataProvider * provider) :
 	rebuildArgsFromModel();
 	provider->addColorProviderListener(this);
 
+	provider->addInspectableListener(this);
 	//addChildControllableContainer(&automationsManager);
 }
 
 MotionBlock::~MotionBlock()
 {
-	if (!provider.wasObjectDeleted()) provider->removeColorProviderListener(this);
+	if (!provider.wasObjectDeleted())
+	{
+		provider->removeColorProviderListener(this);
+		provider->removeInspectableListener(this);
+	}
 }
 
 var MotionBlock::getMotionData(Drone * p, double time, var params)
 {
+	if (provider.wasObjectDeleted()) return var();
+
 	var localParams = params.isVoid()?new DynamicObject():new DynamicObject(*params.getDynamicObject());
 	Array<WeakReference<Parameter>> paramList = paramsContainer.getAllParameters();
 	
@@ -85,6 +92,8 @@ void MotionBlock::rebuildArgsFromModel()
 	paramsContainer.clear();
 	//automationsManager.clear();
 
+	if (provider.wasObjectDeleted()) return;
+
 	Array<WeakReference<Controllable>> params = provider->getModelParameters();
 
 	for (auto &sc : params)
@@ -117,7 +126,6 @@ void MotionBlock::providerParametersChanged(MotionBlockDataProvider *)
 
 void MotionBlock::providerParameterValueUpdated(MotionBlockDataProvider *, Parameter * p)
 {
-	
 	if (p == nullptr) return;
 	Parameter * tp = paramsContainer.getParameterByName(p->shortName);
 	if (tp == nullptr) return;
@@ -153,7 +161,6 @@ var MotionBlock::getJSONData()
 
 void MotionBlock::loadJSONDataInternal(var data)
 {
-	
 	BaseItem::loadJSONDataInternal(data);
 
 	var pData = data.getProperty("params", var());
@@ -161,4 +168,9 @@ void MotionBlock::loadJSONDataInternal(var data)
 	//automationsManager.loadJSONData(data.getProperty("automations", var()));
 
 	if (paramsContainer.controllables.size() == 0) paramsLoadData = pData; //if params where not already there when loading (using script for exemple), store data to use later
+}
+
+void MotionBlock::inspectableDestroyed(Inspectable * i)
+{ 
+	if(provider.wasObjectDeleted()) blockListeners.call(&MotionBlockListener::blockProviderDestroyed);
 }

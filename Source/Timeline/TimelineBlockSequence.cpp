@@ -28,28 +28,29 @@ TimelineBlockSequence::~TimelineBlockSequence()
 
 var TimelineBlockSequence::getMotionData(Drone * p, double time, var params)
 {
-	Array<MotionBlockLayer *> layers = getLayersForProp(p);
+	MotionBlockLayer * primaryLayer = getPrimaryLayerForDrone(p);
+	Array<MotionBlockLayer *> secondaryLayers = getSecondaryLayersForDrone(p);
 
-	int numLayers = layers.size();
+	int numLayers = secondaryLayers.size();
+
+	if (primaryLayer == nullptr && numLayers == 0) return var();
+
 	float t = params.getProperty("sequenceTime", true) ? currentTime->floatValue() : time;
 	
 	int droneCount = -1;
 
-	if (numLayers == 1 && layers[0] != nullptr)
-	{
-		params.getDynamicObject()->setProperty("forceID", layers[0]->filterManager.getTargetIDForDrone(p, droneCount));
-		return layers[0]->getMotionData(p, t, params); //use sequence's time instead of prop time
+	Vector3D<float> targetPrimaryPos;
+	if(primaryLayer != nullptr)
+	{	
+		var pResult = primaryLayer->getMotionData(p, t, params); //use sequence's time instead of prop time
+		var primaryPos = pResult.getProperty("position", var());
+		if (primaryPos.isArray()) targetPrimaryPos = Vector3D<float>(primaryPos[0], primaryPos[1], primaryPos[2]);
 	}
+
 	
-	if (numLayers == 0) return var();
+	Vector3D<float> secondaryPos;
 
-	Vector3D<float> targetMainPos;
-	Vector3D<float> effectPos;
-	float totalMainWeight = 0;
-	int numMainPositions = 0;
-	int numEffectPositions = 0;
-
-	for (auto &l : layers)
+	for (auto &l : secondaryLayers)
 	{
 		if (l == nullptr) continue;
 		params.getDynamicObject()->setProperty("forceID", l->filterManager.getTargetIDForDrone(p, droneCount));
@@ -57,36 +58,15 @@ var TimelineBlockSequence::getMotionData(Drone * p, double time, var params)
 		
 		if (!lResult.isObject()) continue;
 
-		var lPosData = lResult.getProperty("position", var());
 		float lWeight = lResult.getProperty("weight", 0);
-
+		var lPosData = lResult.getProperty("position", var());
 		if (!lPosData.isArray()) continue;
 
 		Vector3D<float> lPos(lPosData[0], lPosData[1], lPosData[2]);
-		MotionBlockLayer::Mode m = l->mode->getValueDataAsEnum<MotionBlockLayer::Mode>();
-
-		switch(m)
-		{
-		case MotionBlockLayer::MAIN:
-		{
-			targetMainPos += lPos * lWeight;
-			totalMainWeight += lWeight;
-			numMainPositions++;
-		}
-		break;
-
-		case MotionBlockLayer::EFFECT:
-			effectPos += lPos * lWeight;
-			numEffectPositions++;
-			break;
-		}
+		secondaryPos += lPos * lWeight;
 	}
 
-
-	if (numMainPositions == 0 && numEffectPositions == 0) return var();
-	if (totalMainWeight > 0 && numMainPositions > 1) targetMainPos /= totalMainWeight;
-
-	Vector3D<float> tPos(targetMainPos + effectPos);
+	Vector3D<float> tPos(targetPrimaryPos + secondaryPos);
 
 	var result = var(new DynamicObject());
 	var posData;
@@ -99,7 +79,20 @@ var TimelineBlockSequence::getMotionData(Drone * p, double time, var params)
 
 }
 
-Array<MotionBlockLayer*> TimelineBlockSequence::getLayersForProp(Drone * p, bool includeDisabled)
+MotionBlockLayer* TimelineBlockSequence::getPrimaryLayerForDrone(Drone * p, bool includeDisabled)
+{
+	for (auto &i : layerManager->items)
+	{
+		if (!includeDisabled && !i->enabled->boolValue()) continue;
+		MotionBlockLayer * l = dynamic_cast<MotionBlockLayer *>(i);
+		if (l == nullptr) continue;
+
+		int droneCount = -1;
+		if (l->filterManager.getTargetIDForDrone(p, droneCount) >= 0) return l;
+	}
+}
+
+Array<MotionBlockLayer*> TimelineBlockSequence::getSecondaryLayersForDrone(Drone * p, bool includeDisabled)
 {
 
 	if (layerManager == nullptr) return nullptr; 
@@ -113,6 +106,7 @@ Array<MotionBlockLayer*> TimelineBlockSequence::getLayersForProp(Drone * p, bool
 		if (!includeDisabled && !i->enabled->boolValue()) continue;
 		MotionBlockLayer * l = dynamic_cast<MotionBlockLayer *>(i);
 		if (l == nullptr) continue;
+		if (l->mode->getValueDataAsEnum<MotionBlockLayer::Mode>() != MotionBlockLayer::SECONDARY) continue;
 
 		int droneCount = -1;
 		if (l->filterManager.getTargetIDForDrone(p, droneCount) >= 0) result.add(l);
