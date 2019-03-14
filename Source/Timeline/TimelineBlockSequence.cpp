@@ -90,6 +90,8 @@ MotionBlockLayer* TimelineBlockSequence::getPrimaryLayerForDrone(Drone * p, bool
 		int droneCount = -1;
 		if (l->filterManager.getTargetIDForDrone(p, droneCount) >= 0) return l;
 	}
+
+	return nullptr;
 }
 
 Array<MotionBlockLayer*> TimelineBlockSequence::getSecondaryLayersForDrone(Drone * p, bool includeDisabled)
