@@ -122,7 +122,7 @@ void PingPongPattern::getMotionDataInternal(var result, Drone * d, double time, 
 	float bSpeed = getParamValue<float>(speed, params);
 	float bTimeIDOffset = getParamValue<float>(timeIDOffset, params);
 
-	float relPos = sinf((time * bSpeed + bTimeIDOffset*id)* float_Pi * 2)+.5f;
+	float relPos = sinf((time * bSpeed + bTimeIDOffset*id)* float_Pi * 2)*.5f+.5f;
 
 	Vector3D<float> tPos = start + (end - start)*relPos + bPositionIDOffset * id;
 
