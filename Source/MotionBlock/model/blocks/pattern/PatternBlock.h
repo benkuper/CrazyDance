@@ -66,12 +66,15 @@ public:
 	CirclePattern(var params = var());
 	~CirclePattern() {}
 
+	BoolParameter * vertical;
 	Point3DParameter * center;
 	FloatParameter * radius;
 	Point3DParameter * orientation;
 	FloatParameter * startAngle;
 	FloatParameter * length;
 	FloatParameter * speed;
+	Point3DParameter * offset;
+	FloatParameter * radiusOffset;
 
 	void getMotionDataInternal(var result, Drone * d, double time, int id, var params) override;
 
@@ -109,6 +112,9 @@ public:
 
 	Point3DParameter * center;
 	Point3DParameter * orientation;
+	Point3DParameter * pos1;
+	Point3DParameter * pos2;
+	Point3DParameter * pos3;
 
 	void getMotionDataInternal(var result, Drone * d, double time, int id, var params) override;
 

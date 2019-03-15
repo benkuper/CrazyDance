@@ -41,8 +41,6 @@ void PositionPattern::getMotionDataInternal(var result, Drone * d, double time, 
 }
 
 
-
-
 LinePattern::LinePattern(var params) :
 	PatternBlock(getTypeString(), params)
 {
@@ -66,12 +64,15 @@ void LinePattern::getMotionDataInternal(var result, Drone * d, double time, int 
 CirclePattern::CirclePattern(var params) :
 	PatternBlock(getTypeString(), params)
 {
+	vertical = paramsContainer->addBoolParameter("Vertical", "Fancy some crashing ?", false);
 	center = paramsContainer->addPoint3DParameter("Center", "The center of the circle");
 	center->setVector(0, 2, 0);
-	radius = paramsContainer->addFloatParameter("Radius", "Radius of the circle", 2,.5f,10);
+	radius = paramsContainer->addFloatParameter("Radius", "Radius of the circle", 2, 0 ,10);
 	startAngle = paramsContainer->addFloatParameter("Start Angle", "Start angle, 1 is full circle, .5 is half", 0, 0, 1);
 	speed = paramsContainer->addFloatParameter("Speed", "Speed of the motion, in full circles per second (1 is 1 full round per second)", .1, -2, 2);
 	length = paramsContainer->addFloatParameter("Length", "Length to cover, 1 is full circle, .5 is arc of half circle", 1, 0, 1);
+	offset = paramsContainer->addPoint3DParameter("Offset", "Offset per ID");
+	radiusOffset = paramsContainer->addFloatParameter("Radius Offset", "Radius offset by ID", 0);
 	orientation = paramsContainer->addPoint3DParameter("Orientation", "Orientation of the circle, this is the Up vector, circle is perpendicular to this vector");
 	orientation->setVector(0, 1, 0);
 }
@@ -85,11 +86,17 @@ void CirclePattern::getMotionDataInternal(var result, Drone * d, double time, in
 	float bStartAngle = getParamValue<float>(startAngle, params);
 	float bLength = getParamValue<float>(length, params);
 	float relP = id * 1.0f / getDroneCount(params) * bLength;
+	bool bVertical = getParamValue<bool>(vertical, params);
+	Vector3D<float> bOffset = getPoint3DValue(offset, params);
+	float bRadiusOffset = getParamValue<float>(radiusOffset, params);
 
 	float relAngle = bStartAngle + relP + time * bSpeed;
 	float tAngle = fmodf(relAngle, 1)  * float_Pi * 2 ;
 
-	Vector3D<float> tPos = bCenter + Vector3D<float>(cosf(tAngle), 0, sinf(tAngle)) * bRadius;
+	float val1 = cosf(tAngle);
+	float val2 = sinf(tAngle);
+	Vector3D<float> tPos = bCenter + Vector3D<float>(val1, bVertical?val2:0,bVertical?0:val2) * (bRadius + bRadiusOffset * id) + bOffset * id;
+
 	var posData;
 	posData.append(tPos.x);
 	posData.append(tPos.y);
@@ -135,10 +142,12 @@ MultiPositionPattern::MultiPositionPattern(var params) :
 {
 	center = paramsContainer->addPoint3DParameter("Center", "Center of the shape");
 	orientation = paramsContainer->addPoint3DParameter("Orientation", "Orientation of the shape");
-
-	paramsContainer->userCanAddControllables = true;
-	paramsContainer->customUserCreateControllableFunc = &MultiPositionPattern::createPosition;
-	paramsContainer->userAddControllablesFilters.add(Point3DParameter::getTypeStringStatic());
+	pos1 = paramsContainer->addPoint3DParameter("Position 1", "Position of first drone");
+	pos2 = paramsContainer->addPoint3DParameter("Position 2", "Position of second drone");
+	pos3 = paramsContainer->addPoint3DParameter("Position 3", "Position of fourth drone drone. Kidding, third.");
+	//paramsContainer->userCanAddControllables = true;
+	//paramsContainer->customUserCreateControllableFunc = &MultiPositionPattern::createPosition;
+	//paramsContainer->userAddControllablesFilters.add(Point3DParameter::getTypeStringStatic());
 }
 
 void MultiPositionPattern::getMotionDataInternal(var result, Drone * d, double time, int id, var params)
@@ -146,7 +155,7 @@ void MultiPositionPattern::getMotionDataInternal(var result, Drone * d, double t
 	Vector3D<float> bCenter = getPoint3DValue(center, params);
 	//Vector3D<float> bOrientation = getPoint3DValue(orientation, params);
 
-	var pos = params.getProperty("position" + String(id), var());
+	var pos = params.getProperty("position" + String(id+1), var());
 	if (!pos.isArray()) return;
 	
 	Vector3D<float> bPos(pos[0], pos[1], pos[2]);
