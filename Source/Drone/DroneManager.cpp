@@ -15,6 +15,8 @@ juce_ImplementSingleton(DroneManager)
 DroneManager::DroneManager() :
 	BaseManager("Drones")
 {
+	lpsBox = addPoint3DParameter("LPS Box", "Bounds of the LPS");
+	lpsBox->setBounds(0, 0, 0, 100, 100, 100);
 }
 
 DroneManager::~DroneManager()

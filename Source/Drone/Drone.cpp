@@ -27,11 +27,10 @@ Drone::Drone(StringRef name, StringRef familyName, var) :
 	editorIsCollapsed = true;
 
 	saveAndLoadRecursiveData = true;
-	Random r(Time::currentTimeMillis());
 
-	uiColor = addColorParameter("UI Color", "Color in UI", Colours::grey);	
-	uiColor->setColor(Colour::fromHSV(r.nextFloat(), 1, .5f, 1));
-
+	Random r(Time::getMillisecondCounterHiRes());
+	uiColor = addColorParameter("UI Color", "Color in UI", Colour::fromHSV(r.nextFloat(), 1, .5f, 1));
+	
 	addChildControllableContainer(&controlCC);
 	takeOff = controlCC.addTrigger("Take off", "Take off");
 	land = controlCC.addTrigger("Land", "Land");

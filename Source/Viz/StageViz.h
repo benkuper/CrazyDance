@@ -21,6 +21,10 @@ public:
 	StageViz(StringRef name, DroneManager * manager);
 	~StageViz();
 
+	ScopedPointer<ControllableUI> lpsBoxUI;
+
+	void paint(Graphics &g) override;
+
 	void updateViewUIPosition(DroneVizUI * dui) override;
 	
 	void addItemUIInternal(DroneVizUI * dui) override;

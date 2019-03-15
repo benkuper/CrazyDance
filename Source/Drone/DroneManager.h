@@ -22,6 +22,8 @@ public:
 	DroneManager();
 	~DroneManager();
 
+	Point3DParameter * lpsBox;
+
     void addItemInternal(Drone * d, var) override;
 	void removeItemInternal(Drone * d) override;
 
