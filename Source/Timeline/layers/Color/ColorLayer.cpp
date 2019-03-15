@@ -55,6 +55,7 @@ var ColorLayer::getJSONData()
 	var data = SequenceLayer::getJSONData();
 
 	data.getDynamicObject()->setProperty("colorManager", colorManager.getJSONData());
+	data.getDynamicObject()->setProperty("filterManager", filterManager.getJSONData());
 
 	return data;
 }
@@ -63,4 +64,5 @@ void ColorLayer::loadJSONDataInternal(var data)
 {
 	SequenceLayer::loadJSONDataInternal(data);
 	colorManager.loadJSONData(data.getProperty("colorManager", var()));
+	filterManager.loadJSONData(data.getProperty("filterManager", var()));
 }
