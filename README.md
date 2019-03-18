@@ -51,3 +51,7 @@ To build the software, you need to :
 ## Screenshots
 
 
+## Screenshots
+
+![CrazyDance](http://benjamin.kuperberg.fr/download/crazydance.png)
+
