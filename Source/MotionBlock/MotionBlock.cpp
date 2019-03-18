@@ -8,10 +8,10 @@
   ==============================================================================
 */
 
-#include "MotionBlock.h"
 
 #include "MotionBlock.h"
 #include "Drone/Drone.h"
+#include "Drone/Cluster/DroneCluster.h"
 
 MotionBlock::MotionBlock(MotionBlockDataProvider * provider) :
 	BaseItem(provider->niceName, false),
@@ -20,7 +20,13 @@ MotionBlock::MotionBlock(MotionBlockDataProvider * provider) :
 	paramsLoadData(var())
     //automationsManager(&paramsContainer)
 {
+
 	addChildControllableContainer(&paramsContainer);
+	
+	cluster = new DroneCluster();
+	cluster->setNiceName("ID Filter");
+	cluster->nameCanBeChangedByUser = false;
+	addChildControllableContainer(cluster);
 
 	userCanRemove = false;
 
@@ -40,9 +46,17 @@ MotionBlock::~MotionBlock()
 	}
 }
 
-var MotionBlock::getMotionData(Drone * p, double time, var params)
+var MotionBlock::getMotionData(Drone * d, double time, var params)
 {
 	if (provider.wasObjectDeleted()) return var();
+	
+	if (!cluster->droneIDs.isEmpty())
+	{
+		int cid = cluster->getLocalDroneID(d);
+		if (cid == -1) return var();
+		params.getDynamicObject()->setProperty("droneCount", cluster->droneIDs.size());
+		params.getDynamicObject()->setProperty("forceID", cluster->getLocalDroneID(d));
+	}
 
 	var localParams = params.isVoid()?new DynamicObject():new DynamicObject(*params.getDynamicObject());
 	Array<WeakReference<Parameter>> paramList = paramsContainer.getAllParameters();
@@ -81,7 +95,7 @@ var MotionBlock::getMotionData(Drone * p, double time, var params)
 		return result;
 	}
 
-	return provider->getMotionData(p, time, localParams);
+	return provider->getMotionData(d, time, localParams);
 }
 
 void MotionBlock::rebuildArgsFromModel()
@@ -154,6 +168,8 @@ var MotionBlock::getJSONData()
 {
 	var data = BaseItem::getJSONData();
 	data.getDynamicObject()->setProperty("params", paramsContainer.getJSONData());
+	data.getDynamicObject()->setProperty("cluster", cluster->getJSONData());
+
 	//data.getDynamicObject()->setProperty("automations", automationsManager.getJSONData());
 	return data;
 
@@ -166,6 +182,8 @@ void MotionBlock::loadJSONDataInternal(var data)
 	var pData = data.getProperty("params", var());
 	paramsContainer.loadJSONData(pData);
 	//automationsManager.loadJSONData(data.getProperty("automations", var()));
+
+	cluster->loadJSONData(data.getProperty("cluster", var()));
 
 	if (paramsContainer.controllables.size() == 0) paramsLoadData = pData; //if params where not already there when loading (using script for exemple), store data to use later
 }

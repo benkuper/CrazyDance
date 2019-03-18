@@ -11,9 +11,9 @@
 #pragma once
 
 #include "JuceHeader.h"
+#include "layers/Block/MotionBlockLayer.h"
 
 class MotionBlock;
-class MotionBlockLayer;
 class ColorLayer;
 class Drone;
 
@@ -34,8 +34,7 @@ public:
 	BoolParameter * sendLandOnPause;
 	BoolParameter * sendLandOnFinish;
 
-	MotionBlockLayer * getPrimaryLayerForDrone(Drone * p, bool includeDisabled = false);
-	Array<MotionBlockLayer *> getSecondaryLayersForDrone(Drone * p, bool includeDisabled = false);
+	Array<MotionBlockLayer *> getLayersForDrone(Drone * p, MotionBlockLayer::Mode mode, bool includeDisabled = false);
 	ColorLayer * getColorLayerForDrone(Drone * p, bool includeDisabled = false);
 
 	void itemAdded(SequenceLayer * s) override;

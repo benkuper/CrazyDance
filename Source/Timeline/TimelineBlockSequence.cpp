@@ -9,7 +9,6 @@
 */
 
 #include "TimelineBlockSequence.h"
-#include "layers/Block/MotionBlockLayer.h"
 #include "layers/Color/ColorLayer.h"
 #include "Audio/AudioManager.h"
 #include "Drone/Drone.h"
@@ -34,35 +33,58 @@ TimelineBlockSequence::~TimelineBlockSequence()
 {
 }
 
-var TimelineBlockSequence::getMotionData(Drone * p, double time, var params)
+var TimelineBlockSequence::getMotionData(Drone * d, double time, var params)
 {
-	MotionBlockLayer * primaryLayer = getPrimaryLayerForDrone(p);
-	Array<MotionBlockLayer *> secondaryLayers = getSecondaryLayersForDrone(p);
+	Array<MotionBlockLayer *> primaryLayers = getLayersForDrone(d, MotionBlockLayer::PRIMARY);
+	Array<MotionBlockLayer *> overrideLayers = getLayersForDrone(d, MotionBlockLayer::OVERRIDE);
+	Array<MotionBlockLayer *> secondaryLayers = getLayersForDrone(d, MotionBlockLayer::SECONDARY);
 
-	int numLayers = secondaryLayers.size();
-
-	if (primaryLayer == nullptr && numLayers == 0) return var();
+	if (primaryLayers.isEmpty() && secondaryLayers.isEmpty()) return var();
 
 	float t = params.getProperty("sequenceTime", true) ? currentTime->floatValue() : time;
 
 	int droneCount = -1;
 
-	Vector3D<float> targetPrimaryPos;
-	if (primaryLayer != nullptr)
+	Vector3D<float> primaryPos;
+	
+	for (auto & l : primaryLayers)
 	{
-		var pResult = primaryLayer->getMotionData(p, t, params); //use sequence's time instead of prop time
-		var primaryPos = pResult.getProperty("position", var());
-		if (primaryPos.isArray()) targetPrimaryPos = Vector3D<float>(primaryPos[0], primaryPos[1], primaryPos[2]);
+		var pResult = l->getMotionData(d, t, params).getProperty("position", var()); //use sequence's time instead of prop time
+		if (pResult.isArray())
+		{
+			primaryPos = Vector3D<float>(pResult[0], pResult[1], pResult[2]);
+			break;
+		}
 	}
 
+	Vector3D<float> overridePos;
+	float overrideWeight = 0;
+	for (auto & l : overrideLayers)
+	{
+		var clipData = l->getMotionData(d, t, params);
+		var posData = clipData.getProperty("position", var()); //use sequence's time instead of prop time
+		if (posData.isArray())
+		{
+			overridePos = Vector3D<float>(posData[0], posData[1], posData[2]);
+			
+			overrideWeight = clipData.getProperty("weight", 0);
+			if (d->globalID->intValue())
+			{
+				DBG("Drone 0, " << overridePos.x << " > " << overrideWeight);
+			}
+			break;
+		}
+	}
+
+	Vector3D<float> targetPrimaryPos = primaryPos + (overridePos - primaryPos) * overrideWeight;
 
 	Vector3D<float> secondaryPos;
 
 	for (auto &l : secondaryLayers)
 	{
 		if (l == nullptr) continue;
-		params.getDynamicObject()->setProperty("forceID", l->filterManager.getTargetIDForDrone(p, droneCount));
-		var lResult = l->getMotionData(p, t, params); //use sequence's time instead of prop time
+		params.getDynamicObject()->setProperty("forceID", l->filterManager.getTargetIDForDrone(d, droneCount));
+		var lResult = l->getMotionData(d, t, params); //use sequence's time instead of prop time
 
 		if (!lResult.isObject()) continue;
 
@@ -83,7 +105,7 @@ var TimelineBlockSequence::getMotionData(Drone * p, double time, var params)
 	posData.append(tPos.z);
 	result.getDynamicObject()->setProperty("position", posData);
 
-	ColorLayer * colorLayer = getColorLayerForDrone(p);
+	ColorLayer * colorLayer = getColorLayerForDrone(d);
 	if (colorLayer != nullptr)
 	{
 		Colour col = colorLayer->getColorAtTime(t);
@@ -101,43 +123,22 @@ var TimelineBlockSequence::getMotionData(Drone * p, double time, var params)
 
 }
 
-MotionBlockLayer* TimelineBlockSequence::getPrimaryLayerForDrone(Drone * p, bool includeDisabled)
+Array<MotionBlockLayer *> TimelineBlockSequence::getLayersForDrone(Drone * d, MotionBlockLayer::Mode m, bool includeDisabled)
 {
-	for (auto &i : layerManager->items)
+	Array<MotionBlockLayer *> result; 
+	for (auto &i: layerManager->items)
 	{
 		if (!includeDisabled && !i->enabled->boolValue()) continue;
 		MotionBlockLayer * l = dynamic_cast<MotionBlockLayer *>(i);
-		if (l == nullptr) continue;
 
+		if (l == nullptr) continue;
+		if (l->mode->getValueDataAsEnum<MotionBlockLayer::Mode>() != m) continue;
+		
 		int droneCount = -1;
-		if (l->filterManager.getTargetIDForDrone(p, droneCount) >= 0) return l;
+		if (l->filterManager.getTargetIDForDrone(d, droneCount) >= 0) result.add(l);
 	}
 
-	return nullptr;
-}
-
-Array<MotionBlockLayer*> TimelineBlockSequence::getSecondaryLayersForDrone(Drone * p, bool includeDisabled)
-{
-
-	if (layerManager == nullptr) return nullptr;
-	if (Engine::mainEngine->isClearing) return nullptr;
-
-	//Array<MotionBlockLayer *> defaultLayers;
-	Array<MotionBlockLayer *> result;
-
-	for (auto &i : layerManager->items)
-	{
-		if (!includeDisabled && !i->enabled->boolValue()) continue;
-		MotionBlockLayer * l = dynamic_cast<MotionBlockLayer *>(i);
-		if (l == nullptr) continue;
-		if (l->mode->getValueDataAsEnum<MotionBlockLayer::Mode>() != MotionBlockLayer::SECONDARY) continue;
-
-		int droneCount = -1;
-		if (l->filterManager.getTargetIDForDrone(p, droneCount) >= 0) result.add(l);
-		//if (l->defaultLayer->boolValue()) defaultLayers.add(l);
-	}
-
-	return result;// result.size() > 0 ? result : defaultLayers;
+	return result;
 }
 
 ColorLayer *TimelineBlockSequence::getColorLayerForDrone(Drone * p, bool includeDisabled)

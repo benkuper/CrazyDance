@@ -80,6 +80,7 @@ var MotionBlockClip::getMotionData(Drone * p, double absoluteTime, var params)
 	if (fadeIn->floatValue() > 0) factor *= jmin<double>(relTimeTotal / fadeIn->floatValue(),1.f);
 	if (fadeOut->floatValue() > 0) factor *= jmin<double>((getTotalLength() - relTimeTotal) / fadeOut->floatValue(), 1.f);
 
+	
 
 	if (dynamic_cast<TimelineBlock *>(currentBlock->provider.get()) != nullptr)
 	{
@@ -88,7 +89,10 @@ var MotionBlockClip::getMotionData(Drone * p, double absoluteTime, var params)
 
 	double relTime = getRelativeTime(absoluteTime, true, absoluteTime >= getEndTime()); //if outside of clip, don't loop
 	result = currentBlock->getMotionData(p, relTime, params);
-	if (result.isObject()) result.getDynamicObject()->setProperty("weight", factor);
+	if (result.isObject())
+	{
+		result.getDynamicObject()->setProperty("weight", factor);
+	}
 	return result;
 }
 

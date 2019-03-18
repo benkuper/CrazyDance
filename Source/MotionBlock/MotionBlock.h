@@ -12,6 +12,9 @@
 
 #include "JuceHeader.h"
 #include "model/MotionBlockModel.h"
+#include "Drone/Cluster/DroneCluster.h"
+
+class DroneCluster;
 
 class MotionBlock :
 	public BaseItem,
@@ -25,11 +28,13 @@ public:
 	WeakReference<MotionBlockDataProvider> provider;
 	ControllableContainer paramsContainer;
 
-	var paramsLoadData;
+	ScopedPointer<DroneCluster> cluster;
 
+	var paramsLoadData;
 	var getMotionData(Drone * p, double time, var params);
 
 	void rebuildArgsFromModel();
+
 
 	void providerParametersChanged(MotionBlockDataProvider *) override;
 	void providerParameterValueUpdated(MotionBlockDataProvider *, Parameter * p) override;

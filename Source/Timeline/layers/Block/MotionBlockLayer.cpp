@@ -19,7 +19,7 @@ MotionBlockLayer::MotionBlockLayer(Sequence * s, var) :
 	transitionManager(this)
 {
 	mode = addEnumParameter("Mode", "Mode for this layer.\nAll \"Main\" layers will be averaged together, then the \"Effect\" layers will be added to that.");
-	mode->addOption("Primary", PRIMARY)->addOption("Secondary", SECONDARY);
+	mode->addOption("Primary", PRIMARY)->addOption("Secondary", SECONDARY)->addOption("Override", OVERRIDE);
 
 	//defaultLayer = addBoolParameter("Default", "If checked, this layer will be the default layer when no layer has the requested prop id", false);
 
@@ -75,58 +75,6 @@ var MotionBlockLayer::getMotionData(Drone * d, double time, var params)
 	}
 
 	return motionData;
-
-
-	/*
-	Array<LayerBlock *> blocks = blockClipManager.get(time, false);
-
-	if (blocks.size() == 0) return var();
-
-	Vector3D<float> tPos;
-	int numPositions = 0;
-
-	int droneCount = -1;
-	filterManager.getTargetIDForDrone(p, droneCount);
-	if (droneCount > -1)
-	{
-		if (params.isVoid()) params = var(new DynamicObject());
-		params.getDynamicObject()->setProperty("droneCount", droneCount);
-	}
-	
-	float totalWeight = 0;
-	for (auto &b : blocks)
-	{
-		MotionBlockClip * clip = (MotionBlockClip *)b;
-		var r = (clip->getMotionData(p, time, params));
-		var rPos = r.getProperty("position", var());
-		float weight = (float)r.getProperty("weight", 0);
-
-		if (rPos.isArray())
-		{
-			tPos += Vector3D<float>(rPos[0], rPos[1], rPos[2]) * weight;
-			totalWeight += weight;
-			numPositions++;
-		}
-	}
-
-	//tPos /= numPositions;
-	if (totalWeight == 0) return var();
-
-	tPos /= totalWeight;
-	float weight = jmin(totalWeight, 1.f);
-
-	
-	var result = var(new DynamicObject());
-	var posData;
-	posData.append(tPos.x);
-	posData.append(tPos.y);
-	posData.append(tPos.z);
-	result.getDynamicObject()->setProperty("position", posData);
-	result.getDynamicObject()->setProperty("weight", weight);
-
-	
-	return result;
-	*/
 }
 
 void MotionBlockLayer::updateLinkedProps()
@@ -174,21 +122,15 @@ SequenceLayerTimeline * MotionBlockLayer::getTimelineUI()
 void MotionBlockLayer::itemAdded(LayerBlock * b)
 {
 	if (isCurrentlyLoadingData) return;
+	if (blockClipManager.items.size() < 2) return;
+	if (mode->getValueDataAsEnum<Mode>() == SECONDARY) return;
 
-	if (blockClipManager.items.size() == 1) return;
 
 	MotionBlockClip * clip = dynamic_cast<MotionBlockClip *>(b);
 
 	MotionBlockClip * prevClip = nullptr;
 	MotionBlockClip * nextClip = nullptr;
 	blockClipManager.getSurroundingBlocks(clip, prevClip, nextClip);
-
-	DBG("Add clip " << clip->time->floatValue() << ", " << blockClipManager.items.indexOf(clip));
-
-	if (nextClip != nullptr)
-	{
-		DBG("Next clip " << nextClip->niceName);
-	}
 
 	MotionBlockClipTransition * beforeTransition = transitionManager.getAfterTransition(prevClip);
 	MotionBlockClipTransition * afterTransition = transitionManager.getBeforeTransition(nextClip);
@@ -221,10 +163,10 @@ void MotionBlockLayer::itemAdded(LayerBlock * b)
 void MotionBlockLayer::itemRemoved(LayerBlock * b)
 {
 	if (isCurrentlyLoadingData) return;
+	if (mode->getValueDataAsEnum<Mode>() == SECONDARY) return;
 
 	MotionBlockClip * clip = dynamic_cast<MotionBlockClip *>(b);
 
-	
 	MotionBlockClipTransition * beforeTransition = nullptr;
 	MotionBlockClipTransition * afterTransition = nullptr;
 	transitionManager.getTransitionsForClip(clip, beforeTransition, afterTransition);

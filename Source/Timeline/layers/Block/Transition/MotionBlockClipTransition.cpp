@@ -168,6 +168,7 @@ var MotionBlockClipTransition::getMotionData(Drone * d, double absoluteTime, var
 	Vector3D<float> targetPos = fromPos + (toPos - fromPos) * curve.getValueForPosition(relTime);
 	var result = new DynamicObject();
 	result.getDynamicObject()->setProperty("position", getVarForPoint3D(targetPos));
+	result.getDynamicObject()->setProperty("weight", 1); //force weight 1
 	return result;
 }
 
