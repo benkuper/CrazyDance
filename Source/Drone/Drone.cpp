@@ -15,8 +15,8 @@
 Drone::Drone(StringRef name, StringRef familyName, var) :
 	BaseItem(name),
 	Thread("Drone " + name),
-    generalCC("General"),
-    controlCC("Controls"),
+	generalCC("General"),
+	controlCC("Controls"),
 	flightCC("Flight"),
 	lightCC("Light"),
 	currentBlock(nullptr),
@@ -30,7 +30,7 @@ Drone::Drone(StringRef name, StringRef familyName, var) :
 
 	Random r(Time::getMillisecondCounterHiRes());
 	uiColor = addColorParameter("UI Color", "Color in UI", Colour::fromHSV(r.nextFloat(), 1, .5f, 1));
-	
+
 	addChildControllableContainer(&controlCC);
 	takeOff = controlCC.addTrigger("Take off", "Take off");
 	land = controlCC.addTrigger("Land", "Land");
@@ -125,13 +125,21 @@ void Drone::update()
 	double time = (Time::getMillisecondCounter() % (int)1e9) / 1000.0;
 	motionData = currentBlock->getMotionData(this, time, var());
 
-	
+
 	bool forceUpdate = motionData.getProperty("forceUpdate", false);
 
 	var posData = motionData.getProperty("position", var());
 	if (posData.isArray())
 	{
-		position->setVector(posData[0], posData[1], posData[2]);
+		Vector3D<float> globalScale = DroneManager::getInstance()->globalScale->getVector();
+		Vector3D<float> globalOffset = DroneManager::getInstance()->globalOffset->getVector();
+
+		position->setVector(
+			(float)posData[0] * globalScale.x + globalOffset.x, 
+			(float)posData[1] * globalScale.y + globalOffset.y, 
+			(float)posData[2] * globalScale.z + globalOffset.z
+		);
+
 		if (forceUpdate) position->setValue(position->value, false, true);
 	}
 

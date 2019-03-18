@@ -36,6 +36,16 @@ void StageViz::paint(Graphics & g)
 
 	g.setColour(Colours::white.withAlpha(.3f));
 	g.drawRect(boxViewSize, 2);
+
+	Vector3D<float> scale = DroneManager::getInstance()->globalScale->getVector();
+	Vector3D<float> offset = DroneManager::getInstance()->globalOffset->getVector();
+	if (scale.x != 1 || scale.y != 1 || scale.z != 1 || offset.x != 0 || offset.y != 0 || offset.z != 0)
+	{
+		g.setColour(HIGHLIGHT_COLOR);
+		g.drawText("Scale : " + String(scale.x) + ", " + String(scale.y) + ", " + String(scale.z)+"\n"+
+			"Offset : " + String(offset.x) + ", " + String(offset.y) + ", " + String(offset.z) + "\n",
+				Rectangle<float>(20,20,100,40), Justification::topLeft);
+	}
 }
 
 void StageViz::updateViewUIPosition(DroneVizUI * dui)

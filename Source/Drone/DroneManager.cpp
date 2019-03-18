@@ -17,6 +17,11 @@ DroneManager::DroneManager() :
 {
 	lpsBox = addPoint3DParameter("LPS Box", "Bounds of the LPS");
 	lpsBox->setBounds(0, 0, 0, 100, 100, 100);
+
+	globalScale = addPoint3DParameter("Global Scale", "Basically multiplies the positions before setting the drone parameter.");
+	globalScale->setVector(Vector3D<float>(1, 1, 1));
+
+	globalOffset = addPoint3DParameter("Global Offset", "Basically offsets the positions before setting the drone parameter, but after the scale !.");
 }
 
 DroneManager::~DroneManager()

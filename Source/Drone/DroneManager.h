@@ -23,6 +23,8 @@ public:
 	~DroneManager();
 
 	Point3DParameter * lpsBox;
+	Point3DParameter * globalScale;
+	Point3DParameter * globalOffset;
 
     void addItemInternal(Drone * d, var) override;
 	void removeItemInternal(Drone * d) override;
