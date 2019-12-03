@@ -23,8 +23,8 @@ public:
 	void initialiseInternal(const String& commandLine) override
 	{
 		AppUpdater::getInstance()->setURLs(URL("http://benjamin.kuperberg.fr/crazydance/update.json"), "http://benjamin.kuperberg.fr/crazydance/download/", "CrazyDance");
-		engine = new CDEngine();
-		mainComponent = new MainComponent();
+		engine.reset(new CDEngine());
+		mainComponent.reset(new MainComponent());
 	}
 };
 

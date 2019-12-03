@@ -51,9 +51,10 @@ void StageViz::paint(Graphics & g)
 void StageViz::updateViewUIPosition(DroneVizUI * dui)
 {
 	Vector3D<float> pos = dui->item->position->getVector(); 
-	Point<int> vPos = getPosInView(Point<float>(pos.x, -pos.z)).toInt();
-
+	Point<int> vPos = getPosInView(Point<float>(pos.x, -pos.z)*100).toInt();
+	
 	dui->setCentrePosition(vPos);
+	dui->resized();
 }
 
 void StageViz::addItemUIInternal(DroneVizUI * dui)

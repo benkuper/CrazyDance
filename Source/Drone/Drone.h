@@ -41,6 +41,8 @@ public:
 
 	ControllableContainer flightCC;
 	Point3DParameter * position;
+	Point3DParameter* realPosition;
+	Point3DParameter* targetPosition;
 
 	ControllableContainer lightCC;
 	ColorParameter * color;
@@ -49,6 +51,7 @@ public:
 	var motionData;
 	ScopedPointer<MotionBlock> currentBlock;
 	TargetParameter * activeProvider;
+
 
 	int previousID; //for swapping
 	int updateRate;

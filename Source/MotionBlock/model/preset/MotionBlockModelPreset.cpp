@@ -36,9 +36,9 @@ MotionBlockModelPreset::~MotionBlockModelPreset()
 	if (!modelRef.wasObjectDeleted()) model->removeControllableContainerListener(this);
 }
 
-var MotionBlockModelPreset::getMotionData(Drone * p, double time, var params)
+var MotionBlockModelPreset::getMotionData(Drone * p, double time, var params, var  * blockMemoryData)
 {
-	return model->getMotionData(p, time, params);
+	return model->getMotionData(p, time, params, blockMemoryData);
 }
 
 void MotionBlockModelPreset::rebuildArgsFromModel(bool syncValues)

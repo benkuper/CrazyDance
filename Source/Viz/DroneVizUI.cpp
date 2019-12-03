@@ -11,14 +11,14 @@
 #include "DroneVizUI.h"
 
 DroneVizUI::DroneVizUI(Drone * d) :
-	BaseItemUI(d, Direction::NONE, Direction::NONE),
+	BaseItemUI(d),
 	vizNotifier(10)
 {
 	showEnableBT = false;
 	showRemoveBT = false;
 	itemLabel.setVisible(false);
 	updateDroneImage();
-	setSize(100,100);
+	setSize(10,10);
 }
 
 DroneVizUI::~DroneVizUI()
@@ -59,7 +59,7 @@ void DroneVizUI::controllableFeedbackUpdateInternal(Controllable * c)
 	if (c == item->state) updateDroneImage();
 	else if (c == item->position || c == item->color)
 	{
-		int targetSize = jmap<float>(item->position->y, 0, 20, 10*viewZoom,20*viewZoom);
+		int targetSize = jmap<float>(item->position->y, 0, 20, 30*viewZoom,60*viewZoom);
 		if (targetSize != getWidth()) setSize(targetSize, targetSize);
 
 		repaint();

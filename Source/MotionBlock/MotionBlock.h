@@ -30,11 +30,11 @@ public:
 
 	ScopedPointer<DroneCluster> cluster;
 
+	var blockMemoryData;
 	var paramsLoadData;
 	var getMotionData(Drone * p, double time, var params);
 
 	void rebuildArgsFromModel();
-
 
 	void providerParametersChanged(MotionBlockDataProvider *) override;
 	void providerParameterValueUpdated(MotionBlockDataProvider *, Parameter * p) override;

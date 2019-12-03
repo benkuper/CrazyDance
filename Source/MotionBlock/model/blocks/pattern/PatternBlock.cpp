@@ -31,7 +31,7 @@ PositionPattern::PositionPattern(var params) :
 	positionIDOffset->setValue(.5f, 0, 0);
 }
 
-void PositionPattern::getMotionDataInternal(var result, Drone * d, double time, int id, var params)
+void PositionPattern::getMotionDataInternal(var result, Drone * d, double time, int id, var params, var * blockMemoryData)
 {
 	Vector3D<float> bPosition = getPoint3DValue(position, params);
 	Vector3D<float> bPositionIDOffset = getPoint3DValue(positionIDOffset, params);
@@ -50,7 +50,7 @@ LinePattern::LinePattern(var params) :
 	endPoint->setValue(3, 2, 0);
 }
 
-void LinePattern::getMotionDataInternal(var result, Drone * d, double time, int id, var params)
+void LinePattern::getMotionDataInternal(var result, Drone * d, double time, int id, var params, var * blockMemoryData)
 {
 	Vector3D<float> start = getPoint3DValue(startPoint, params);
 	Vector3D<float> end = getPoint3DValue(endPoint, params);
@@ -64,38 +64,63 @@ void LinePattern::getMotionDataInternal(var result, Drone * d, double time, int 
 CirclePattern::CirclePattern(var params) :
 	PatternBlock(getTypeString(), params)
 {
-	vertical = paramsContainer->addBoolParameter("Vertical", "Fancy some crashing ?", false);
 	center = paramsContainer->addPoint3DParameter("Center", "The center of the circle");
-	center->setVector(0, 2, 0);
-	radius = paramsContainer->addFloatParameter("Radius", "Radius of the circle", 2, 0 ,10);
-	startAngle = paramsContainer->addFloatParameter("Start Angle", "Start angle, 1 is full circle, .5 is half", 0, 0, 1);
-	speed = paramsContainer->addFloatParameter("Speed", "Speed of the motion, in full circles per second (1 is 1 full round per second)", .1, -2, 2);
-	length = paramsContainer->addFloatParameter("Length", "Length to cover, 1 is full circle, .5 is arc of half circle", 1, 0, 1);
+	center->setVector(0, .5f, 0);
+
+	numCircles = paramsContainer->addIntParameter("Num Circles", "Number of circles to do", 1, 1, 10);
+
+	radius1 = paramsContainer->addFloatParameter("Radius 1", "Radius of the big circle", 0, 0, 2);
+	startAngle1 = paramsContainer->addFloatParameter("Start Angle 1", "Start angle, 1 is full circle, .5 is half", 0, 0, 1);
+	speed1 = paramsContainer->addFloatParameter("Speed 1", "Speed of the motion, in full circles per second (1 is 1 full round per second)", 0, -2, 2);
+	length1 = paramsContainer->addFloatParameter("Length 1", "Length to cover, 1 is full circle, .5 is arc of half circle", 1, 0, 1);
+
+	radius2 = paramsContainer->addFloatParameter("Radius 2", "Radius of the small circles", .3f, 0 ,10);
+	startAngle2 = paramsContainer->addFloatParameter("Start Angle 2", "Start angle, 1 is full circle, .5 is half", 0, 0, 1);
+	speed2 = paramsContainer->addFloatParameter("Speed 2", "Speed of the motion, in full circles per second (1 is 1 full round per second)", .1, -2, 2);
+	length2 = paramsContainer->addFloatParameter("Length 2", "Length to cover, 1 is full circle, .5 is arc of half circle", 1, 0, 1);
+
 	offset = paramsContainer->addPoint3DParameter("Offset", "Offset per ID");
-	radiusOffset = paramsContainer->addFloatParameter("Radius Offset", "Radius offset by ID", 0);
+	radiusOffset = paramsContainer->addFloatParameter("Radius Offset", "Radius offset by ID", 0,-.5f,.5f);
 	orientation = paramsContainer->addPoint3DParameter("Orientation", "Orientation of the circle, this is the Up vector, circle is perpendicular to this vector");
 	orientation->setVector(0, 1, 0);
 }
 
-void CirclePattern::getMotionDataInternal(var result, Drone * d, double time, int id, var params)
+void CirclePattern::getMotionDataInternal(var result, Drone * d, double time, int id, var params, var * blockMemoryData)
 {
 	Vector3D<float> bCenter = getPoint3DValue(center, params);
 	//Vector3D<float> bOrientation = getPoint3DValue(orientation, params);
-	float bRadius = getParamValue<float>(radius, params);
-	float bSpeed = getParamValue<float>(speed, params);
-	float bStartAngle = getParamValue<float>(startAngle, params);
-	float bLength = getParamValue<float>(length, params);
-	float relP = id * 1.0f / getDroneCount(params) * bLength;
-	bool bVertical = getParamValue<bool>(vertical, params);
+
+	float bNumCircles = getParamValue<int>(numCircles, params);
+	float bRadius1 = getParamValue<float>(radius1, params);
+	float bSpeed1 = getParamValue<float>(speed1, params);
+	float bStartAngle1 = getParamValue<float>(startAngle1, params);
+	float bLength1 = getParamValue<float>(length1, params);
+
+	float bRadius2 = getParamValue<float>(radius2, params);
+	float bSpeed2 = getParamValue<float>(speed2, params);
+	float bStartAngle2 = getParamValue<float>(startAngle2, params);
+	float bLength2 = getParamValue<float>(length2, params);
+
+	int numDrones = getDroneCount(params);
+	int numDronesPerCircle = jmax<int>(ceil(numDrones / bNumCircles), 1);
+	int curBigCircle = floor(id / numDronesPerCircle);
+
+	
+	float relP1 = curBigCircle * 1.0f / bNumCircles * bLength1;
+	float relAngle1 = bStartAngle1 + relP1 + time * bSpeed1;
+	float tAngle1 = fmodf(relAngle1, 1) * float_Pi * 2;
+	Vector3D<float> tPos = bCenter + Vector3D<float>(cosf(tAngle1), 0, sinf(tAngle1)) * bRadius1;
+
+
+
+	float relP2 = (id%numDronesPerCircle) * 1.0f / numDronesPerCircle * bLength2;
+	float relAngle2 = bStartAngle2 + relP2 + time * bSpeed2;
+	float tAngle2 = fmodf(relAngle2, 1)  * float_Pi * 2 ;
+
 	Vector3D<float> bOffset = getPoint3DValue(offset, params);
 	float bRadiusOffset = getParamValue<float>(radiusOffset, params);
 
-	float relAngle = bStartAngle + relP + time * bSpeed;
-	float tAngle = fmodf(relAngle, 1)  * float_Pi * 2 ;
-
-	float val1 = cosf(tAngle);
-	float val2 = sinf(tAngle);
-	Vector3D<float> tPos = bCenter + Vector3D<float>(val1, bVertical?val2:0,bVertical?0:val2) * (bRadius + bRadiusOffset * id) + bOffset * id;
+	tPos += Vector3D<float>(cosf(tAngle2), 0, sinf(tAngle2)) * (bRadius2 + bRadiusOffset * id) + bOffset * id;
 
 	var posData;
 	posData.append(tPos.x);
@@ -121,7 +146,7 @@ PingPongPattern::PingPongPattern(var params) :
 	timeIDOffset = paramsContainer->addFloatParameter("Offset Time By ID", "Offset the time by the drone id", 0);
 }
 
-void PingPongPattern::getMotionDataInternal(var result, Drone * d, double time, int id, var params)
+void PingPongPattern::getMotionDataInternal(var result, Drone * d, double time, int id, var params, var * blockMemoryData)
 {
 	Vector3D<float> start = getPoint3DValue(startPosition, params);
 	Vector3D<float> end = getPoint3DValue(endPosition, params);
@@ -150,7 +175,7 @@ MultiPositionPattern::MultiPositionPattern(var params) :
 	//paramsContainer->userAddControllablesFilters.add(Point3DParameter::getTypeStringStatic());
 }
 
-void MultiPositionPattern::getMotionDataInternal(var result, Drone * d, double time, int id, var params)
+void MultiPositionPattern::getMotionDataInternal(var result, Drone * d, double time, int id, var params, var * blockMemoryData)
 {
 	Vector3D<float> bCenter = getPoint3DValue(center, params);
 	//Vector3D<float> bOrientation = getPoint3DValue(orientation, params);

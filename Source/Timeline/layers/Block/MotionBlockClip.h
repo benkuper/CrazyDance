@@ -25,16 +25,20 @@ public:
 
 	MotionBlockLayer * layer;
 	ScopedPointer<MotionBlock> currentBlock;
-	
+	OwnedArray<MotionBlock> secondaryBlocks;
+
 	TargetParameter * activeProvider;
 
+
+	FloatParameter* clipStartOffset;
 	BoolParameter * autoFade;
 	FloatParameter * fadeIn;
 	FloatParameter * fadeOut;
+	Automation fadeCurve;
 
 	var blockData; //for ghosting
 
-	void setBlockFromProvider(MotionBlockDataProvider * provider);
+	void setBlockFromProvider(MotionBlockDataProvider* provider);
 	var getMotionData(Drone * p, double absoluteTime, var params);
 
 	virtual void blockParamControlModeChanged(Parameter *p) override;

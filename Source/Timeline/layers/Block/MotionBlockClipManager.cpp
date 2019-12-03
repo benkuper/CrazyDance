@@ -9,9 +9,10 @@
 */
 
 #include "MotionBlockClipManager.h"
+#include "MotionBlockLayer.h"
 
 MotionBlockClipManager::MotionBlockClipManager(MotionBlockLayer * layer) :
-	LayerBlockManager(),
+	LayerBlockManager(layer, "Clips"),
 	layer(layer)
 {
 	itemDataType = "MotionBlockClip";
@@ -38,7 +39,7 @@ void MotionBlockClipManager::getSurroundingBlocks(MotionBlockClip * clip, Motion
 
 void MotionBlockClipManager::onControllableFeedbackUpdate(ControllableContainer * cc, Controllable * c)
 {
-	MotionBlockClip * b = dynamic_cast<MotionBlockClip *>(c->parentContainer);
+	MotionBlockClip* b = c->getParentAs<MotionBlockClip>();
 	if (b != nullptr)
 	{
 		if (c == b->time || c == b->coreLength || c == b->loopLength)

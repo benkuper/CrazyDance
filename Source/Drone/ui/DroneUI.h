@@ -14,8 +14,7 @@
 
 class DroneUI :
 	public BaseItemUI<Drone>,
-	public Drone::AsyncListener,
-	public DragAndDropTarget
+	public Drone::AsyncListener
 {
 public:
 	DroneUI(Drone * d);
@@ -35,7 +34,6 @@ public:
 
 	void newMessage(const Drone::DroneEvent &e) override;
 
-	bool isInterestedInDragSource(const SourceDetails &source) override;
 	void itemDragEnter(const SourceDetails &source) override;
 	void itemDragExit(const SourceDetails &source) override;
 	void itemDropped(const SourceDetails &source) override;

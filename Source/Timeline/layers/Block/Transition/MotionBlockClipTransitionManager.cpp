@@ -12,6 +12,7 @@
 #include "../MotionBlockLayer.h"
 
 MotionBlockClipTransitionManager::MotionBlockClipTransitionManager(MotionBlockLayer * layer) :
+	LayerBlockManager(layer, "Transitions"),
 	layer(layer)
 {
 	userCanAddItemsManually = false;

@@ -14,8 +14,8 @@
 
 class MotionBlockModelGroup :
 	public BaseItem,
-	public BaseManager<MotionBlockModelGroup>::Listener,
-	public BaseManager<MotionBlockModel>::Listener
+	public BaseManager<MotionBlockModelGroup>::ManagerListener,
+	public BaseManager<MotionBlockModel>::ManagerListener
 {
 public:
 	MotionBlockModelGroup(const String &name = "Group");

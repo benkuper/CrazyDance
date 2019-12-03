@@ -12,7 +12,7 @@
 #include "ActionManager.h"
 
 ActionLayer::ActionLayer(Sequence * _sequence, var params) :
-	TriggerLayer(_sequence, params)
+	TriggerLayer(_sequence, "Actions", params)
 {
 	setManager(new ActionManager(this, _sequence));
 }

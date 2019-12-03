@@ -52,6 +52,16 @@ Drone * DroneManager::getDroneWithId(int id, Drone * excludeDrone)
 	return nullptr;
 }
 
+Drone* DroneManager::getDroneWithDroneId(int id, Drone* excludeDrone)
+{
+	for (auto& d : items)
+	{
+		if (d == excludeDrone) continue;
+		if (d->droneID->intValue() == id) return d;
+	}
+	return nullptr;
+}
+
 
 int DroneManager::getFirstAvailableID()
 {

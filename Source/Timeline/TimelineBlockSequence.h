@@ -19,13 +19,13 @@ class Drone;
 
 class TimelineBlockSequence :
 	public Sequence,
-	public SequenceLayerManager::Listener
+	public SequenceLayerManager::ManagerListener
 {
 public:
 	TimelineBlockSequence();
 	~TimelineBlockSequence();
 
-	SequenceLayerFactory layerFactory;
+	Factory<SequenceLayer> factory;
 	var getMotionData(Drone * p, double time, var params);
 
 	BoolParameter * alwaysSendWhenPlaying;
@@ -35,7 +35,7 @@ public:
 	BoolParameter * sendLandOnFinish;
 
 	Array<MotionBlockLayer *> getLayersForDrone(Drone * p, MotionBlockLayer::Mode mode, bool includeDisabled = false);
-	ColorLayer * getColorLayerForDrone(Drone * p, bool includeDisabled = false);
+	Array<ColorLayer *> getColorLayersForDrone(Drone * p, bool includeDisabled = false);
 
 	void itemAdded(SequenceLayer * s) override;
 

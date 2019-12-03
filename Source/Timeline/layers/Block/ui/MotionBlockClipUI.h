@@ -26,8 +26,7 @@ public:
 };
 
 class MotionBlockClipUI :
-	public LayerBlockUI,
-	public DragAndDropTarget
+	public LayerBlockUI
 	//public Thread //Threaded preview generation
 {
 public:
@@ -70,7 +69,6 @@ public:
 
 	void controllableFeedbackUpdateInternal(Controllable *) override;
 
-	bool isInterestedInDragSource(const SourceDetails &source) override;
 	void itemDragEnter(const SourceDetails &source) override;
 	void itemDragExit(const SourceDetails &source) override;
 	void itemDragMove(const SourceDetails &source) override;

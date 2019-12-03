@@ -27,7 +27,7 @@ public:
 	ControllableContainer paramsContainer;
 
 	var previousData; //for keeping overriden value and saved dynamic values
-	var getMotionData(Drone * p, double time, var params) override;
+	var getMotionData(Drone * p, double time, var params, var  * blockMemoryData) override;
 
 	void rebuildArgsFromModel(bool syncValues = true);
 	void childStructureChanged(ControllableContainer * cc) override;

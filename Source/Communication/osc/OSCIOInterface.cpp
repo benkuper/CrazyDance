@@ -18,6 +18,8 @@ OSCIOInterface::OSCIOInterface(StringRef name, var params) :
 	remoteHost = addStringParameter("Remote Host", "", "127.0.0.1");
 	remotePort = addIntParameter("Remote Port", "", 16000, 1024, 65535);
 
+	setupReceiver();
+	receiver.addListener(this);
 	sender.connect("0.0.0.0", 1024);
 }
 
@@ -25,8 +27,26 @@ OSCIOInterface::~OSCIOInterface()
 {
 }
 
+void OSCIOInterface::setupReceiver()
+{
+	receiver.disconnect();
+	if (!enabled->boolValue()) return;
+
+	try
+	{
+		receiver.connect(localPort->intValue());
+		LOG("Port bound to " << localPort->intValue());
+	}
+	catch (std::exception e)
+	{
+		LOGERROR("Could not bind port : " << localPort->intValue());
+	}
+}
+
 void OSCIOInterface::sendDroneData(Drone * d, Controllable * c)
 {
+	if (!enabled->boolValue())  return;
+
 	String address = getAddressForDroneControllable(d, c);
 	OSCMessage m(address);
 	if (c->type != Controllable::TRIGGER)
@@ -51,6 +71,18 @@ void OSCIOInterface::sendDroneData(Drone * d, Controllable * c)
 	sender.sendToIPAddress(remoteHost->stringValue(), remotePort->intValue(), m);
 }
 
+void OSCIOInterface::onContainerParameterChangedInternal(Parameter* p)
+{
+	if (p == enabled)
+	{
+		setupReceiver();
+	}
+	else if (p == localPort)
+	{
+		setupReceiver();
+	}
+}
+
 String OSCIOInterface::getAddressForDroneControllable(Drone * d, Controllable * c) const
 {
 	return "/drone/" + d->droneID->stringValue() + "/" + c->getControlAddress(d);
@@ -58,5 +90,8 @@ String OSCIOInterface::getAddressForDroneControllable(Drone * d, Controllable * 
 
 void OSCIOInterface::oscMessageReceived(const OSCMessage & message)
 {
-	//
+	if (logIncoming->boolValue())
+	{
+		NLOG(niceName, "Message received : " << message.getAddressPattern().toString());
+	}
 }

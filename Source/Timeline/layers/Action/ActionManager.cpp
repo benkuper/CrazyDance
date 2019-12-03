@@ -10,23 +10,15 @@
 
 #include "ActionManager.h"
 #include "ActionLayer.h"
+#include "GenericActionTrigger.h"
 
 ActionManager::ActionManager(ActionLayer * layer, Sequence * sequence) :
 	TimeTriggerManager(layer, sequence)
 {
+	factory.defs.add(Factory<TimeTrigger>::Definition::createDef("", "Generic", &GenericActionTrigger::create));
+	managerFactory = &factory;
 }
 
 ActionManager::~ActionManager()
 {
-}
-
-TimeTrigger * ActionManager::createItem()
-  {
-	  return new Action();
-  }
-
-void ActionManager::addTriggerAt(float time, float flagY)
-{
-	Action * a = new Action(time, flagY);
-	TimeTriggerManager::addItem(a);
 }

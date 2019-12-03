@@ -26,7 +26,10 @@ public:
 	OSCReceiver receiver;
 	OSCSender sender;
 
+	void setupReceiver();
 	virtual void sendDroneData(Drone * d, Controllable *c) override;
+
+	void onContainerParameterChangedInternal(Parameter* p) override;
 
 	virtual String getAddressForDroneControllable(Drone * d, Controllable *c) const;
 

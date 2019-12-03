@@ -35,6 +35,7 @@ void MotionBlockModelTreeUI::paint(Graphics & g)
 	case MotionBlockModel::TIMELINE: c = Colours::limegreen; break;
 	case MotionBlockModel::SCRIPT: c = Colours::pink; break;
 	case MotionBlockModel::PATTERN: c = BLUE_COLOR; break;
+	case MotionBlockModel::INTERACTIVE: c = Colours::lightcyan; break;
         default:
             break;
 	}
@@ -119,7 +120,7 @@ void MotionBlockModelTreeUI::mouseDrag(const MouseEvent & e)
 	if (e.getDistanceFromDragStart() > 40)
 	{
 		var desc = new DynamicObject();
-		desc.getDynamicObject()->setProperty("type", dragAndDropID.toString());
+		desc.getDynamicObject()->setProperty("dataType", dragAndDropID.toString());
 		desc.getDynamicObject()->setProperty("model", model->getTypeString());
 		startDragging(desc, this, Image(), true);
 	}

@@ -14,13 +14,19 @@
 
 MotionBlockClip::MotionBlockClip(MotionBlockLayer * layer, float _time) :
 	LayerBlock("MotionBlockClip", _time),
-	layer(layer)
+	layer(layer),
+	fadeCurve("Fade Curve")
 {
 	itemDataType = "MotionBlockClip";
+
+	clipStartOffset = addFloatParameter("Clip Start Offset", "Offset at which the clip starts", 0, 0);
+	clipStartOffset->defaultUI = FloatParameter::TIME;
+
 
 	activeProvider = addTargetParameter("Active Block", "The current active block for this prop");
 	activeProvider->targetType = TargetParameter::CONTAINER;
 	activeProvider->hideInEditor = true;
+
 	
 	//activeProvider->customGetTargetContainerFunc = &MotionBlockModelLibrary::showProvidersAndGet;
 
@@ -29,6 +35,16 @@ MotionBlockClip::MotionBlockClip(MotionBlockLayer * layer, float _time) :
 	fadeOut = addFloatParameter("Fade Out", "Fade out time", 0, 0, getTotalLength());
 	fadeIn->setControllableFeedbackOnly(autoFade->boolValue());
 	fadeOut->setControllableFeedbackOnly(autoFade->boolValue());
+
+	fadeCurve.allowKeysOutside = false;
+	addChildControllableContainer(&fadeCurve);
+	fadeCurve.addItem(0, 0);
+	fadeCurve.addItem(1, 1);
+	fadeCurve.items[0]->setEasing(Easing::BEZIER);
+	fadeCurve.showUIInEditor = true;
+	CubicEasing* cb = (CubicEasing*)(fadeCurve.items[0]->easing.get());
+	cb->anchor1->setPoint(.3f, 0);
+	cb->anchor2->setPoint(.6f, 1);
 
 }
 
@@ -76,18 +92,19 @@ var MotionBlockClip::getMotionData(Drone * p, double absoluteTime, var params)
 	
 	float factor = 1;
 
-	double relTimeTotal = absoluteTime - time->floatValue();
-	if (fadeIn->floatValue() > 0) factor *= jmin<double>(relTimeTotal / fadeIn->floatValue(),1.f);
-	if (fadeOut->floatValue() > 0) factor *= jmin<double>((getTotalLength() - relTimeTotal) / fadeOut->floatValue(), 1.f);
+	double relTimeTotal = absoluteTime - time->floatValue() - clipStartOffset->floatValue();
+	if (fadeIn->floatValue() > 0) factor *= fadeCurve.getValueForPosition(jmin<double>(relTimeTotal / fadeIn->floatValue(), 1.f));
+	if (fadeOut->floatValue() > 0) factor *= fadeCurve.getValueForPosition(jmin<double>((getTotalLength() - relTimeTotal) / fadeOut->floatValue(), 1.f));
 
-	
 
 	if (dynamic_cast<TimelineBlock *>(currentBlock->provider.get()) != nullptr)
 	{
 		params.getDynamicObject()->setProperty("sequenceTime", false);
 	}
-
-	double relTime = getRelativeTime(absoluteTime, true, absoluteTime >= getEndTime()); //if outside of clip, don't loop
+	
+	bool doLoop = loopLength->floatValue() > 0;// absoluteTime < getEndTime();
+	double relTime = getRelativeTime(absoluteTime + clipStartOffset->floatValue(), true, !doLoop); //if outside of clip, don't loop
+	params.getDynamicObject()->setProperty("loopAutomations", doLoop);
 	result = currentBlock->getMotionData(p, relTime, params);
 	if (result.isObject())
 	{
@@ -100,8 +117,12 @@ void MotionBlockClip::blockParamControlModeChanged(Parameter * p)
 {
 	if (p->controlMode == Parameter::AUTOMATION)
 	{
-		p->automation->automation.setLength(coreLength->floatValue());
-		p->automation->automation.allowKeysOutside = true;
+		Automation* a = dynamic_cast<Automation*>(p->automation->automationContainer);
+		if (a != nullptr)
+		{
+			a->setLength(coreLength->floatValue());
+			a->allowKeysOutside = true;
+		}
 	}
 }
 
@@ -115,7 +136,14 @@ void MotionBlockClip::setCoreLength(float value, bool stretch, bool stickToCoreE
 		Array<WeakReference<Parameter>> params = currentBlock->paramsContainer.getAllParameters();
 		for (auto & pa : params)
 		{
-			if (pa->controlMode == Parameter::AUTOMATION) pa->automation->automation.setLength(coreLength->floatValue(), stretch, stickToCoreEnd);
+			if (pa->controlMode == Parameter::AUTOMATION)
+			{
+				Automation* a = dynamic_cast<Automation*>(pa->automation->automationContainer);
+				if (a != nullptr)
+				{
+					a->setLength(coreLength->floatValue(), stretch, stickToCoreEnd);
+				}
+			}
 		}
 	}
 }
@@ -162,7 +190,11 @@ void MotionBlockClip::loadJSONDataInternal(var data)
 		{
 			if (pa->controlMode == Parameter::AUTOMATION)
 			{
-				pa->automation->automation.allowKeysOutside = true;
+				Automation* a = dynamic_cast<Automation*>(pa->automation->automationContainer);
+				if (a != nullptr)
+				{
+					a->allowKeysOutside = true;
+				}
 			}
 		}
 	}

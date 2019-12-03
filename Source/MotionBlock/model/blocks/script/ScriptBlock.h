@@ -25,7 +25,7 @@ public:
 
 	virtual Array<WeakReference<Controllable>> getModelParameters() override;
 
-	void getMotionDataInternal(var result, Drone  * d, double time, int id, var params) override;
+	void getMotionDataInternal(var result, Drone  * d, double time, int id, var params, var*  blockMemoryData) override;
 
 	void onControllableFeedbackUpdateInternal(ControllableContainer * cc, Controllable *) override;
 	void childStructureChanged(ControllableContainer * cc) override;

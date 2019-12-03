@@ -34,7 +34,7 @@ Array<WeakReference<Controllable>> ScriptBlock::getModelParameters()
 	return script.scriptParamsContainer.getAllControllables();
 }
 
-void ScriptBlock::getMotionDataInternal(var result, Drone * d, double time, int id, var params)
+void ScriptBlock::getMotionDataInternal(var result, Drone * d, double time, int id, var params, var * blockMemoryData)
 {
 	if (!params.hasProperty("droneCount")) params.getDynamicObject()->setProperty("droneCount", getDroneCount(params));
 	Array<var> args;
@@ -42,7 +42,7 @@ void ScriptBlock::getMotionDataInternal(var result, Drone * d, double time, int 
 	args.add(id);
 	args.add(time);
 	args.add(params);
-
+	//args.add(blockMemoryData);
 	script.callFunction(updateMotionDataId, args); 
 }
 

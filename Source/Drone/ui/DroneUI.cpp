@@ -12,7 +12,7 @@
 #include "MotionBlock/model/library/ui/MotionBlockModelTreeUI.h"
 
 DroneUI::DroneUI(Drone * d) :
-	BaseItemUI(d, Direction::NONE, Direction::NONE),
+	BaseItemUI(d),
 	isDraggingItemOver(false)
 {
 	item->addAsyncCoalescedDroneListener(this);
@@ -94,12 +94,6 @@ void DroneUI::newMessage(const Drone::DroneEvent & e)
 	default:
 		break;
 	}
-}
-
-
-bool DroneUI::isInterestedInDragSource(const SourceDetails & source)
-{
-	return source.description.getProperty("type", "") == MotionBlockModelTreeUI::dragAndDropID.toString();
 }
 
 void DroneUI::itemDragEnter(const SourceDetails & source)

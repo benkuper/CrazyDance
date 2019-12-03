@@ -25,7 +25,7 @@ public:
 
 	TimelineBlockSequence sequence;
 
-	var getMotionData(Drone * d, double time, var params) override;
+	var getMotionData(Drone * d, double time, var params, var * blockMemoryData) override;
 
 	void sequenceCurrentTimeChanged(Sequence *, float /*prevTime*/, bool /*evaluateSkippedData*/) override;
 	void sequencePlayStateChanged(Sequence * s) override;

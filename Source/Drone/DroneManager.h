@@ -29,7 +29,8 @@ public:
     void addItemInternal(Drone * d, var) override;
 	void removeItemInternal(Drone * d) override;
 
-	Drone * getDroneWithId(int id, Drone * exludeDrone = nullptr);
+	Drone* getDroneWithId(int id, Drone* exludeDrone = nullptr);
+	Drone* getDroneWithDroneId(int id, Drone* exludeDrone = nullptr);
 	
 	int getFirstAvailableID();
 	void droneGlobalIDChanged(Drone * d, int previousID) override;

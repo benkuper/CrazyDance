@@ -11,14 +11,19 @@
 #pragma once
 
 #include "JuceHeader.h"
+#include "Drone/Cluster/DroneCluster.h"
 
 class Action :
 	public TimeTrigger
 {
 public:
-	Action(float time = 0, float flagYPos = 0, const String &name = "Action");
-	~Action();
+	Action(const String &name = "Action");
+	virtual ~Action();
 
+	DroneCluster cluster;
+
+	virtual var getJSONData() override;
+	virtual void loadJSONDataItemInternal(var data) override;
 
 	String getTypeString() const override { return "Action"; }
 };

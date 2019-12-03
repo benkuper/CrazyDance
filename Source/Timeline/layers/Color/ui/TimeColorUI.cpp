@@ -17,6 +17,8 @@ TimeColorUI::TimeColorUI(TimeColor * item) :
 	colorUI = item->color->createColorParamUI();
 	addAndMakeVisible(colorUI);
 	//colorUI->addMouseListener(this, false); //why ??
+
+	dragAndDropEnabled = false;
 }
 
 TimeColorUI::~TimeColorUI()

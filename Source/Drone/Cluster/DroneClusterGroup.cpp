@@ -17,7 +17,6 @@ DroneClusterGroup::DroneClusterGroup() :
 	sendFeedback = addBoolParameter("Send Feedback", "If checked, Drone changes will be sent using their local ID", false);
 
 	//clusterManager.hideEditorHeader = true;
-	clusterManager.skipControllableNameInAddress = true;
 	clusterManager.selectItemWhenCreated = false;
 	clusterManager.editorCanBeCollapsed = false;
 

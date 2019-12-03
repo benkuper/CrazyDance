@@ -147,8 +147,11 @@ var MotionBlockClipTransition::getMotionData(Drone * d, double absoluteTime, var
 	float targetFromTime = inverted ? absoluteTime : jmin<float>(absoluteTime, smoothedFadeFrom);
 	float targetToTime = inverted ? absoluteTime : jmax<float>(absoluteTime, smoothedFadeTo);
 
-	var fromMotionPosData = fromClip->getMotionData(d, targetFromTime, params).getProperty("position", var());
-	var toMotionPosData = toClip->getMotionData(d, targetToTime, params).getProperty("position", var());
+
+	params.getDynamicObject()->setProperty("isTransition", true);
+
+	var fromMotionPosData = fromClip->getMotionData(d, targetFromTime, params).getProperty("position", params);
+	var toMotionPosData = toClip->getMotionData(d, targetToTime, params).getProperty("position", params);
 
 	if (fromTime == toTime) return fromMotionPosData;
 	if (!fromMotionPosData.isArray() || !toMotionPosData.isArray()) return var();

@@ -12,6 +12,7 @@
 #include "../blocks/timeline/TimelineBlock.h"
 #include "../blocks/pattern/PatternBlock.h"
 #include "../blocks/script/ScriptBlock.h"
+#include "../blocks/interactive/InteractiveBlock.h"
 
 juce_ImplementSingleton(MotionBlockModelLibrary)
 
@@ -27,6 +28,7 @@ MotionBlockModelLibrary::MotionBlockModelLibrary() :
 	factory.defs.add(Factory<MotionBlockModel>::Definition::createDef("", "Multi Position", &MultiPositionPattern::create));
 	factory.defs.add(Factory<MotionBlockModel>::Definition::createDef("", "Script", &ScriptBlock::create));
 	factory.defs.add(Factory<MotionBlockModel>::Definition::createDef("", "Timeline", &TimelineBlock::create));
+	factory.defs.add(Factory<MotionBlockModel>::Definition::createDef("", "Interactive", &InteractiveBlock::create));
 	factory.buildPopupMenu();
 
 }

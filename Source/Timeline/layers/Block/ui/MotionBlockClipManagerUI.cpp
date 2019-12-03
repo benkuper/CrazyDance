@@ -19,6 +19,7 @@ MotionBlockClipManagerUI::MotionBlockClipManagerUI(MotionBlockLayerTimeline * _t
 	timeline(_timeline),
 	dropClipX(-1)
 {
+	acceptedDropTypes.add("MotionBlockModel");
 	addExistingItems();
 }
 
@@ -42,10 +43,6 @@ LayerBlockUI * MotionBlockClipManagerUI::createUIForItem(LayerBlock * item)
 	return new MotionBlockClipUI((MotionBlockClip *)item);
 }
 
-bool MotionBlockClipManagerUI::isInterestedInDragSource(const SourceDetails & source)
-{
-	return source.description.getProperty("type", "") == MotionBlockModelTreeUI::dragAndDropID.toString();
-}
 
 void MotionBlockClipManagerUI::itemDragEnter(const SourceDetails & source)
 {

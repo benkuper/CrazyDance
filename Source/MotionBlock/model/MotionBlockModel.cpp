@@ -59,11 +59,11 @@ Array<WeakReference<Controllable>> MotionBlockModel::getModelParameters()
 	return paramsContainer->getAllControllables();
 }
 
-var MotionBlockModel::getMotionData(Drone * d, double time, var params)
+var MotionBlockModel::getMotionData(Drone * d, double time, var params, var * blockMemoryData)
 {
 	var result = var(new DynamicObject());
 	int id = params.getProperty("forceID", d->globalID->intValue());
-	getMotionDataInternal(result, d, time, id, params);
+	getMotionDataInternal(result, d, time, id, params, blockMemoryData);
 	return result;
 }
 

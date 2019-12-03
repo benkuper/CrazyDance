@@ -29,6 +29,10 @@
 			isa = PBXBuildFile;
 			fileRef = 6CBA75DF0C67BC206E7E2D7C;
 		};
+		CC3F1269BF7B3739292235BE = {
+			isa = PBXBuildFile;
+			fileRef = 5D7656A4BE5DF3A668E52612;
+		};
 		49D46E19219E83E27D707433 = {
 			isa = PBXBuildFile;
 			fileRef = A1649476D3D9E25A602C8AED;
@@ -156,6 +160,10 @@
 		EDC40ABC6C034700B4D05D97 = {
 			isa = PBXBuildFile;
 			fileRef = 7F54DE8BA18D56BA0CC7F14D;
+		};
+		00C52B72C72C4F352BE925B0 = {
+			isa = PBXBuildFile;
+			fileRef = 9EC8268D9C7A62B001F77507;
 		};
 		1E0177E48E77610D2A8D52E6 = {
 			isa = PBXBuildFile;
@@ -377,6 +385,10 @@
 			isa = PBXBuildFile;
 			fileRef = 49DB1F8A634A8B863DE5259D;
 		};
+		637A8BDC83EE02F0727EBCB7 = {
+			isa = PBXBuildFile;
+			fileRef = 1A12E7B958A27EA16A557215;
+		};
 		3ABF1C53F4E1FB28A4FB5B8A = {
 			isa = PBXBuildFile;
 			fileRef = 4A15C743C12BA3DC47E2C73B;
@@ -411,6 +423,13 @@
 			lastKnownFileType = sourcecode.c.h;
 			name = MotionBlockModelPreset.h;
 			path = ../../Source/MotionBlock/model/preset/MotionBlockModelPreset.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		096E332942340DF1D31AB2BE = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = InteractiveBlock.h;
+			path = ../../Source/MotionBlock/model/blocks/interactive/InteractiveBlock.h;
 			sourceTree = "SOURCE_ROOT";
 		};
 		0989A3996615CD797A6E9642 = {
@@ -509,6 +528,13 @@
 			lastKnownFileType = sourcecode.c.h;
 			name = MotionBlockClipTransitionUI.h;
 			path = ../../Source/Timeline/layers/Block/Transition/ui/MotionBlockClipTransitionUI.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		1A12E7B958A27EA16A557215 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = "include_juce_organicui2.cpp";
+			path = "../../JuceLibraryCode/include_juce_organicui2.cpp";
 			sourceTree = "SOURCE_ROOT";
 		};
 		1A570A0A96909C6D92EDB03A = {
@@ -670,6 +696,13 @@
 			lastKnownFileType = sourcecode.c.h;
 			name = ColorLayerPanel.h;
 			path = ../../Source/Timeline/layers/Color/ui/ColorLayerPanel.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		34A2DFFE802AC8EB1BD96717 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			name = CrazyDance.entitlements;
+			path = CrazyDance.entitlements;
 			sourceTree = "SOURCE_ROOT";
 		};
 		369BF5F7A5D5944FA0CEDF8F = {
@@ -888,6 +921,13 @@
 			name = "include_juce_cryptography.mm";
 			path = "../../JuceLibraryCode/include_juce_cryptography.mm";
 			sourceTree = "SOURCE_ROOT";
+		};
+		5D7656A4BE5DF3A668E52612 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = CoreAudioKit.framework;
+			path = System/Library/Frameworks/CoreAudioKit.framework;
+			sourceTree = SDKROOT;
 		};
 		5D78465C0D0546D84274B8F8 = {
 			isa = PBXFileReference;
@@ -1188,6 +1228,13 @@
 			lastKnownFileType = sourcecode.c.h;
 			name = TimeColor.h;
 			path = ../../Source/Timeline/layers/Color/TimeColor.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		9EC8268D9C7A62B001F77507 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = InteractiveBlock.cpp;
+			path = ../../Source/MotionBlock/model/blocks/interactive/InteractiveBlock.cpp;
 			sourceTree = "SOURCE_ROOT";
 		};
 		A0FA160D2FD8AC6B3199D933 = {
@@ -1891,6 +1938,15 @@
 			name = library;
 			sourceTree = "<group>";
 		};
+		2B8D4A228E7103448F4B8EF3 = {
+			isa = PBXGroup;
+			children = (
+				9EC8268D9C7A62B001F77507,
+				096E332942340DF1D31AB2BE,
+			);
+			name = interactive;
+			sourceTree = "<group>";
+		};
 		9413684DCE1A2F47E0D4C328 = {
 			isa = PBXGroup;
 			children = (
@@ -1922,6 +1978,7 @@
 		69CB1002182C319768A05C1D = {
 			isa = PBXGroup;
 			children = (
+				2B8D4A228E7103448F4B8EF3,
 				9413684DCE1A2F47E0D4C328,
 				54539C0B38F57415C021BE8F,
 				EDD1FD173752C0590005E88B,
@@ -2160,6 +2217,7 @@
 				A71DDA4D3CE545DDAC042976,
 				90186113CCA873229B470719,
 				49DB1F8A634A8B863DE5259D,
+				1A12E7B958A27EA16A557215,
 				4A15C743C12BA3DC47E2C73B,
 				CE8423ACEDE3BF3E63E78937,
 				702C86479EED3092AEAD7CE9,
@@ -2185,6 +2243,7 @@
 				F96AE82340FA9DF27CF332FC,
 				4406E075016FCB3E66932AB7,
 				6CBA75DF0C67BC206E7E2D7C,
+				5D7656A4BE5DF3A668E52612,
 				A1649476D3D9E25A602C8AED,
 				162331F4CDA498EE4DC5DCE0,
 				0F92BAC951997CFFAC744680,
@@ -2222,6 +2281,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_LINK_OBJC_RUNTIME = NO;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
 				DEAD_CODE_STRIPPING = YES;
@@ -2268,6 +2328,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_LINK_OBJC_RUNTIME = NO;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
 				COPY_PHASE_STRIP = NO;
@@ -2328,6 +2389,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = c11;
@@ -2372,6 +2434,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -2455,6 +2518,7 @@
 				EECF77B2C777FD72C1C0572E,
 				A0005E3E660DD6BE91741826,
 				EDC40ABC6C034700B4D05D97,
+				00C52B72C72C4F352BE925B0,
 				1E0177E48E77610D2A8D52E6,
 				F0CEFC671CBF27F7508F36BF,
 				4FAC588299ABB90404BF081D,
@@ -2510,6 +2574,7 @@
 				D93C242D0BF209EC40416DA4,
 				39BC030294DD0AA9EC6F6953,
 				1900AAE9BBC3C450168812D4,
+				637A8BDC83EE02F0727EBCB7,
 				3ABF1C53F4E1FB28A4FB5B8A,
 				A1808834886E0B98EBB60A02,
 			);
@@ -2524,6 +2589,7 @@
 				8F40600D1C4B6C3BC5D8F5A1,
 				77F5B941B74E283ABE4E48CE,
 				9412B704481EDEA278249B27,
+				CC3F1269BF7B3739292235BE,
 				49D46E19219E83E27D707433,
 				6306E4EF82AD586D1645A826,
 				CA0DE18FE17BA17F5D4F62FD,
@@ -2551,7 +2617,7 @@
 		295367DE8853D15FD6F03399 = {
 			isa = PBXProject;
 			buildConfigurationList = 07760E51B644B152998B9735;
-			attributes = { LastUpgradeCheck = 0930; ORGANIZATIONNAME = ""; TargetAttributes = { B27B5CA080C8F0FCE5AFD424 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; }; }; };
+			attributes = { LastUpgradeCheck = 1100; ORGANIZATIONNAME = ""; TargetAttributes = { B27B5CA080C8F0FCE5AFD424 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; }; }; };
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
 			mainGroup = 74F9F7C73812F9DBBF61F8B3;

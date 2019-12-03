@@ -10,6 +10,7 @@
 
 #include "TimelineBlockSequence.h"
 #include "layers/Color/ColorLayer.h"
+#include "layers/Action/ActionLayer.h"
 #include "Audio/AudioManager.h"
 #include "Drone/Drone.h"
 #include "Drone/DroneManager.h"
@@ -20,13 +21,20 @@ TimelineBlockSequence::TimelineBlockSequence() :
 	totalTime->setValue(120); //2 min by default
 	layerManager->addItem(new MotionBlockLayer(this));
 	layerManager->addBaseManagerListener(this);
-	setAudioDeviceManager(&AudioManager::getInstance()->am);
 
 	alwaysSendWhenPlaying = addBoolParameter("Always send when playing", "", false);
 	sendTakeOffOnPlay = addBoolParameter("Send Takeoff on play", "", false);
 	sendLandOnStop = addBoolParameter("Send Land on stop", "", false);
 	sendLandOnPause = addBoolParameter("Send Land on pause", "", false);
 	sendLandOnFinish = addBoolParameter("Send Land on finish", "", false);
+
+	//Timeline
+	layerManager->factory.defs.add(SequenceLayerManager::LayerDefinition::createDef("", "Motion", &MotionBlockLayer::create, this));
+	layerManager->factory.defs.add(SequenceLayerManager::LayerDefinition::createDef("", ColorLayer::getTypeStringStatic(), &ColorLayer::create, this));
+	layerManager->factory.defs.add(SequenceLayerManager::LayerDefinition::createDef("", "Actions", &ActionLayer::create, this));
+	layerManager->factory.defs.add(SequenceLayerManager::LayerDefinition::createDef("", "Audio", &AudioLayer::create, this));
+
+	setAudioDeviceManager(&AudioManager::getInstance()->am);
 }
 
 TimelineBlockSequence::~TimelineBlockSequence()
@@ -105,17 +113,31 @@ var TimelineBlockSequence::getMotionData(Drone * d, double time, var params)
 	posData.append(tPos.z);
 	result.getDynamicObject()->setProperty("position", posData);
 
-	ColorLayer * colorLayer = getColorLayerForDrone(d);
-	if (colorLayer != nullptr)
+	Array<ColorLayer *> colorLayers = getColorLayersForDrone(d);
+	if(colorLayers.size() > 0)
 	{
-		Colour col = colorLayer->getColorAtTime(t);
+		float r = 0;
+		float g = 0;
+		float b = 0;
+		float a = 0;
+		for (auto& cl : colorLayers)
+		{
+			Colour c = cl->getColorAtTime(t);
+			r = jmin<float>(r + c.getRed(), 255);
+			g = jmin<float>(g + c.getGreen(), 255);
+			b = jmin<float>(b + c.getBlue(), 255);
+			a = jmin<float>(a + c.getAlpha(), 255);
+
+		}
+
 		var colData;
-		colData.append(col.getRed());
-		colData.append(col.getGreen());
-		colData.append(col.getBlue());
-		colData.append(col.getAlpha());
+		colData.append(r);
+		colData.append(g);
+		colData.append(b);
+		colData.append(a);
 		result.getDynamicObject()->setProperty("color", colData);
 	}
+	
 
 	if (alwaysSendWhenPlaying->boolValue() && isPlaying->boolValue()) result.getDynamicObject()->setProperty("forceUpdate", true);
 
@@ -141,8 +163,9 @@ Array<MotionBlockLayer *> TimelineBlockSequence::getLayersForDrone(Drone * d, Mo
 	return result;
 }
 
-ColorLayer *TimelineBlockSequence::getColorLayerForDrone(Drone * p, bool includeDisabled)
+Array<ColorLayer*> TimelineBlockSequence::getColorLayersForDrone(Drone* p, bool includeDisabled)
 {
+	Array<ColorLayer*> result;
 	for (auto &i : layerManager->items)
 	{
 		if (!includeDisabled && !i->enabled->boolValue()) continue;
@@ -150,10 +173,10 @@ ColorLayer *TimelineBlockSequence::getColorLayerForDrone(Drone * p, bool include
 		if (l == nullptr) continue;
 
 		int droneCount = -1;
-		if (l->filterManager.getTargetIDForDrone(p, droneCount) >= 0) return l;
+		if (l->filterManager.getTargetIDForDrone(p, droneCount) >= 0) result.add(l);
 	}
 
-	return nullptr;
+	return result;
 }
 
 void TimelineBlockSequence::itemAdded(SequenceLayer * s)

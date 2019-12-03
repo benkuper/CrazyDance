@@ -56,6 +56,9 @@
     <Filter Include="CrazyDance\Source\MotionBlock\model\library">
       <UniqueIdentifier>{79125955-8390-5C0A-A1E5-0F1F972F3F5F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CrazyDance\Source\MotionBlock\model\blocks\interactive">
+      <UniqueIdentifier>{A4228CBA-2944-9FFA-7764-3CAA937ACBB8}</UniqueIdentifier>
+    </Filter>
     <Filter Include="CrazyDance\Source\MotionBlock\model\blocks\pattern">
       <UniqueIdentifier>{4B64823D-999F-EF0B-1090-809CEC8ED21F}</UniqueIdentifier>
     </Filter>
@@ -239,6 +242,9 @@
     <Filter Include="JUCE Modules\juce_organicui\automation\parameter">
       <UniqueIdentifier>{536EB392-F941-573E-557A-ABB126B53BD1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="JUCE Modules\juce_organicui\automation\recorder\ui">
+      <UniqueIdentifier>{408CE83D-36B4-E38E-1E21-0BD4809E9846}</UniqueIdentifier>
+    </Filter>
     <Filter Include="JUCE Modules\juce_organicui\automation\recorder">
       <UniqueIdentifier>{D3E35206-F386-CFAB-A812-9B7BDB340B71}</UniqueIdentifier>
     </Filter>
@@ -247,6 +253,30 @@
     </Filter>
     <Filter Include="JUCE Modules\juce_organicui\automation">
       <UniqueIdentifier>{A0724705-28B2-FE7E-9FDC-273B8930E824}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JUCE Modules\juce_organicui\comment\ui">
+      <UniqueIdentifier>{DD441617-E86F-B599-C793-C0AEE5F9B6CF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JUCE Modules\juce_organicui\comment">
+      <UniqueIdentifier>{B600888C-9BF5-F2DA-748A-D86465A33FFD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JUCE Modules\juce_organicui\controllable\dashboard\ui">
+      <UniqueIdentifier>{E4C32E75-B35E-3B02-0D43-81C49A10D3AC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JUCE Modules\juce_organicui\controllable\dashboard">
+      <UniqueIdentifier>{35082EBD-0C03-9FC7-51FE-10F9A70F1F5E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JUCE Modules\juce_organicui\controllable\parameter\dashboard\ui">
+      <UniqueIdentifier>{300D3F70-B324-481C-2302-15089971B7C0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JUCE Modules\juce_organicui\controllable\parameter\dashboard">
+      <UniqueIdentifier>{E333732D-0D82-ED3D-963B-6E7FD764787E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JUCE Modules\juce_organicui\controllable\parameter\gradient\ui">
+      <UniqueIdentifier>{59B19CB2-CF22-F681-38D2-5345DC070B6A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JUCE Modules\juce_organicui\controllable\parameter\gradient">
+      <UniqueIdentifier>{20C49B18-CE94-9D44-6A5C-225B00E1D038}</UniqueIdentifier>
     </Filter>
     <Filter Include="JUCE Modules\juce_organicui\controllable\parameter\ui">
       <UniqueIdentifier>{8985EB6E-3B3D-2F50-8596-35A90644BBDF}</UniqueIdentifier>
@@ -272,8 +302,20 @@
     <Filter Include="JUCE Modules\juce_organicui\help">
       <UniqueIdentifier>{54FE50EF-F56B-C1E4-8E3C-A566B33B6F8E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="JUCE Modules\juce_organicui\helpers\crypto\hmac">
+      <UniqueIdentifier>{A5633EBC-1E29-7D6F-3236-00828EC13E8A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JUCE Modules\juce_organicui\helpers\crypto">
+      <UniqueIdentifier>{427229E6-5C9E-151E-F571-468B856BB151}</UniqueIdentifier>
+    </Filter>
     <Filter Include="JUCE Modules\juce_organicui\helpers">
       <UniqueIdentifier>{1DE9CE4E-5887-D7C5-F2FF-C3AD214BEE3E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JUCE Modules\juce_organicui\inspectable\dashboard\ui">
+      <UniqueIdentifier>{922B0E72-8A4C-BE01-7301-CF50894560D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JUCE Modules\juce_organicui\inspectable\dashboard">
+      <UniqueIdentifier>{9A2CA343-050A-C891-51B6-301A74570D17}</UniqueIdentifier>
     </Filter>
     <Filter Include="JUCE Modules\juce_organicui\inspectable\ui">
       <UniqueIdentifier>{CA08A3F4-FDEE-CBCC-1C52-7297B3958EFA}</UniqueIdentifier>
@@ -338,6 +380,12 @@
     <Filter Include="JUCE Modules\juce_organicui\updater">
       <UniqueIdentifier>{4BC1AC06-AAA3-905B-8EC6-B4DDD74C0211}</UniqueIdentifier>
     </Filter>
+    <Filter Include="JUCE Modules\juce_organicui\warning\ui">
+      <UniqueIdentifier>{53C1B9BB-CD33-B290-AF4D-9329F26F8E41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JUCE Modules\juce_organicui\warning">
+      <UniqueIdentifier>{91FADFB6-70FE-3F81-2E5A-366E896BFF22}</UniqueIdentifier>
+    </Filter>
     <Filter Include="JUCE Modules\juce_organicui">
       <UniqueIdentifier>{5F63D43A-3BA8-5209-9971-62F87C2979FE}</UniqueIdentifier>
     </Filter>
@@ -349,6 +397,9 @@
     </Filter>
     <Filter Include="JUCE Modules\juce_timeline\resources">
       <UniqueIdentifier>{D391EFE7-9D9C-64D9-7CA8-C06DBE64F72C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JUCE Modules\juce_timeline\timeline\Sequence\Common">
+      <UniqueIdentifier>{87993395-387D-3067-FA8B-D7C9311C4390}</UniqueIdentifier>
     </Filter>
     <Filter Include="JUCE Modules\juce_timeline\timeline\Sequence\Cue\ui">
       <UniqueIdentifier>{675B1DB0-7AEA-A463-6F13-A6C8D7C5D25A}</UniqueIdentifier>
@@ -477,6 +528,9 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\MotionBlock\model\library\MotionBlockModelLibrary.cpp">
       <Filter>CrazyDance\Source\MotionBlock\model\library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\MotionBlock\model\blocks\interactive\InteractiveBlock.cpp">
+      <Filter>CrazyDance\Source\MotionBlock\model\blocks\interactive</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\MotionBlock\model\blocks\pattern\PatternBlock.cpp">
       <Filter>CrazyDance\Source\MotionBlock\model\blocks\pattern</Filter>
@@ -1066,9 +1120,6 @@
     <ClCompile Include="..\..\..\JUCE\modules\juce_gui_basics\layout\juce_GridItem.cpp">
       <Filter>JUCE Modules\juce_gui_basics\layout</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\JUCE\modules\juce_gui_basics\layout\juce_GridUnitTests.cpp">
-      <Filter>JUCE Modules\juce_gui_basics\layout</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\JUCE\modules\juce_gui_basics\layout\juce_GroupComponent.cpp">
       <Filter>JUCE Modules\juce_gui_basics\layout</Filter>
     </ClCompile>
@@ -1462,14 +1513,14 @@
     <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\automation\easing\Easing.cpp">
       <Filter>JUCE Modules\juce_organicui\automation\easing</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\automation\parameter\ui\PlayableParameterAutomationEditor.cpp">
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\automation\parameter\ui\ParameterAutomationEditor.cpp">
       <Filter>JUCE Modules\juce_organicui\automation\parameter\ui</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\automation\parameter\ParameterAutomation.cpp">
       <Filter>JUCE Modules\juce_organicui\automation\parameter</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\automation\parameter\ParameterAutomationManager.cpp">
-      <Filter>JUCE Modules\juce_organicui\automation\parameter</Filter>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\automation\recorder\ui\AutomationRecorderEditor.cpp">
+      <Filter>JUCE Modules\juce_organicui\automation\recorder\ui</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\automation\recorder\AutomationRecorder.cpp">
       <Filter>JUCE Modules\juce_organicui\automation\recorder</Filter>
@@ -1491,6 +1542,57 @@
     </ClCompile>
     <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\automation\AutomationKey.cpp">
       <Filter>JUCE Modules\juce_organicui\automation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\comment\ui\CommentManagerViewUI.cpp">
+      <Filter>JUCE Modules\juce_organicui\comment\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\comment\ui\CommentUI.cpp">
+      <Filter>JUCE Modules\juce_organicui\comment\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\comment\Comment.cpp">
+      <Filter>JUCE Modules\juce_organicui\comment</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\comment\CommentManager.cpp">
+      <Filter>JUCE Modules\juce_organicui\comment</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\controllable\dashboard\ui\DashboardCCItemUI.cpp">
+      <Filter>JUCE Modules\juce_organicui\controllable\dashboard\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\controllable\dashboard\ui\DashboardControllableItemUI.cpp">
+      <Filter>JUCE Modules\juce_organicui\controllable\dashboard\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\controllable\dashboard\ui\DashboardTriggerItemUI.cpp">
+      <Filter>JUCE Modules\juce_organicui\controllable\dashboard\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\controllable\dashboard\DashboardCCItem.cpp">
+      <Filter>JUCE Modules\juce_organicui\controllable\dashboard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\controllable\dashboard\DashboardControllableItem.cpp">
+      <Filter>JUCE Modules\juce_organicui\controllable\dashboard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\controllable\dashboard\DashboardTriggerItem.cpp">
+      <Filter>JUCE Modules\juce_organicui\controllable\dashboard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\controllable\parameter\dashboard\ui\DashboardParameterItemUI.cpp">
+      <Filter>JUCE Modules\juce_organicui\controllable\parameter\dashboard\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\controllable\parameter\dashboard\DashboardParameterItem.cpp">
+      <Filter>JUCE Modules\juce_organicui\controllable\parameter\dashboard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\controllable\parameter\gradient\ui\GradientColorManagerEditor.cpp">
+      <Filter>JUCE Modules\juce_organicui\controllable\parameter\gradient\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\controllable\parameter\gradient\ui\GradientColorManagerUI.cpp">
+      <Filter>JUCE Modules\juce_organicui\controllable\parameter\gradient\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\controllable\parameter\gradient\ui\GradientColorUI.cpp">
+      <Filter>JUCE Modules\juce_organicui\controllable\parameter\gradient\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\controllable\parameter\gradient\GradientColor.cpp">
+      <Filter>JUCE Modules\juce_organicui\controllable\parameter\gradient</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\controllable\parameter\gradient\GradientColorManager.cpp">
+      <Filter>JUCE Modules\juce_organicui\controllable\parameter\gradient</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\controllable\parameter\ui\BetterStepper.cpp">
       <Filter>JUCE Modules\juce_organicui\controllable\parameter\ui</Filter>
@@ -1618,6 +1720,9 @@
     <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\controllable\Trigger.cpp">
       <Filter>JUCE Modules\juce_organicui\controllable</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\dashboard\ui\DashboardGroupItemUI.cpp">
+      <Filter>JUCE Modules\juce_organicui\dashboard\ui</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\dashboard\ui\DashboardItemManagerUI.cpp">
       <Filter>JUCE Modules\juce_organicui\dashboard\ui</Filter>
     </ClCompile>
@@ -1630,37 +1735,25 @@
     <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\dashboard\ui\DashboardManagerView.cpp">
       <Filter>JUCE Modules\juce_organicui\dashboard\ui</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\dashboard\ui\DashboardPanelUI.cpp">
-      <Filter>JUCE Modules\juce_organicui\dashboard\ui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\dashboard\ui\DashboardScriptItemUI.cpp">
-      <Filter>JUCE Modules\juce_organicui\dashboard\ui</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\dashboard\ui\DashboardUI.cpp">
-      <Filter>JUCE Modules\juce_organicui\dashboard\ui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\dashboard\ui\DashboardView.cpp">
       <Filter>JUCE Modules\juce_organicui\dashboard\ui</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\dashboard\Dashboard.cpp">
       <Filter>JUCE Modules\juce_organicui\dashboard</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\dashboard\DashboardGroupItem.cpp">
+      <Filter>JUCE Modules\juce_organicui\dashboard</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\dashboard\DashboardItem.cpp">
+      <Filter>JUCE Modules\juce_organicui\dashboard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\dashboard\DashboardItemFactory.cpp">
       <Filter>JUCE Modules\juce_organicui\dashboard</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\dashboard\DashboardItemManager.cpp">
       <Filter>JUCE Modules\juce_organicui\dashboard</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\dashboard\DashboardManager.cpp">
-      <Filter>JUCE Modules\juce_organicui\dashboard</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\dashboard\DashboardPanel.cpp">
-      <Filter>JUCE Modules\juce_organicui\dashboard</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\dashboard\DashboardPanelManager.cpp">
-      <Filter>JUCE Modules\juce_organicui\dashboard</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\dashboard\DashboardScriptItem.cpp">
       <Filter>JUCE Modules\juce_organicui\dashboard</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\engine\Engine.cpp">
@@ -1674,6 +1767,21 @@
     </ClCompile>
     <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\help\HelpPanel.cpp">
       <Filter>JUCE Modules\juce_organicui\help</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\helpers\crypto\hmac\HMAC_SHA1.cpp">
+      <Filter>JUCE Modules\juce_organicui\helpers\crypto\hmac</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\helpers\crypto\hmac\SHA1.cpp">
+      <Filter>JUCE Modules\juce_organicui\helpers\crypto\hmac</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\helpers\StringUtil.cpp">
+      <Filter>JUCE Modules\juce_organicui\helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\inspectable\dashboard\ui\DashboardInspectableItemUI.cpp">
+      <Filter>JUCE Modules\juce_organicui\inspectable\dashboard\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\inspectable\dashboard\DashboardInspectableItem.cpp">
+      <Filter>JUCE Modules\juce_organicui\inspectable\dashboard</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\inspectable\ui\InspectableContentComponent.cpp">
       <Filter>JUCE Modules\juce_organicui\inspectable\ui</Filter>
@@ -1709,9 +1817,6 @@
       <Filter>JUCE Modules\juce_organicui\manager\ui</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\manager\BaseItem.cpp">
-      <Filter>JUCE Modules\juce_organicui\manager</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\manager\Factory.cpp">
       <Filter>JUCE Modules\juce_organicui\manager</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\manager\GenericControllableItem.cpp">
@@ -1813,7 +1918,7 @@
     <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\resources\organicui_resources\JuceLibraryCode\include_juce_video.mm">
       <Filter>JUCE Modules\juce_organicui\resources\organicui_resources\JuceLibraryCode</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\resources\OrganicBinaryData.cpp">
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\resources\BinaryData.cpp">
       <Filter>JUCE Modules\juce_organicui\resources</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\script\ui\ScriptEditor.cpp">
@@ -1888,7 +1993,22 @@
     <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\updater\AppUpdater.cpp">
       <Filter>JUCE Modules\juce_organicui\updater</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\warning\ui\WarningReporterPanel.cpp">
+      <Filter>JUCE Modules\juce_organicui\warning\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\warning\ui\WarningTargetUI.cpp">
+      <Filter>JUCE Modules\juce_organicui\warning\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\warning\WarningReporter.cpp">
+      <Filter>JUCE Modules\juce_organicui\warning</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\warning\WarningTarget.cpp">
+      <Filter>JUCE Modules\juce_organicui\warning</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\juce_organicui.cpp">
+      <Filter>JUCE Modules\juce_organicui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_organicui\juce_organicui2.cpp">
       <Filter>JUCE Modules\juce_organicui</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\JUCE Modules\juce_timeline\resources\timeline_resources\JuceLibraryCode\BinaryData.cpp">
@@ -1975,6 +2095,9 @@
     <ClCompile Include="..\..\..\JUCE Modules\juce_timeline\resources\BinaryData.cpp">
       <Filter>JUCE Modules\juce_timeline\resources</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_timeline\timeline\Sequence\Common\TimedLayerItem.cpp">
+      <Filter>JUCE Modules\juce_timeline\timeline\Sequence\Common</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\..\JUCE Modules\juce_timeline\timeline\Sequence\Cue\ui\TimeCueManagerUI.cpp">
       <Filter>JUCE Modules\juce_timeline\timeline\Sequence\Cue\ui</Filter>
     </ClCompile>
@@ -2059,9 +2182,6 @@
     <ClCompile Include="..\..\..\JUCE Modules\juce_timeline\timeline\Sequence\Layer\SequenceLayer.cpp">
       <Filter>JUCE Modules\juce_timeline\timeline\Sequence\Layer</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\JUCE Modules\juce_timeline\timeline\Sequence\Layer\SequenceLayerFactory.cpp">
-      <Filter>JUCE Modules\juce_timeline\timeline\Sequence\Layer</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\JUCE Modules\juce_timeline\timeline\Sequence\Layer\SequenceLayerManager.cpp">
       <Filter>JUCE Modules\juce_timeline\timeline\Sequence\Layer</Filter>
     </ClCompile>
@@ -2096,6 +2216,9 @@
       <Filter>JUCE Modules\juce_timeline\timeline</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\JUCE Modules\juce_timeline\juce_timeline.cpp">
+      <Filter>JUCE Modules\juce_timeline</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\JUCE Modules\juce_timeline\TimelineAppCommands.cpp">
       <Filter>JUCE Modules\juce_timeline</Filter>
     </ClCompile>
     <ClCompile Include="..\..\JuceLibraryCode\BinaryData.cpp">
@@ -2141,6 +2264,9 @@
       <Filter>JUCE Library Code</Filter>
     </ClCompile>
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_organicui.cpp">
+      <Filter>JUCE Library Code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\JuceLibraryCode\include_juce_organicui2.cpp">
       <Filter>JUCE Library Code</Filter>
     </ClCompile>
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_osc.cpp">
@@ -2222,6 +2348,9 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\MotionBlock\model\library\MotionBlockModelLibrary.h">
       <Filter>CrazyDance\Source\MotionBlock\model\library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\MotionBlock\model\blocks\interactive\InteractiveBlock.h">
+      <Filter>CrazyDance\Source\MotionBlock\model\blocks\interactive</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\MotionBlock\model\blocks\pattern\PatternBlock.h">
       <Filter>CrazyDance\Source\MotionBlock\model\blocks\pattern</Filter>
@@ -2473,6 +2602,9 @@
       <Filter>JUCE Modules\juce_graphics\image_formats\pnglib</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\JUCE\modules\juce_graphics\image_formats\pnglib\pngconf.h">
+      <Filter>JUCE Modules\juce_graphics\image_formats\pnglib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\JUCE\modules\juce_graphics\image_formats\pnglib\pngdebug.h">
       <Filter>JUCE Modules\juce_graphics\image_formats\pnglib</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\JUCE\modules\juce_graphics\image_formats\pnglib\pnginfo.h">
@@ -3036,14 +3168,14 @@
     <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\automation\easing\Easing.h">
       <Filter>JUCE Modules\juce_organicui\automation\easing</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\automation\parameter\ui\PlayableParameterAutomationEditor.h">
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\automation\parameter\ui\ParameterAutomationEditor.h">
       <Filter>JUCE Modules\juce_organicui\automation\parameter\ui</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\automation\parameter\ParameterAutomation.h">
       <Filter>JUCE Modules\juce_organicui\automation\parameter</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\automation\parameter\ParameterAutomationManager.h">
-      <Filter>JUCE Modules\juce_organicui\automation\parameter</Filter>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\automation\recorder\ui\AutomationRecorderEditor.h">
+      <Filter>JUCE Modules\juce_organicui\automation\recorder\ui</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\automation\recorder\AutomationRecorder.h">
       <Filter>JUCE Modules\juce_organicui\automation\recorder</Filter>
@@ -3065,6 +3197,57 @@
     </ClInclude>
     <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\automation\AutomationKey.h">
       <Filter>JUCE Modules\juce_organicui\automation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\comment\ui\CommentManagerViewUI.h">
+      <Filter>JUCE Modules\juce_organicui\comment\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\comment\ui\CommentUI.h">
+      <Filter>JUCE Modules\juce_organicui\comment\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\comment\Comment.h">
+      <Filter>JUCE Modules\juce_organicui\comment</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\comment\CommentManager.h">
+      <Filter>JUCE Modules\juce_organicui\comment</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\controllable\dashboard\ui\DashboardCCItemUI.h">
+      <Filter>JUCE Modules\juce_organicui\controllable\dashboard\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\controllable\dashboard\ui\DashboardControllableItemUI.h">
+      <Filter>JUCE Modules\juce_organicui\controllable\dashboard\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\controllable\dashboard\ui\DashboardTriggerItemUI.h">
+      <Filter>JUCE Modules\juce_organicui\controllable\dashboard\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\controllable\dashboard\DashboardCCItem.h">
+      <Filter>JUCE Modules\juce_organicui\controllable\dashboard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\controllable\dashboard\DashboardControllableItem.h">
+      <Filter>JUCE Modules\juce_organicui\controllable\dashboard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\controllable\dashboard\DashboardTriggerItem.h">
+      <Filter>JUCE Modules\juce_organicui\controllable\dashboard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\controllable\parameter\dashboard\ui\DashboardParameterItemUI.h">
+      <Filter>JUCE Modules\juce_organicui\controllable\parameter\dashboard\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\controllable\parameter\dashboard\DashboardParameterItem.h">
+      <Filter>JUCE Modules\juce_organicui\controllable\parameter\dashboard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\controllable\parameter\gradient\ui\GradientColorManagerEditor.h">
+      <Filter>JUCE Modules\juce_organicui\controllable\parameter\gradient\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\controllable\parameter\gradient\ui\GradientColorManagerUI.h">
+      <Filter>JUCE Modules\juce_organicui\controllable\parameter\gradient\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\controllable\parameter\gradient\ui\GradientColorUI.h">
+      <Filter>JUCE Modules\juce_organicui\controllable\parameter\gradient\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\controllable\parameter\gradient\GradientColor.h">
+      <Filter>JUCE Modules\juce_organicui\controllable\parameter\gradient</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\controllable\parameter\gradient\GradientColorManager.h">
+      <Filter>JUCE Modules\juce_organicui\controllable\parameter\gradient</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\controllable\parameter\ui\BetterStepper.h">
       <Filter>JUCE Modules\juce_organicui\controllable\parameter\ui</Filter>
@@ -3106,9 +3289,6 @@
       <Filter>JUCE Modules\juce_organicui\controllable\parameter\ui</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\controllable\parameter\ui\ParameterUI.h">
-      <Filter>JUCE Modules\juce_organicui\controllable\parameter\ui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\controllable\parameter\ui\StringParameterTextUI.h">
       <Filter>JUCE Modules\juce_organicui\controllable\parameter\ui</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\controllable\parameter\ui\StringParameterUI.h">
@@ -3201,6 +3381,9 @@
     <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\controllable\Trigger.h">
       <Filter>JUCE Modules\juce_organicui\controllable</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\dashboard\ui\DashboardGroupItemUI.h">
+      <Filter>JUCE Modules\juce_organicui\dashboard\ui</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\dashboard\ui\DashboardItemManagerUI.h">
       <Filter>JUCE Modules\juce_organicui\dashboard\ui</Filter>
     </ClInclude>
@@ -3213,37 +3396,28 @@
     <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\dashboard\ui\DashboardManagerView.h">
       <Filter>JUCE Modules\juce_organicui\dashboard\ui</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\dashboard\ui\DashboardPanelUI.h">
-      <Filter>JUCE Modules\juce_organicui\dashboard\ui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\dashboard\ui\DashboardScriptItemUI.h">
-      <Filter>JUCE Modules\juce_organicui\dashboard\ui</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\dashboard\ui\DashboardUI.h">
-      <Filter>JUCE Modules\juce_organicui\dashboard\ui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\dashboard\ui\DashboardView.h">
       <Filter>JUCE Modules\juce_organicui\dashboard\ui</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\dashboard\Dashboard.h">
       <Filter>JUCE Modules\juce_organicui\dashboard</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\dashboard\DashboardGroupItem.h">
+      <Filter>JUCE Modules\juce_organicui\dashboard</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\dashboard\DashboardItem.h">
+      <Filter>JUCE Modules\juce_organicui\dashboard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\dashboard\DashboardItemFactory.h">
       <Filter>JUCE Modules\juce_organicui\dashboard</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\dashboard\DashboardItemManager.h">
       <Filter>JUCE Modules\juce_organicui\dashboard</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\dashboard\DashboardItemProvider.h">
+      <Filter>JUCE Modules\juce_organicui\dashboard</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\dashboard\DashboardManager.h">
-      <Filter>JUCE Modules\juce_organicui\dashboard</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\dashboard\DashboardPanel.h">
-      <Filter>JUCE Modules\juce_organicui\dashboard</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\dashboard\DashboardPanelManager.h">
-      <Filter>JUCE Modules\juce_organicui\dashboard</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\dashboard\DashboardScriptItem.h">
       <Filter>JUCE Modules\juce_organicui\dashboard</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\engine\Engine.h">
@@ -3257,6 +3431,12 @@
     </ClInclude>
     <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\help\HelpPanel.h">
       <Filter>JUCE Modules\juce_organicui\help</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\helpers\crypto\hmac\HMAC_SHA1.h">
+      <Filter>JUCE Modules\juce_organicui\helpers\crypto\hmac</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\helpers\crypto\hmac\SHA1.h">
+      <Filter>JUCE Modules\juce_organicui\helpers\crypto\hmac</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\helpers\DebugHelpers.h">
       <Filter>JUCE Modules\juce_organicui\helpers</Filter>
@@ -3278,6 +3458,12 @@
     </ClInclude>
     <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\helpers\WakeOnLan.h">
       <Filter>JUCE Modules\juce_organicui\helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\inspectable\dashboard\ui\DashboardInspectableItemUI.h">
+      <Filter>JUCE Modules\juce_organicui\inspectable\dashboard\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\inspectable\dashboard\DashboardInspectableItem.h">
+      <Filter>JUCE Modules\juce_organicui\inspectable\dashboard</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\inspectable\ui\InspectableContentComponent.h">
       <Filter>JUCE Modules\juce_organicui\inspectable\ui</Filter>
@@ -3321,6 +3507,9 @@
     <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\manager\ui\BaseManagerUI.h">
       <Filter>JUCE Modules\juce_organicui\manager\ui</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\manager\ui\BaseManagerViewMiniPane.h">
+      <Filter>JUCE Modules\juce_organicui\manager\ui</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\manager\ui\BaseManagerViewUI.h">
       <Filter>JUCE Modules\juce_organicui\manager\ui</Filter>
     </ClInclude>
@@ -3333,7 +3522,13 @@
     <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\manager\BaseItem.h">
       <Filter>JUCE Modules\juce_organicui\manager</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\manager\BaseItemListener.h">
+      <Filter>JUCE Modules\juce_organicui\manager</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\manager\BaseManager.h">
+      <Filter>JUCE Modules\juce_organicui\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\manager\BaseManagerListener.h">
       <Filter>JUCE Modules\juce_organicui\manager</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\manager\Factory.h">
@@ -3366,7 +3561,7 @@
     <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\resources\organicui_resources\JuceLibraryCode\JuceHeader.h">
       <Filter>JUCE Modules\juce_organicui\resources\organicui_resources\JuceLibraryCode</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\resources\OrganicBinaryData.h">
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\resources\BinaryData.h">
       <Filter>JUCE Modules\juce_organicui\resources</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\script\ui\ScriptEditor.h">
@@ -3447,6 +3642,18 @@
     <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\updater\AppUpdater.h">
       <Filter>JUCE Modules\juce_organicui\updater</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\warning\ui\WarningReporterPanel.h">
+      <Filter>JUCE Modules\juce_organicui\warning\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\warning\ui\WarningTargetUI.h">
+      <Filter>JUCE Modules\juce_organicui\warning\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\warning\WarningReporter.h">
+      <Filter>JUCE Modules\juce_organicui\warning</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_organicui\warning\WarningTarget.h">
+      <Filter>JUCE Modules\juce_organicui\warning</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\..\..\JUCE Modules\juce_organicui\juce_organicui.h">
       <Filter>JUCE Modules\juce_organicui</Filter>
     </ClInclude>
@@ -3461,6 +3668,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\JUCE Modules\juce_timeline\resources\BinaryData.h">
       <Filter>JUCE Modules\juce_timeline\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_timeline\timeline\Sequence\Common\TimedLayerItem.h">
+      <Filter>JUCE Modules\juce_timeline\timeline\Sequence\Common</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\JUCE Modules\juce_timeline\timeline\Sequence\Cue\ui\TimeCueManagerUI.h">
       <Filter>JUCE Modules\juce_timeline\timeline\Sequence\Cue\ui</Filter>
@@ -3546,9 +3756,6 @@
     <ClInclude Include="..\..\..\JUCE Modules\juce_timeline\timeline\Sequence\Layer\SequenceLayer.h">
       <Filter>JUCE Modules\juce_timeline\timeline\Sequence\Layer</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\JUCE Modules\juce_timeline\timeline\Sequence\Layer\SequenceLayerFactory.h">
-      <Filter>JUCE Modules\juce_timeline\timeline\Sequence\Layer</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\JUCE Modules\juce_timeline\timeline\Sequence\Layer\SequenceLayerManager.h">
       <Filter>JUCE Modules\juce_timeline\timeline\Sequence\Layer</Filter>
     </ClInclude>
@@ -3581,6 +3788,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\JUCE Modules\juce_timeline\timeline\SequenceManager.h">
       <Filter>JUCE Modules\juce_timeline\timeline</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\JUCE Modules\juce_timeline\TimelineAppCommands.h">
+      <Filter>JUCE Modules\juce_timeline</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\JUCE Modules\juce_timeline\juce_timeline.h">
       <Filter>JUCE Modules\juce_timeline</Filter>

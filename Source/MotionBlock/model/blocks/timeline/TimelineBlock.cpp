@@ -35,7 +35,7 @@ void TimelineBlock::loadJSONDataInternal(var data)
 	sequence.loadJSONData(data.getProperty("sequence", var()));
 }
 
-var TimelineBlock::getMotionData(Drone * d, double time, var params)
+var TimelineBlock::getMotionData(Drone * d, double time, var params, var * blockMemoryData)
 {
 	return sequence.getMotionData(d, time, params);
 

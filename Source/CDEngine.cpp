@@ -38,12 +38,7 @@ CDEngine::CDEngine() :
 	ProjectSettings::getInstance()->addChildControllableContainer(&ioCC);
 	ProjectSettings::getInstance()->addChildControllableContainer(AudioManager::getInstance());
 
-	//Timeline
-	SequenceLayerFactory::getInstance()->layerDefs.add(SequenceLayerDefinition::createDef("Motion", &MotionBlockLayer::create));
-	SequenceLayerFactory::getInstance()->layerDefs.add(SequenceLayerDefinition::createDef(ColorLayer::getTypeStringStatic(), &ColorLayer::create));
-	SequenceLayerFactory::getInstance()->layerDefs.add(SequenceLayerDefinition::createDef("Actions", &ActionLayer::create));
-	SequenceLayerFactory::getInstance()->layerDefs.add(SequenceLayerDefinition::createDef("Audio", &AudioLayer::create));
-
+	
 	//Communication
 	OSCRemoteControl::getInstance()->addRemoteControlListener(this);
 
@@ -51,7 +46,6 @@ CDEngine::CDEngine() :
 
 CDEngine::~CDEngine()
 {
-	DroneManager::getInstance()->clear();
 	MotionBlockModelLibrary::getInstance()->clear();
 
 	IOInterfaceManager::deleteInstance();
@@ -61,7 +55,6 @@ CDEngine::~CDEngine()
 
 	MotionBlockModelLibrary::deleteInstance();
 	AudioManager::deleteInstance();
-	SequenceLayerFactory::deleteInstance();
 }
 
 void CDEngine::clearInternal()

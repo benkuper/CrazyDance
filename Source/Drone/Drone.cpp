@@ -47,6 +47,11 @@ Drone::Drone(StringRef name, StringRef familyName, var) :
 	addChildControllableContainer(&flightCC);
 	position = flightCC.addPoint3DParameter("Position", "Position of the drone");
 	//position->setBounds(-10, 0, -10, 10, 5, 10);
+	realPosition = flightCC.addPoint3DParameter("Real Position", "Real position of the drone");
+	realPosition->setControllableFeedbackOnly(true);
+
+	targetPosition = flightCC.addPoint3DParameter("Target Position", "Target position of the drone from the server");
+	targetPosition->setControllableFeedbackOnly(true);
 
 	addChildControllableContainer(&lightCC);
 	color = lightCC.addColorParameter("Color", "Color of the light deck", Colours::black);
@@ -107,7 +112,7 @@ void Drone::setBlockFromProvider(MotionBlockDataProvider * model)
 		linkedInspectables.addIfNotAlreadyThere(currentBlock->provider.get());
 		currentBlock->provider->linkedInspectables.addIfNotAlreadyThere(this);
 
-		startThread();
+		if(enabled->boolValue()) startThread();
 	}
 
 	if (Engine::mainEngine != nullptr && !Engine::mainEngine->isClearing)
@@ -167,6 +172,12 @@ void Drone::onContainerParameterChangedInternal(Parameter * p)
 		if (!enabled->boolValue())
 		{
 			motionData = var();
+			signalThreadShouldExit();
+			waitForThreadToExit(100);
+		}
+		else
+		{
+			startThread();
 		}
 	}
 }
@@ -216,7 +227,7 @@ void Drone::run()
 	sleep(100);
 	while (!threadShouldExit())
 	{
-		update();
+		if(enabled->boolValue()) update();
 		sleep(1000.0f / updateRate); //50fps
 	}
 

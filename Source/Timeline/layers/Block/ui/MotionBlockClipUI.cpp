@@ -22,6 +22,8 @@ MotionBlockClipUI::MotionBlockClipUI(MotionBlockClip * _clip) :
     imageIsReady(false),
     isDraggingModel(false)
 {
+	
+	acceptedDropTypes.add("MotionBlockModel");
 
 	bgColor = BG_COLOR.brighter().withAlpha(.5f);
 
@@ -73,13 +75,13 @@ void MotionBlockClipUI::paint(Graphics & g)
 	if (clip->fadeIn->floatValue() > 0)
 	{
 		g.setColour(fColor);
-		g.drawLine(0, getHeight(), getWidth()*(clip->fadeIn->floatValue() / clip->getTotalLength()), fadeInHandle.getY() + fadeInHandle.getHeight() / 2);
+		g.drawLine(0, getHeight(), getWidth()*(clip->fadeIn->floatValue() / clip->getTotalLength()), fadeInHandle.getY() + fadeInHandle.getHeight() / 2, 2);
 	}
 
 	if (clip->fadeOut->floatValue() > 0)
 	{
 		g.setColour(fColor);
-		g.drawLine(getWidth()*(1 - (clip->fadeOut->floatValue() / clip->getTotalLength())), fadeOutHandle.getY() + fadeOutHandle.getHeight() / 2, getWidth(), getHeight());
+		g.drawLine(getWidth()*(1 - (clip->fadeOut->floatValue() / clip->getTotalLength())), fadeOutHandle.getY() + fadeOutHandle.getHeight() / 2, getWidth(), getHeight(), 2);
 	}
 }
 
@@ -128,7 +130,7 @@ void MotionBlockClipUI::setTargetAutomation(ParameterAutomation * a)
 
 	if (a == nullptr) return;
 
-	automationUI = new AutomationUI(&a->automation);
+	automationUI = new AutomationUI(dynamic_cast<Automation *>(a->automationContainer));
 	addAndMakeVisible(automationUI);
 	resized();
 	repaint();
@@ -182,10 +184,10 @@ void MotionBlockClipUI::mouseDown(const MouseEvent & e)
 					if (pa->controlMode != Parameter::ControlMode::AUTOMATION)
 					{
 						pa->setControlMode(Parameter::ControlMode::AUTOMATION);
-						pa->automation->mode->setValueWithData(PlayableParameterAutomation::MANUAL);
+						pa->automation->setManualMode(true);
 					}
 
-					if (!pa.wasObjectDeleted()) setTargetAutomation(pa->automation);
+					if (!pa.wasObjectDeleted()) setTargetAutomation(pa->automation.get());
 				}
 			}
 		}
@@ -255,13 +257,13 @@ void MotionBlockClipUI::controllableFeedbackUpdateInternal(Controllable * c)
 	{
 		fadeInHandle.setVisible(!clip->autoFade->boolValue());
 		fadeOutHandle.setVisible(!clip->autoFade->boolValue());
-		//repaint();
+		repaint();
 	}
-}
-
-bool MotionBlockClipUI::isInterestedInDragSource(const SourceDetails & source)
-{
-	return source.description.getProperty("type", "") == MotionBlockModelTreeUI::dragAndDropID.toString();
+	else if (c == clip->fadeIn || c == clip->fadeOut)
+	{
+		resized();
+		repaint();
+	}
 }
 
 void MotionBlockClipUI::itemDragEnter(const SourceDetails & source)
@@ -385,6 +387,7 @@ MotionBlockFadeHandle::MotionBlockFadeHandle(const Image & image) :
 
 void MotionBlockFadeHandle::paint(Graphics & g)
 {
-	g.setColour(Colours::white);
-	g.drawImage(img, getLocalBounds().toFloat().reduced(2));
+	g.setColour(Colours::orange);
+	g.fillRoundedRectangle(getLocalBounds().toFloat().reduced(2,2), 2);
+	//g.drawImage(img, getLocalBounds().toFloat().reduced(2));
 }

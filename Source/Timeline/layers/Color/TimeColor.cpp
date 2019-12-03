@@ -23,6 +23,7 @@ TimeColor::TimeColor(float _time, const Colour & _color, const String & name) :
 	position->setValue(_time);
 	color->setColor(_color);
 	addParameter(color);
+
 }
 
 TimeColor::~TimeColor()

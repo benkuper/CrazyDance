@@ -21,7 +21,7 @@ class MotionBlockModel :
 	public MotionBlockDataProvider
 {
 public:	
-	enum Type { PATTERN, TIMELINE, SCRIPT, NOT_SET };
+	enum Type { PATTERN, TIMELINE, SCRIPT, INTERACTIVE, NOT_SET };
 		
 	MotionBlockModel(const String &name = "MotionBlockModel", var params = var(), Type type = NOT_SET);
 	~MotionBlockModel();
@@ -41,8 +41,8 @@ public:
 
 	virtual Array<WeakReference<Controllable>> getModelParameters() override;
 
-	virtual var getMotionData(Drone * p, double time, var params) override;
-	virtual void getMotionDataInternal(var result, Drone * p, double time, int id, var params) {}
+	virtual var getMotionData(Drone * p, double time, var params, var * blockMemoryData) override;
+	virtual void getMotionDataInternal(var result, Drone * p, double time, int id, var params, var * blockMemoryData) {}
 
 	template<class T>
 	T getParamValue(Parameter * p, var params);

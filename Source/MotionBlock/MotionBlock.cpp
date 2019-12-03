@@ -20,6 +20,7 @@ MotionBlock::MotionBlock(MotionBlockDataProvider * provider) :
 	paramsLoadData(var())
     //automationsManager(&paramsContainer)
 {
+	blockMemoryData = new DynamicObject();
 
 	addChildControllableContainer(&paramsContainer);
 	
@@ -64,22 +65,29 @@ var MotionBlock::getMotionData(Drone * d, double time, var params)
 
 	if (localParams.getProperty("updateAutomation", true))
 	{
+		bool loopAutomations = localParams.getProperty("loopAutomations", true);
 		for (auto &param : paramList)
 		{
 			if (param.wasObjectDeleted()) continue;
 			if (param->controlMode != Parameter::AUTOMATION  || param->automation == nullptr) continue;
-			param->automation->currentTime->setValue(fmodf(time, param->automation->automation.length->floatValue()));
+			
+			float automationLength = param->automation->lengthParamRef->floatValue();
+			float targetTime = loopAutomations ? fmodf(time, automationLength):jmin<float>(time, automationLength);
+			param->automation->timeParamRef->setValue(targetTime);
 		}
 	} else
 	{
 		for (auto &param : paramList)
 		{
 			if (param->controlMode != Parameter::AUTOMATION) continue;
-			Automation * a = &param->automation->automation;
+			ParameterAutomation* a = param->automation.get();
 
-			float value = a->getValueForPosition(fmodf(time, a->length->floatValue()));
-			float normValue = jmap<float>(value, param->minimumValue, param->maximumValue);
-			localParams.getDynamicObject()->setProperty(param->shortName,normValue);
+			if (dynamic_cast<Automation*>(a->automationContainer) != nullptr)
+			{
+				float value = ((Automation*)a->automationContainer)->getValueForPosition(fmodf(time, a->lengthParamRef->floatValue()));
+				float normValue = jmap<float>(value, param->minimumValue, param->maximumValue);
+				localParams.getDynamicObject()->setProperty(param->shortName, normValue);
+			}
 		}
 	}
 
@@ -95,7 +103,7 @@ var MotionBlock::getMotionData(Drone * d, double time, var params)
 		return result;
 	}
 
-	return provider->getMotionData(d, time, localParams);
+	return provider->getMotionData(d, time, localParams, &blockMemoryData);
 }
 
 void MotionBlock::rebuildArgsFromModel()
@@ -157,7 +165,7 @@ void MotionBlock::parameterControlModeChanged(Parameter * p)
 {
 	if (p->controlMode == Parameter::AUTOMATION)
 	{
-		p->automation->mode->setValueWithData(PlayableParameterAutomation::MANUAL);
+		p->automation->setManualMode(true);
 		//p->automation->hideInEditor = true;
 	}
 

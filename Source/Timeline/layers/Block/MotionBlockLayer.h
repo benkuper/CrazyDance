@@ -18,7 +18,7 @@ class MotionBlockLayer :
 	public SequenceLayer,
 	public DroneTargetFilterManager::FilterManagerListener,
 	public EngineListener,
-	public MotionBlockClipManager::Listener
+	public MotionBlockClipManager::ManagerListener
 {
 public:
 	MotionBlockLayer(Sequence * s, var params = var());
@@ -26,11 +26,14 @@ public:
 
 	enum Mode { PRIMARY, SECONDARY, OVERRIDE };
 
+	enum PrePostMode { NONE, HOLD, LOOP, MIRROR };
+
 	MotionBlockClipManager blockClipManager;
 	MotionBlockClipTransitionManager transitionManager;
 
 	//BoolParameter * defaultLayer;
-	EnumParameter * mode;
+	EnumParameter* mode;
+	EnumParameter * prePostMode;
 	DroneTargetFilterManager filterManager;
 
 	var getMotionData(Drone * d, double time, var params);

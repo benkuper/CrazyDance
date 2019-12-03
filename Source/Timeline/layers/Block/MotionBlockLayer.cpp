@@ -21,8 +21,12 @@ MotionBlockLayer::MotionBlockLayer(Sequence * s, var) :
 	mode = addEnumParameter("Mode", "Mode for this layer.\nAll \"Main\" layers will be averaged together, then the \"Effect\" layers will be added to that.");
 	mode->addOption("Primary", PRIMARY)->addOption("Secondary", SECONDARY)->addOption("Override", OVERRIDE);
 
+	prePostMode = addEnumParameter("PrePost Mode", "Mode for this layer.\nAll \"Main\" layers will be averaged together, then the \"Effect\" layers will be added to that.");
+	prePostMode->addOption("None", NONE)->addOption("Hold", HOLD);// ->addOption("Loop", LOOP)->addOption("Mirror", MIRROR);
+
 	//defaultLayer = addBoolParameter("Default", "If checked, this layer will be the default layer when no layer has the requested prop id", false);
 
+	
 	addChildControllableContainer(&blockClipManager);
 	blockClipManager.hideInEditor = true;
 	addChildControllableContainer(&transitionManager);
@@ -52,11 +56,17 @@ var MotionBlockLayer::getMotionData(Drone * d, double time, var params)
 		MotionBlockClip * firstBlock = (MotionBlockClip *)blockClipManager.items[0];
 		MotionBlockClip * lastBlock = (MotionBlockClip *)blockClipManager.items[blockClipManager.items.size()-1];
 
-		if (time <= firstBlock->time->floatValue())
+		PrePostMode pm = prePostMode->getValueDataAsEnum<PrePostMode>();
+		if (time < firstBlock->time->floatValue())
 		{
-			return  firstBlock->getMotionData(d, firstBlock->time->floatValue(), params);
+			if(pm == NONE) return var();
+			else if(pm == HOLD) return firstBlock->getMotionData(d, firstBlock->time->floatValue(), params);
 		}
-		else if (time >= lastBlock->getEndTime()) return  lastBlock->getMotionData(d, lastBlock->getEndTime(), params);
+		else if (time >= lastBlock->getEndTime())
+		{
+			if (pm == NONE) return  var();
+			else if (pm == HOLD) return lastBlock->getMotionData(d, lastBlock->getEndTime(), params);
+		}
 	}
 
 	var motionData;

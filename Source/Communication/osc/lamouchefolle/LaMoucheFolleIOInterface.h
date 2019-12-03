@@ -22,6 +22,8 @@ public:
 
 	String getAddressForDroneControllable(Drone * d, Controllable * c) const override;
 
+	virtual void oscMessageReceived(const OSCMessage& m) override;
+
 	String getTypeString() const override { return getTypeStringStatic(); }
 	static const String getTypeStringStatic() { return "LaMoucheFolle";  }
 	static IOInterface * create(var params) { return new LaMoucheFolleIOInterface(params); }

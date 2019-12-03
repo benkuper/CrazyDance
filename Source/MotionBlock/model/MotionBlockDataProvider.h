@@ -24,7 +24,7 @@ public:
 	Trigger * assignToAll;
 
 	virtual Array<WeakReference<Controllable>> getModelParameters() = 0;
-	virtual var getMotionData(Drone * p, double time, var params) = 0;
+	virtual var getMotionData(Drone * p, double time, var params, var * blockMemoryData) = 0;
 
 	//Bake info
 	enum BakeControl { PLAY, PAUSE, STOP, SEEK };
