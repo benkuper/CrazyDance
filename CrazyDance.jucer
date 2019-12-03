@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="GKWuh9" name="CrazyDance" projectType="guiapp" jucerVersion="5.4.5"
-              headerPath="../../Source">
+              headerPath="../../Source" version="1.0.1b">
   <MAINGROUP id="NJ6gip" name="CrazyDance">
     <GROUP id="{B5D2DCAB-0538-FD92-CD32-905A62809468}" name="Resources">
       <GROUP id="{F80A2B71-6C84-3871-DD96-2195933EF271}" name="drone">

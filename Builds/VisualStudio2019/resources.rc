@@ -7,16 +7,16 @@
 #include <windows.h>
 
 VS_VERSION_INFO VERSIONINFO
-FILEVERSION  1,0,0,0
+FILEVERSION  1,0,1b,0
 BEGIN
   BLOCK "StringFileInfo"
   BEGIN
     BLOCK "040904E4"
     BEGIN
       VALUE "FileDescription",  "CrazyDance\0"
-      VALUE "FileVersion",  "1.0.0\0"
+      VALUE "FileVersion",  "1.0.1b\0"
       VALUE "ProductName",  "CrazyDance\0"
-      VALUE "ProductVersion",  "1.0.0\0"
+      VALUE "ProductVersion",  "1.0.1b\0"
     END
   END
 
