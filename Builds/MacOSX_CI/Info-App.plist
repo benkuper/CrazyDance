@@ -8,7 +8,7 @@
     <key>CFBundleIconFile</key>
     <string>Icon.icns</string>
     <key>CFBundleIdentifier</key>
-    <string>com.yourcompany.CrazyDance</string>
+    <string>com.benkuper.CrazyDance</string>
     <key>CFBundleName</key>
     <string>CrazyDance</string>
     <key>CFBundleDisplayName</key>

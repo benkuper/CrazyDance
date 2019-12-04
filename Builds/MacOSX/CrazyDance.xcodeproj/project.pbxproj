@@ -2316,7 +2316,7 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.CrazyDance;
+				PRODUCT_BUNDLE_IDENTIFIER = com.benkuper.CrazyDance;
 				PRODUCT_NAME = "CrazyDance";
 				USE_HEADERMAP = NO;
 			};
@@ -2361,7 +2361,7 @@
 				INFOPLIST_PREPROCESS = NO;
 				INSTALL_PATH = "$(HOME)/Applications";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.CrazyDance;
+				PRODUCT_BUNDLE_IDENTIFIER = com.benkuper.CrazyDance;
 				PRODUCT_NAME = "CrazyDance";
 				USE_HEADERMAP = NO;
 			};

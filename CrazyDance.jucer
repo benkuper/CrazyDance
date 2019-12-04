@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="GKWuh9" name="CrazyDance" projectType="guiapp" jucerVersion="5.4.5"
-              headerPath="../../Source" version="1.0.1b">
+              headerPath="../../Source" version="1.0.1b" bundleIdentifier="com.benkuper.CrazyDance">
   <MAINGROUP id="NJ6gip" name="CrazyDance">
     <GROUP id="{B5D2DCAB-0538-FD92-CD32-905A62809468}" name="Resources">
       <GROUP id="{F80A2B71-6C84-3871-DD96-2195933EF271}" name="drone">
@@ -496,5 +496,6 @@
     <WINDOWS/>
     <OSX/>
   </LIVE_SETTINGS>
-  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1"/>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_USE_MP3AUDIOFORMAT="1"
+               JUCE_USE_LAME_AUDIO_FORMAT="1" JUCE_USE_WINDOWS_MEDIA_FORMAT="1"/>
 </JUCERPROJECT>
